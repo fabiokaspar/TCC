@@ -1,21 +1,39 @@
-<script src="jquery-2.1.4.min.js"></script>
-<script>
-var dados = {
-  start:0,
-  num:10,
-  q:"red+sox",
-	cr:"countryCA",
-  lr:"lang_fr",
-  client:"google-csbe",
-  output:"xml_no_dtd",
-  cx:"00255077836266642015:u-scht7a-8i"
-};
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"> 
+    <title>requisição ajax</title>  
+  </head>
+  <body>
+    <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+    <input type="button" id="ajax" value="ajax">   
+    <script>
+      $(document).ready(mandave);
 
-$.ajax({
-	url:"http://www.google.com/search",
-	data:dados,
-	sucess:function(respota) {
-		alert(resposta);
-	}
-});
-</script>
+      function mandave(){
+        console.log("OI");
+        var dados = {
+          start:0,
+          num:10,
+          q:"red+sox",
+          cr:"countryCA",
+          lr:"lang_fr",
+          client:"google-csbe",
+          output:"xml_no_dtd",
+          cx:"00255077836266642015:u-scht7a-8i"
+        };
+
+        $("#ajax").click(function(){ 
+            $.ajax({
+              url:"http://www.google.com/search",
+              data:dados,
+              sucess:function(respota) {
+                console.log("passou!!");
+                alert(resposta);
+              }
+            });
+        });
+      }   
+    </script>     
+  </body>
+</html>
