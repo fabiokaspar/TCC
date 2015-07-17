@@ -9,4 +9,6 @@ No arquivo ~/.bashrc (ele é um arquivo oculto, só aparece com ls -la),        
  `CLASSPATH=$CLASSPATH:~/lucene-5.1.0/queryparser/lucene-queryparser-5.1.0.jar`  
  `CLASSPATH=$CLASSPATH:~/lucene-5.1.0/demo/lucene-demo-5.1.0.jar`  
  `CLASSPATH=$CLASSPATH:~/lucene-5.1.0/analysis/common/lucene-analyzers-common-5.1.0.jar`  
- `export CLASSPATH`
+ `export CLASSPATH` 
+
+Depois é só compilar os 2 arquivos da documentação do lucene **somente** com `javac arquivo.java` e rodar **exatamente** conforme o código sugere.
