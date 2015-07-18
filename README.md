@@ -12,3 +12,7 @@ No arquivo ~/.bashrc (ele é um arquivo oculto, só aparece com ls -la),        
  `export CLASSPATH` 
 
 Depois é só compilar os 2 arquivos da documentação do lucene **somente** com `javac arquivo.java` e rodar **exatamente** conforme o código sugere.
+
+######Site referencia para lista de estabelecimentos:
+
+`http://guia1.folha.com.br/busca/restaurantes/?q`
