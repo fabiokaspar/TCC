@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>JSON/Atom Custom Search API Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <meta charset="utf-8">
+ 
+    <style>
+    	#resposta{
+    		background-color: MediumTurquoise;
+    	}
+    </style>
+  </head>
+  <body>
+
+  	<!-- *************************** -->
+	 <div id="pesquisa">       
+        <input id="a" type="text" placeholder="Estabelecimento..." class="focus">
+  		<button>Pesquisar</button> <br>
+        <input id="localizacao" type="radio" name="1" checked>localização
+        <input id="preco" type="radio" name="1">preço            
+        <input id="qualidade" type="radio" name="1">qualidade            
+    </div>
+  	<!-- *************************** -->
+
+  	<br>
+  	<div id="resposta" bg-color="yellow"></div>
+    
+    <script type="text/javascript" src="consultaGoogle.js"></script>
+  </body>
+</html>
