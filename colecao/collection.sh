@@ -1,39 +1,59 @@
 #!/bin/bash
 
-if [[ ! -e ./restaurante ]]; then
-	mkdir ./restaurante
-	cd restaurante
+pegaLinkDosSites(){
+	## salva as 19 paginas do guia folha no diretorio com formato html
+	i=1; num=1;
+	# fim=901;
+	fim=1;
 	
-	# # salva as 19 paginas do guia folha no diretorio com formato html
-	# i=1; 
-	# while [ $i -le 901 ]; do 
-	# 	wget -qO- http://guia1.folha.com.br/busca/restaurantes/?sr=$i > siteRestaurantes$i.html
-	# 	i=$((i+50)); 
-	# done
+	while [ $i -le $fim ]; do 
+		wget -qO- http://guia1.folha.com.br/busca/restaurantes/?sr=$i > siteRestaurantes$num.html
+		cat siteRestaurantes$num.html | egrep -o "http://.*\#onde" >> linksRestaurantes.txt
+		i=$((i+50));
+		num=$((num+1)); 
+	done
+	echo "Links dos sites dos restaurantes ......OK"
+}
 
-	# salva o site do guia folha no diretorio com formato html
-	wget -qO- http://guia1.folha.com.br/busca/restaurantes/?q= > siteRestaurantes.html
-	# recupera os links dos restaurantes
-	cat siteRestaurantes.html | egrep -o "http://.*\#onde" > linksRestaurantes.txt
-	# recupera o nome de cada restaurante para criar um arquivo com esse nome
-	cat linksRestaurantes.txt | egrep -o "([A-Za-z]|_)+#" | egrep -o "([A-Za-z]|_)+" > nomes.txt
+pegaNomeDosSites(){
+	cat linksRestaurantes.txt | egrep -o "([A-Za-z]|_|[0-9])+\?" | egrep -o "([A-Za-z]|_|[0-9])+" > nomes.txt
+	echo "Nome dos restaurantes .................OK"
+}
 
-	# cria um array com os nomes dos restaurantes
+criaPaginaRestaurante(){
+	## cria um array com os nomes dos restaurantes
 	for nome in $(cat nomes.txt); do
 		arrayNome=("${arrayNome[@]}" $nome)
 	done 
 	
-	# cria um array com os links dos restaurantes
+	## cria um array com os links dos restaurantes
 	for link in $(cat linksRestaurantes.txt); do
 		arrayLink=("${arrayLink[@]}" $link) 
 	done 
 
-	# acessa o link e coloca o seu conteudo no arquivo com o nome correspondente 
+	## acessa o link e coloca o seu conteudo no arquivo com o nome correspondente 
 	i=0; 
 	while [ $i -lt ${#arrayNome[*]} ]; do 
 	   	wget -qO-  ${arrayLink[$i]} > ${arrayNome[$i]}."txt"
+	   	# cat ${arrayNome[$i]}."txt" | egrep -o "<\!--TITLE-->*<\!--/LOCATIONS-->" > ${arrayNome[$i]}."txt"
 		i=$((i+1)); 
 	done	
+	echo "Arquivo de cada um dos restaurantes ...OK"
+}
 
-	rm siteRestaurantes.html linksRestaurantes.txt nomes.txt
+removeArquivosDesnecessarios(){
+	rm *.html linksRestaurantes.txt nomes.txt
+	echo "Arquivos desnecessarios removidos .....OK"
+}
+
+################ MAIN ################  
+
+if [[ ! -e ./restaurante ]]; then
+	mkdir ./restaurante
+	cd restaurante
+	
+	pegaLinkDosSites
+	pegaNomeDosSites
+	criaPaginaRestaurante
+	removeArquivosDesnecessarios
 fi
