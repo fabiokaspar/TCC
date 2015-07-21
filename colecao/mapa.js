@@ -1,25 +1,28 @@
 var map;
 var mapProp;
 var origem = undefined;
-var destino = undefined;
-var dist;
-var calculeRota;
-var renderRota;
+var direcaoRota;
+var mostraRota;
+
+var restaurantes = [
+	{nome:"D", lat:-23.51583, lon: -46.65721, preco: "40,00", qualid: 3, distancia: {texto: "0", valor: 0}, marker: undefined},
+	{nome:"B", lat:-23.50811, lon: -46.70064, preco: "75,00", qualid: 1, distancia: {texto: "0", valor: 0}, marker: undefined},
+	{nome:"E", lat:-23.52779, lon: -46.64451, preco: "30,00", qualid: 4, distancia: {texto: "0", valor: 0}, marker: undefined},
+	{nome:"C", lat:-23.51126, lon: -46.67936, preco: "55,00", qualid: 2, distancia: {texto: "0", valor: 0}, marker: undefined},
+	{nome:"A", lat:-23.49473, lon: -46.70906, preco: "70,00", qualid: 5, distancia: {texto: "0", valor: 0}, marker: undefined}
+];
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
 function initialize() {	  
-	inicializarMapa();
-	navigator.geolocation.getCurrentPosition(getGeolocation, errorGeolocation);
-}
-		
-function inicializarMapa(){
 	mapProp = {
 		center:new google.maps.LatLng(-23.55112,-46.63438),
 		zoom:11
 	};
 
 	map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+	navigator.geolocation.getCurrentPosition(getGeolocation, errorGeolocation);
 }
 
 function getGeolocation(position){
@@ -28,11 +31,15 @@ function getGeolocation(position){
    	});
 
 	map.setCenter(origem.position);
-	//origem.setMap(map);
+	origem.setMap(map);
 
-	marcaDestino();
-	desenhaRota();
-	calculaDistancia(origem.getPosition(), destino.getPosition());
+	var infowindow = new google.maps.InfoWindow({
+			content: "Eu"
+	});
+
+	infowindow.open(map,origem);
+
+	main();
 }
 
 function errorGeolocation(error){
@@ -40,19 +47,67 @@ function errorGeolocation(error){
     alert("Falha ao buscar sua geolocalização");
 }
 
-function marcaDestino(){
-	destino = new google.maps.Marker({
-   		position: new google.maps.LatLng(-23.40,-45.10)
-   	});
+function main(){
+	if(origem != undefined){
+		for(var i = 0; i < 5; i++){
+			marcaDestino(i);
+			calculaDistanciaEuclidiana(origem.position, restaurantes[i].marker.position, restaurantes[i].nome, i);
+			desenhaRotaEuclidiana(origem, restaurantes[i].marker);
+		}
 
-	//destino.setMap(map);
+		restaurantes.sort(compare);
+		desenhaRota(origem, restaurantes[0].marker);
+	
+		mostraListaRestaurante();
+	}
 }
 
-function desenhaRota(){
+function marcaDestino(index){
+	var destino = new google.maps.Marker({
+		position: new google.maps.LatLng(restaurantes[index].lat,restaurantes[index].lon),
+	});
+	
+	destino.setMap(map);
+
+	var infowindow = new google.maps.InfoWindow({
+		content: restaurantes[index].nome
+	});
+
+	infowindow.open(map,destino);		
+
+	restaurantes[index].marker = destino;
+}
+
+function calculaDistanciaEuclidiana(origLatLng, destLatLng, nomeDestino, index){
+	var dist = google.maps.geometry.spherical.computeDistanceBetween(origLatLng, destLatLng);
+	
+	if(dist != 0){
+		dist = dist.toFixed();
+
+		if(dist >= 1000){
+			dist /= 1000;
+
+			restaurantes[index].distancia.texto = dist +" km";
+		}
+		else if(dist > 0){
+			restaurantes[index].distancia.texto = dist +" m";
+		}
+		else{ 
+			restaurantes[index].distancia.texto = "menos de 1 m";
+		}
+	}
+	else{
+		restaurantes[index].distancia.texto = "0 m";
+	}
+
+	restaurantes[index].distancia.valor = dist;
+}
+
+function desenhaRotaEuclidiana(origem, destino){
 	var coordenadas = [
-	    origem.position,
-		destino.position    
-	];
+ 	    origem.position,
+ 		destino.position    
+ 	];
 
 	var rota = new google.maps.Polyline({
 		path: coordenadas,
@@ -62,44 +117,44 @@ function desenhaRota(){
 		strokeWeight: 2
 	});
 
-	console.log(rota);
-	rota.setMap(map);  
-
-	if(origem != undefined && destino != undefined){
-		calculeRota = new google.maps.DirectionsService();
-		renderRota = new google.maps.DirectionsRenderer();
-		renderRota.setMap(map);
-		
-		var request = {
-			origin: origem.position,
-			destination: destino.position,
-			travelMode: google.maps.DirectionsTravelMode.DRIVING
-		};
-
-		calculeRota.route(request, function(response, status){
-			if(status == google.maps.DirectionsStatus.OK){
-				renderRota.setDirections(response);
-			}
-		});
-	}
+	rota.setMap(map);
 }
 
-function calculaDistancia(origLatLng, destLatLng){
-	dist = google.maps.geometry.spherical.computeDistanceBetween(origLatLng, destLatLng);
-	
-	if(dist != 0){
-		dist = dist.toFixed();
+function compare(a,b) {
+	if (a.distancia.valor < b.distancia.valor) return -1;
+	if (a.distancia.valor > b.distancia.valor) return 1;
+  	
+  	return 0;
+}
 
-		if(dist >= 1000){
-			dist /= 1000;
-			alert("distancia = "+ dist +"km");
+function desenhaRota(origem, destino){
+	direcaoRota = new google.maps.DirectionsService();
+	mostraRota = new google.maps.DirectionsRenderer();
+	mostraRota.setMap(map);
+	
+	var request = {
+		origin: origem.position,
+		destination: destino.position,
+		travelMode: google.maps.DirectionsTravelMode.DRIVING
+	};
+
+	direcaoRota.route(request, function(response, status){
+		if(status == google.maps.DirectionsStatus.OK){
+			mostraRota.setDirections(response);
+			console.log("Tempo de percurso estimado: "+response.routes[0].legs[0].duration.text);
+			console.log("Distancia total: "+response.routes[0].legs[0].distance.text);
 		}
-		else if(dist > 0){
-			alert("distancia = "+ dist +"m");
-		}
-		else alert("menos de 1m");
-	}
-	else{
-		alert("0m");
-	}
+	});
+}
+
+function mostraListaRestaurante(){
+	var lista = "<br><b>Lista Restaurantes por Distância</b><br>";
+
+	for (var i = 0; i < restaurantes.length; i++) {
+    	lista += "<p id='restauranteInfo'> Restaurante " + restaurantes[i].nome + "<br>";
+    	lista += " Preco: " + restaurantes[i].preco + "<br>";
+    	lista += " <b>Distância: " + restaurantes[i].distancia.texto + "</b></p>";
+  	}
+
+	$("#listaRestaurantes").html(lista);
 }

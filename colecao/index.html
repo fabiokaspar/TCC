@@ -8,7 +8,7 @@
     <meta charset="utf-8">
  
     <style>
-    	#resposta{
+    	#restauranteInfo {
     		background-color: MediumTurquoise;
     	}
     </style>
@@ -20,17 +20,17 @@
         <input id="a" type="text" placeholder="Estabelecimento..." class="focus">
   		  <button>Pesquisar</button> <br><br>
         <b>Ordenar por: </b><br><br>
-        <input id="localizacao" type="radio" name="1" checked>localização
+        <input id="localizacao" type="radio" name="1" checked>distância
         <input id="preco" type="radio" name="1">preço            
         <input id="qualidade" type="radio" name="1">qualidade            
     </div>
 
   	<br>
-  	<div id="resposta" bg-color="yellow"></div>
   	<!-- *************************** -->
 
-	<div id="googleMap" style="width:500px;height:380px;"></div>
+  <div id="googleMap" style="width:500px;height:380px;"></div>
 	
-
+  <div id="listaRestaurantes"></div>
+	
   </body>
 </html>
