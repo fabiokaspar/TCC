@@ -14,7 +14,7 @@ var restaurantes = [
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
-function initialize() {	  
+function initialize() {
 	mapProp = {
 		center:new google.maps.LatLng(-23.55112,-46.63438),
 		zoom:11
@@ -47,18 +47,26 @@ function errorGeolocation(error){
     alert("Falha ao buscar sua geolocalização");
 }
 
+//TODO: Verificar se isto '$("#restaurante"+i)' esta certo 
 function main(){
 	if(origem != undefined){
 		for(var i = 0; i < 5; i++){
 			marcaDestino(i);
 			calculaDistanciaEuclidiana(origem.position, restaurantes[i].marker.position, restaurantes[i].nome, i);
-			desenhaRotaEuclidiana(origem, restaurantes[i].marker);
+			// desenhaRotaEuclidiana(origem, restaurantes[i].marker);
 		}
 
 		restaurantes.sort(compare);
-		desenhaRota(origem, restaurantes[0].marker);
 	
 		mostraListaRestaurante();
+
+		$("#btnRota").click(function(){
+			escondeMarkers();
+			for(var i = 0; i < restaurantes.length; i++){
+				if($("#restaurante"+i).prop("checked")) 
+					desenhaRota(origem, restaurantes[i].marker);
+			}
+		});
 	}
 }
 
@@ -147,14 +155,27 @@ function desenhaRota(origem, destino){
 	});
 }
 
+// TODO: fazer com que apenas um radio button esteja selecionado (checked)
 function mostraListaRestaurante(){
-	var lista = "<br><b>Lista Restaurantes por Distância</b><br>";
+	var lista = "<br><b>Lista Restaurantes por Distância</b><br><form>";
 
 	for (var i = 0; i < restaurantes.length; i++) {
-    	lista += "<p id='restauranteInfo'> Restaurante " + restaurantes[i].nome + "<br>";
+    	lista += "<p class='restauranteInfo'><input id='restaurante"+i+"' type='radio' 'name='1'> restaurante " + restaurantes[i].nome + "<br>";
     	lista += " Preco: " + restaurantes[i].preco + "<br>";
     	lista += " <b>Distância: " + restaurantes[i].distancia.texto + "</b></p>";
   	}
 
+  	lista+="</form>";
+  	lista+="<button type='button' id='btnRota'>Criar rota</button>";
+
+
 	$("#listaRestaurantes").html(lista);
+}
+
+function escondeMarkers(){
+	for(var i = 0; i < 5; i++){
+		restaurantes[i].marker.setMap(null);
+	}
+
+	origem.setMap(null);
 }
