@@ -8,8 +8,8 @@ var restaurantes = [
 	{nome:"D", lat:-23.51583, lon: -46.65721, preco: "40,00", qualid: 3, distancia: {texto: "0", valor: 0}, marker: undefined},
 	{nome:"B", lat:-23.50811, lon: -46.70064, preco: "75,00", qualid: 1, distancia: {texto: "0", valor: 0}, marker: undefined},
 	{nome:"E", lat:-23.52779, lon: -46.64451, preco: "30,00", qualid: 4, distancia: {texto: "0", valor: 0}, marker: undefined},
-	{nome:"C", lat:-23.51126, lon: -46.67936, preco: "55,00", qualid: 2, distancia: {texto: "0", valor: 0}, marker: undefined},
-	{nome:"A", lat:-23.49473, lon: -46.70906, preco: "70,00", qualid: 5, distancia: {texto: "0", valor: 0}, marker: undefined}
+	{nome:"C", lat:-23.51126, lon: -46.67936, preco: "55,00", qualid: 5, distancia: {texto: "0", valor: 0}, marker: undefined},
+	{nome:"A", lat:-23.49473, lon: -46.70906, preco: "70,00", qualid: 2, distancia: {texto: "0", valor: 0}, marker: undefined}
 ];
 
 google.maps.event.addDomListener(window, 'load', initialize);
@@ -39,7 +39,9 @@ function getGeolocation(position){
 
 	infowindow.open(map,origem);
 
-	main();
+	$("#btnPesquisar").click(function(){
+		main();
+	});
 }
 
 function errorGeolocation(error){
@@ -47,7 +49,6 @@ function errorGeolocation(error){
     alert("Falha ao buscar sua geolocalização");
 }
 
-//TODO: Verificar se isto '$("#restaurante"+i)' esta certo 
 function main(){
 	if(origem != undefined){
 		for(var i = 0; i < 5; i++){
@@ -56,7 +57,9 @@ function main(){
 			// desenhaRotaEuclidiana(origem, restaurantes[i].marker);
 		}
 
-		restaurantes.sort(compare);
+		if($("#inptLocalizacao").prop("checked")) restaurantes.sort(compareDist);
+		else if($("#inptPreco").prop("checked")) restaurantes.sort(comparePreco);
+		else if($("#inptQualidade").prop("checked")) restaurantes.sort(compareQualid);
 	
 		mostraListaRestaurante();
 
@@ -128,9 +131,23 @@ function desenhaRotaEuclidiana(origem, destino){
 	rota.setMap(map);
 }
 
-function compare(a,b) {
+function compareDist(a,b) {
 	if (a.distancia.valor < b.distancia.valor) return -1;
 	if (a.distancia.valor > b.distancia.valor) return 1;
+  	
+  	return 0;
+}
+
+function comparePreco(a,b) {
+	if (a.preco < b.preco) return -1;
+	if (a.preco > b.preco) return 1;
+  	
+  	return 0;
+}
+
+function compareQualid(a,b) {
+	if (a.qualid < b.qualid) return -1;
+	if (a.qualid > b.qualid) return 1;
   	
   	return 0;
 }
@@ -155,15 +172,25 @@ function desenhaRota(origem, destino){
 	});
 }
 
-// TODO: fazer com que apenas um radio button esteja selecionado (checked)
 function mostraListaRestaurante(){
 	var lista = "<br><b>Lista Restaurantes por Distância</b><br><form>";
 
-	for (var i = 0; i < restaurantes.length; i++) {
-    	lista += "<p class='restauranteInfo'><input id='restaurante"+i+"' type='radio' 'name='1'> restaurante " + restaurantes[i].nome + "<br>";
-    	lista += " Preco: " + restaurantes[i].preco + "<br>";
-    	lista += " <b>Distância: " + restaurantes[i].distancia.texto + "</b></p>";
-  	}
+	if($("#inptQualidade").prop("checked")){
+		for (var i = restaurantes.length-1; i >=0; i--) {
+	    	lista += "<p class='restauranteInfo'><input id='restaurante"+i+"' type='radio' name='1'> restaurante " + restaurantes[i].nome + "<br>";
+	    	lista += " Preco: " + restaurantes[i].preco + "<br>";
+	    	lista += " Qualidade: " + restaurantes[i].qualid + "<br>";
+	    	lista += " <b>Distância: " + restaurantes[i].distancia.texto + "</b></p>";
+	  	}
+	}
+	else{
+		for (var i = 0; i < restaurantes.length; i++) {
+	    	lista += "<p class='restauranteInfo'><input id='restaurante"+i+"' type='radio' name='1'> restaurante " + restaurantes[i].nome + "<br>";
+	    	lista += " Preco: " + restaurantes[i].preco + "<br>";
+	    	lista += " Qualidade: " + restaurantes[i].qualid + "<br>";
+	    	lista += " <b>Distância: " + restaurantes[i].distancia.texto + "</b></p>";
+	  	}
+	}
 
   	lista+="</form>";
   	lista+="<button type='button' id='btnRota'>Criar rota</button>";
