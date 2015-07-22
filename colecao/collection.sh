@@ -31,7 +31,8 @@ if [[ ! -e ./restaurante ]]; then
 	# acessa o link e coloca o seu conteudo no arquivo com o nome correspondente 
 	i=0; 
 	while [ $i -lt ${#arrayNome[*]} ]; do 
-	   	wget -qO-  ${arrayLink[$i]} > ${arrayNome[$i]}."txt"
+   	wget -qO-  ${arrayLink[$i]} > ${arrayNome[$i]}."txt"
+		php ../cleaner.php ${arrayNome[$i]}."txt"
 		i=$((i+1)); 
 	done	
 
