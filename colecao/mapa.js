@@ -164,7 +164,7 @@ function desenhaRota(origem, destino){
 
 function mostraListaRestaurante(){
 	var lista = "<br><b>Lista Restaurantes por Distância</b><br>";
-		lista += "<mark> Escolha um dos estabelecimentos para calcular rota:</mark> <form>"
+		lista += "<mark> Escolha um dos estabelecimentos para calcular rota:</mark><form>"
 
 	if($("#inptQualidade").prop("checked")){
 		for (var i = restaurantes.length-1; i >=0; i--) {
@@ -183,10 +183,9 @@ function mostraListaRestaurante(){
 	  	}
 	}
 
-  	lista+="</form>";
-  	lista+="<input type='button' id='btnRota' value='Criar rota'>";
-
-
+  	lista += "</form>";
+  	lista += "<input type='button' id='btnRota' value='Criar rota até o local marcado'>";
+  	
 	$("#listaRestaurantes").html(lista);
 }
 
