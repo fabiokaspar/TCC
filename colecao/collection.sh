@@ -36,7 +36,7 @@ criaPaginaRestaurante(){
 	while [ $i -lt ${#arrayNome[*]} ]; do 
    	wget -qO-  ${arrayLink[$i]} > ${arrayNome[$i]}."txt"
 	  # cat ${arrayNome[$i]}."txt" | egrep -o "<\!--TITLE-->*<\!--/LOCATIONS-->" > ${arrayNome[$i]}."txt"
-		php ../cleaner.php ${arrayNome[$i]}."txt"
+		php ../cleaner.php ${arrayNome[$i]}."txt" ${arrayLink[$i]}
 		i=$((i+1)); 
 	done	
 	echo "Arquivo de cada um dos restaurantes ...OK"
