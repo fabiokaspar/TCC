@@ -24,7 +24,7 @@ if(preg_match("/\<\!\-{2}TITLE\-{2}\>(.+?)\<\!\-{2}\/LOCATIONS\-{2}\>/s", $text,
     }
     $args['link'] = $argv[2];
     
-    $saida = fopen("final_".$filename,"w");
+    $saida = fopen($filename,"w");
     foreach($args as $i => $e) {
         if(is_array($e)) {
             foreach($e as $j => $f) {
