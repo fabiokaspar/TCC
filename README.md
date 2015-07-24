@@ -16,3 +16,7 @@ Depois é só compilar os 2 arquivos da documentação do lucene **somente** com
 ######Site referencia para lista de estabelecimentos:
 
 `http://guia1.folha.com.br/busca/restaurantes/?q`
+
+####Exemplo ajax
+
+Colocar os dois arquivos (ajaxExemplo.html e gethint.php) na pasta var/www para executar com o localhost. Além disso, é necessário ter o apache rodando (`$ sudo service apache2 start`).
