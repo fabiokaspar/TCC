@@ -1,6 +1,7 @@
+<!-- Change your life! Don't waste time looking for! Join us in ... LookingFor -->
 <html>
   <head>
-    <title>Trabalho de conclusão de curso</title>
+    <title>LookingFor</title>
     <link rel="stylesheet" type="text/css" href="css/regras.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	  <script src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=geometry&language=pt-BR">
@@ -10,22 +11,25 @@
   </head>
   <body>
 
-  	<!-- *************************** -->
-	 <div id="pesquisa">       
-        <input id="estab" type="text" placeholder="Estabelecimento..." class="focus">
-  		  <button id="btnPesquisar">Pesquisar</button> <br><br>
-        <b>Ordenar por: </b>
-        <input id="inptLocalizacao" type="radio" name="1" checked>distância
-        <input id="inptPreco" type="radio" name="1">preço            
-        <input id="inptQualidade" type="radio" name="1">qualidade            
-    </div>
+  <div id="conteudo">  
+      <div id="titulo">LOOKING FOR</div>
+      <hr>
+    	<!-- *************************** -->
+      <div id="pesquisa">       
+          <input id="estab" type="text" placeholder="Estabelecimento..." class="focus">
+      	  <button id="btnPesquisar">Pesquisar</button> <br><br>
+          <b>Ordenar por: </b>
+          <input id="inptLocalizacao" type="radio" name="1" checked>distância
+          <input id="inptPreco" type="radio" name="1">preço            
+          <input id="inptQualidade" type="radio" name="1">qualidade            
+      </div>
 
-  	<br>
-  	<!-- *************************** -->
+      <br>
+    	<!-- *************************** -->
 
-  <div id="googleMap" style="width:700px;height:500px;"></div>
-	
-  <div id="listaRestaurantes"></div>
+      <div id="googleMap"></div>
+      <div id="listaRestaurantes"></div>
+   </div>
 	
   </body>
 </html>

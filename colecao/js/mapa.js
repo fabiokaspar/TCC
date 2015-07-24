@@ -4,6 +4,7 @@ var origem = undefined;
 var direcaoRota;
 var mostraRota;
 
+// TODO: Adicionar mais do que 5 markers
 var restaurantes = [
 	{nome:"D", lat:-23.51583, lon: -46.65721, preco: "40,00", qualid: 3, distancia: {texto: "0", valor: 0}, marker: undefined},
 	{nome:"B", lat:-23.50811, lon: -46.70064, preco: "75,00", qualid: 1, distancia: {texto: "0", valor: 0}, marker: undefined},
@@ -44,6 +45,9 @@ function getGeolocation(position){
 	infowindow.open(map,origem);
 
 	$("#btnPesquisar").click(function(){
+		origem.setMap(map);
+		mostraRota.setMap(null);
+
 		main();
 	});
 }
@@ -54,6 +58,8 @@ function errorGeolocation(error){
 }
 
 function main(){
+	var rotaMarcada = false;
+
 	if(origem != undefined){
 		for(var i = 0; i < 5; i++){
 			marcaDestino(i);
@@ -68,12 +74,18 @@ function main(){
 		mostraListaRestaurante();
 
 		$("#btnRota").click(function(){
-			escondeMarkers();
+			
 			for(var i = 0; i < restaurantes.length; i++){
 				if($("#restaurante"+i).prop("checked")){ 
+					reapareceMarkers();
+					escondeMarkers(i);
+					rotaMarcada = true;
 					mostraRota.setMap(null);
 					desenhaRota(origem, restaurantes[i].marker);
 				}
+			}
+			if(!rotaMarcada){
+				alert("Por favor, escolha uma das rotas!");
 			}
 		});
 	}
@@ -189,12 +201,16 @@ function mostraListaRestaurante(){
 	$("#listaRestaurantes").html(lista);
 }
 
-function escondeMarkers(){
-	for(var i = 0; i < 5; i++){
-		restaurantes[i].marker.setMap(null);
-	}
+function escondeMarkers(index){
+	restaurantes[index].marker.setMap(null);
 
 	origem.setMap(null);
+}
+
+function reapareceMarkers(){
+	for(var i = 0; i < 5; i++){
+		restaurantes[i].marker.setMap(map);
+	}
 }
 
 // função em desuso

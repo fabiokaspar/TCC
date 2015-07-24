@@ -3,7 +3,23 @@
 	width: 70%;
 }
 
-#listaRestaurantes{
+#listaRestaurantes {
 	margin-left: 20cm;
 	margin-top: -15cm;
+}
+
+#titulo {
+	color: #228B22;
+	margin-left: 40%; 
+	padding: 5px;
+
+	font-family: "Times New Roman", Times, serif;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 40px;
+}
+
+#googleMap {
+	width:700px;
+	height:500px;
 }
