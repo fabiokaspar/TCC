@@ -5,13 +5,15 @@ var direcaoRota;
 var mostraRota;
 
 // TODO: Adicionar mais do que 5 markers
+/*
 var restaurantes = [
 	{nome:"D", lat:-23.51583, lon: -46.65721, preco: "40,00", qualid: 3, distancia: {texto: "0", valor: 0}, marker: undefined},
 	{nome:"B", lat:-23.50811, lon: -46.70064, preco: "75,00", qualid: 1, distancia: {texto: "0", valor: 0}, marker: undefined},
 	{nome:"E", lat:-23.52779, lon: -46.64451, preco: "30,00", qualid: 4, distancia: {texto: "0", valor: 0}, marker: undefined},
 	{nome:"C", lat:-23.51126, lon: -46.67936, preco: "55,00", qualid: 5, distancia: {texto: "0", valor: 0}, marker: undefined},
 	{nome:"A", lat:-23.49473, lon: -46.70906, preco: "70,00", qualid: 2, distancia: {texto: "0", valor: 0}, marker: undefined}
-];
+]; 
+*/
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
@@ -26,6 +28,30 @@ function initialize() {
 	mostraRota = new google.maps.DirectionsRenderer();
 
 	navigator.geolocation.getCurrentPosition(getGeolocation, errorGeolocation);
+	clienteRequisicao();
+}
+
+function clienteRequisicao(){
+  	$('#ajax_form').submit(function(){
+  		var dados = $(this).serialize();
+  		$.ajax({
+			type: "POST",
+			url: "php/servidor.php",
+			data: dados,
+			dataType: "text",
+			success: function(response){
+				$('#listaRestaurantes').html('');
+				$('#listaRestaurantes').append(response);
+				//alert(response);
+				console.log(response);
+			},
+			error: function(err){
+				alert("ERRO!");
+				console.log(err);
+			}		
+		});
+		return false;
+  	});
 }
 
 function getGeolocation(position){
@@ -39,15 +65,15 @@ function getGeolocation(position){
 	origem.setMap(map);
 
 	var infowindow = new google.maps.InfoWindow({
-			content: "origem"
+		content: "origem"
 	});
 
 	infowindow.open(map,origem);
 
 	$("#btnPesquisar").click(function(){
+		//clienteRequisicao();
 		origem.setMap(map);
 		mostraRota.setMap(null);
-
 		main();
 	});
 }
@@ -74,7 +100,6 @@ function main(){
 		mostraListaRestaurante();
 
 		$("#btnRota").click(function(){
-			
 			for(var i = 0; i < restaurantes.length; i++){
 				if($("#restaurante"+i).prop("checked")){ 
 					reapareceMarkers();
@@ -182,7 +207,7 @@ function mostraListaRestaurante(){
 		for (var i = restaurantes.length-1; i >=0; i--) {
 	    	lista += "<p class='restauranteInfo'><input id='restaurante"+i+"' type='radio' name='1'> restaurante " + restaurantes[i].nome + "<br>";
 	    	lista += " Preco: " + restaurantes[i].preco + "<br>";
-	    	lista += " Qualidade: " + restaurantes[i].qualid + "<br>";
+	    	lista += " Qualidade: " + restaurantes[i].qualid + " estrelas <br>";
 	    	lista += " <b>Distância: " + restaurantes[i].distancia.texto + "</b></p>";
 	  	}
 	}

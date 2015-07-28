@@ -47,20 +47,23 @@ removeArquivosDesnecessarios(){
 	echo "Arquivos desnecessarios removidos .....OK"
 }
 
+#indexador(){
+#	if [[ ! -e ./index ]]; then
+#		java org.apache.lucene.demo.IndexFiles -docs $PWD
+#	fi
+#}
+
 ################ MAIN ################  
-
-if [[ ! -e ./restaurante ]]; then
 	
-	mkdir ./restaurante
-	cd restaurante
-	pegaLinkDosSites
-	pegaNomeDosSites
-	criaPaginaRestaurante
-	removeArquivosDesnecessarios
+#mkdir ./restaurantes
+cd restaurantes
+pegaLinkDosSites
+pegaNomeDosSites
+criaPaginaRestaurante
+removeArquivosDesnecessarios
+cd ..
 
-	../indexador.sh
-else
-	cd restaurante
-	../indexador.sh
-fi
-
+#else
+#	cd restaurantes
+#	indexador
+#fi

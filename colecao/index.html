@@ -12,16 +12,22 @@
   <body>
 
   <div id="conteudo">  
-      <div id="titulo">LOOKING FOR</div>
+      <div id="titulo">LookingFor</div>
       <hr>
     	<!-- *************************** -->
-      <div id="pesquisa">       
-          <input id="estab" type="text" placeholder="Estabelecimento..." class="focus">
-      	  <button id="btnPesquisar">Pesquisar</button> <br><br>
+      <div id="pesquisa">
+        <form method="POST" id="ajax_form">     
+         
+          <input id="estab" type="text" placeholder="Estabelecimento..." 
+          class="focus" name=query>
+      	 
+          <button id="btnPesquisar">Pesquisar</button> <br><br>
+         
           <b>Ordenar por: </b>
-          <input id="inptLocalizacao" type="radio" name="1" checked>distância
-          <input id="inptPreco" type="radio" name="1">preço            
-          <input id="inptQualidade" type="radio" name="1">qualidade            
+            <input id="inptLocalizacao" type="radio" name=parametro value="distancia" checked>distância
+            <input id="inptPreco" type="radio" name=parametro value="preco">preço            
+            <input id="inptQualidade" type="radio" name=parametro value="qualidade">qualidade   
+        </form>    
       </div>
 
       <br>
