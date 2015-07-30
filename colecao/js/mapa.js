@@ -5,7 +5,7 @@ var direcaoRota;
 var mostraRota;
 
 // TODO: Adicionar mais do que 5 markers
-/*
+
 var restaurantes = [
 	{nome:"D", lat:-23.51583, lon: -46.65721, preco: "40,00", qualid: 3, distancia: {texto: "0", valor: 0}, marker: undefined},
 	{nome:"B", lat:-23.50811, lon: -46.70064, preco: "75,00", qualid: 1, distancia: {texto: "0", valor: 0}, marker: undefined},
@@ -13,7 +13,6 @@ var restaurantes = [
 	{nome:"C", lat:-23.51126, lon: -46.67936, preco: "55,00", qualid: 5, distancia: {texto: "0", valor: 0}, marker: undefined},
 	{nome:"A", lat:-23.49473, lon: -46.70906, preco: "70,00", qualid: 2, distancia: {texto: "0", valor: 0}, marker: undefined}
 ]; 
-*/
 
 google.maps.event.addDomListener(window, 'load', initialize);
 

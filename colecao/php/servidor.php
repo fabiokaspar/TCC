@@ -1,11 +1,5 @@
 <?php
 	# É necessário adicionar permissão de escrita à pasta colecao
- 
-	$path = '../../../lucene-5.1.0/core/lucene-core-5.1.0.jar';
-	$path .= ':../../../lucene-5.1.0/queryparser/lucene-queryparser-5.1.0.jar';
-	$path .= ':../../../lucene-5.1.0/demo/lucene-demo-5.1.0.jar';
-	$path .= ':../../../lucene-5.1.0/analysis/common/lucene-analyzers-common-5.1.0.jar';
-
 	$haveDir = is_dir("../restaurantes");
 
 	if(!$haveDir){
@@ -29,6 +23,35 @@
 		$q = "nota";
 	}
 
-	echo "<b>Parametro relevante: " .$q. "</b><br><br>";
-	echo shell_exec('java -cp '. $path.' org.apache.lucene.demo.SearchFiles -paging 50 -index ../restaurantes/index -query '. $q);	
+	#echo "<b>Parâmetro relevante: " .$q. "</b><br><br>";
+	#echo shell_exec('cd ..; ./buscaColecao.sh '. $q);
+
+	if($haveDir){
+		$dir = dir("../restaurantes");
+		$array = array();
+
+		$i = 0;
+		while($arq = "../restaurantes/".$dir->read()){
+			//echo "<a href='../restaurantes/".$arq."'>".$arq."</a><br/>";
+			 //echo $arq. "<br/>";
+			if(ereg("\.txt", $arq)){
+				$fp = fopen($arq, 'r');
+				if(!$fp){
+					echo "ERRO ao abrir o arquivo ". $arq ."<br/>";
+				} else{
+					$conteudo = utf8_encode(fread($fp, filesize($arq)));
+					$array[$arq] = $conteudo;
+					//echo "<b>Arquivo = ".$arq."</b>:<br/><br/>".$conteudo;
+					fclose($fp);
+				}
+				$i++;
+				if($i == 10) break;
+			}
+		}
+		$dir->close();
+		foreach($array as $key => $value){
+			echo "<b>Nome: ". $key .". Conteudo: </b><br><br>".$value."<br/><br/>";
+		}
+	}
+
 ?>
