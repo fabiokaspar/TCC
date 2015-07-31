@@ -6,13 +6,7 @@ var mostraRota;
 
 // TODO: Adicionar mais do que 5 markers
 
-var restaurantes = [
-	{nome:"D", lat:-23.51583, lon: -46.65721, preco: "40,00", qualid: 3, distancia: {texto: "0", valor: 0}, marker: undefined},
-	{nome:"B", lat:-23.50811, lon: -46.70064, preco: "75,00", qualid: 1, distancia: {texto: "0", valor: 0}, marker: undefined},
-	{nome:"E", lat:-23.52779, lon: -46.64451, preco: "30,00", qualid: 4, distancia: {texto: "0", valor: 0}, marker: undefined},
-	{nome:"C", lat:-23.51126, lon: -46.67936, preco: "55,00", qualid: 5, distancia: {texto: "0", valor: 0}, marker: undefined},
-	{nome:"A", lat:-23.49473, lon: -46.70906, preco: "70,00", qualid: 2, distancia: {texto: "0", valor: 0}, marker: undefined}
-]; 
+var restaurantesArray = []; 
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
@@ -27,7 +21,6 @@ function initialize() {
 	mostraRota = new google.maps.DirectionsRenderer();
 
 	navigator.geolocation.getCurrentPosition(getGeolocation, errorGeolocation);
-	clienteRequisicao();
 }
 
 function clienteRequisicao(){
@@ -39,10 +32,13 @@ function clienteRequisicao(){
 			data: dados,
 			dataType: "text",
 			success: function(response){
-				$('#listaRestaurantes').html('');
-				$('#listaRestaurantes').append(response);
-				//alert(response);
-				console.log(response);
+				var obj = JSON.parse(response);
+
+				for(var i = 0; i < obj.restaurantes.length; i++){
+					restaurantesArray.push(obj.restaurantes[i]);					
+				}
+
+				main();				
 			},
 			error: function(err){
 				alert("ERRO!");
@@ -70,10 +66,9 @@ function getGeolocation(position){
 	infowindow.open(map,origem);
 
 	$("#btnPesquisar").click(function(){
-		//clienteRequisicao();
 		origem.setMap(map);
 		mostraRota.setMap(null);
-		main();
+		clienteRequisicao();
 	});
 }
 
@@ -88,24 +83,24 @@ function main(){
 	if(origem != undefined){
 		for(var i = 0; i < 5; i++){
 			marcaDestino(i);
-			calculaDistanciaEuclidiana(origem.position, restaurantes[i].marker.position, restaurantes[i].nome, i);
-			// desenhaRotaEuclidiana(origem, restaurantes[i].marker);
+			calculaDistanciaEuclidiana(origem.position, restaurantesArray[i].marker.position, restaurantesArray[i].nome, i);
+			// desenhaRotaEuclidiana(origem, restaurantesArray[i].marker);
 		}
 
-		if($("#inptLocalizacao").prop("checked")) restaurantes.sort(compareDist);
-		else if($("#inptPreco").prop("checked")) restaurantes.sort(comparePreco);
-		else if($("#inptQualidade").prop("checked")) restaurantes.sort(compareQualid);
+		if($("#inptLocalizacao").prop("checked")) restaurantesArray.sort(compareDist);
+		else if($("#inptPreco").prop("checked")) restaurantesArray.sort(comparePreco);
+		else if($("#inptQualidade").prop("checked")) restaurantesArray.sort(compareQualid);
 	
 		mostraListaRestaurante();
 
 		$("#btnRota").click(function(){
-			for(var i = 0; i < restaurantes.length; i++){
+			for(var i = 0; i < restaurantesArray.length; i++){
 				if($("#restaurante"+i).prop("checked")){ 
 					reapareceMarkers();
 					escondeMarkers(i);
 					rotaMarcada = true;
 					mostraRota.setMap(null);
-					desenhaRota(origem, restaurantes[i].marker);
+					desenhaRota(origem, restaurantesArray[i].marker);
 				}
 			}
 			if(!rotaMarcada){
@@ -117,20 +112,20 @@ function main(){
 
 function marcaDestino(index){
 	var destino = new google.maps.Marker({
-		position: new google.maps.LatLng(restaurantes[index].lat,restaurantes[index].lon),
-		title: restaurantes[index].nome,
+		position: new google.maps.LatLng(restaurantesArray[index].lat,restaurantesArray[index].lon),
+		title: restaurantesArray[index].nome,
 		icon: "images/restaurant-24@2x.png"
 	});
 	
 	destino.setMap(map);
 
 	var infowindow = new google.maps.InfoWindow({
-		content: restaurantes[index].nome
+		content: restaurantesArray[index].nome
 	});
 
 	//infowindow.open(map,destino);		
 
-	restaurantes[index].marker = destino;
+	restaurantesArray[index].marker = destino;
 }
 
 // cuidado: a distancia é euclidiana e pouco conveniente
@@ -143,20 +138,20 @@ function calculaDistanciaEuclidiana(origLatLng, destLatLng, nomeDestino, index){
 		if(dist >= 1000){
 			dist /= 1000;
 
-			restaurantes[index].distancia.texto = dist +" km";
+			restaurantesArray[index].distancia.texto = dist +" km";
 		}
 		else if(dist > 0){
-			restaurantes[index].distancia.texto = dist +" m";
+			restaurantesArray[index].distancia.texto = dist +" m";
 		}
 		else{ 
-			restaurantes[index].distancia.texto = "menos de 1 m";
+			restaurantesArray[index].distancia.texto = "menos de 1 m";
 		}
 	}
 	else{
-		restaurantes[index].distancia.texto = "0 m";
+		restaurantesArray[index].distancia.texto = "0 m";
 	}
 
-	restaurantes[index].distancia.valor = dist;
+	restaurantesArray[index].distancia.valor = dist;
 }
 
 function compareDist(a,b) {
@@ -203,19 +198,19 @@ function mostraListaRestaurante(){
 		lista += "<mark> Escolha um dos estabelecimentos para calcular rota:</mark><form>"
 
 	if($("#inptQualidade").prop("checked")){
-		for (var i = restaurantes.length-1; i >=0; i--) {
-	    	lista += "<p class='restauranteInfo'><input id='restaurante"+i+"' type='radio' name='1'> restaurante " + restaurantes[i].nome + "<br>";
-	    	lista += " Preco: " + restaurantes[i].preco + "<br>";
-	    	lista += " Qualidade: " + restaurantes[i].qualid + " estrelas <br>";
-	    	lista += " <b>Distância: " + restaurantes[i].distancia.texto + "</b></p>";
+		for (var i = restaurantesArray.length-1; i >=0; i--) {
+	    	lista += "<p class='restauranteInfo'><input id='restaurante"+i+"' type='radio' name='1'> restaurante " + restaurantesArray[i].nome + "<br>";
+	    	lista += " Preco: " + restaurantesArray[i].preco + "<br>";
+	    	lista += " Qualidade: " + restaurantesArray[i].qualid + " estrelas <br>";
+	    	lista += " <b>Distância: " + restaurantesArray[i].distancia.texto + "</b></p>";
 	  	}
 	}
 	else{
-		for (var i = 0; i < restaurantes.length; i++) {
-	    	lista += "<p class='restauranteInfo'><input id='restaurante"+i+"' type='radio' name='1'> restaurante " + restaurantes[i].nome + "<br>";
-	    	lista += " Preco: " + restaurantes[i].preco + "<br>";
-	    	lista += " Qualidade: " + restaurantes[i].qualid + "<br>";
-	    	lista += " <b>Distância: " + restaurantes[i].distancia.texto + "</b></p>";
+		for (var i = 0; i < restaurantesArray.length; i++) {
+	    	lista += "<p class='restauranteInfo'><input id='restaurante"+i+"' type='radio' name='1'> restaurante " + restaurantesArray[i].nome + "<br>";
+	    	lista += " Preco: " + restaurantesArray[i].preco + "<br>";
+	    	lista += " Qualidade: " + restaurantesArray[i].qualid + "<br>";
+	    	lista += " <b>Distância: " + restaurantesArray[i].distancia.texto + "</b></p>";
 	  	}
 	}
 
@@ -226,14 +221,14 @@ function mostraListaRestaurante(){
 }
 
 function escondeMarkers(index){
-	restaurantes[index].marker.setMap(null);
+	restaurantesArray[index].marker.setMap(null);
 
 	origem.setMap(null);
 }
 
 function reapareceMarkers(){
 	for(var i = 0; i < 5; i++){
-		restaurantes[i].marker.setMap(map);
+		restaurantesArray[i].marker.setMap(map);
 	}
 }
 

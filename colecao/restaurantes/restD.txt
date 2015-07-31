@@ -1,0 +1,12 @@
+{
+	"nome":"D", 
+	"lat":-23.51583, 
+	"lon": -46.65721, 
+	"preco": "40,00", 
+	"qualid": 3, 
+	"distancia": {
+		"texto": "0", 
+		"valor": 0
+	}, 
+	"marker": "undefined"
+}
