@@ -34,11 +34,14 @@ function clienteRequisicao(){
 			success: function(response){
 				var obj = JSON.parse(response);
 
-				for(var i = 0; i < obj.restaurantes.length; i++){
+				/*for(var i = 0; i < obj.restaurantes.length; i++){
 					restaurantesArray.push(obj.restaurantes[i]);					
 				}
 
-				main();				
+				main(); */
+				console.log(obj);
+				console.log(response);
+
 			},
 			error: function(err){
 				alert("ERRO!");
