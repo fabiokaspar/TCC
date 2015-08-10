@@ -85,15 +85,15 @@ if(preg_match("/\<\!\-{2}TITLE\-{2}\>(.+?)\<\!\-{2}\/LOCATIONS\-{2}\>/s", $text,
                     $funcionamento = clear($qnd_matches[1]);
                     $args['local'][$i]['funcionamento'] = $funcionamento;
                 }
-//                $json = Geocoder::getJSON($endereco);
-//                if($json) {
-//                    $api_info = json_decode($json)->{'results'}[0];
-//                    $location = $api_info->{'geometry'}->{'location'};
-//                    $args['local'][$i]['latlon'] = array($location->{"lat"},$location->{"lng"});  
-//                } else {
-//                    unset($args['local'][$i]);
-//                    $ok = false;    
-//                }                
+                $json = Geocoder::getJSON($endereco);
+                if($json) {
+                    $api_info = json_decode($json)->{'results'}[0];
+                    $location = $api_info->{'geometry'}->{'location'};
+                    $args['local'][$i]['latlon'] = array($location->{"lat"},$location->{"lng"});  
+                } else {
+                    unset($args['local'][$i]);
+                    $ok = false;    
+                }                
             }
         }
     }   
