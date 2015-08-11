@@ -7,4 +7,4 @@ path=$path:../../lucene-5.1.0/analysis/common/lucene-analyzers-common-5.1.0.jar
 
 pathIndex=./restaurantes/index
 
-java -classpath $path org.apache.lucene.demo.SearchFiles -index $pathIndex -query $1 -paging 40
+java -classpath $path org.apache.lucene.demo.SearchFiles -index $pathIndex -query $1 -paging 50

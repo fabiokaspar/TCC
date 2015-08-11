@@ -40,5 +40,8 @@
 	$dir->close();
 	$JSON .= ']}';
 
-	echo $JSON;
+	$resp = shell_exec('cd ..; ./buscaColecao.sh '.$q);
+	echo $resp;
+	//echo $JSON;
+
 ?>
