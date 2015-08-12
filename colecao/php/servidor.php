@@ -1,47 +1,54 @@
 <?php
 	# É necessário adicionar permissão de escrita à pasta colecao
-	if($_POST['parametro'] == "distancia"){
+	if ($_POST['parametro'] == "distancia") {
 		$p = "endereco";
 	}
-	else if($_POST['parametro'] == "preco"){
+	else if ($_POST['parametro'] == "preco") {
 		$p = "preco";
 	}
-	else{
+	else {
 		$p = "nota";
 	}
 	$q = $_POST['query'];
 	
 	$haveDir = is_dir("../restaurantes");
 
-	if(!$haveDir){
+	if (!$haveDir) {
 		umask(0);
 		mkdir('../restaurantes', 0777, true);
 		shell_exec('cd .. ; ./criaColecao.sh; ./indexaColecao.sh');
 	}
 
-	$dir = dir("../restaurantes");
-	$JSON = '{ "restaurantes" : [';
+	$resp =	shell_exec('cd .. ; ./buscaColecao.sh '. $q);
+	$array = explode("\n", $resp);
+	$final = array();
 
-	$i = 0;
-	while($arq = "../restaurantes/".$dir->read()){
-		if(ereg("\.txt", $arq)){
-			$fp = fopen($arq, 'r');
-			if(!$fp){
-				echo "ERRO ao abrir o arquivo ". $arq ."<br/>";
-			} else{
-				$JSON .= utf8_encode(fread($fp, filesize($arq)));
-				fclose($fp);
-			}
-			$i++;
-			if($i == 50) break;
-			else $JSON .= ', ';
+	foreach ($array as $value) {	
+		if (ereg("[A-z\.\/]+\.txt", $value, $expr)) { 
+			//echo $expr[0]."\n";
+			$final[] = $expr[0];
 		}
 	}
+	$tam = count($final);
+
+	$dir = dir("../restaurantes");
+	$JSON = '{ "restaurantes" : [';
+	
+	for ($i = 0; $nome = $dir->read();) {
+		if (ereg("\.txt$", $nome)) {
+			if (in_array("./restaurantes/".$nome, $final)) {
+				$arquivo = "../restaurantes/".$nome;
+				$JSON .= utf8_encode(file_get_contents($arquivo));
+				
+				$i++;
+				if ($i == $tam) break;
+				else $JSON .= ",\n\n";
+			}
+		}
+	}
+
 	$dir->close();
 	$JSON .= ']}';
 
-	$resp = shell_exec('cd ..; ./buscaColecao.sh '.$q);
-	echo $resp;
-	//echo $JSON;
-
+	echo $JSON;
 ?>

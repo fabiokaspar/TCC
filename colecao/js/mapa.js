@@ -32,14 +32,14 @@ function clienteRequisicao(){
 			data: dados,
 			dataType: "text",
 			success: function(response){
-				//var obj = JSON.parse(response);
+				var obj = JSON.parse(response);
 
 				/*for(var i = 0; i < obj.restaurantes.length; i++){
 					restaurantesArray.push(obj.restaurantes[i]);					
 				}
 
 				main(); */
-				//console.log(obj);
+				console.log(obj);
 				console.log(response);
 			},
 			error: function(err){
