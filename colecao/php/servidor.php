@@ -11,6 +11,8 @@
 	}
 	$q = $_POST['query'];
 	
+	$q = '"'.$q.'"';
+	
 	$haveDir = is_dir("../restaurantes");
 
 	if (!$haveDir) {
@@ -19,7 +21,9 @@
 		shell_exec('cd .. ; ./criaColecao.sh; ./indexaColecao.sh');
 	}
 
-	$resp =	shell_exec('cd .. ; ./buscaColecao.sh '. $q);
+	$resp =	shell_exec("cd .. ; ./buscaColecao.sh ".$q);
+	//echo $resp;
+	
 	$array = explode("\n", $resp);
 	$final = array();
 
@@ -34,7 +38,7 @@
 	$dir = dir("../restaurantes");
 	$JSON = '{ "restaurantes" : [';
 	
-	for ($i = 0; $nome = $dir->read();) {
+	for ($i = 0; $nome = $dir->read(); ) {
 		if (ereg("\.txt$", $nome)) {
 			if (in_array("./restaurantes/".$nome, $final)) {
 				$arquivo = "../restaurantes/".$nome;
@@ -46,7 +50,7 @@
 			}
 		}
 	}
-
+	
 	$dir->close();
 	$JSON .= ']}';
 

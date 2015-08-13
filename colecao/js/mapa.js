@@ -39,7 +39,7 @@ function clienteRequisicao(){
 				}
 
 				main(); */
-				console.log(obj);
+				//console.log(obj);
 				console.log(response);
 			},
 			error: function(err){
