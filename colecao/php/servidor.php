@@ -28,7 +28,7 @@
 	$final = array();
 
 	foreach ($array as $value) {	
-		if (ereg("[A-z\.\/]+\.txt", $value, $expr)) { 
+		if (ereg("[A-z\.\/]+\.json$", $value, $expr)) { 
 			//echo $expr[0]."\n";
 			$final[] = $expr[0];
 		}
@@ -38,21 +38,22 @@
 	$dir = dir("../restaurantes");
 	$JSON = '{ "restaurantes" : [';
 	
-	for ($i = 0; $nome = $dir->read(); ) {
-		if (ereg("\.txt$", $nome)) {
+	while ($nome = $dir->read()) {
+		if (ereg("[A-z\.\/]+\.json$", $nome)) {
 			if (in_array("./restaurantes/".$nome, $final)) {
 				$arquivo = "../restaurantes/".$nome;
 				$JSON .= utf8_encode(file_get_contents($arquivo));
-				
-				$i++;
-				if ($i == $tam) break;
-				else $JSON .= ",\n\n";
+				$JSON .= ",\n\n";
 			}
 		}
 	}
-	
-	$dir->close();
-	$JSON .= ']}';
 
+	$JSON = rtrim($JSON, ",..\n");
+	$JSON .= ']}';
+	$dir->close();
+	
 	echo $JSON;
+	//echo "latitude = ". $_POST['lat'];
+	//echo "\nlongitude = ". $_POST['lng'];
+
 ?>

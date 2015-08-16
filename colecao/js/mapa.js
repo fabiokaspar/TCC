@@ -26,6 +26,13 @@ function initialize() {
 function clienteRequisicao(){
   	$('#ajax_form').submit(function(){
   		var dados = $(this).serialize();
+  		if (origem != undefined){
+  			dados += '&lat=';
+  			dados += origem.position.G;
+  			dados += '&lng=';
+  			dados += origem.position.K;
+  		}
+
   		$.ajax({
 			type: "POST",
 			url: "php/servidor.php",
@@ -33,14 +40,14 @@ function clienteRequisicao(){
 			dataType: "text",
 			success: function(response){
 				var obj = JSON.parse(response);
+				console.log(obj);
+				console.log(response);
 
 				/*for(var i = 0; i < obj.restaurantes.length; i++){
 					restaurantesArray.push(obj.restaurantes[i]);					
 				}
 
 				main(); */
-				//console.log(obj);
-				console.log(response);
 			},
 			error: function(err){
 				alert("ERRO!");
