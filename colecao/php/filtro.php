@@ -42,8 +42,9 @@
 		if (ereg("[A-z\.\/]+\.json$", $nome)) {
 			if (in_array("./restaurantes/".$nome, $final)) {
 				$arquivo = "../restaurantes/".$nome;
-				$JSON .= utf8_encode(file_get_contents($arquivo));
-				$JSON .= ",\n\n";
+				$content = utf8_encode(file_get_contents($arquivo));
+				$JSON .= $content;
+				$JSON .= ",\n\n";			
 			}
 		}
 	}

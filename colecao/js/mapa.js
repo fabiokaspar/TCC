@@ -35,7 +35,7 @@ function clienteRequisicao(){
 
   		$.ajax({
 			type: "POST",
-			url: "php/servidor.php",
+			url: "php/filtro.php",
 			data: dados,
 			dataType: "text",
 			success: function(response){
