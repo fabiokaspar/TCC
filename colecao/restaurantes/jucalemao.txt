@@ -323,7 +323,7 @@ document.write( "<a href=\"http://tools.folha.com.br/print?site=guia&amp;url=" +
 <table class="subInfo">
 <tr>
 <td class="down">
-	As informações abaixo foram checadas em 26/6/2015.<br> Após essa data, sugerimos contatar o local para confirmar as informações.</td>
+	As informações abaixo foram checadas em 30/6/2015.<br> Após essa data, sugerimos contatar o local para confirmar as informações.</td>
 </tr>
 </table>
 <!--/CHECK_DATE-->

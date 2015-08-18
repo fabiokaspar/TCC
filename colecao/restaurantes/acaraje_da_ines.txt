@@ -323,7 +323,7 @@ document.write( "<a href=\"http://tools.folha.com.br/print?site=guia&amp;url=" +
 <table class="subInfo">
 <tr>
 <td class="down">
-	As informações abaixo foram checadas em 05/5/2015.<br> Após essa data, sugerimos contatar o local para confirmar as informações.</td>
+	As informações abaixo foram checadas em 31/7/2015.<br> Após essa data, sugerimos contatar o local para confirmar as informações.</td>
 </tr>
 </table>
 <!--/CHECK_DATE-->
@@ -387,7 +387,7 @@ R. Ezequiel Freire, 265 - Santana - Norte. Telefone: 3582-4286.<br>
 <tr valign="top">
 <td>
 <span style="font-size: 11px;">
-segunda a sábado: 16h às 23h.<br></span>
+segunda a sexta: 12h às 15h e 17h às 22h30.<br>sábado: 11h às 22h.<br>domingo: 11h às 16h.<br></span>
 </td>
 </tr>
 </table>
@@ -406,7 +406,7 @@ segunda a sábado: 16h às 23h.<br></span>
 <td class="localInfo" colspan="2">
 Av. Nsa. Sra. do Loreto, 1.144 - Vila Medeiros - Norte. Telefone: 2982-1243.<br>
 <span style="font-size: 11px;">Aceita os cartões Amex, Diners, Elo, Good Card, MasterCard, Visa. Aceita os tíquetes Alelo, Plan Vale Refeição, Sodexo Pass, Ticket Restaurante Eletrônico. </span><br>
-<br>Não aceita cheques. Faz entrega em domicílio. Aceita reservas. Não tem ar-condicionado. Tem mesas ao ar livre. Tem conexão wi-fi. Possui cadeirões para bebês. 60 lugares. </td>
+<br>Não aceita cheques. Não faz entrega em domicílio. Aceita reservas. Não tem ar-condicionado. Tem mesas ao ar livre. Tem conexão wi-fi. Possui cadeirões para bebês. 60 lugares. </td>
 </tr>
 <tr>
 <td valign="top">
@@ -419,7 +419,7 @@ Av. Nsa. Sra. do Loreto, 1.144 - Vila Medeiros - Norte. Telefone: 2982-1243.<br>
 <tr valign="top">
 <td>
 <span style="font-size: 11px;">
-terça a quinta: 12h às 22h.<br>domingo: 12h às 17h.<br>sexta e sábado: 12h às 23h.<br></span>
+terça a sábado: 12h às 22h.<br>domingo: 12h às 17h.<br></span>
 </td>
 </tr>
 </table>

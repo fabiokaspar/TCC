@@ -157,9 +157,9 @@ public class SearchFiles {
         }
 
         Document doc = searcher.doc(hits[i].doc);
-        String path = doc.get("path");
-        if (path != null) {
-          System.out.println((i+1) + ". " + path);
+        String name = doc.get("path");
+        if (name != null) {
+          System.out.println((i+1) + ". " + name);
           String link = doc.get("link");
           if (link != null) {
             System.out.println("   Link: " + link);

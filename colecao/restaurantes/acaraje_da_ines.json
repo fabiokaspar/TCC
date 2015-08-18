@@ -9,7 +9,7 @@
             "endereco": "R. Ezequiel Freire, 265, Santana, Norte, São Paulo",
             "telefone": "3582-4286",
             "localInfo": "Aceita os cartões Amex, Cabal, Diners, Elo, Good Card, Hipercard, MasterCard, Visa. Aceita os tíquetes Alelo, Plan Vale Refeição, Sodexo Pass, Ticket Restaurante Eletrônico. Não aceita cheques. Faz entrega em domicílio. Aceita reservas. Não tem ar-condicionado. Tem conexão wi-fi. Possui cadeirões para bebês. 50 lugares.",
-            "funcionamento": "segunda a sábado: 16h às 23h.",
+            "funcionamento": "segunda a sexta: 12h às 15h e 17h às 22h30.sábado: 11h às 22h.domingo: 11h às 16h.",
             "latlon": [
                 -23.503988,
                 -46.6236398
@@ -18,8 +18,8 @@
         {
             "endereco": "Av. Nsa. Sra. do Loreto, 1.144, Vila Medeiros, Norte, São Paulo",
             "telefone": "2982-1243",
-            "localInfo": "Aceita os cartões Amex, Diners, Elo, Good Card, MasterCard, Visa. Aceita os tíquetes Alelo, Plan Vale Refeição, Sodexo Pass, Ticket Restaurante Eletrônico. Não aceita cheques. Faz entrega em domicílio. Aceita reservas. Não tem ar-condicionado. Tem mesas ao ar livre. Tem conexão wi-fi. Possui cadeirões para bebês. 60 lugares.",
-            "funcionamento": "terça a quinta: 12h às 22h.domingo: 12h às 17h.sexta e sábado: 12h às 23h.",
+            "localInfo": "Aceita os cartões Amex, Diners, Elo, Good Card, MasterCard, Visa. Aceita os tíquetes Alelo, Plan Vale Refeição, Sodexo Pass, Ticket Restaurante Eletrônico. Não aceita cheques. Não faz entrega em domicílio. Aceita reservas. Não tem ar-condicionado. Tem mesas ao ar livre. Tem conexão wi-fi. Possui cadeirões para bebês. 60 lugares.",
+            "funcionamento": "terça a sábado: 12h às 22h.domingo: 12h às 17h.",
             "latlon": [
                 -23.4864774,
                 -46.581452

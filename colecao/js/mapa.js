@@ -32,22 +32,26 @@ function clienteRequisicao(){
   			dados += '&lng=';
   			dados += origem.position.K;
   		}
-
   		$.ajax({
 			type: "POST",
 			url: "php/filtro.php",
 			data: dados,
 			dataType: "text",
 			success: function(response){
-				var obj = JSON.parse(response);
-				console.log(obj);
-				console.log(response);
+				try {
+					console.log(response);
+					var obj = JSON.parse(response);
+					console.log(obj);
+					console.log(response);
 
-				/*for(var i = 0; i < obj.restaurantes.length; i++){
-					restaurantesArray.push(obj.restaurantes[i]);					
+					/*for(var i = 0; i < obj.restaurantes.length; i++){
+						restaurantesArray.push(obj.restaurantes[i]);					
+					}
+
+					main(); */
+				} catch(e) {
+					console.log("Erro. --> "+e);
 				}
-
-				main(); */
 			},
 			error: function(err){
 				alert("ERRO!");

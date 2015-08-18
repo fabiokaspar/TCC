@@ -47,7 +47,7 @@ public class IndexFiles
 		}
 	}
 	static void indexDoc(IndexWriter writer, Path file) throws IOException {
-		String descricao = "", link = "";
+		String descricao = "", link = "", nome = "";
 		try (InputStream stream = Files.newInputStream(file)) {
 			Document doc = new Document();
       
@@ -61,6 +61,8 @@ public class IndexFiles
 		        sb.append(line);
 		    }
 		    JSONObject json = new JSONObject(sb.toString());
+		    nome = json.getString("nome");
+	    	doc.add( new StringField("name", nome, Field.Store.YES) );
 		    if(json.has("descricao")) {
 		    	descricao = json.getString("descricao");
 		    	doc.add( new TextField("contents", descricao, Field.Store.YES) );

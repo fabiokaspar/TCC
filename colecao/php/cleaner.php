@@ -46,8 +46,10 @@ $args = array();
 $ok = true;
 if(preg_match("/\<\!\-{2}TITLE\-{2}\>(.+?)\<\!\-{2}\/LOCATIONS\-{2}\>/s", $text, $matches_g)) {
     $text = $matches_g[1];
-    if(preg_match('/<td id="eventName">([\w\s]+)<\/td>/u',$text,$matches)) {
+    if(preg_match('/<td id="eventName">([\w\s-_\.&\'"]+)<\/td>/u',$text,$matches)) {
         $args['nome'] = $matches[1];
+    } else {
+	      finish(false);
     }
     if(preg_match("/alt\=\"(\w+)\"/u",$text,$matches)) {
         $args['nota'] = $matches[1];
