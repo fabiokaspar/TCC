@@ -1,8 +1,13 @@
-# TCC
-Códigos de linguagens em geral, paginas web, o que for necessário
+# TCC - LookingFor
 
-####Lucene
+####Lucene (para rodar no terminal)
+Este passo só é necessário para rodar o Lucene via terminal. 
 
+No caso do LookingFor, os scripts que chamam o Lucene já vem com a CLASSPATH setada logo no início
+deles. 
+Os scripts ignoram a configuração do ambiente do bash e a tarefa de setar as variáveis é manual.
+
+#####Vamos lá então:                                                              
 No arquivo ~/.bashrc (ele é um arquivo oculto, só aparece com ls -la),                                              adicionar (supondo que a pasta do lucene foi descompactada no ~/):
 
  `CLASSPATH=.:~/lucene-5.1.0/core/lucene-core-5.1.0.jar`  
@@ -11,12 +16,12 @@ No arquivo ~/.bashrc (ele é um arquivo oculto, só aparece com ls -la),        
  `CLASSPATH=$CLASSPATH:~/lucene-5.1.0/analysis/common/lucene-analyzers-common-5.1.0.jar`  
  `export CLASSPATH` 
 
-Depois é só compilar os 2 arquivos da documentação do lucene **somente** com `javac arquivo.java` e rodar **exatamente** conforme o código sugere.
+Depois é só compilar os 2 arquivos da documentação do lucene **somente** com `javac arquivo.java` e rodar **exatamente** conforme o código sugere. 
 
 ######Site referencia para lista de estabelecimentos:
 
 `http://guia1.folha.com.br/busca/restaurantes/?q`
 
-####Exemplo ajax
+####Iniciar o apache
 
-Colocar os dois arquivos (ajaxExemplo.html e gethint.php) na pasta var/www para executar com o localhost. Além disso, é necessário ter o apache rodando (`$ sudo service apache2 start`).
+`$ sudo service apache2 start`
