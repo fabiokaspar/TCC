@@ -1,0 +1,20 @@
+{
+    "nome": "Miski",
+    "nota": "Bom",
+    "descricao": "A casa sírio-libanesa foi aberta como rotisseria em 1987 e hoje também atua como restaurante. De quarta e sábado, serve bufê de \"melohie\", um cozido de verduras, com acompanhamentos como quibe assado e músculo bovino. Entre as opções à la carte, o \"chich barak\" (cappelletti) tem molho de coalhada e hortelã. <br>",
+    "preco": "de R$ 60,01 a R$ 75,00",
+    "cozinha": "Árabe",
+    "local": [
+        {
+            "endereco": "Al. Joaquim Eugênio de Lima, 1.690, Jardim Paulista, Oeste, São Paulo",
+            "telefone": "3884-3193",
+            "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Plan Vale Refeição, Sodexo Pass, Ticket Restaurante Eletrônico. Aceita cheques. Faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Não tem mesas ao ar livre. 110 lugares. Estac. c/ manob. (R$ 20).",
+            "funcionamento": "Restaurante: terça a sábado: 11h às 23h45.domingo: 11h30 às 16h30. Rotisseria: terça a sábado: 8h às 24h.domingo: 8h às 17h.",
+            "latlon": [
+                -23.5505199,
+                -46.6333094
+            ]
+        }
+    ],
+    "link": "http://guia1.folha.com.br/guia/restaurantes/arabe/11883/miski?sr=1#onde"
+}

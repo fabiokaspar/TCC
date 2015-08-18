@@ -1,0 +1,20 @@
+{
+    "nome": "Mama Leila",
+    "nota": "Regular",
+    "descricao": "Funciona em sistema de bufê cobrado por quilo ou com preço fixo (para comer à vontade). Traz pra­tos como quibe cru e mussacá. Em ambientação simples, que atrai um público do bairro, a ca­sa também oferece opções à la carte e alternativas vegetarianas.",
+    "preco": "de R$ 60,01 a R$ 75,00",
+    "cozinha": "Árabe",
+    "local": [
+        {
+            "endereco": "R. João Moura, 1.167, Pinheiros, Oeste, São Paulo",
+            "telefone": "3064-3823",
+            "localInfo": "Aceita os cartões Amex, Aura, Cabal, Diners, Elo, Hipercard, MasterCard, Sorocred, Visa. Aceita os tíquetes Alelo, Bônus, Plan Vale Refeição, Sodexo Pass, Ticket Restaurante Eletrônico. Não aceita cheques. Não faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Não tem mesas ao ar livre. 60 lugares.",
+            "funcionamento": "segunda a sexta e domingo: 11h30 às 17h.sábado: 11h30 às 18h.",
+            "latlon": [
+                -23.5505199,
+                -46.6333094
+            ]
+        }
+    ],
+    "link": "http://guia1.folha.com.br/guia/restaurantes/arabe/11875/mama_leila?sr=1#onde"
+}

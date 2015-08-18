@@ -1,0 +1,20 @@
+{
+    "nome": "Monte Líbano",
+    "nota": "Regular",
+    "descricao": "Na região da 25 de Março, o pequeno restaurante está instalado no primeiro andar de um prédio comercial desde 1973, e ainda guarda a aura daquela época. Tocada pela libanesa Alice Maatouk, serve receitas tradicionais feitas com delicadeza, a exemplo do quibe michui recheado com gordura de carneiro, carne com pinoli ou coalhada seca. Para experimentar a maioria dos pratos, opte pelo rodízio, que tem itens como o saboroso tabule e o arroz com lentilhas.",
+    "preco": "até R$ 60,00",
+    "cozinha": "Árabe",
+    "local": [
+        {
+            "endereco": "R. Cav. Basílio Jafet, 38, 1º andar, Centro, Centro, São Paulo",
+            "telefone": "3326-3544",
+            "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico. Aceita cheques. Não faz entrega em domicílio. Aceita reservas. Não tem ar-condicionado. Tem mesas ao ar livre. 70 lugares.",
+            "funcionamento": "segunda a sexta: 11h às 15h30.",
+            "latlon": [
+                -23.5406338,
+                -46.6320967
+            ]
+        }
+    ],
+    "link": "http://guia1.folha.com.br/guia/restaurantes/arabe/11873/monte_libano?sr=1#onde"
+}

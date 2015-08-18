@@ -1,0 +1,20 @@
+{
+    "nome": "Amazônia",
+    "nota": "Bom",
+    "descricao": "O paraense Paulo Leite apresenta clássicos da culinária amazônica, como o pato no tucupi e o tacacá, um caldo que leva folhas de jambu, camarão seco, tucupi e goma de mandioca. Outro destaque é a maniçoba, que lembra a feijoada, de origem indígena, feita com a folha da mandioca moída e fervida por sete dias. Prove os sorvetes, que vêm de Belém em sabores como cupuaçu e graviola.",
+    "preco": "de R$ 60,01 a R$ 75,00",
+    "cozinha": "Brasileira",
+    "local": [
+        {
+            "endereco": "R. Rui Barbosa, 206, Bela Vista, Centro, São Paulo",
+            "telefone": "3142-9264",
+            "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass. Não aceita cheques. Aceita reservas. Tem ar-condicionado. Tem mesas ao ar livre. Não tem local para comer. 55 lugares.",
+            "funcionamento": "segunda, terça e domingo: 12h às 15h.quarta a sábado: 12h às 15h e 19h às 23h.",
+            "latlon": [
+                -23.5573387,
+                -46.645613
+            ]
+        }
+    ],
+    "link": "http://guia1.folha.com.br/guia/restaurantes/brasileira/139401/amazonia?sr=1#onde"
+}

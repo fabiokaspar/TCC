@@ -1,0 +1,19 @@
+{
+    "nome": "Miso",
+    "descricao": "Opera em sistema de bufê de pratos japoneses, coreanos, tailandeses e de outros países orientais. Opções como udon e lamen (tipos de macarrão) são feitas na hora e levadas à mesa.",
+    "preco": "de R$ 75,01 a R$ 95,00",
+    "cozinha": "Asiática",
+    "local": [
+        {
+            "endereco": "R. Pedroso Alvarenga, 554, Itaim Bibi, Oeste, São Paulo",
+            "telefone": "3167-3608",
+            "localInfo": "Aceita os cartões Amex, Aura, Cabal, Diners, Elo, Good Card, Hipercard, MasterCard, Sorocred, Todos, Visa. Aceita os tíquetes Alelo, Bônus, Plan Vale Refeição, Sodexo Pass, Ticket Restaurante, Ticket Restaurante Eletrônico, Vale Ticket. Aceita reservas. Tem ar-condicionado. Tem mesas ao ar livre. Tem conexão wi-fi. 130 lugares. Valet (R$ 20).",
+            "funcionamento": "terça a sexta: 12h às 15h e 19h às 23h30.sábado e domingo: 12h às 16h30 e 18h30 às 23h30.",
+            "latlon": [
+                -23.5811121,
+                -46.6758921
+            ]
+        }
+    ],
+    "link": "http://guia1.folha.com.br/guia/restaurantes/asiatica/2730100/miso?sr=1#onde"
+}

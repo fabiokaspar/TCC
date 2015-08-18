@@ -1,0 +1,29 @@
+{
+    "nome": "Jacob",
+    "descricao": "O restaurante surgiu na região da rua 25 de Março, fundado por uma família libanesa. Com proposta despretensio­sa, serve esfirras que fizeram a fa­ma da casa. Os salgados dividem espaço com outras sugestões, caso da lin­guiça síria, feita de carne bovina e um toque de vinho, e do charuto de folha de uva.",
+    "preco": "até R$ 60,00",
+    "cozinha": "Árabe",
+    "local": [
+        {
+            "endereco": "R. Com. Abdo Schahin, 144, fundos, Centro, Centro, São Paulo",
+            "telefone": "3227-5536",
+            "localInfo": "Aceita os cartões Amex, Diners, Elo, Hipercard, MasterCard, Visa. Aceita os tíquetes Alelo, Bônus, Cabal Vale, Good Vale, Plan Vale Refeição, Sodexo Pass, Ticket Restaurante Eletrônico. Não aceita cheques. Não faz entrega em domicílio. Aceita reservas. Não tem ar-condicionado. Não tem mesas ao ar livre. 100 lugares.",
+            "funcionamento": "segunda a sábado: 11h30 às 15h30.",
+            "latlon": [
+                -23.5406338,
+                -46.6320967
+            ]
+        },
+        {
+            "endereco": "R. Dr. Rafael de Barros, 91, Paraíso, Sul, São Paulo",
+            "telefone": "3057-3137",
+            "localInfo": "Aceita os cartões Amex, Diners, Elo, Good Card, Hipercard, MasterCard, Visa. Aceita os tíquetes Alelo, Good Vale, Sodexo Pass, Ticket Restaurante Eletrônico, Vale Ticket. Não aceita cheques. Faz entrega em domicílio. Não aceita reservas. Tem ar-condicionado. Não tem mesas ao ar livre. 50 lugares.",
+            "funcionamento": "segunda a sábado: 9h às 17h.",
+            "latlon": [
+                -23.5505199,
+                -46.6333094
+            ]
+        }
+    ],
+    "link": "http://guia1.folha.com.br/guia/restaurantes/arabe/11611/jacob?sr=1#onde"
+}

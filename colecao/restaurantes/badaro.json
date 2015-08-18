@@ -1,0 +1,30 @@
+{
+    "nome": "Badaró",
+    "nota": "Regular",
+    "descricao": "Pratos como virado à paulista e bife a cavalo dão o tom da cozinha deste restaurante, que investe na culinária tradicional de São Paulo. O local trabalha com sistema à la carte, mas às quartas-feiras e aos sábado oferece um caprichado bufê de feijoada. Outra sugestão é a picanha no alho, com arroz, batatas, palmito e brócolis.",
+    "preco": "de R$ 75,01 a R$ 95,00",
+    "cozinha": "Brasileira",
+    "local": [
+        {
+            "endereco": "Av. Roque Petroni Jr., 1.089, piso Lazer, Jardim das Acácias, Sul, São Paulo",
+            "telefone": "5181-8076",
+            "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico. Não aceita cheques. Não faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Não tem mesas ao ar livre. 120 lugares. Estac. (R$ 15 p/ 3 h).",
+            "funcionamento": "segunda a sábado: 12h às 23h.domingo: 12h às 22h.",
+            "latlon": [
+                -23.5505199,
+                -46.6333094
+            ]
+        },
+        {
+            "endereco": "Av. das Nações Unidas, 12.555, piso B, Chácara Itaim, Sul, São Paulo",
+            "telefone": "3043-9233",
+            "localInfo": "Aceita os cartões Amex, Diners, MasterCard, Visa. Aceita os tíquetes Alelo, Bônus, Sodexo Pass, Ticket Restaurante Eletrônico. Não aceita cheques. Não faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Não tem mesas ao ar livre. 140 lugares. Estac. (R$ 29 p/ 3 h) .",
+            "funcionamento": "Restaurante: segunda a sexta: 11h30 às 15h. sábado e domingo: 11h30 às 17h. Happy Hour: segunda a sexta: 18h às 21h.",
+            "latlon": [
+                -23.5505199,
+                -46.6333094
+            ]
+        }
+    ],
+    "link": "http://guia1.folha.com.br/guia/restaurantes/brasileira/11553/badaro?sr=1#onde"
+}

@@ -1,0 +1,50 @@
+{
+    "nome": "Tantra",
+    "nota": "Regular",
+    "descricao": "Tons de vermelho, orquídeas e estátuas de Buda marcam o ambiente dessa casa que serve pratos de inspiração asiática. À la carte, destacam-se receitas como a salada de lula e lichia e o camarão empanado com amendoim, servido com purê de banana. O comensal ainda pode combinar ingredientes no bufê \"mongolian grill\", entre carnes, peixes, ervas e condimentos, e entregá-los ao chapeiro, que finaliza o prato. De sobremesa, há cheesecake de pera com gengibre.",
+    "preco": "de R$ 75,01 a R$ 95,00",
+    "cozinha": "Asiática",
+    "local": [
+        {
+            "endereco": "Av. São Camilo, 988, Granja Viana, Cotia, São Paulo",
+            "telefone": "4702-6883",
+            "localInfo": "Aceita os cartões Amex, Diners, Elo, Good Card, Hipercard, MasterCard, Visa. Aceita os tíquetes Alelo, Bônus, Good Vale, Ticket Restaurante Eletrônico, Vale Ticket. Não aceita cheques. Não faz entrega em domicílio. Aceita reservas. Não tem ar-condicionado. Tem acesso para deficiente. Tem música ao vivo. Não tem mesas ao ar livre. 200 lugares. Valet (R$ 14,50).",
+            "funcionamento": "terça a quinta: 12h às 15h e 18h às 23h.sexta: 12h às 15h e 18h às 24h.sábado: 12h às 24h.domingo: 12h às 23h.",
+            "latlon": [
+                -23.5830352,
+                -46.837093
+            ]
+        },
+        {
+            "endereco": "R. Amaro Cavalheiro, 158, Pinheiros, Oeste, São Paulo",
+            "telefone": "3815-6233",
+            "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Plan Vale Refeição, Sodexo Pass, Ticket Restaurante Eletrônico. Aceita cheques. Não faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Não tem mesas ao ar livre. 150 lugares.",
+            "funcionamento": "segunda a sexta: 12h às 15h.",
+            "latlon": [
+                -23.5708298,
+                -46.6990329
+            ]
+        },
+        {
+            "endereco": "R. Itapura, 721, Vila Gomes Cardim, Leste, São Paulo",
+            "telefone": "2157-2891",
+            "localInfo": "Aceita os cartões Amex, Aura, Diners, Elo, Good Card, Hipercard, MasterCard, Visa. Aceita os tíquetes Alelo, Good Vale, Sodexo Pass, Ticket Restaurante Eletrônico. Aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Tem música ao vivo. Tem mesas ao ar livre. 100 lugares. Valet (R$ 20).",
+            "funcionamento": "terça e quarta: 12h às 15h e 19h às 23h.quinta: 12h às 15h e 19h às 24h.sexta: 12h às 15h e 19h à 1h.sábado: 12h às 16h e 19h à 1h.domingo: 12h às 16h e 19h às 23h.",
+            "latlon": [
+                -23.544773,
+                -46.5664761
+            ]
+        },
+        {
+            "endereco": "R. Chilon, 364, Vila Olímpia, Oeste, São Paulo",
+            "telefone": "3846-7112",
+            "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Plan Vale Refeição, Sodexo Pass, Ticket Restaurante Eletrônico. Aceita cheques. Não faz entrega em domicílio. Aceita reservas. Não tem ar-condicionado. Tem acesso para deficiente. Tem mesas ao ar livre. 160 lugares. Estac. c/ manob. (R$ 20).",
+            "funcionamento": "segunda a quarta: 12h às 15h e 18h às 24h.quinta: 12h às 15h e 18h à 1h.sábado: 13h às 17h e 19h às 2h.domingo: 13h às 17h.sexta: 12h às 15h e 18h às 2h.",
+            "latlon": [
+                -23.5943869,
+                -46.6828627
+            ]
+        }
+    ],
+    "link": "http://guia1.folha.com.br/guia/restaurantes/asiatica/12159/tantra?sr=1#onde"
+}

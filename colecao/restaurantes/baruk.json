@@ -1,0 +1,30 @@
+{
+    "nome": "Baruk",
+    "nota": "Bom",
+    "descricao": "A casa investe em pratos da cozinha árabe em sistema de rodízio ou à la carte. O menu lista pratos triviais, como esfirras e quibe frito, e também opções mais elaboradas, como o michui de filé-mignon, com homus e cuscuz marroquino, e o picadinho de berinjela, com creme branco e amêndoas.",
+    "preco": "até R$ 60,00",
+    "cozinha": "Árabe",
+    "local": [
+        {
+            "endereco": "R. Bandeira Paulista, 399, Itaim Bibi, Oeste, São Paulo",
+            "telefone": "3895-9990",
+            "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico. Não aceita cheques. Faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Não tem mesas ao ar livre. Tem conexão wi-fi. 90 lugares. Valet (R$ 22).",
+            "funcionamento": "segunda: 12h às 16h e 19h às 22h.terça a sábado: 12h às 17h e 19h às 23h.domingo: 12h às 17h e 19h às 22h.",
+            "latlon": [
+                -23.582957,
+                -46.676149
+            ]
+        },
+        {
+            "endereco": "Al. Raja Gabaglia, 160, Vila Olímpia, Oeste, São Paulo",
+            "telefone": "3045-9999",
+            "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico. Não aceita cheques. Faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Não tem mesas ao ar livre. Tem conexão wi-fi. 120 lugares.",
+            "funcionamento": "segunda a domingo: 12h às 17h.",
+            "latlon": [
+                -23.5957315,
+                -46.6893242
+            ]
+        }
+    ],
+    "link": "http://guia1.folha.com.br/guia/restaurantes/arabe/684952/baruk?sr=1#onde"
+}

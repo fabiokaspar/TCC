@@ -1,0 +1,20 @@
+{
+    "nome": "Caverna Bugre",
+    "nota": "Regular",
+    "descricao": "O restaurante serve há 60 anos um menu em que constam especialidades alemãs e pratos de outras cozinhas. O carro-chefe é o filé alpino (R$ 38,80), gratinado e coberto com copa, Catupiry, provolone e molho inglês, servido com arroz branco.",
+    "preco": "de R$ 95,01 a R$ 130,00",
+    "cozinha": "Alemã",
+    "local": [
+        {
+            "endereco": "R. Teodoro Sampaio, 334, Pinheiros, Oeste, São Paulo",
+            "telefone": "3085-6984",
+            "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Bônus, Good Vale, Sodexo Pass, Ticket Restaurante Eletrônico. Aceita cheques. Não faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Não tem mesas ao ar livre. Tem conexão wi-fi. 54 lugares.",
+            "funcionamento": "segunda a quinta: 11h30 às 15h30 e 18h às 23h30.sexta: 11h30 às 15h30 e 18h às 24h.sábado: 11h30 às 24h.domingo: 11h30 às 21h.",
+            "latlon": [
+                -23.5505199,
+                -46.6333094
+            ]
+        }
+    ],
+    "link": "http://guia1.folha.com.br/guia/restaurantes/alema/11853/caverna_bugre?sr=1#onde"
+}

@@ -1,0 +1,30 @@
+{
+    "nome": "Saj",
+    "nota": "Regular",
+    "descricao": "Da chapa saj, trazida do Líbano, saem pães quentinhos, caso do pão-folha, para acompanhar pastas como baba ghanoush e mhammara (feita de pimentão). Não saia sem pedir de sobremesa o Chocolamour -com sorvete, chantilly, calda e farofa doce. <br>",
+    "preco": "de R$ 75,01 a R$ 95,00",
+    "cozinha": "Árabe",
+    "local": [
+        {
+            "endereco": "R. Joaquim Antunes, 260, Pinheiros, Oeste, São Paulo",
+            "telefone": "2574-3665",
+            "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico, Vale Refeição. Aceita cheques. Faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Tem conexão wi-fi. Possui menu executivo. 80 lugares. Valet (R$ 15).",
+            "funcionamento": "segunda a quinta: 12h às 15h30 e 18h30 às 23h.sexta: 12h às 15h30 e 18h30 às 24h.sábado: 12h às 24h.domingo: 12h30 às 22h30.",
+            "latlon": [
+                -23.5660288,
+                -46.6801274
+            ]
+        },
+        {
+            "endereco": "R. Girassol, 523, Vila Madalena, Oeste, São Paulo",
+            "telefone": "3032-5939",
+            "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Plan Vale Refeição, Sodexo Pass, Ticket Restaurante Eletrônico, Vale Refeição. Aceita cheques. Aceita reservas. Tem ar-condicionado. Não tem mesas ao ar livre. Tem conexão wi-fi. 74 lugares. Valet (R$ 10).",
+            "funcionamento": "segunda a quinta: 12h às 16h e 18h30 às 23h.sexta: 12h às 16h e 18h30 às 24h.sábado: 12h às 24h.domingo: 12h30 às 22h30.",
+            "latlon": [
+                -22.858896,
+                -47.0518593
+            ]
+        }
+    ],
+    "link": "http://guia1.folha.com.br/guia/restaurantes/arabe/272558/saj?sr=1#onde"
+}

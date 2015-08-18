@@ -1,0 +1,20 @@
+{
+    "nome": "Gibran",
+    "nota": "Regular",
+    "descricao": "Sem nenhuma pinta das tradicionais casas de esfiha da cidade, o árabe moderninho tem a consultoria do experiente chef libanês Benon Chamilian. No menu, há as tradicionais pastas, esfihas (entre elas, a de bastrmá, a carne-seca armênia com mozarela), quibe de peixe e kebabes (inclusive uma versão com quibe cru temperado). Entre as sobremesas, está o mahalabie (manjar de leite).",
+    "preco": "até R$ 60,00",
+    "cozinha": "Árabe",
+    "local": [
+        {
+            "endereco": "R. Com. Miguel Calfat, 296, Vila Nova Conceição, Sul, São Paulo",
+            "telefone": "7805-0032",
+            "localInfo": "Aceita os cartões Amex, Diners, Elo, Hipercard, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico. Não faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Não tem mesas ao ar livre. 56 lugares.",
+            "funcionamento": "segunda a quinta: 12h às 15h.sexta e sábado: 12h às 16h.",
+            "latlon": [
+                -23.5929391,
+                -46.675448
+            ]
+        }
+    ],
+    "link": "http://guia1.folha.com.br/guia/restaurantes/arabe/959031/gibran?sr=1#onde"
+}

@@ -1,0 +1,50 @@
+{
+    "nome": "Almanara",
+    "nota": "Regular",
+    "descricao": "Bastião da cozinha árabe, fica num imponente prédio do centro da cidade. O forte dessa casa é o rodízio, em que entram quibe cru e frito, esfirras variadas, espetinhos, charutinhos, entre outras receitas. Ao lado, funciona um delivery, para quem quiser levar para casa.",
+    "preco": "até R$ 60,00",
+    "cozinha": "Árabe",
+    "local": [
+        {
+            "endereco": "R. Oscar Freire, 523, Cerqueira César, Oeste, São Paulo",
+            "telefone": "3085-6916",
+            "localInfo": "Aceita os cartões Amex, Diners, MasterCard, Visa. Aceita os tíquetes Alelo, Bônus, Sodexo Pass, Ticket Restaurante, Ticket Restaurante Eletrônico. Aceita cheques. Faz entrega em domicílio. Não aceita reservas. Tem ar-condicionado. Não tem mesas ao ar livre. Tem conexão wi-fi. 104 lugares. Valet (R$ 20 p/ 3 h).",
+            "funcionamento": "segunda a quinta e domingo: 11h30 às 23h30.sexta e sábado: 11h30 à 0h30.",
+            "latlon": [
+                -23.562284,
+                -46.6699295
+            ]
+        },
+        {
+            "endereco": "R. Basílio da Gama, 70, República, Centro, São Paulo",
+            "telefone": "3257-7580",
+            "localInfo": "Aceita os cartões Amex, Diners, MasterCard, Visa. Aceita os tíquetes Alelo, Bônus, Sodexo Pass, Ticket Restaurante, Ticket Restaurante Eletrônico. Aceita cheques. Faz entrega em domicílio. Não aceita reservas. Tem ar-condicionado. Não tem mesas ao ar livre. Tem conexão wi-fi. 112 lugares. Estac. c/ manob. (R$ 10 a 1ª h - convênio).",
+            "funcionamento": "segunda a domingo: 11h30 às 23h.",
+            "latlon": [
+                -23.5450974,
+                -46.6428219
+            ]
+        },
+        {
+            "endereco": "R. 13 de Maio, 1.947, Bela Vista, Centro, São Paulo",
+            "telefone": "3284-6905",
+            "localInfo": "Aceita os cartões Amex, Diners, MasterCard, Visa. Aceita os tíquetes Alelo, Bônus, Sodexo Pass, Ticket Restaurante, Ticket Restaurante Eletrônico. Aceita cheques. Faz entrega em domicílio. Não aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Não tem mesas ao ar livre. 134 lugares. Estac. (R$ 13 p/ 2 h).",
+            "funcionamento": "segunda a domingo: 11h30 às 23h.",
+            "latlon": [
+                -23.5704825,
+                -46.6435488
+            ]
+        },
+        {
+            "endereco": "Av. das Nações Unidas, 4.777, Jardim  Universidade Pinheiros, Oeste, São Paulo",
+            "telefone": "3021-8484",
+            "localInfo": "Aceita os cartões Amex, Diners, MasterCard, Visa. Aceita os tíquetes Alelo, Bônus, Sodexo Pass, Ticket Restaurante, Ticket Restaurante Eletrônico. Aceita cheques. Faz entrega em domicílio. Não aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Não tem mesas ao ar livre. 182 lugares. Estac. (R$ 12 p/ 2 h).",
+            "funcionamento": "segunda a quinta e domingo: 11h30 às 23h.sexta e sábado: 11h30 às 23h30.",
+            "latlon": [
+                -23.5505199,
+                -46.6333094
+            ]
+        }
+    ],
+    "link": "http://guia1.folha.com.br/guia/restaurantes/arabe/11481/almanara?sr=1#onde"
+}
