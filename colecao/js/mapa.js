@@ -38,7 +38,7 @@ function clienteRequisicao() {
 			dataType: "text",
 			success: function(response){
 				try {
-				console.log(response);
+//				console.log(response);
 					var obj = JSON.parse(response);
 					for(var i = 0; i < obj.restaurantes.length; i++){
 						var restaurante = obj.restaurantes[i];
