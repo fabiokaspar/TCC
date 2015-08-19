@@ -53,6 +53,8 @@ public class IndexFiles
       
 			Field pathField = new StringField("path", file.toString(), Field.Store.YES);
 			doc.add(pathField);
+			Field filenameField = new StringField("filename", file.getFileName().toString(), Field.Store.YES);
+			doc.add(filenameField);
 			
 			BufferedReader br = new BufferedReader(new InputStreamReader(stream, StandardCharsets.UTF_8));
 			StringBuilder sb = new StringBuilder();

@@ -23,34 +23,32 @@ function initialize() {
 	navigator.geolocation.getCurrentPosition(getGeolocation, errorGeolocation);
 }
 
-function clienteRequisicao(){
-  	$('#ajax_form').submit(function(){
-  		var dados = $(this).serialize();
-  		if (origem != undefined){
-  			dados += '&lat=';
-  			dados += origem.position.G;
-  			dados += '&lng=';
-  			dados += origem.position.K;
-  		}
-  		$.ajax({
+function clienteRequisicao() {
+  	var dados = $(this).serialize();
+		if (origem != undefined){
+			dados += '&lat=';
+			dados += origem.position.G;
+			dados += '&lng=';
+			dados += origem.position.K;
+		}
+		$.ajax({
 			type: "POST",
 			url: "php/filtro.php",
 			data: dados,
 			dataType: "text",
 			success: function(response){
 				try {
-					console.log(response);
+				console.log(response);
 					var obj = JSON.parse(response);
-					console.log(obj);
-					console.log(response);
-
-					/*for(var i = 0; i < obj.restaurantes.length; i++){
-						restaurantesArray.push(obj.restaurantes[i]);					
+					for(var i = 0; i < obj.restaurantes.length; i++){
+						var restaurante = obj.restaurantes[i];
+						console.log(restaurante.nome);
+						restaurantesArray.push(restaurante);					
 					}
-
-					main(); */
-				} catch(e) {
-					console.log("Erro. --> "+e);
+//				main();
+				} catch(err) {
+					alert("Erro.");
+					console.log(err);
 				}
 			},
 			error: function(err){
@@ -59,7 +57,6 @@ function clienteRequisicao(){
 			}		
 		});
 		return false;
-  	});
 }
 
 function getGeolocation(position){
@@ -78,10 +75,14 @@ function getGeolocation(position){
 
 	infowindow.open(map,origem);
 
-	$("#btnPesquisar").click(function(){
+	$('#ajax_form').submit(function(e) {
+		e.preventDefault();
+
 		origem.setMap(map);
 		mostraRota.setMap(null);
-		clienteRequisicao();
+
+		clienteRequisicao.call(this);
+		return false;
 	});
 }
 
