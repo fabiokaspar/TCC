@@ -38,17 +38,18 @@ function clienteRequisicao() {
 			dataType: "text",
 			success: function(response){
 				try {
-//				console.log(response);
-					var obj = JSON.parse(response);
-					for(var i = 0; i < obj.restaurantes.length; i++){
-						var restaurante = obj.restaurantes[i];
-						console.log(restaurante.nome);
-						restaurantesArray.push(restaurante);					
-					}
-//				main();
+                                        var obj = JSON.parse(response);
+                                        $("div#listaRestaurantes").html("");
+                                        for(var i = 0; i < obj.restaurantes.length; i++){
+                                                var restaurante = obj.restaurantes[i];
+                                                var p = $("<p></p>").html((i+1)+" - "+restaurante.nome);
+                                                $("div#listaRestaurantes").append(p);
+                                                restaurantesArray.push(restaurante);					
+                                        }
+                                        //main();
 				} catch(err) {
-					alert("Erro.");
-					console.log(err);
+					console.log("Erro. --> "+response);
+					//console.log(err);
 				}
 			},
 			error: function(err){

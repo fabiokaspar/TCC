@@ -17,4 +17,28 @@ class Geocoder {
         return $json;
     }
     
+    static public function getLatLng($endereco) {
+        $json = Geocoder::getJSON($endereco);
+        $results = json_decode($json)->{'results'};
+        foreach($results as $result) {
+            $location = $result->{'geometry'}->{'location'};
+            $lat = $location->{"lat"};
+            $lng = $location->{"lng"};
+            if(self::equals($lat,-23.5505199) && self::equals($lng,-46.6333094)) {
+                continue;
+            }
+            if($lng < -46.85 || $lng > -46.35) {
+                continue;
+            }
+            if($lat < -23.75 || $lat > -23.45) {
+                continue;
+            }
+            return array($lat,$lng);
+        }
+        return false;
+    }
+    
+    static private function equals($a,$b,$e=0.000001) {
+        return (($a + $e > $b) && ($a - $e < $b));
+    }
 }

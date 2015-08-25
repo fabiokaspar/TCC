@@ -1,9 +1,9 @@
 <?php
 
 class Index {
-    const ROOT = "/var/www/TCC/colecao/";
-    const INDEX_FOLDER = "restaurantes";
-    const INDEX_PATH = "/var/www/TCC/colecao/restaurantes";
+    const ROOT = "../";
+    const INDEX_FOLDER = "../restaurantes";
+    const INDEX_PATH = "../restaurantes/index";
     
     static function exists() {
         return is_dir(self::INDEX_PATH);

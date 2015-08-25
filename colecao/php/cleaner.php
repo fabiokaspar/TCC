@@ -1,21 +1,30 @@
 <?php
 header('Content-type: text/html; charset=utf-8');
 
-include_once 'Geocoder.php';
+require_once 'Geocoder.php';
+require_once 'Extractor.php';
+require_once 'InvalidFileException.php';
 
 set_error_handler('exceptions_error_handler');
 function exceptions_error_handler($severity, $message, $filename, $lineno) {
-  if (error_reporting() == 0) {
-    return;
-  }
-  if (error_reporting() & $severity) {
-    throw new ErrorException($message, 0, $severity, $filename, $lineno);
-  }
+    if (error_reporting() == 0) {
+        return;
+    }
+    if (error_reporting() & $severity) {
+        //throw new ErrorException($message, 0, $severity, $filename, $lineno);
+        echo "\n\n\t\t ERROR in file $filename at line $lineno:\n\t\t\t\" $message \"\n\n";
+    }
 }
 function clear($str) {
-    $str = strip_tags($str);
-    $str = trim(preg_replace("/\s+/", " ", $str));
-    return $str;
+    $str1 = strip_tags($str);
+    $str2 = trim(preg_replace("/\s+/", " ", $str1));
+    return $str2;
+}
+function clearAddress($address) {
+    $address1 = trim($address);
+    $address2 = trim($address1,".");
+    $address3 = preg_replace("/\s-/", ",", $address2);  
+    return $address3;
 }
 function finish($status) {
     global $input_filename, $totalFiles, $filesGenerated;
@@ -32,110 +41,64 @@ function finish($status) {
     echo "\t[\033[{$status_clr}m$status_str\033[0m] $msg $input_filename\n";
     exit(0);
 }
-function extractLatLng($results) {
-    foreach($results as $result) {
-        $location = $result->{'geometry'}->{'location'};
-        $lat = $location->{"lat"};
-        $lng = $location->{"lng"};
-        if(equals($lat,-23.5505199) && equals($lng,-46.6333094)) {
-            continue;
-        }
-        if($lng < -46.85 || $lng > -46.35) {
-            continue;
-        }
-        if($lat < -23.75 || $lat > -23.45) {
-            continue;
-        }
-        return array($lat,$lng);
-    }
-    throw new Exception("Error.", 0, null);
-}
-function equals($a,$b,$e=0.000001) {
-    return (($a + $e > $b) && ($a - $e < $b));
-}
 
 $totalFiles = 0;
 $filesGenerated = 0;
-
+$json_options = JSON_UNESCAPED_UNICODE 
+                + JSON_UNESCAPED_SLASHES
+                + JSON_PRETTY_PRINT;
 $input_filename = $argv[1];
-$pure_text = file_get_contents($input_filename);
-$text = mb_convert_encoding($pure_text,"UTF-8");
-$filenameWithoutExt = preg_replace("/([\w_]+)\.(\w+)/i", '${1}', $input_filename);
-if(!$text) {
+try {
+    $extractor = new Extractor($input_filename);
+    $text = $extractor->getText();
+} catch (InvalidFileException $e) {
     finish(false);
 }
+$filenameWithoutExt = $extractor->getFilenameWithoutExtension();
 
 $args = array();
 $ok = true;
-if(preg_match("/\<\!\-{2}TITLE\-{2}\>(.+?)\<\!\-{2}\/LOCATIONS\-{2}\>/s", $text, $matches_g)) {
-    $text = $matches_g[1];
-    if(preg_match('/<td id="eventName">([\w\s-_\.&\'"]+)<\/td>/u',$text,$matches)) {
-        $args['nome'] = $matches[1];
-    } else {
-        finish(false);
-    }
-    $args['link'] = $argv[2];
-    if(preg_match("/alt\=\"(\w+)\"/u",$text,$matches)) {
-        $args['nota'] = $matches[1];
-    }
-    if(preg_match('/<td id="summary"([\s\w=\"])*>(.+?)<\/td>/s',$text,$sm_matches)) {
-        $summary = $sm_matches[2];
-        if(preg_match("/(.*?)<p>/",$summary,$matches)) {
-            $args['descricao'] = $matches[1];
-        }
-        if(preg_match("/<b>Preço médio<\/b>:\s?(.+)<br\/?>/i",$summary,$matches)) {
-            $args['preco'] = $matches[1];
-        }
-        if(preg_match("/<b>Tipo\s+de\s+cozinha:<\/b>\s*([^<]+)\s*<br>/i",$summary,$matches)) {
-            $args['cozinha'] = $matches[1];
-        }   
-    }
-    if(preg_match_all('/<div class="serviceInfo">(.+?)<\/div>/s',$text,$matches)) {
-        $totalFiles = count($matches[1]);
-        $filesGenerated = 0;
-        foreach ($matches[1] as $i => $serviceInfo) {
-            if(preg_match('/<td class="localInfo" colspan="2">\n(.+?)<\/td>/s',$serviceInfo,$si_matches)) {
-                $localInfo = $si_matches[1];
-                if(preg_match('/(.+?)Telefone:\s?(\d{4}\-\d{4})\.?<br\/?>(.*)/s',$localInfo,$li_matches)) {
-                    $endereco = $li_matches[1];
-                } else {
-                    continue;
-                }
-                $endereco = trim($endereco);
-                $endereco = trim($endereco,".");
-                $endereco = preg_replace("/\s-/", ",", $endereco);    
-                $endereco_banco = "$endereco, São Paulo, Brasil";
-                $endereco_busca = preg_replace("/^([^,]+,[^,]+).+$/", '${1}', $endereco).", São Paulo, Brasil";    
-                $args['local'] = array();
-                $args['local']['endereco'] = $endereco_banco;
-                $args['local']['telefone'] = $li_matches[2];      
-                $args['local']['localInfo'] = clear($li_matches[3]);      
-                if(preg_match("/<b>Quando<\/b>(.+?)\/table>/s",$serviceInfo,$qnd_matches)) {
-                    $funcionamento = clear($qnd_matches[1]);
-                    $args['local']['funcionamento'] = $funcionamento;
-                }
-                $json = Geocoder::getJSON($endereco_busca);
-                try {
-                    $api_info = json_decode($json)->{'results'};
-                    $args['local']['latlon'] = extractLatLng($api_info);  
-                    
-                    $json_options = JSON_UNESCAPED_UNICODE 
-                        + JSON_UNESCAPED_SLASHES
-                        + JSON_PRETTY_PRINT;
-                    $json_output = json_encode($args,$json_options);
-                    $id = ($i>0)?"($i)":"";
-                    $output_filename = "$filenameWithoutExt$id.json"; 
-                    file_put_contents($output_filename, $json_output);  
-                    
-                    $filesGenerated++;
-                } catch (Exception $e) {
-                    $ok = false;    
-                }       
-                unset($args['local']);
-            }
-        }
-    }   
-    finish($ok);
+
+$args['nome'] = $extractor->getName();
+if(empty($args['nome'])) {
+    finish(false);
 }
-finish(false);
+$args['link'] = $argv[2];
+$args['nota'] = $extractor->getGrade();
+$summary = $extractor->getSummary();
+$args['descricao'] = $summary['descricao'];
+$args['preco'] = $summary['preco'];
+$args['cozinha'] = $summary['cozinha'];
+
+$locais = $extractor->getLocalInfo();
+if(!empty($locais)) {
+    $totalFiles = count($locais);
+    $filesGenerated = 0;
+    foreach ($locais as $i => $localInfo) {
+        $endereco = clearAddress($localInfo['endereco']);  
+        $endereco_banco = "$endereco, São Paulo, Brasil";
+        $endereco_busca = preg_replace("/^([^,]+,[^,]+).+$/", '${1}', $endereco).", São Paulo, Brasil";    
+        
+        $local = array();
+        $local['endereco'] = $endereco_banco;
+        $local['endereco_busca'] = $endereco_busca;
+        $local['telefone'] = $localInfo['telefone'];      
+        $local['localInfo'] = clear($localInfo['info']);      
+        $local['funcionamento'] = clear($localInfo['funcionamento']);
+        $latlon = Geocoder::getLatLng($endereco_busca);
+        if($latlon) {
+            $local['latlon'] = $latlon;  
+            $json = array_merge($args,$local);
+            $json_output = json_encode($json,$json_options);
+            $id = ($i>0)?"($i)":"";
+            file_put_contents("$filenameWithoutExt$id.json", $json_output);  
+            $filesGenerated++;
+        } else {
+            $ok = false;    
+        }       
+        unset($local);
+    }
+}   
+finish($ok);
+
 
