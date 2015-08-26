@@ -8,10 +8,21 @@
 }
 
 .restauranteInfo {
-	background-color: MediumTurquoise;
-	width: 70%;
+    background-color: lightsteelblue;
+    border: thin solid steelblue;
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 4px 0px 0px 0px;
 }
 
+form#restaurantes {
+    display: none;
+}
+form#restaurantes input[type=button] {
+    width: 100%;
+    margin: 4px 0px;
+    padding: 4px;
+}
 #listaRestaurantes {
 	
 }
@@ -51,7 +62,7 @@
 #mensagem {
     display: none;
     background-color: #fcc;
-    width:479px;
+    margin-top: 5px;
     padding:10px;
     border:thin solid #daa;
 }
@@ -89,16 +100,23 @@ input[type=text]:active, input[type=text]:focus {
     outline: green auto 200px !important;
     outline-offset: 20px !important;
 }
-button {
+button, input[type=button] {
     padding: 6px;
     border: thin solid grey;
     cursor: pointer;
     font-size: 16px;
+    background: -webkit-linear-gradient(white, #ddd); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(white, #ddd); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(white, #ddd); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(white, #ddd); /* Standard syntax */
 }
-button:hover {
-    background-color: #bbb;
+button:hover, input[type=button]:hover {
+    background: -webkit-linear-gradient(#ddd, #ccc); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#ddd, #ccc); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#ddd, #ccc); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#ddd, #ccc); /* Standard syntax */
 }
-button:focus {
+button:focus, input[type=button]:active {
     outline: 0px;
 }
 
@@ -113,7 +131,7 @@ button:focus {
 #opcoes {
     width: 499px;
     height:30px;
-    margin-top: 5px;
+    margin: 5px 0px;
 }
 #opcoes > table {  
     height: 100%;

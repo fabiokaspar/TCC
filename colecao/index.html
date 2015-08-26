@@ -51,11 +51,6 @@
                         </form>                
                     </td>
                 </tr>
-                <tr>
-                    <td colspan="2" align='center'>
-                        <div id="mensagem"></div>
-                    </td>
-                </tr>
                 <!-- *************************** -->
                 <tr>
                     <td>
@@ -63,7 +58,13 @@
                     </td>
                     <td width='300'>
                         <div class='rotulo metallic'>Resultados</div>
-                        <div id="listaRestaurantes"></div>
+                        <div id="mensagem"></div>
+                        <form id="restaurantes">
+                            <b>Lista de restaurantes por Distância</b><br>
+                            <mark> Escolha um dos estabelecimentos para calcular rota:</mark>
+                            <div id="listaRestaurantes"></div>
+                            <input type='button' id='btnRota' value='Criar rota até o local marcado'>
+                        </form>
                     </td>
                 </tr>
             </table>
