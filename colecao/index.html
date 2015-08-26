@@ -13,29 +13,64 @@
 
   <div id="conteudo">  
       <div id="titulo">LookingFor</div>
-      <hr>
     	<!-- *************************** -->
-      <div id="pesquisa">
-        <form method="POST" id="ajax_form">     
-         
-          <input id="estab" type="text" placeholder="Estabelecimento..." 
-          class="focus" name="query">
-      	 
-          <button id="btnPesquisar">Pesquisar</button> <br><br>
-         
-          <b>Ordenar por: </b>
-            <input id="inptLocalizacao" type="radio" name=parametro value="endereco" checked>distância
-            <input id="inptPreco" type="radio" name=parametro value="preco">preço            
-            <input id="inptQualidade" type="radio" name=parametro value="nota">qualidade   
-        </form>    
-      </div>
+        
+        <div id="corpo">
+            <table>
+                <tr>
+                    <td colspan="2" id="pesquisa" align='center'>
+                        <br><br><br><br>
+                        <form method="POST" id="ajax_form">     
 
-      <br>
-    	<!-- *************************** -->
+                          <input id="estab" type="text" placeholder="Estabelecimento..." 
+                          class="focus" size="44" name="query">
+                          <button id="btnPesquisar">Pesquisar</button><br>
 
-      <div id="googleMap"></div>
-      <div id="listaRestaurantes"></div>
+                          <div id='opcoes' class='metallic'>
+                            <table width='100%'>
+                                <tr>
+                                    <th><b>Ordenar por: </b></th>
+                                    <td>
+                                        <label>
+                                            <input id="inptLocalizacao" type="radio" name=parametro value="endereco" checked>Distância
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label>
+                                            <input id="inptPreco" type="radio" name=parametro value="preco">Preço            
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <label>
+                                            <input id="inptQualidade" type="radio" name=parametro value="nota">Qualidade   
+                                        </label>
+                                    </td>
+                                </tr>
+                            </table>
+                          </div>
+                        </form>                
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align='center'>
+                        <div id="mensagem"></div>
+                    </td>
+                </tr>
+                <!-- *************************** -->
+                <tr>
+                    <td>
+                        <div id="googleMap"></div>
+                    </td>
+                    <td width='300'>
+                        <div class='rotulo metallic'>Resultados</div>
+                        <div id="listaRestaurantes"></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="rodape">
+            Criado por:
+        </div>
    </div>
-	
   </body>
 </html>
