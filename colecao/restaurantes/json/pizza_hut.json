@@ -1,0 +1,17 @@
+{
+    "nome": "Pizza Hut",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/pizzarias/11713/pizza_hut?sr=701#onde",
+    "nota": "Regular",
+    "descricao": "Parte de uma rede internacional presente em 88 países, a casa é conhecida por sua pizza Pan, de bem massa grossa, mas também oferece os discos em expessura média e fininha. Serve também pratos, como saladas e massas. Uma opção nesta linha é o penne com camarões. O pepperoni é a estrela entre as pizzas -a versão Supreme combina o embutido a uma seleção de carnes, mais mozarela e fatias de pimentão verde e cebola. Também tem opção de cobertura vegetariana.",
+    "preco": "de R$ 60,01 a R$ 75,00",
+    "cozinha": "Pizzarias",
+    "endereco": "R. dos Pinheiros, 100, Pinheiros, Oeste, São Paulo, Brasil",
+    "endereco_busca": "R. dos Pinheiros, 100, São Paulo, Brasil",
+    "telefone": "3062-6998",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, Hipercard, MasterCard, Visa. Aceita os tíquetes Alelo, Plan Vale Refeição, Sodexo Pass, Ticket Restaurante, Ticket Restaurante Eletrônico. Não aceita cheques. Faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Tem mesas ao ar livre. 170 lugares. Estac. (R$ 15 - convênio).",
+    "funcionamento": "segunda a quinta: 12h às 23h.sexta: 12h às 24h.sábado: 14h às 24h.domingo: 14h às 23h.",
+    "latlon": [
+        -23.5642725,
+        -46.6792866
+    ]
+}

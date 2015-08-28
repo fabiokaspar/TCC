@@ -1,0 +1,17 @@
+{
+    "nome": "Ting",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/chinesa/12045/ting?sr=201#onde",
+    "nota": "Regular",
+    "descricao": "É um chinês pequeno e arrumado, que serve molhos saborosos, camarões carnudos e carne de porco macia. O menu traz clássicos chineses: rolinhos primavera, frango xadrez, porco agridoce e banana caramelada.",
+    "preco": "de R$ 75,01 a R$ 95,00",
+    "cozinha": "Chinesa",
+    "endereco": "R. Cerro Corá, 2.034, Vila Romana, Oeste, São Paulo, Brasil",
+    "endereco_busca": "R. Cerro Corá, 2.034, São Paulo, Brasil",
+    "telefone": "3022-5050",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico. Não aceita cheques. Faz entrega em domicílio. Aceita reservas. Não tem ar-condicionado. Tem mesas ao ar livre. 60 lugares.",
+    "funcionamento": "terça a sexta: 11h às 15h e 18h30 às 23h.sábado: 11h às 16h e 18h30 às 23h.domingo: 11h às 16h e 18h30 às 22h30.",
+    "latlon": [
+        -23.5352074,
+        -46.7143992
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "nome": "Restaurante do Mube",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/variada/12735/restaurante_do_mube?sr=901#onde",
+    "nota": "Regular",
+    "descricao": "Boa opção na região do Jardim Europa. Serve quiches, saladas, grelhados e massas em um ambiente confortável e aconchegante. Uma sugestão é o ravióli de mussarela de búfala com molho de tomate e manjericão.",
+    "preco": "de R$ 60,01 a R$ 75,00",
+    "cozinha": "Variada",
+    "endereco": "R. Alemanha, 221, Jardim Europa, Oeste, São Paulo, Brasil",
+    "endereco_busca": "R. Alemanha, 221, São Paulo, Brasil",
+    "telefone": "3088-3981",
+    "localInfo": "Aceita os cartões Amex, Aura, Cabal, Diners, Elo, Hipercard, MasterCard, Visa. Aceita os tíquetes Alelo, Ticket Restaurante Eletrônico. Aceita cheques. Não faz entrega em domicílio. Não aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Tem mesas ao ar livre. 48 lugares.",
+    "funcionamento": "Restaurante: segunda a sexta: 9h às 19h.sábado: 11h às 22h.domingo: 9h às 21h. Bar: segunda a sexta e domingo: 9h às 19h.sábado: 11h às 19h.",
+    "latlon": [
+        -23.5731295,
+        -46.6770461
+    ]
+}

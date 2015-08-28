@@ -1,0 +1,17 @@
+{
+    "nome": "Roma",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/italiana/12335/roma?sr=401#onde",
+    "nota": false,
+    "descricao": "Num casarão centenário funciona esta cantina de ambiente familiar, atendimento atencioso e boas receitas -a exemplo do pappardelle no ragu de carne moída. As massas, produzidas no próprio restaurante, podem ser consumidas no salão e compradas pré-cozidas ou prontas na rotisseria. Tem bufê de saladas e de sobremesas. <br> <br>",
+    "preco": "de R$ 95,01 a R$ 130,00",
+    "cozinha": "Italiana",
+    "endereco": "R. Maranhão, 512, Higienópolis, Centro, São Paulo, Brasil",
+    "endereco_busca": "R. Maranhão, 512, São Paulo, Brasil",
+    "telefone": "3660-0800",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo. Não aceita cheques. Faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Não tem mesas ao ar livre. Tem conexão wi-fi. 200 lugares. Estac. c/ manob. grátis.",
+    "funcionamento": "Restaurante: segunda a sexta: 11h30 às 15h30 e 19h às 24h.sábado: 11h30 às 16h e 19h à 1h.domingo: 11h30 às 16h30 e 19h às 22h. Rotisserie: terça a domingo: 9h às 22h.",
+    "latlon": [
+        -23.5441878,
+        -46.6574014
+    ]
+}

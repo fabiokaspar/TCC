@@ -1,0 +1,17 @@
+{
+    "nome": "Weinstube",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/alema/1171582/weinstube?sr=1#onde",
+    "nota": false,
+    "descricao": "Instalado dentro do Clube Transatlântico, o restaurante é especializado na culinária alemã. O cardápio oferece variedade de salsichas e o tradicional joelho de porco com chucrute, mas vai além disso. Há também receitas como o \"späetzle\", tipo de nhoque alemão de batatas, incrementado com queijo de cabra e tomates frescos.",
+    "preco": "de R$ 75,01 a R$ 95,00",
+    "cozinha": "Alemã",
+    "endereco": "R. José Guerra, 130, Chácara Santo Antônio, Sul, São Paulo, Brasil",
+    "endereco_busca": "R. José Guerra, 130, São Paulo, Brasil",
+    "telefone": "2133-8600",
+    "localInfo": "Aceita os cartões Amex, Diners, MasterCard, Visa. Não aceita cheques. Não faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Não tem mesas ao ar livre. Possui cadeirões para bebês. 120 lugares. Estac. (R$ 13 a 1ª h).",
+    "funcionamento": "segunda a sexta: 12h às 15h.",
+    "latlon": [
+        -23.6280111,
+        -46.7077509
+    ]
+}

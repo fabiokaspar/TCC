@@ -1,0 +1,17 @@
+{
+    "nome": "Amadeus",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/pescados/12533/amadeus?sr=601#onde",
+    "nota": false,
+    "descricao": "A casa é comandada pela chef Bella Masano, que prepara sugestões com peixes e frutos do mar. Entre os pratos que cativam a clientela estão os camarões gigantes, acompanhados de aspargos e cogumelos braseados. Outra receita do menu é o peixe no papelote, que leva tomates frescos, alcaparra, cebola, brotos da horta e farofa de azeitonas pretas.",
+    "preco": "Acima de R$ 130,00",
+    "cozinha": "Pescados",
+    "endereco": "R. Haddock Lobo, 807, Cerqueira César, Oeste, São Paulo, Brasil",
+    "endereco_busca": "R. Haddock Lobo, 807, São Paulo, Brasil",
+    "telefone": "3061-2859",
+    "localInfo": "Aceita os cartões Amex, Visa. Não faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Tem mesas ao ar livre. Possui menu executivo. 56 lugares. Estac. c/ manob. (R$ 15).",
+    "funcionamento": "segunda a quinta: 12h às 15h e 19h às 23h.sexta e sábado: 12h às 16h30 e 19h às 24h.domingo: 12h às 17h.",
+    "latlon": [
+        -23.5595012,
+        -46.6631188
+    ]
+}

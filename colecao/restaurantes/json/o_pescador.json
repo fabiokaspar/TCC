@@ -1,0 +1,17 @@
+{
+    "nome": "O Pescador",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/pescados/13237/o_pescador?sr=601#onde",
+    "nota": false,
+    "descricao": "O bar oferece como especialidade os aperitivos de frutos do mar. Uma das opções são os espetos de camarão, ótimos para petiscar com a cerveja gelada",
+    "preco": false,
+    "cozinha": "Pescados",
+    "endereco": "Av. Zaki Narchi, 1.464, Carandiru, Norte, São Paulo, Brasil",
+    "endereco_busca": "Av. Zaki Narchi, 1.464, São Paulo, Brasil",
+    "telefone": "2221-3326",
+    "localInfo": "Aceita os cartões Amex, Diners, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante, Ticket Restaurante Eletrônico. Preço: R$ 7 (cerveja em garrafa Brahma - 600 ml). Não aceita cheques. Não faz entrega em domicílio. Não aceita reservas. Não tem ar-condicionado. Não vende ingresso pelo telefone. Tem mesas ao ar livre. 130 lugares.",
+    "funcionamento": "segunda a quinta e domingo: 8h às 24h.sexta e sábado: 8h à 1h.",
+    "latlon": [
+        -23.5047135,
+        -46.6150647
+    ]
+}

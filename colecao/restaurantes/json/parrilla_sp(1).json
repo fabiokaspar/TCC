@@ -1,0 +1,17 @@
+{
+    "nome": "Parrilla SP",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/carnes/628039/parrilla_sp?sr=151#onde",
+    "nota": false,
+    "descricao": "O espaçoso restaurante é especializado em carnes argentinas grelhadas, servidas à la carte, com salada da casa oferecida como cortesia.",
+    "preco": "de R$ 60,01 a R$ 75,00",
+    "cozinha": "Carnes",
+    "endereco": "R. Min. Jesuíno Cardoso, 568, Vila Nova Conceição, Sul, São Paulo, Brasil",
+    "endereco_busca": "R. Min. Jesuíno Cardoso, 568, São Paulo, Brasil",
+    "telefone": "3045-4420",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico. Aceita cheques. Não aceita reservas. Tem ar-condicionado. Tem conexão wi-fi. 80 lugares.",
+    "funcionamento": "segunda a sexta: 11h30 às 15h.",
+    "latlon": [
+        -23.5930227,
+        -46.6831863
+    ]
+}

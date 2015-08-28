@@ -1,0 +1,17 @@
+{
+    "nome": "Cantina Arancini",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/italiana/57808/cantina_arancini?sr=301#onde",
+    "nota": "Regular",
+    "descricao": "Pequena cantina que mantém a tradição das casas do gênero, com comida farta e preços em conta. No cardápio, massas secas e frescas, além de carnes como filé ou polpettone à parmigiana.",
+    "preco": "de R$ 60,01 a R$ 75,00",
+    "cozinha": "Italiana",
+    "endereco": "Av. João Carlos da Silva Borges, 1.211, Santo Amaro, Sul, São Paulo, Brasil",
+    "endereco_busca": "Av. João Carlos da Silva Borges, 1.211, São Paulo, Brasil",
+    "telefone": "5641-9774",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, Good Card, Hipercard, MasterCard, Sorocred, Visa. Aceita os tíquetes Alelo, Bônus, Good Vale, Sodexo Pass, Ticket Restaurante Eletrônico. Não aceita cheques. Não faz entrega em domicílio. Aceita reservas. Não tem ar-condicionado. Não tem mesas ao ar livre. 60 lugares.",
+    "funcionamento": "quinta e sexta: 11h30 às 15h e 18h30 às 23h.sábado: 12h às 23h.domingo: 12h às 17h.",
+    "latlon": [
+        -23.6345402,
+        -46.7117444
+    ]
+}

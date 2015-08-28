@@ -1,0 +1,17 @@
+{
+    "nome": "Carlos",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/pizzarias/2729257/carlos?sr=651#onde",
+    "nota": "Bom",
+    "descricao": "Uma casinha discreta na rua Harmonia, inaugurada no final de fevereiro. Serve pizzas individuais (do tamanho de um prato), cujas massas demoram um dia inteiro para ficarem prontas, já que fermentam naturalmente. O cardápio conta com seis opções de coberturas, entre elas a clássica mozarela (R$ 25), que também leva azeitonas pretas e manjerona. Se não quiser ir direto ao ponto, peça uma das entradas. Tem berinjela assada e carpaccio de carne fatiado na faca.",
+    "preco": "de R$ 75,01 a R$ 95,00",
+    "cozinha": "Pizzarias",
+    "endereco": "R. Harmonia, 501, Sumarezinho, Oeste, São Paulo, Brasil",
+    "endereco_busca": "R. Harmonia, 501, São Paulo, Brasil",
+    "telefone": "3813-2017",
+    "localInfo": "Aceita os cartões Diners, MasterCard, Visa. Tem ar-condicionado. Não tem mesas ao ar livre. 50 lugares.",
+    "funcionamento": "terça a domingo: 19h às 23h30.",
+    "latlon": [
+        -23.5539137,
+        -46.6891084
+    ]
+}

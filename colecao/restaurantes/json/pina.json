@@ -1,0 +1,17 @@
+{
+    "nome": "Pina",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/italiana/2729790/pina?sr=401#onde",
+    "nota": false,
+    "descricao": "Novidade no Itaim, tem no comando da cozinha o chef Ricardo Rossi, que já passou por restaurantes da Itália, Rússia, Estados Unidos e Brasil. No cardápio, massas dividem-se entre receitas tradicionais, caso do pici com pesto de manjericão e estragão, e versões mais autorais, como o fettuccine com molho de camarão-rosa, açafrão e aspargos. Para acompanhar, escolha uma bebida da carta de vinhos -os rótulos vêm do Chile, da França e de Portugal.",
+    "preco": "de R$ 75,01 a R$ 95,00",
+    "cozinha": "Italiana",
+    "endereco": "R. Jacurici, 27, Itaim Bibi, Oeste, São Paulo, Brasil",
+    "endereco_busca": "R. Jacurici, 27, São Paulo, Brasil",
+    "telefone": "3071-2501",
+    "localInfo": "Aceita os cartões Amex, Aura, Diners, Elo, Good Card, Hipercard, MasterCard, Sorocred, Visa. Aceita os tíquetes Alelo, Good Vale, Sodexo Pass, Ticket Restaurante, Ticket Restaurante Eletrônico, Vale Ticket. Aceita cheques. Faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Tem mesas ao ar livre. Tem conexão wi-fi. Possui menu executivo. 60 lugares. Valet (R$ 23).",
+    "funcionamento": "segunda a quarta: 12h às 15h.quinta e sexta: 12h às 15h e 19h às 23h30.sábado: 12h às 16h e 19h às 23h30.domingo: 12h às 16h.",
+    "latlon": [
+        -23.5845205,
+        -46.6855818
+    ]
+}

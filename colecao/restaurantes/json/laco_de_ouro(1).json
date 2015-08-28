@@ -1,0 +1,17 @@
+{
+    "nome": "Laço de Ouro",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/carnes/1898932/laco_de_ouro?sr=151#onde",
+    "nota": false,
+    "descricao": "A churrascaria trabalha com cortes brasileiros à la carte e acompanhamentos diversos. A picanha e a maminha, por exemplo, chegam à mesa com arroz e fritas. Já a picanha de cordeiro, com arroz à grega e batata sautée. Outras guarnições, como a farofa e a banana à milanesa, podem ser pedidas à parte.",
+    "preco": "de R$ 60,01 a R$ 75,00",
+    "cozinha": "Carnes",
+    "endereco": "R. Pirapora, 215, Vila Mariana, Sul, São Paulo, Brasil",
+    "endereco_busca": "R. Pirapora, 215, São Paulo, Brasil",
+    "telefone": "3884-0643",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, Hipercard, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico. Aceita cheques. Faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Não tem mesas ao ar livre. Tem conexão wi-fi. 140 lugares.",
+    "funcionamento": "segunda a sábado: 11h30 às 23h30.domingo: 11h30 às 23h.",
+    "latlon": [
+        -23.5817616,
+        -46.6519878
+    ]
+}

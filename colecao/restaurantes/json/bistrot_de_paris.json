@@ -1,0 +1,17 @@
+{
+    "nome": "Bistrot de Paris",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/francesa/394217/bistrot_de_paris?sr=251#onde",
+    "nota": "Bom",
+    "descricao": "Instalado numa charmosa vila que desemboca na rua Augusta, o restaurante de Pierre Murcia e do chef Alain Poletto sugere clássicos franceses, como o cassoulet e a coxa de pato confitada com batatas sauteadas. <br>",
+    "preco": "Acima de R$ 130,00",
+    "cozinha": "Francesa",
+    "endereco": "R. Augusta, 2.542, Cerqueira César, Oeste, São Paulo, Brasil",
+    "endereco_busca": "R. Augusta, 2.542, São Paulo, Brasil",
+    "telefone": "3063-1675",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico. Não aceita cheques. Aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Tem mesas ao ar livre. Tem conexão wi-fi. Possui cadeirões para bebês. Possui menu executivo. 98 lugares. Valet (R$ 18, no jantar).",
+    "funcionamento": "terça a sexta: 12h às 15h e 19h às 23h.domingo: 12h às 16h.sábado: 12h30 às 16h e 19h30 às 24h.",
+    "latlon": [
+        -23.5633725,
+        -46.6658094
+    ]
+}

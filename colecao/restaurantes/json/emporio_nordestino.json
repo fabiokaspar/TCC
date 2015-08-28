@@ -1,0 +1,17 @@
+{
+    "nome": "Empório Nordestino",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/brasileira/11735/emporio_nordestino?sr=51#onde",
+    "nota": false,
+    "descricao": "Especializado em cozinha nordestina, este restaurante funciona em um casarão restaurado na Freguesia do Ó, com amplos janelões de madeira e decoração rústica. A estrela do cardápio é a carne de sol, mas há outras boas opções, como o baião-de-dois, com feijão de corda e queijo de coalho. Para arrematar, experimente os doces caseiros, como o de jaca.",
+    "preco": "até R$ 60,00",
+    "cozinha": "Brasileira",
+    "endereco": "Lgo. da Matriz Nsa. Sra. do Ó, 144, Freguesia do Ó, Norte, São Paulo, Brasil",
+    "endereco_busca": "Lgo. da Matriz Nsa. Sra. do Ó, 144, São Paulo, Brasil",
+    "telefone": "3931-3101",
+    "localInfo": "Aceita os cartões Cabal, Diners, Elo, Good Card, Hipercard, MasterCard, Sorocred, Visa. Aceita os tíquetes Alelo, Bônus, Cabal Vale, Good Vale, Sodexo Pass. Não aceita cheques. Não faz entrega em domicílio. Aceita reservas. Não tem ar-condicionado. Tem mesas ao ar livre. Tem conexão wi-fi. 100 lugares.",
+    "funcionamento": "terça a quinta: 11h30 às 23h.sexta e sábado: 11h30 à 1h.domingo: 11h30 às 18h.",
+    "latlon": [
+        -23.5013002,
+        -46.6989398
+    ]
+}

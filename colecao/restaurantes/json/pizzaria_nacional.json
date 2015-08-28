@@ -1,0 +1,17 @@
+{
+    "nome": "Pizzaria Nacional",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/pizzarias/1879471/pizzaria_nacional?sr=701#onde",
+    "nota": false,
+    "descricao": "A casa serve pizzas com massa de fermentação longa, cobertas por molho de tomate da marca italiana Ciao e ingredientes como a mozarela de búfala da mineira Borghese. A pizza Vitrola leva mozarela, pancetta, cebola roxa e queijo pecorino.",
+    "preco": "até R$ 60,00",
+    "cozinha": "Pizzarias",
+    "endereco": "R. Canário, 480, Indianópolis, Sul, São Paulo, Brasil",
+    "endereco_busca": "R. Canário, 480, São Paulo, Brasil",
+    "telefone": "3074-4389",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Tem conexão wi-fi. 160 lugares.",
+    "funcionamento": "segunda a quinta e domingo: 18h30 à 0h30.sexta e sábado: 18h30 à 1h30.",
+    "latlon": [
+        -23.6002493,
+        -46.6660245
+    ]
+}

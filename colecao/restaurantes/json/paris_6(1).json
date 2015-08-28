@@ -1,0 +1,17 @@
+{
+    "nome": "Paris 6",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/francesa/12147/paris_6?sr=251#onde",
+    "nota": "Regular",
+    "descricao": "Frequentado por um público jovem e por atores, tem funcionamento ininterrupto. O \"restaurateur\" Isaac Azar oferece cozinha com clássicos franceses, como o steak tartare com mostarda Dijon e o tradicional croque monsieur.",
+    "preco": "Acima de R$ 130,00",
+    "cozinha": "Francesa",
+    "endereco": "R. Haddock Lobo, 1.240, Cerqueira César, Oeste, São Paulo, Brasil",
+    "endereco_busca": "R. Haddock Lobo, 1.240, São Paulo, Brasil",
+    "telefone": "3085-1595",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico. Não aceita cheques. Não faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Tem mesas ao ar livre. Possui menu executivo. 96 lugares. Valet (R$ 25 p/ 3 h).",
+    "funcionamento": "segunda a domingo: 24 horas.",
+    "latlon": [
+        -23.5622131,
+        -46.6661366
+    ]
+}

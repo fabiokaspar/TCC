@@ -1,0 +1,17 @@
+{
+    "nome": "Hiro",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/japonesa/12349/hiro?sr=451#onde",
+    "nota": "Regular",
+    "descricao": "A casa japonesa funciona em sistema \"kaiten-sushi\", onde os enrolados são servidos em esteiras diante dos clientes, que pegam os que lhe apetecem e pagam pelo que for consumido.",
+    "preco": "de R$ 95,01 a R$ 130,00",
+    "cozinha": "Japonesa",
+    "endereco": "Av. Dr. Cândido Motta Filho, 731, Cidade São Francisco, Oeste, São Paulo, Brasil",
+    "endereco_busca": "Av. Dr. Cândido Motta Filho, 731, São Paulo, Brasil",
+    "telefone": "3766-7090",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Sorocred, Visa. Aceita os tíquetes Alelo, Green Card, Sodexo Pass, Ticket Restaurante Eletrônico. Faz entrega em domicílio. Não aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Não tem mesas ao ar livre. Possui menu executivo. 60 lugares. Estac. (R$ 3 a 1ª h).",
+    "funcionamento": "segunda a quinta: 12h às 14h30 e 19h às 23h.sexta e sábado: 12h às 15h e 19h às 23h.domingo: 12h às 16h.",
+    "latlon": [
+        -23.5575388,
+        -46.7553599
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "nome": "Eataly.",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/italiana/2743262/eataly?sr=351#onde",
+    "nota": false,
+    "descricao": "O megaespaço &ndash;com 4,5 mil metros quadrados&ndash; dedicado à cozinha italiana conta com oito restaurantes, duas cafeterias, docerias e um empório com 22 departamentos.",
+    "preco": false,
+    "cozinha": "Italiana",
+    "endereco": "Av. Pres. Juscelino Kubitschek, 1.489, Vila Nova Conceição, Sul, São Paulo, Brasil",
+    "endereco_busca": "Av. Pres. Juscelino Kubitschek, 1.489, São Paulo, Brasil",
+    "telefone": "3279-3300",
+    "localInfo": "Aceita os cartões Amex, Aura, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Good Vale, Plan Vale Refeição, Sodexo Pass, Ticket Restaurante Eletrônico, Vale Refeição. Tem ar-condicionado. Tem acesso para deficiente. Tem conexão wi-fi. Estac. (R$ 6 p/ 30 min.).",
+    "funcionamento": "segunda a domingo: 8h às 23h.",
+    "latlon": [
+        -23.5916921,
+        -46.6834011
+    ]
+}

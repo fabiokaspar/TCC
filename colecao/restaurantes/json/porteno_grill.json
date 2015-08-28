@@ -1,0 +1,17 @@
+{
+    "nome": "Porteño Grill",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/carnes/2214034/porteno_grill?sr=201#onde",
+    "nota": false,
+    "descricao": "A especialidade da casa é a carne vinda da Argentina. Lá, desfilam pelas mesas picanha, fraldinha e costela, cortes que podem ser acompanhados por opções como arroz, batatas fritas, creme de milho. Oferece ainda massas, almoço executivo e pratos menores (para crianças).",
+    "preco": "de R$ 75,01 a R$ 95,00",
+    "cozinha": "Carnes",
+    "endereco": "Av. Pavão, 566, Indianópolis, Sul, São Paulo, Brasil",
+    "endereco_busca": "Av. Pavão, 566, São Paulo, Brasil",
+    "telefone": "5041-3541",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, Hipercard, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass. Não aceita cheques. Aceita reservas. Tem ar-condicionado. Não tem mesas ao ar livre. Tem conexão wi-fi. Possui menu executivo. 50 lugares. Valet (R$ 15).",
+    "funcionamento": "terça a sexta: 12h às 15h30 e 18h às 23h.sábado: 12h às 23h.domingo: 12h às 17h.",
+    "latlon": [
+        -23.605119,
+        -46.6700438
+    ]
+}

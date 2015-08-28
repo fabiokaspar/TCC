@@ -1,0 +1,17 @@
+{
+    "nome": "Hiro",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/japonesa/12349/hiro?sr=451#onde",
+    "nota": "Regular",
+    "descricao": "A casa japonesa funciona em sistema \"kaiten-sushi\", onde os enrolados são servidos em esteiras diante dos clientes, que pegam os que lhe apetecem e pagam pelo que for consumido.",
+    "preco": "de R$ 95,01 a R$ 130,00",
+    "cozinha": "Japonesa",
+    "endereco": "R. 13 de Maio, 1.947, piso Jardins, Bela Vista, Centro, São Paulo, Brasil",
+    "endereco_busca": "R. 13 de Maio, 1.947, São Paulo, Brasil",
+    "telefone": "3266-5514",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico. Aceita cheques. Tem ar-condicionado. Não tem mesas ao ar livre. 61 lugares. Estac. (R$ 13 p/ 2 h).",
+    "funcionamento": "segunda a domingo: 11h30 às 23h.",
+    "latlon": [
+        -23.5704825,
+        -46.6435488
+    ]
+}

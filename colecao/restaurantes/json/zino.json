@@ -1,0 +1,17 @@
+{
+    "nome": "Zino",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/italiana/1009674/zino?sr=451#onde",
+    "nota": false,
+    "descricao": "Adega e restaurante, o pequeno espaço na Vila Mariana fica aberto de terça a sábado, initerruptamente, entre 12h e meia-noite (no domingo, fecha às 23h). Da cozinha do chef Rafael Leão, todos os dias sai uma sugestão diferente de risoto. No menu, destaca-se o filé saltimboca alla romana, com presunto cru e salvia, acompanhado por fettucine puxado na manteiga.",
+    "preco": "de R$ 60,01 a R$ 75,00",
+    "cozinha": "Italiana",
+    "endereco": "R. Joaquim Távora, 1.317, Vila Mariana, Sul, São Paulo, Brasil",
+    "endereco_busca": "R. Joaquim Távora, 1.317, São Paulo, Brasil",
+    "telefone": "5082-4308",
+    "localInfo": "Aceita os cartões MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass. Não aceita cheques. Não faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Tem mesas ao ar livre. Tem conexão wi-fi. Possui cadeirões para bebês. 50 lugares.",
+    "funcionamento": "terça a sábado: 12h às 16h e 19h às 24h.domingo: 12h às 16h e 18h às 22h.",
+    "latlon": [
+        -23.5876426,
+        -46.6449934
+    ]
+}

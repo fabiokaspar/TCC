@@ -1,0 +1,17 @@
+{
+    "nome": "Irori",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/japonesa/12441/irori?sr=451#onde",
+    "nota": false,
+    "descricao": "Na casa onde funcionou por 20 anos o Iti Fuji há vários ambientes decorados de forma tradicional, além de um jardim japonês com lago e carpas. No menu, há pratos japoneses típicos, como combinados de sushi e sashimi e robatas.",
+    "preco": "de R$ 60,01 a R$ 75,00",
+    "cozinha": "Japonesa",
+    "endereco": "Al. Jaú, 487, Jardim Paulista, Oeste, São Paulo, Brasil",
+    "endereco_busca": "Al. Jaú, 487, São Paulo, Brasil",
+    "telefone": "3569-1390",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, Hipercard, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico. Não aceita cheques. Não faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Não tem mesas ao ar livre. 160 lugares.",
+    "funcionamento": "segunda a quinta: 11h30 às 14h30 e 18h30 às 23h30.sexta: 11h30 às 14h30 e 18h30 à 0h30.sábado: 12h às 16h e 18h30 à 0h30.",
+    "latlon": [
+        -23.5666268,
+        -46.6543228
+    ]
+}

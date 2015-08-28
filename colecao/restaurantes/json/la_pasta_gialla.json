@@ -1,0 +1,17 @@
+{
+    "nome": "La Pasta Gialla",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/italiana/11579/la_pasta_gialla?sr=351#onde",
+    "nota": "Bom",
+    "descricao": "A casa do chef Sergio Arno é um misto de bruschetteria e cantina. Destaque para o ravióli de queijo de cabra, servido ao molho de pera e amêndoas.",
+    "preco": "de R$ 75,01 a R$ 95,00",
+    "cozinha": "Italiana",
+    "endereco": "Av. Leão Machado, 100, 1º piso, Parque Continental, Oeste, São Paulo, Brasil",
+    "endereco_busca": "Av. Leão Machado, 100, São Paulo, Brasil",
+    "telefone": "3714-0361",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico. Não aceita cheques. Não faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Não tem mesas ao ar livre. Possui menu executivo. 90 lugares. Estac. (R$ 6 p/ 2 h).",
+    "funcionamento": "segunda a quinta e domingo: 12h às 22h.sexta e sábado: 12h às 23h.",
+    "latlon": [
+        -23.547665,
+        -46.7571733
+    ]
+}

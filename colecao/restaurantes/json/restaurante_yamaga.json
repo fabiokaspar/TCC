@@ -1,0 +1,17 @@
+{
+    "nome": "Restaurante Yamaga",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/japonesa/496986/restaurante_yamaga?sr=501#onde",
+    "nota": "Regular",
+    "descricao": "Localizado no bairro Liberdade, oferece três salas reservadas com tatames e cardápio à la carte preparado cuidadosamente por Toshiso Nonogushi. O tempura, o udon e o lamen são os destaques da casa.",
+    "preco": "de R$ 75,01 a R$ 95,00",
+    "cozinha": "Japonesa",
+    "endereco": "R. Tomás Gonzaga, 66, Liberdade, Centro, São Paulo, Brasil",
+    "endereco_busca": "R. Tomás Gonzaga, 66, São Paulo, Brasil",
+    "telefone": "3275-1790",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Ticket Restaurante Eletrônico. Não aceita cheques. Não faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Não tem mesas ao ar livre. Possui cadeirões para bebês. 60 lugares.",
+    "funcionamento": "segunda, terça, quinta e sexta: 11h30 às 14h e 18h30 às 23h.sábado: 12h às 15h e 18h30 às 23h.domingo: 12h às 21h.",
+    "latlon": [
+        -23.5578201,
+        -46.6357324
+    ]
+}

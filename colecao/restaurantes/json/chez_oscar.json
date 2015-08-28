@@ -1,0 +1,17 @@
+{
+    "nome": "Chez Oscar",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/variada/2159076/chez_oscar?sr=801#onde",
+    "nota": "Regular",
+    "descricao": "Localizada num moderno e sofisticado edifício, a casa mais nova do grupo Chez é um multiespaço com terraço, restaurante e bares suspensos. O cardápio lista opções de cozinha variada, como a lula na chapa com batata-doce e tomate cereja (de entrada) e o omelete rústico com salada de grão-de-bico, parmesão e pão da casa.",
+    "preco": "de R$ 95,01 a R$ 130,00",
+    "cozinha": "Variada",
+    "endereco": "R. Oscar Freire, 1.128, Cerqueira César, Oeste, São Paulo, Brasil",
+    "endereco_busca": "R. Oscar Freire, 1.128, São Paulo, Brasil",
+    "telefone": "3081-2966",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Não aceita cheques. Não faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Tem mesas ao ar livre. Tem conexão wi-fi. Possui menu executivo. 180 lugares. Valet (R$ 30).",
+    "funcionamento": "segunda a sábado: 12h à 1h.domingo: 12h às 22h.",
+    "latlon": [
+        -23.5614211,
+        -46.6706009
+    ]
+}

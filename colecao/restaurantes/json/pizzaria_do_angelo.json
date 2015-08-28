@@ -1,0 +1,17 @@
+{
+    "nome": "Pizzaria do Angelo",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/pizzarias/12591/pizzaria_do_angelo?sr=701#onde",
+    "nota": false,
+    "descricao": "Aberto no início da década de 1970, o espaço conserva o charme do passado. Tem um disputado balcão que lembra o de um botequim, onde são servida as fatias de pizza. Nas mesas, elas podem ser consumidas inteiras.",
+    "preco": "até R$ 60,00",
+    "cozinha": "Pizzarias",
+    "endereco": "R. Sapucaia, 527, Mooca, Leste, São Paulo, Brasil",
+    "endereco_busca": "R. Sapucaia, 527, São Paulo, Brasil",
+    "telefone": "2692-5230",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Não aceita cheques. Faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Não tem mesas ao ar livre. 120 lugares.",
+    "funcionamento": "segunda a quinta e domingo: 17h30 às 24h.sexta e sábado: 17h30 à 1h.",
+    "latlon": [
+        -23.5508335,
+        -46.5920651
+    ]
+}

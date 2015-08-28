@@ -1,0 +1,17 @@
+{
+    "nome": "Star City",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/variada/12805/star_city?sr=901#onde",
+    "nota": "Regular",
+    "descricao": "Aberto em 1953, é um restaurante clássico do centro, cuja feijoada já foi considerada uma das melhores da cidade. Serve também pratos triviais, como o filé à cubana e o lombo de porco à mineira",
+    "preco": "de R$ 60,01 a R$ 75,00",
+    "cozinha": "Variada",
+    "endereco": "R. Frederico Abranches, 453, Vila Buarque, Centro, São Paulo, Brasil",
+    "endereco_busca": "R. Frederico Abranches, 453, São Paulo, Brasil",
+    "telefone": "3331-2044",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Ticket Restaurante Eletrônico. Não aceita cheques. Faz entrega em domicílio. Aceita reservas. Não tem ar-condicionado. Não tem mesas ao ar livre. 180 lugares. Estac. c/ manob. (R$ 10, no nº 388 - convênio).",
+    "funcionamento": "terça a sábado: 11h às 23h.domingo: 11h às 17h.",
+    "latlon": [
+        -23.5388579,
+        -46.6515421
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "nome": "La Trattoria",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/italiana/12203/la_trattoria?sr=351#onde",
+    "nota": "Regular",
+    "descricao": "Aberto em 1968, é um restaurante com ar de cantina e cozinha inspirada na região da Toscana. As massas são feitas na casa, em versões como o agnolotti com molho branco e funghi.",
+    "preco": "até R$ 60,00",
+    "cozinha": "Italiana",
+    "endereco": "R. Antônio Bicudo, 50/58, Pinheiros, Oeste, São Paulo, Brasil",
+    "endereco_busca": "R. Antônio Bicudo, 50/58, São Paulo, Brasil",
+    "telefone": "3088-3572",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico. Não faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Não tem mesas ao ar livre. 120 lugares. Estac. (R$ 16 p/ 2 h).",
+    "funcionamento": "terça a quinta: 12h às 15h.sexta: 12h às 15h e 19h à 23h.sábado: 12h às 16h e 19h às 23h.domingo: 12h às 16h.",
+    "latlon": [
+        -23.5671355,
+        -46.6876513
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "nome": "Baruk",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/arabe/684952/baruk?sr=1#onde",
+    "nota": "Bom",
+    "descricao": "A casa investe em pratos da cozinha árabe em sistema de rodízio ou à la carte. O menu lista pratos triviais, como esfirras e quibe frito, e também opções mais elaboradas, como o michui de filé-mignon, com homus e cuscuz marroquino, e o picadinho de berinjela, com creme branco e amêndoas.",
+    "preco": "até R$ 60,00",
+    "cozinha": "Árabe",
+    "endereco": "Al. Raja Gabaglia, 160, Vila Olímpia, Oeste, São Paulo, Brasil",
+    "endereco_busca": "Al. Raja Gabaglia, 160, São Paulo, Brasil",
+    "telefone": "3045-9999",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico. Não aceita cheques. Faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Não tem mesas ao ar livre. Tem conexão wi-fi. 120 lugares.",
+    "funcionamento": "segunda a domingo: 12h às 17h.",
+    "latlon": [
+        -23.5957315,
+        -46.6893242
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "nome": "Pepe Nero",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/italiana/1657439/pepe_nero?sr=401#onde",
+    "nota": false,
+    "descricao": "Restaurante italiano, tem sócios do Don Pepe Di Napoli.",
+    "preco": "de R$ 60,01 a R$ 75,00",
+    "cozinha": "Italiana",
+    "endereco": "Av. Jandira, 185, Indianópolis, Sul, São Paulo, Brasil",
+    "endereco_busca": "Av. Jandira, 185, São Paulo, Brasil",
+    "telefone": "5051-1508",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, Hipercard, MasterCard, Sorocred, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico, Vale Refeição. Aceita cheques. Não faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Tem mesas ao ar livre. Tem conexão wi-fi. 82 lugares. Valet (R$ 13 e R$ 18).",
+    "funcionamento": "segunda a sexta: 12h às 15h e 19h às 23h30.sábado: 12h às 15h30 e 19h às 23h30.",
+    "latlon": [
+        -23.6065962,
+        -46.6627741
+    ]
+}

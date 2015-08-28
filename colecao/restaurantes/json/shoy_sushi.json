@@ -1,0 +1,17 @@
+{
+    "nome": "Shoy Sushi",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/japonesa/2772378/shoy_sushi?sr=501#onde",
+    "nota": false,
+    "descricao": "Localizada na Vila Nova Conceição, a casa possui uma gôndola refrigerada na qual exibe hossomakis, niguiris e uramakis. Quem chega, pega com as mãos as versões de sushi que pretende devorar -eles são embalados individualmente, em um processo quase todo automatizado. Os preços vão de R$ 1,60 a R$ 3 cada, dependendo do recheio. Além dos sushis, a casa serve também sashimis, saladas e pratos quentes, como frango xadrez, yakisoba e salmão com legumes. De segunda à sexta, depois das 17h, todos os sushis e sashimis são vendidos com 50% de desconto.",
+    "preco": "até R$ 60,00",
+    "cozinha": "Japonesa",
+    "endereco": "R. Clodomiro Amazonas, 79, Vila Nova Conceição, Sul, São Paulo, Brasil",
+    "endereco_busca": "R. Clodomiro Amazonas, 79, São Paulo, Brasil",
+    "telefone": "3078-1288",
+    "localInfo": "Aceita os cartões MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico. Não aceita cheques. Faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Não tem mesas ao ar livre. 40 lugares.",
+    "funcionamento": "segunda a sexta: 11h30 às 20h.",
+    "latlon": [
+        -23.5849459,
+        -46.6797878
+    ]
+}

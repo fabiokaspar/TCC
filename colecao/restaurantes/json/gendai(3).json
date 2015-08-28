@@ -1,0 +1,17 @@
+{
+    "nome": "Gendai",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/japonesa/11531/gendai?sr=451#onde",
+    "nota": false,
+    "descricao": "Rede de restaurantes e comida rápida de comida japonesa com 15 unidades em São Paulo. Serve opções tradicionais, como o combinado Gendai salmão, com sushis e sashimis de salmão. Entre os pratos quentes, há o yakissoba executivo.",
+    "preco": "até R$ 60,00",
+    "cozinha": "Japonesa",
+    "endereco": "R. Borges Lagoa, 245, Vila Clementino, Sul, São Paulo, Brasil",
+    "endereco_busca": "R. Borges Lagoa, 245, São Paulo, Brasil",
+    "telefone": "5084-2323",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico. Não aceita cheques. Faz entrega em domicílio. Não aceita reservas. Tem ar-condicionado. Tem mesas ao ar livre. 80 lugares. Estac. (R$ 6,50 p/ 2 h, no nº 207).",
+    "funcionamento": "segunda a sábado: 11h30 às 15h e 18h às 23h.domingo: 12h às 16h e 18h às 23h.",
+    "latlon": [
+        -23.5973663,
+        -46.6390797
+    ]
+}

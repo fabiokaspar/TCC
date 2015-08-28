@@ -1,0 +1,17 @@
+{
+    "nome": "Pizzaria Valentina",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/pizzarias/12599/pizzaria_valentina?sr=701#onde",
+    "nota": false,
+    "descricao": "Fica em uma área nobre da região leste e tem ambientação em estilo rústico-chique, com pé-direito alto e uma grande varanda ao ar livre. A pizza com nome da casa leva frango desfiado e requeijão.",
+    "preco": "de R$ 60,01 a R$ 75,00",
+    "cozinha": "Pizzarias",
+    "endereco": "R. Luiz dos Santos Cabral, 201, Jardim Anália Franco, Leste, São Paulo, Brasil",
+    "endereco_busca": "R. Luiz dos Santos Cabral, 201, São Paulo, Brasil",
+    "telefone": "2671-2215",
+    "localInfo": "Aceita os cartões MasterCard, Visa. Couvert artístico: R$ 10. Aceita cheques. Faz entrega em domicílio. Aceita reservas. Não tem ar-condicionado. Tem acesso para deficiente. Tem mesas ao ar livre. 360 lugares.",
+    "funcionamento": "segunda a quinta e domingo: 19h às 24h.sexta e sábado: 19h à 0h45.",
+    "latlon": [
+        -23.5548507,
+        -46.5627926
+    ]
+}

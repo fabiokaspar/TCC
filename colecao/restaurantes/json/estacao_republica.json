@@ -1,0 +1,17 @@
+{
+    "nome": "Estação República",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/bufequilo/11953/estacao_republica?sr=101#onde",
+    "nota": false,
+    "descricao": "Fica em um casarão do século 19, com salão decorado com fotos de artistas de cinema. Serve um bufê de almoço, com saladas, queijos, risotos, massas e tortas que variam diariamente. As sobremesas merecem atenção.",
+    "preco": "até R$ 60,00",
+    "cozinha": "Bufê/quilo",
+    "endereco": "R. Aurora, 964, Santa Efigênia, Centro, São Paulo, Brasil",
+    "endereco_busca": "R. Aurora, 964, São Paulo, Brasil",
+    "telefone": "3331-2160",
+    "localInfo": "Aceita os tíquetes Alelo, Plan Vale Refeição, Sodexo Pass, Ticket Restaurante Eletrônico. Não aceita cheques. Não faz entrega em domicílio. Não aceita reservas. Não tem ar-condicionado. Tem mesas ao ar livre. 180 lugares.",
+    "funcionamento": "segunda a sexta: 11h30 às 15h.",
+    "latlon": [
+        -23.5427794,
+        -46.6448064
+    ]
+}

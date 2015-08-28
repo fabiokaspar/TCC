@@ -1,0 +1,17 @@
+{
+    "nome": "A Galeteria Assados",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/carnes/1961524/a_galeteria_assados?sr=101#onde",
+    "nota": false,
+    "descricao": "Aberto há 25 anos, o restaurante ocupa dois imóveis muito simples. Só vende frango com osso, assado na churrasqueira depois de ser temperado com mais de 20 ingredientes. O Kit Galeto inclui a ave mais duas guarnições, que podem ser arroz à grega e salpicão. Se a ideia for pedir comida para viagem, os pratos saem mais em conta.",
+    "preco": "de R$ 75,01 a R$ 95,00",
+    "cozinha": "Carnes",
+    "endereco": "Av. Cotovia, 357, Indianópolis, Sul, São Paulo, Brasil",
+    "endereco_busca": "Av. Cotovia, 357, São Paulo, Brasil",
+    "telefone": "5542-1680",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, Hipercard, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico, Vale Ticket. Aceita cheques. Faz entrega em domicílio. Aceita reservas. Não tem ar-condicionado. Tem mesas ao ar livre. Tem conexão wi-fi. 200 lugares. Valet (R$ 15).",
+    "funcionamento": "segunda a sábado: 10h às 23h30.domingo: 10h às 21h.",
+    "latlon": [
+        -23.6061305,
+        -46.672201
+    ]
+}

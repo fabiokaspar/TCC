@@ -1,0 +1,17 @@
+{
+    "nome": "Laço de Ouro",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/carnes/1898932/laco_de_ouro?sr=151#onde",
+    "nota": false,
+    "descricao": "A churrascaria trabalha com cortes brasileiros à la carte e acompanhamentos diversos. A picanha e a maminha, por exemplo, chegam à mesa com arroz e fritas. Já a picanha de cordeiro, com arroz à grega e batata sautée. Outras guarnições, como a farofa e a banana à milanesa, podem ser pedidas à parte.",
+    "preco": "de R$ 60,01 a R$ 75,00",
+    "cozinha": "Carnes",
+    "endereco": "R. Pires da Mota, 295, Aclimação, Centro, São Paulo, Brasil",
+    "endereco_busca": "R. Pires da Mota, 295, São Paulo, Brasil",
+    "telefone": "3208-1567",
+    "localInfo": "Aceita os cartões Amex, Aura, Diners, Elo, Hipercard, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico. Não aceita cheques. Faz entrega em domicílio. Aceita reservas. Não tem ar-condicionado. Tem acesso para deficiente. Não tem mesas ao ar livre. Tem conexão wi-fi. 250 lugares. Estac. grátis.",
+    "funcionamento": "segunda a domingo: 11h30 às 24h.",
+    "latlon": [
+        -23.5657925,
+        -46.6318501
+    ]
+}

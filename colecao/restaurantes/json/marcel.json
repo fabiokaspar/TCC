@@ -1,0 +1,17 @@
+{
+    "nome": "Marcel",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/francesa/11589/marcel?sr=251#onde",
+    "nota": "Bom",
+    "descricao": "Aberta em 1955, a casa está sob o comando do chef Raphael Despiri­te, neto de um antigo proprietário. O menu sugere clássicos franceses retocados por nuances contempo­râneas -os suflês, em diferentes versões, são um sucesso. Destaque para o entrecôte ao molho de pimentas, que é servido com batatas dauphinoise.",
+    "preco": "de R$ 95,01 a R$ 130,00",
+    "cozinha": "Francesa",
+    "endereco": "R. da Consolação, 3.555, Cerqueira César, Oeste, São Paulo, Brasil",
+    "endereco_busca": "R. da Consolação, 3.555, São Paulo, Brasil",
+    "telefone": "3064-3089",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita cheques. Não faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Não tem mesas ao ar livre. Possui menu executivo. 50 lugares. Estac. c/ manob. (R$ 20).",
+    "funcionamento": "segunda a sexta: 12h às 14h30 e 19h às 24h.sábado: 19h às 24h.domingo: 12h30 às 16h e 19h às 23h.",
+    "latlon": [
+        -23.5629145,
+        -46.6702288
+    ]
+}

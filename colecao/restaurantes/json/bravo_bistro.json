@@ -1,0 +1,17 @@
+{
+    "nome": "Bravo Bistrô",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/variada/1665281/bravo_bistro?sr=751#onde",
+    "nota": false,
+    "descricao": "Localizada na Mooca, a casa mescla as culinárias francesa e italiana em seu menu. Entre as opções, há a \"Arancini di Sicilia\", que leva risoto de açafrão e mozarela de búfala, e o contrafilé marinado no vinho tinto, com cebola caramelizada, batata rústica e fondant de gorgonzola. De sobremesa, peça o brownie de chocolate e nozes com gelato de baunilha e chantili.",
+    "preco": "de R$ 95,01 a R$ 130,00",
+    "cozinha": "Variada",
+    "endereco": "R. dos Campineiros, 501, Mooca, Leste, São Paulo, Brasil",
+    "endereco_busca": "R. dos Campineiros, 501, São Paulo, Brasil",
+    "telefone": "4306-8560",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass. Aceita reservas. Tem ar-condicionado. Não tem mesas ao ar livre. Tem conexão wi-fi. 80 lugares. Estac. grátis.",
+    "funcionamento": "terça a quinta: 12h às 15h30 e 19h30 às 23h.sábado: 12h30 às 16h e 19h30 às 24h.domingo: 12h30 às 16h.sexta: 12h às 15h30 e 19h30 às 24h.",
+    "latlon": [
+        -23.5558266,
+        -46.5934001
+    ]
+}

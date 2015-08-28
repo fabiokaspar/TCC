@@ -1,0 +1,17 @@
+{
+    "nome": "Casa Santo Antônio",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/italiana/1899124/casa_santo_antonio?sr=301#onde",
+    "nota": false,
+    "descricao": "O restaurante ocupa um casarão construído no início da década de 1960 na zona sul da cidade. Tem entre os sócios três ex-funcionários do Grupo Fasano -não à toa, o cardápio é italiano. Entre os pratos, há massas, como o nhoque à bolonhesa, incrementado com molho funghi, e o espaguete integral preparado com camarão e legumes.",
+    "preco": "de R$ 95,01 a R$ 130,00",
+    "cozinha": "Italiana",
+    "endereco": "Av. João Carlos da Silva Borges, 764, Granja Julieta, Sul, São Paulo, Brasil",
+    "endereco_busca": "Av. João Carlos da Silva Borges, 764, São Paulo, Brasil",
+    "telefone": "4328-6205",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass. Não aceita cheques. Não faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Tem mesas ao ar livre. Tem conexão wi-fi. 90 lugares. Valet grátis.",
+    "funcionamento": "terça a sexta: 12h às 15h e 19h às 23h.sábado: 12h às 16h e 19h às 24h.domingo: 12h às 17h.",
+    "latlon": [
+        -23.6384961,
+        -46.7115585
+    ]
+}

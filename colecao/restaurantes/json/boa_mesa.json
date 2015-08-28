@@ -1,0 +1,17 @@
+{
+    "nome": "Boa Mesa",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/bufequilo/11951/boa_mesa?sr=101#onde",
+    "nota": false,
+    "descricao": "Serve pratos de cozinha variada no bufê de almoço (por peso), em um ambiente colorido e decorado com espelhos. O cardápio varia diariamente, com receitas como mezzaluna de mussarela ao sugo. Costuma fazer sucesso o salmão servido às sextas. Nas segundas a casa oferece pratos de sotaque tex-mex como tacos, burritos e o apimentado chile.",
+    "preco": "até R$ 60,00",
+    "cozinha": "Bufê/quilo",
+    "endereco": "R. Correia de Melo, 80, Bom Retiro, Centro, São Paulo, Brasil",
+    "endereco_busca": "R. Correia de Melo, 80, São Paulo, Brasil",
+    "telefone": "3361-2699",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, Hipercard, MasterCard, Visa. Aceita os tíquetes Alelo, Plan Vale Refeição, Sodexo Pass, Ticket Restaurante Eletrônico, Vale Refeição. Não aceita cheques. Não faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Não tem mesas ao ar livre. 190 lugares.",
+    "funcionamento": "segunda a sábado: 11h30 às 15h30.",
+    "latlon": [
+        -23.5304692,
+        -46.6376982
+    ]
+}

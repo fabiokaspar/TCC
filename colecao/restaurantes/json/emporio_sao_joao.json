@@ -1,0 +1,17 @@
+{
+    "nome": "Empório São João",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/variada/1817851/emporio_sao_joao?sr=801#onde",
+    "nota": false,
+    "descricao": "No corredor gastronômico da rua dos Pinheiros, o restaurante é alternativa para comer bem a preços razoáveis. Num ambiente rústico-chique, propõe pê-efes diários no almoço, como o que leva picadinho com farofa, pastel e ovo frito, que é servido às segundas. Das opções fixas, prove o queijo de coalho com chutney e, depois, o risoto de abóbora, mais linguiça e couve. Finalize com um bocado de compota de frutas para adoçar a boca.",
+    "preco": "até R$ 60,00",
+    "cozinha": "Variada",
+    "endereco": "R. dos Pinheiros, 456, Pinheiros, Oeste, São Paulo, Brasil",
+    "endereco_busca": "R. dos Pinheiros, 456, São Paulo, Brasil",
+    "telefone": "3063-0114",
+    "localInfo": "Aceita os cartões Amex, Cabal, Diners, Elo, Hipercard, MasterCard, Sorocred, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico. Não aceita cheques. Não faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Tem mesas ao ar livre. Tem conexão wi-fi. 100 lugares.",
+    "funcionamento": "segunda: 9h às 19h.terça a sábado: 9h às 24h.domingo: 9h às 17h.",
+    "latlon": [
+        -23.5653919,
+        -46.6825185
+    ]
+}

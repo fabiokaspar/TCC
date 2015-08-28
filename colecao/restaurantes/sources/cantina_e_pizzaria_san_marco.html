@@ -1,0 +1,488 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Guia da Folha Online - Restaurantes - Cantina e Pizzaria San Marco</title>
+
+<!--HEADER-->
+<!--HEAD-->
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="Thu, 01 Jan 1970 00:00:00 GMT">
+<meta http-equiv="Cache-Control" content="no-store">
+<meta name="description" content="O Guia da Folha Online é um site de cultura, diversão e entretenimento, com reportagens exclusivas e amplo roteiro com atrações da região metropolitana de São Paulo (SP).">
+<meta name="keywords" content="guia,folha online,roteiro,cinema,teatro,criança,passeios,shows,concertos,dança,exposições,restaurantes,bares,guloseimas,noite,crianca,exposicao,exposicoes,danca,multimidia,multimídia,enquete,galeria,fotos,eventos,evento,são paulo,sao">
+<link rev="made" href="http://tools.folha.com.br/feedback/webmaster">
+<link rel="shortcut icon" type="image/x-icon" href="http://f.i.uol.com.br/guia/favicon.ico">
+
+<link type="text/css" rel="stylesheet" href="http://static.folha.uol.com.br/guia/css/2/common.css?2013052801">
+<link type="text/css" rel="stylesheet" href="http://www1.folha.uol.com.br/folha/furniture/guia/2/common/restaurantes.css">
+
+<script type="text/javascript" src="http://static.folha.uol.com.br/library/jquery/1.7.2/jquery.js"></script>
+<script type="text/javascript" src="http://static.folha.uol.com.br/guia/js/2/plugins.js"></script>
+<script type="text/javascript" src="http://static.folha.uol.com.br/guia/js/2/common.js?2013061001"></script>
+
+<!--/HEAD-->
+<script type="text/javascript">
+guia.information.page.channel = 'restaurantes' ;
+guia.information.page.title = 'Cantina e Pizzaria San Marco' ;
+guia.information.page.type = 'servicos' ;
+</script>
+
+<!-- Tag Manager -->
+<script type="text/javascript">
+guia.tag_manager.banners = [ "banner-728x90-1" , "banner-220x90-1" ] ;
+guia.tag_manager.create() ;
+</script>
+<script type="text/javascript" src="http://tm.uol.com.br/h/par/folha.js"></script>
+<!-- /Tag Manager -->
+
+</head>
+<body onLoad="guiaonline_onload_manager()">
+<div id="aligner">
+<!--HEADER-->
+<!--BARRA_DO_UOL-->
+<script type="text/javascript" src="http://barra.uol.com.br/b/scripts/1024/bv1folha.js"></script>
+<!--/BARRA_DO_UOL-->
+<!--BARRA FOLHA-->
+<script type="text/javascript" src="http://static.folha.uol.com.br/navbar/1.0/folha_search.js"></script>
+<!--/BARRA FOLHA-->
+<div id="header">
+<div id="logo_header">
+<a href="http://guia.folha.com.br/" class="logo_guia">Guia da Folha</a><a href="http://www.folha.uol.com.br/" class="logo_folha">Folha.com</a>
+</div>
+<div id="fullBannerContainer">
+<script type="text/javascript" language="JavaScript"><!--
+folha_ads_show( 'online.guia.restaurantes.search' , '728x90' , '1');
+--></script>
+</div>
+</div>
+<!--/HEADER-->
+
+<!--NAVEGACAO-->
+<div id="navbar">
+<ul>
+<li><a href="http://guia.folha.com.br/cinema"><img src="http://f.i.uol.com.br/guia/2/furniture/images/lbl-cinema-3.jpg" border="0" width="80" height="45" alt="Cinema"></a></li>
+<li><a href="http://guia.folha.com.br/teatro"><img src="http://f.i.uol.com.br/guia/2/furniture/images/lbl-teatro-3.jpg" border="0" width="80" height="45" alt="Teatro"></a></li>
+<li><a href="http://guia.folha.com.br/passeios"><img src="http://f.i.uol.com.br/guia/2/furniture/images/lbl-passeios-3.jpg" border="0" width="150" height="45" alt="Passeios"></a></li>
+<li><a href="http://guia.folha.com.br/shows"><img src="http://f.i.uol.com.br/guia/2/furniture/images/lbl-shows-3.jpg" border="0" width="80" height="45" alt="Shows"></a></li>
+<li><a href="http://guia.folha.com.br/restaurantes"><img src="http://f.i.uol.com.br/guia/2/furniture/images/lbl-restaurantes-3.jpg" border="0" width="120" height="45" alt="Restaurantes"></a></li>
+<li><a href="http://guia.folha.com.br/noite" class="last"><img src="http://f.i.uol.com.br/guia/2/furniture/images/lbl-noite-3.jpg" border="0" width="55" height="45" alt="Noite"></a></li>
+</ul>
+</div><!--/NAVEGACAO-->
+<!--/CABECALHO-->
+
+<!--MAIN-->
+<div id="main">
+
+<!--BUSCAR EVENTOS-->
+<script type="text/javascript" >
+
+	( function() {
+		
+		jQuery(document).ready(function() {
+			teaser.init() ;
+		});
+		
+		var teaser = {
+			init : function() {
+				this.start = 1 ;
+				if( this.start ) {
+					this.config() ;
+					this.request_teaser() ;
+				}
+			},
+			config: function(){
+				this.url = "http://guia.folha.com.br/restaurantes/search-teaser.json" ;
+				this.callback = "get_teaser" ;
+			},
+			request_teaser : function() {
+				var self = this ;
+				$.ajax({
+				   url: self.url ,
+				   dataType: 'jsonp' ,
+				   crossDomain: true ,
+				   jsonpCallback: self.callback ,
+				   success: function ( data ) {
+				     	self.fill_teaser( data.text , data.url ) ;
+				   }
+				});
+			},
+			fill_teaser : function( text , url ) {
+				var box_search = $("td.showMore span.text") ;
+				var content = "" ;
+				content = '<a class="text" href="' + url + '">' + text + '<\/a>' ; /*content*/
+				box_search.html( content ) ;
+			}
+			
+		}
+		
+	} )( jQuery ) ;
+
+</script>
+
+
+<div id="masthead">
+	
+<p class="restaurantes"><img src="http://f.i.uol.com.br/guia/2/furniture/images/trj-restaurantes.gif" alt="Restaurantes" width="180" height="20" border="0" align="left">
+
+<span class="default"><a href="http://guia1.folha.com.br/busca/restaurantes/?detailed=yes">Busca detalhada</a></span>
+
+</p>
+</div>
+<div id="searchBox">
+<div class="restaurantes" style="margin: 1px 0;">
+<form action="http://guia1.folha.com.br/busca/restaurantes/" id="searchForm" method="get" onSubmit="javascript: return guia_check_input_text_value(this);">
+
+<table border="0" cellpadding="0" cellspacing="0" id="box">
+<tr>
+<td valign="top" id="busca"><span>Buscar restaurantes com a palavra</span>
+<input  type="text" name="q" value="Palavra-chave " onFocus="javascript: this.value=guia_modify_default_text(this.value);" onBlur="javascript: this.value=guia_modify_default_text(this.value);"></td>
+<td>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="types">
+<input type="hidden" name="genre">
+<input type="hidden" name="address">
+<input type="hidden" name="price_rate">
+<input type="hidden" name="rating">
+<select name="genre">
+<option value="">Tipo de cozinha</option>
+<option value="Alemã">Alemã</option>
+<option value="Árabe">Árabe</option>
+<option value="Armênia">Armênia</option>
+<option value="Asiática">Asiática</option>
+<option value="Brasileira">Brasileira</option>
+<option value="Bufê/quilo">Bufê/quilo</option>
+<option value="Carnes">Carnes</option>
+<option value="Chinesa">Chinesa</option>
+<option value="Comida Rápida">Comida Rápida</option>
+<option value="Coreana">Coreana</option>
+<option value="Escandinava">Escandinava</option>
+<option value="Espanhola">Espanhola</option>
+<option value="Francesa">Francesa</option>
+<option value="Grega">Grega</option>
+<option value="Indiana">Indiana</option>
+<option value="Italiana">Italiana</option>
+<option value="Japonesa">Japonesa</option>
+<option value="Judaica">Judaica</option>
+<option value="Marroquina">Marroquina</option>
+<option value="Mediterrânea">Mediterrânea</option>
+<option value="Mexicana">Mexicana</option>
+<option value="Natural">Natural</option>
+<option value="Novidades">Novidades</option>
+<option value="Outra">Outra</option>
+<option value="Peruana">Peruana</option>
+<option value="Pescados">Pescados</option>
+<option value="Pizzarias">Pizzarias</option>
+<option value="Portuguesa">Portuguesa</option>
+<option value="Sanduicherias">Sanduicherias</option>
+<option value="Tailandesa">Tailandesa</option>
+<option value="Variada">Variada</option>
+</select>
+<br><select name="location_ibge_complement">
+<option value="">Bairro</option>
+<option value="Aricanduva/Formosa/Carrão">Aricanduva/Formosa/Carrão</option>
+<option value="Barra Funda">Barra Funda</option>
+<option value="Barueri">Barueri</option>
+<option value="Bela Vista">Bela Vista</option>
+<option value="Butantã">Butantã</option>
+<option value="Casa Verde/Cachoeirinha">Casa Verde/Cachoeirinha</option>
+<option value="Centro">Centro</option>
+<option value="Consolação/Higienópolis">Consolação/Higienópolis</option>
+<option value="Cotia">Cotia</option>
+<option value="Freguesia/Brasilândia">Freguesia/Brasilândia</option>
+<option value="Guarulhos">Guarulhos</option>
+<option value="Ipiranga/Vila Prudente">Ipiranga/Vila Prudente</option>
+<option value="Itaim Bibi">Itaim Bibi</option>
+<option value="Itaquera/S.Miguel/S.Mateus">Itaquera/S.Miguel/S.Mateus</option>
+<option value="Jardins">Jardins</option>
+<option value="Jundiaí">Jundiaí</option>
+<option value="Lapa/Vila Leopoldina">Lapa/Vila Leopoldina</option>
+<option value="Liberdade/Cambuci">Liberdade/Cambuci</option>
+<option value="Mairiporã">Mairiporã</option>
+<option value="Mauá">Mauá</option>
+<option value="Moema">Moema</option>
+<option value="Mooca">Mooca</option>
+<option value="Morumbi">Morumbi</option>
+<option value="Osasco">Osasco</option>
+<option value="Penha">Penha</option>
+<option value="Perdizes">Perdizes</option>
+<option value="Perus/Pirituba">Perus/Pirituba</option>
+<option value="Pinheiros/Vila Madalena">Pinheiros/Vila Madalena</option>
+<option value="Santana de Parnaíba">Santana de Parnaíba</option>
+<option value="Santana/Tremembé">Santana/Tremembé</option>
+<option value="Santo Amaro">Santo Amaro</option>
+<option value="Santo André">Santo André</option>
+<option value="São Caetano do Sul">São Caetano do Sul</option>
+<option value="Saúde/Jabaquara">Saúde/Jabaquara</option>
+<option value="Socorro/Parelheiros">Socorro/Parelheiros</option>
+<option value="Vila Maria/Vila Guilherme">Vila Maria/Vila Guilherme</option>
+<option value="Vila Mariana">Vila Mariana</option>
+</select>
+<br></td><td class="types">
+<select name="price_rate">
+<option value="">Gasto médio</option>
+<option value="Acima de R$ 125,00">Acima de R$ 125,00</option>
+<option value="Acima de R$ 130,00">Acima de R$ 130,00</option>
+<option value="até R$ 60,00">até R$ 60,00</option>
+<option value="de R$ 60,01 a R$ 75,00">de R$ 60,01 a R$ 75,00</option>
+<option value="de R$ 75,01 a R$ 95,00">de R$ 75,01 a R$ 95,00</option>
+<option value="de R$ 85,01 a R$ 120,00">de R$ 85,01 a R$ 120,00</option>
+<option value="de R$ 95,01 a R$ 130,00">de R$ 95,01 a R$ 130,00</option>
+</select>
+<br><select name="rating">
+<option value="">Estrelas</option>
+<option value="1 estrela">1 estrela</option>
+<option value="2 estrelas">2 estrelas</option>
+<option value="3 estrelas">3 estrelas</option>
+</select>
+<br></td>
+
+</tr>
+<tr><td colspan="2">
+<input  type="checkbox" name="open" value="yes"> Mostrar só restaurantes abertos agora</td></tr>
+</table>
+</td>
+
+<td class="showMore" style="padding: 10px;border-top: 0;">
+<span class="restaurantes">
+<a href="http://guia1.folha.com.br/busca/restaurantes/?q=&amp;genre=&amp;address=&amp;price_rate=&amp;rating=&amp;genre=Carnes&amp;address_complement_1=&amp;price_rate=&amp;rating=&amp;section=restaurantes&amp;x=40&amp;y=3">Roteiro do guia</a>
+</span>
+<br>
+<!--<span class="text"></span>!-->
+</td>
+
+</tr>
+<tr>
+<td colspan="3">
+<br>
+<td>
+</tr>
+<tr>
+<td colspan="3">
+<input type="image" src="http://f.i.uol.com.br/guia/2/furniture/images/btn-buscar-restaurantes.gif" alt="Buscar"> <a href="javascript: void(0);" onClick="javascript: guia_folha_online_limpa_form( 'searchForm' )"><img src="http://f.i.uol.com.br/guia/2/furniture/images/btn-limpar-restaurantes.gif" height="17" width="57" border="0" alt="Limpar"></a><br><br>
+<td>
+</tr>
+</table>
+
+<input type="hidden" name="section" value="restaurantes">
+</form>
+
+</div>
+<div class="back"><p class="showMore restaurantes"><a href="http://guia1.folha.com.br/busca/restaurantes/?q=">Lista completa de restaurantes</a></p></div>
+</div>
+<!--/BUSCAR EVENTOS-->
+
+<!--TOOLBAR-->
+<!--PRINT:EXCLUDE-->
+<div id="toolbarTop">
+<div>
+<script language="javascript" type="text/javascript"><!--
+var tmpHref = location.href ;
+document.write( "<a href=\"http://tools.folha.com.br/feedback?site=guia&amp;url=" + url_encode( tmpHref ) + "\"><img src=\"http://f.i.uol.com.br/folha/images/icn-backspace.gif\" width=\"20\" height=\"20\" border=\"0\" alt=\"Comunicar erros\">Comunicar erros<\/a>" ) ;
+//--></script>
+<noscript>
+<a href="http://tools.folha.com.br/feedback?url=referrer"><img src="http://f.i.uol.com.br/folha/images/icn-backspace.gif" width="20" height="20" border="0" alt="Comunicar erros">Comunicar erros</a>
+</noscript>
+</div>
+
+<div>
+<script language="javascript" type="text/javascript"><!--
+var tmpHref = location.href ;
+document.write( "<a href=\"http://tools.folha.com.br/send?site=guia&amp;url=" + url_encode( tmpHref ) + "\"><img src=\"http://f.i.uol.com.br/folha/images/icn-email.gif\" width=\"20\" height=\"20\" border=\"0\" alt=\"Enviar por e-mail\">Enviar por e-mail<\/a>" ) ;
+//--></script>
+
+<noscript>
+<a href="http://tools.folha.com.br/send?site=emcimadahora&amp;url=referrer"><img src="http://f.i.uol.com.br/folha/images/icn-email.gif" width="20" height="20" border="0" alt="Enviar por e-mail">Enviar por e-mail</a>
+</noscript>
+
+</div>
+
+<div>
+<script language="javascript" type="text/javascript"><!--
+var tmpHref = location.href ;
+document.write( "<a href=\"http://tools.folha.com.br/print?site=guia&amp;url=" + url_encode( tmpHref ) + "\"><img src=\"http://f.i.uol.com.br/folha/images/icn-imprimir.gif\" width=\"20\" height=\"20\" border=\"0\" alt=\"Imprimir\">Imprimir<\/a>" ) ;
+//--></script>
+<noscript>
+<a href="http://tools.folha.com.br/print?site=emcimadahora&amp;url=referrer"><img src="http://f.i.uol.com.br/folha/images/icn-imprimir.gif" width="20" height="20" border="0" alt="Imprimir">Imprimir</a>
+</noscript>
+</div>
+
+</div>
+<!--/PRINT:EXCLUDE-->
+<!--/TOOLBAR-->
+
+<!--ARTICLE-->
+<!--CONTENT-->
+<div id="articleNew">
+
+<!--ROTEIRO-->
+<div id="roteiro">
+
+<!--CHECK_DATE-->
+<table class="subInfo">
+<tr>
+<td class="down">
+	As informações abaixo foram checadas em 04/8/2015.<br> Após essa data, sugerimos contatar o local para confirmar as informações.</td>
+</tr>
+</table>
+<!--/CHECK_DATE-->
+
+<!--TITLE-->
+<!--NAME_RATING-->
+<table border="0" cellpadding="0" cellspacing="0" id="eventInfo">
+<tr>
+<td id="eventName">Cantina e Pizzaria San Marco</td>
+<!--<td id="checkbox" valign="middle"><input type="checkbox"></td></tr>-->
+</table>
+<!--/NAME_RATING-->
+<!--/TITLE-->
+
+<!--EXTRA_SUMMARY-->
+<table border="0" cellpadding="0" cellspacing="0" id="eventMidia">
+<tr>
+<td id="summary" rowspan="2" valign="top">
+Tradicional restaurante da Mooca, tem decoração simples e é bastante procurado por famílias nos fins de semana. Ali são servidas receitas clássicas italianas, como a perna de cabrito com brócolis e batatas coradas (R$ 150) e o fusilli à calabresa (R$ 43,80).<p>
+<b>Tipo de  cozinha:</b> Italiana<br>
+<b>Preço médio</b>: de R$ 95,01 a R$ 130,00<br>
+</p>
+</td>
+</tr>
+</table>
+<!--/EXTRA_SUMMARY-->
+
+<!--LOCATIONS-->
+<a name="cantinaepizzariasanmarco"></a>
+<div class="serviceInfo">
+<h4>Cantina e Pizzaria San Marco</h4>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td class="localInfo" colspan="2">
+R. Orville Derby, 232 - Mooca - Leste. Telefone: 2292-3193.<br>
+<span style="font-size: 11px;">Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico. </span><br>
+<br>Não aceita cheques. Faz entrega em domicílio. Não aceita reservas. Tem ar-condicionado. Não tem mesas ao ar livre. 94 lugares. </td>
+</tr>
+<tr>
+<td valign="top">
+
+
+<table cellspacing="0" cellpadding="0">
+<tr>
+<th><b>Quando</b></th>
+</tr>
+<tr valign="top">
+<td>
+<span style="font-size: 11px;">
+terça a sexta: 11h às 15h30 e 18h às 23h.<br>sábado: 11h às 17h e 18h30 às 23h.<br>domingo: 11h às 17h.<br></span>
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+
+</table>
+</div>
+
+<!--/LOCATIONS-->
+
+</div>
+<!--/ROTEIRO-->
+</div>
+<!--/CONTENT-->
+<!--/ARTICLE-->
+</div>
+<!--/MAIN-->
+
+<!--BARRA_DIREITA-->
+<div class="full_rightBar" style="margin-left: 10px;">
+<a href="http://guia.folha.uol.com.br/pesquisa/" class="research-guide"><img src="http://f.i.uol.com.br/guia/2/furniture/images/guia-opiniao-280x40.png" alt="Dê sua opinião sobre o guia"></a>
+
+<div id="myGuide">
+<p class="top">
+<a href="http://guia1.folha.com.br/meu_guia"><img src="http://f.i.uol.com.br/guia/2/furniture/images/trj-meu_guia.gif" border="0" width="77" height="12" alt=""></a>
+<span id="my_guide_num_elements"></span></p>
+
+<p>Saiba como criar e imprimir um guia personalizado, com o que fazer, onde comer e onde beber.</p>
+<p style="padding:0px 0px 2px 105px" ><a href="http://guia1.folha.com.br/meu_guia"><img src="http://f.i.uol.com.br/guia/2/furniture/images/btn-acessar.gif" border="0" alt="Acessar"></a></p>
+</div>
+
+
+<table border="0" cellpadding="0" cellspacing="0" id="evaluations">
+<tr id="title"><td colspan="4">Avaliação dos críticos da Folha</td></tr>
+<tr><td class="symbol"><img src="http://f.i.uol.com.br/guia/2/furniture/images/evaluation_three_stars.gif" border="0" width="33" height="10" alt=""></td><td>ótimo</td><td class="symbol"><img src="http://f.i.uol.com.br/guia/2/furniture/images/evaluation_square.gif" border="0" width="10" height="10" alt=""></td><td>regular</td></tr>
+<tr><td class="symbol"><img src="http://f.i.uol.com.br/guia/2/furniture/images/evaluation_two_stars.gif" border="0" width="22" height="10" alt=""></td><td>muito bom</td><td class="symbol"><img src="http://f.i.uol.com.br/guia/2/furniture/images/evaluation_ball.gif" border="0" width="10" height="10" alt=""></td><td>ruim</td></tr>
+<tr><td class="symbol"><img src="http://f.i.uol.com.br/guia/2/furniture/images/evaluation_one_star.gif" border="0" width="10" height="10" alt=""></td><td>bom</td></tr>
+</table>
+
+<div id="umBanner">
+<!--BANNERS-->
+<script type="text/javascript" language="JavaScript"><!--
+folha_ads_show( "online.guia.restaurantes.search" , "220x90" , "0" ) ;
+//--></script>
+<!--/BANNERS-->
+</div>
+
+
+</div><!--/BARRA_DIREITA-->
+
+<!--RODAPE-->
+<div id="copyright">
+Copyright Folha de S.Paulo. Todos os direitos reservados. É proibida a reprodução do conteúdo desta página em qualquer meio de comunicação,<br>
+eletrônico ou impresso, sem autorização escrita da Folhapress (pesquisa@folhapress.com.br).
+</div>
+
+<script type="text/javascript" src="http://www1.folha.uol.com.br/folha/furniture/guia/barra_direita.js"></script>
+
+<script type="text/javascript"><!--
+guia.information.check() ;
+//rightBarRender();
+--></script>
+
+<!-- Omniture -->
+<script type="text/javascript" src="http://me.jsuol.com.br/omtr/folhacom.js" charset="iso-8859-1"></script>
+<!-- /Omniture -->
+
+</div>
+<!-- /aligner -->
+
+
+<!-- Tag Manager Peças -->
+<div class="tm-ads" id="banner-220x90-1">
+<script type="text/javascript">guia.tag_manager.get( "220x90-1" ) ;</script>
+</div>
+
+<div class="tm-ads" id="banner-300x250-2">
+<script type="text/javascript">//guia.tag_manager.get( "300x250-2" ) ;</script>
+</div>
+
+<div class="tm-ads" id="banner-728x90-1">
+<script type="text/javascript">guia.tag_manager.get( "728x90-1" ) ;</script>
+</div>
+<!-- /Tag Manager -->
+
+<!-- Tag Manager -->
+<script type="text/javascript" src="http://tm.uol.com.br/b/par/folha.js"></script>
+<!-- /Tag Manager -->
+
+
+<!--IVC -->
+<script type="text/javascript"> 
+    var ivcUrl = ("https:" == document.location.protocol ? "https://datpdpmej1fn2.cloudfront.net/" :
+    "http://ivccftag.ivcbrasil.org.br/") + "ivc.js";
+    ;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalIvcNamespace=p.GlobalIvcNamespace||[];
+    p.GlobalIvcNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
+    };p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
+    n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script",ivcUrl,"ivc")); 
+
+    window.ivc('newTracker', 'cf', 'ivccf.ivcbrasil.org.br', {
+        idWeb: '125'
+    }); 
+
+    window.ivc('trackPageView'); 
+</script>
+<!-- /IVC -->
+
+
+</body>
+</html><!--/RODAPE-->

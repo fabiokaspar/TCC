@@ -1,0 +1,17 @@
+{
+    "nome": "P.F. Chang's",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/asiatica/2395962/pf_changs?sr=1#onde",
+    "nota": "Regular",
+    "descricao": "A rede norte-americana, que tem cerca de 250 unidades espalhadas por 15 países, é especializada em comida asiática. O menu é bem explicado e lista receitas inspiradas em diversas regiões da Ásia, como as lâminas de carne caramelizadas em molho à base de shoyu, alho e cebolinha, típicas da Mongólia. A ideia, comum na tradição chinesa, é compartilhar os pratos. De entrada, faz sucesso uma combinação de frango, cogumelos e cebolinha. É o próprio cliente quem coloca o recheio em folhas de alface, montando um tipo de wrap.",
+    "preco": "de R$ 60,01 a R$ 75,00",
+    "cozinha": "Asiática",
+    "endereco": "Av. Pres. Juscelino Kubitschek, 627, Vila Nova Conceição, Oeste, São Paulo, Brasil",
+    "endereco_busca": "Av. Pres. Juscelino Kubitschek, 627, São Paulo, Brasil",
+    "telefone": "3044-0571",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Ticket Restaurante Eletrônico. Não aceita cheques. Não faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Tem mesas ao ar livre. Tem conexão wi-fi. 324 lugares. Valet (R$ 22).",
+    "funcionamento": "segunda a quinta: 12h às 15h30 e 18h30 às 22h30.sexta e sábado: 12h às 24h.domingo: 12h às 22h.",
+    "latlon": [
+        -23.5887518,
+        -46.6757458
+    ]
+}

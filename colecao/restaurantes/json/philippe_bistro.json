@@ -1,0 +1,17 @@
+{
+    "nome": "Philippe Bistrô",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/francesa/13721/philippe_bistro?sr=251#onde",
+    "nota": false,
+    "descricao": "No pequeno bistrô comandado pelo chef Luis Philippe Vieira, na charmosa rua Normandia, encontram-se opções como tartare de salmão e risoto de abobrinha com queijo brie (prato principal). Há também carnes como o lombo de cordeiro servido com polenta e trufas.",
+    "preco": "de R$ 95,01 a R$ 130,00",
+    "cozinha": "Francesa",
+    "endereco": "R. Normandia, 103, Indianópolis, Sul, São Paulo, Brasil",
+    "endereco_busca": "R. Normandia, 103, São Paulo, Brasil",
+    "telefone": "5532-0807",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo. Não aceita cheques. Não faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Tem mesas ao ar livre. Tem conexão wi-fi. 50 lugares. Valet (R$ 13 e R$ 20).",
+    "funcionamento": "segunda: 12h às 16h.terça a quinta: 12h às 18h20 e 19h20 às 23h30.domingo: 12h às 16h30.sexta e sábado: 12h às 18h20 e 19h20 às 24h.",
+    "latlon": [
+        -23.6083034,
+        -46.6710547
+    ]
+}

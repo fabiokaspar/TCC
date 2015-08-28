@@ -1,0 +1,17 @@
+{
+    "nome": "Villa di Roma",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/variada/129817/villa_di_roma?sr=901#onde",
+    "nota": false,
+    "descricao": "O restaurante está localizado no motel Villa di Roma e oferece cardápio variado, que inclui saladas, aves, peixes, risotos, cremes, massas, omeletes, porções e sanduíches. As cartas de sobremesas e bebidas são generosas.",
+    "preco": "até R$ 60,00",
+    "cozinha": "Variada",
+    "endereco": "R. Clélia, 634, Lapa, Oeste, São Paulo, Brasil",
+    "endereco_busca": "R. Clélia, 634, São Paulo, Brasil",
+    "telefone": "3875-3377",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico. Não aceita cheques. Aceita reservas. Tem mesas ao ar livre. 200 lugares. Valet (R$ 20).",
+    "funcionamento": "segunda a sexta: 9h às 17h.",
+    "latlon": [
+        -23.5249202,
+        -46.6886173
+    ]
+}

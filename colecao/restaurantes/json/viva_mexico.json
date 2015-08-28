@@ -1,0 +1,17 @@
+{
+    "nome": "Viva México",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/mexicana/13629/viva_mexico?sr=551#onde",
+    "nota": false,
+    "descricao": "É um misto de restaurante e bar, que serve especialidades mexicanas, incluindo a cerveja Dos Equis. Uma boa opção entre os pratos são as flautas sortidas: quatro tortilhas fritas com recheios variados (carne com ricota, frango com cogumelos, carne desfiada e carne com chile) cobertas por creme de leite e alface.",
+    "preco": "de R$ 75,01 a R$ 95,00",
+    "cozinha": "Mexicana",
+    "endereco": "R. Fradique Coutinho, 1.124, Vila Madalena, Oeste, São Paulo, Brasil",
+    "endereco_busca": "R. Fradique Coutinho, 1.124, São Paulo, Brasil",
+    "telefone": "3032-0901",
+    "localInfo": "Aceita cheques. Aceita reservas. Tem ar-condicionado. Não vende ingresso pelo telefone. Tem mesas ao ar livre. Tem conexão wi-fi. 52 lugares.",
+    "funcionamento": "segunda a quinta e domingo: 12h às 24h.sexta e sábado: 12h à 1h.",
+    "latlon": [
+        -23.5576902,
+        -46.6903103
+    ]
+}
