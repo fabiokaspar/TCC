@@ -1,69 +1,75 @@
 #!/bin/bash
 
+source conf.sh
+
 pegaLinkDosSites(){
+	echo -ne "Links dos sites dos restaurantes ......"
 	## salva as 19 paginas do guia folha no diretorio com formato html
 	i=1; num=1;
-	# fim=901;
-	fim=1;
-	
+	fim=944;
+	if [ -e ${ROOT}/linksRestaurantes.txt ]; then 
+		rm ${ROOT}/linksRestaurantes.txt
+	fi
 	while [ $i -le $fim ]; do 
-		wget -qO- http://guia1.folha.com.br/busca/restaurantes/?sr=$i > siteRestaurantes$num.html
-		cat siteRestaurantes$num.html | egrep -o "http://.*\#onde" >> linksRestaurantes.txt
+			echo -ne \\r"Links dos sites dos restaurantes ......($num/19)"
+		wget -qO- http://guia1.folha.com.br/busca/restaurantes/?sr=$i > ${ROOT}/siteRestaurantes$num.html
+		cat ${ROOT}/siteRestaurantes$num.html | egrep -o "http://.*\#onde" >> ${ROOT}/linksRestaurantes.txt
 		i=$((i+50));
 		num=$((num+1)); 
 	done
-	echo "Links dos sites dos restaurantes ......OK"
+	echo -e \\r"Links dos sites dos restaurantes ......OK                "
 }
 
 pegaNomeDosSites(){
-	cat linksRestaurantes.txt | egrep -o "([A-Za-z]|_|[0-9])+\?" | egrep -o "([A-Za-z]|_|[0-9])+" > nomes.txt
-	echo "Nome dos restaurantes .................OK"
+	echo -n "Nome dos restaurantes ................."
+	cat ${ROOT}/linksRestaurantes.txt | egrep -o "([A-Za-z]|_|[0-9])+\?" | egrep -o "([A-Za-z]|_|[0-9])+" > ${ROOT}/nomes.txt
+	echo "OK"
 }
 
 criaPaginaRestaurante(){
+	echo -n "Arquivo de cada um dos restaurantes ..."
 	## cria um array com os nomes dos restaurantes
-	for nome in $(cat nomes.txt); do
+	for nome in $(cat ${ROOT}/nomes.txt); do
 		arrayNome=("${arrayNome[@]}" $nome)
 	done 
 	
 	## cria um array com os links dos restaurantes
-	for link in $(cat linksRestaurantes.txt); do
+	for link in $(cat ${ROOT}/linksRestaurantes.txt); do
 		arrayLink=("${arrayLink[@]}" $link) 
 	done 
 
 	## acessa o link e coloca o seu conteudo no arquivo com o nome correspondente 
 	i=0; 
+	max=${#arrayNome[*]}
 	while [ $i -lt ${#arrayNome[*]} ]; do 
-   	wget -qO-  ${arrayLink[$i]} > ${arrayNome[$i]}."txt"
-	  # cat ${arrayNome[$i]}."txt" | egrep -o "<\!--TITLE-->*<\!--/LOCATIONS-->" > ${arrayNome[$i]}."txt"
-		php ../php/cleaner.php ${arrayNome[$i]}."txt" ${arrayLink[$i]}
+		echo -ne \\r"Arquivo de cada um dos restaurantes ...($i/$max)"
+   	wget -qO-  ${arrayLink[$i]} > ${SOURCES}/${arrayNome[$i]}."html"
+		echo ${arrayLink[$i]} > ${LINKS}/${arrayNome[$i]}."txt"
 		i=$((i+1)); 
 	done	
-	echo "Arquivo de cada um dos restaurantes ...OK"
+	echo -e \\r"Arquivo de cada um dos restaurantes ...OK           "
 }
 
 removeArquivosDesnecessarios(){
-	rm *.html linksRestaurantes.txt nomes.txt
-	echo "Arquivos desnecessarios removidos .....OK"
+	echo -n "Arquivos desnecessarios removidos ....."
+	rm ${ROOT}/*.html ${ROOT}/linksRestaurantes.txt ${ROOT}/nomes.txt
+	echo "OK"
 }
 
-#indexador(){
-#	if [[ ! -e ./index ]]; then
-#		java org.apache.lucene.demo.IndexFiles -docs $PWD
-#	fi
-#}
-
+criaPasta(){
+	if [ ! -d $1 ]
+	then
+		mkdir $1
+	fi
+}
 ################ MAIN ################  
 	
-#mkdir ./restaurantes
-cd restaurantes
+criaPasta $ROOT
+criaPasta $SOURCES
+criaPasta $LINKS
+#cd ./restaurantes
 pegaLinkDosSites
 pegaNomeDosSites
 criaPaginaRestaurante
 removeArquivosDesnecessarios
-cd ..
-
-#else
-#	cd restaurantes
-#	indexador
-#fi
+#cd ..

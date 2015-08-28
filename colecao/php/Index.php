@@ -1,8 +1,8 @@
 <?php
 
 class Index {
-    const ROOT = "../";
-    const INDEX_FOLDER = "../restaurantes";
+    const ROOT = "../restaurantes";
+    const INDEX_FOLDER = "../restaurantes/json";
     const INDEX_PATH = "../restaurantes/index";
     
     static function exists() {

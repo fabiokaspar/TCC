@@ -29,8 +29,9 @@ public class IndexFiles
 	{
 		try
 		{
-			String docsPath = "/var/www/TCC/colecao/restaurantes";
-			String indexPath = docsPath + "/index";
+			String rootPath = "/var/www/TCC/colecao/restaurantes";
+			String docsPath = rootPath + "/json";
+			String indexPath = rootPath + "/index";
 			
 			Directory dir = FSDirectory.open(Paths.get(indexPath));
 			Analyzer analyzer = new StandardAnalyzer();

@@ -13,6 +13,10 @@
     width: calc(100% - 22px);
     padding: 10px;
     margin: 4px 0px 0px 0px;
+    display:block;
+}
+.restauranteInfo input[type=radio] {
+    display: none;
 }
 
 form#restaurantes {
@@ -24,7 +28,8 @@ form#restaurantes input[type=button] {
     padding: 4px;
 }
 #listaRestaurantes {
-	
+    max-height: 370px;
+    overflow-y: scroll;
 }
 
 #titulo {
@@ -144,4 +149,36 @@ button:focus, input[type=button]:active {
 #opcoes > table td *{  
     vertical-align: -2px;
     line-height: 27px;
+}
+
+.labels {
+    color: black;
+    background-color: rgba(255,255,255,0.5);
+    font-family: "Lucida Grande", "Arial", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    height: 22px;
+    min-width: 22px;     
+    border: 2px solid black;
+    border-radius: 20px;
+    white-space: nowrap;
+    -webkit-transition: all 0.3s; /* Safari */
+    transition: all 0.3s;
+}
+#listaRestaurantes .labels {
+    display:inline-block;
+    background-color: rgba(155,155,255,0.4);
+    margin-right:4px;
+    vertical-align: -2px;
+}
+.labels.hover,
+#listaRestaurantes .labels.hover {
+    background-color: rgba(0,0,0,1);
+    color: white;
+}
+.labels.selecionado,
+#listaRestaurantes .labels.selecionado {
+    background-color: rgba(255,155,0,0.7) !important;
+    color: black !important;
 }
