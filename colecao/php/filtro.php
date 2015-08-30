@@ -18,17 +18,20 @@
 		Index::create();
 	}
 	$filenames = Index::search($query);
-        
 	$dir = Index::INDEX_FOLDER;
 	$restaurantes = array();
-	foreach($filenames as $filename) {
-		$path = "$dir/$filename";
-		if(empty($filename) || !file_exists($path)) {
+	
+	// procura na lista filenames
+	foreach($filenames as $path) {
+		#$path = $name;
+		#echo "* $path\n";
+		if(empty($path) || !file_exists($path)) {
 			continue;
 		}
 		$content = json_decode(file_get_contents($path),TRUE);
 		$restaurantes[] = $content;
 	}
+
 	$pre_JSON = array("restaurantes"=>$restaurantes);
 	$JSON = json_encode($pre_JSON);
 	
