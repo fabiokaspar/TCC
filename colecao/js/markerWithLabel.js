@@ -216,7 +216,7 @@ MarkerLabel_.prototype.draw = function () {
   
   // Position the container:
   var position = this.getProjection().fromLatLngToDivPixel(this.marker_.getPosition());
-  this.containerDiv_.style.left = (position.x - 11) + "px";
+  this.containerDiv_.style.left = (position.x - 10) + "px";
   this.containerDiv_.style.top = (position.y - 35) + "px";
 
   this.containerDiv_.style.zIndex = this.marker_.get("labelZIndex");

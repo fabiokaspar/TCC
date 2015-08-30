@@ -83,7 +83,7 @@ function getGeolocation(position){
 	origem.setMap(map);
 
 	var infowindow = new google.maps.InfoWindow({
-		content: "origem"
+		content: "Você está aqui"
 	});
 
 	infowindow.open(map,origem);
@@ -100,7 +100,7 @@ function getGeolocation(position){
 }
 
 function errorGeolocation(error){
-  if(error.code != error.PERMISSION_DENIED)
+  if(error.code !== error.PERMISSION_DENIED)
     alert("Falha ao buscar sua geolocalização");
 }
 
@@ -116,7 +116,7 @@ function clearMarkers() {
 function main(){
 	var rotaMarcada = false;
 	if(origem != undefined){
-		for(var i = 0; i < numResultados; i++){
+		for(var i = numResultados - 1; i >= 0; i--){
 			marcaDestino(i);
                         var latlng = new google.maps.LatLng(restaurantesArray[i].latlon[0],restaurantesArray[i].latlon[1]);
 			calculaDistanciaEuclidiana(origem.position, latlng, restaurantesArray[i].nome, i);
