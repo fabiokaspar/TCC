@@ -15,20 +15,14 @@ class Index {
     }
     static function search($query) {
         $resp =	shell_exec("cd .. ; ./buscaColecao.sh '$query'");
-        #echo "resp =>\n".$resp;
         $filenames = explode("\n", $resp);
-        //echo " \n\nLista:\n".$resp;
-        
-        #$resp = array();
-        $final = array();
+
+        $resposta = array();
         foreach ($filenames as $value) {
-            if (ereg("[A-z\.\/]+\.json$", $value, $expr)) {
-                $final[] = $expr[0];
-                #echo ">".$expr[0]."\n";
+            if (preg_match("/[A-z\.\/]+\.json$/", $value,$expr)) {
+                $resposta[] = $expr[0];
             }
         }
-
-        #return $filenames;
-        return $final;
+        return $resposta;
     }
 }

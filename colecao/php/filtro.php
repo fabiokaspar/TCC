@@ -22,9 +22,8 @@
 	$restaurantes = array();
 	
 	// procura na lista filenames
-	foreach($filenames as $path) {
-		#$path = $name;
-		#echo "* $path\n";
+	foreach($filenames as $filename) {
+		$path = "$dir/$filename";
 		if(empty($path) || !file_exists($path)) {
 			continue;
 		}
