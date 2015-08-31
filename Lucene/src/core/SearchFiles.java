@@ -5,6 +5,7 @@ import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.text.DecimalFormat;
 import java.util.Date;
 
 import org.apache.lucene.analysis.Analyzer;
@@ -38,6 +39,7 @@ public class SearchFiles {
     boolean raw = false;
     String queryString = null;
     int hitsPerPage = 10;
+    GeographicCoordenates origin = new GeographicCoordenates(-23.5505199,-46.6333094);
     
     index = "/var/www/TCC/colecao/restaurantes/index";
     for(int i = 0;i < args.length;i++) {
@@ -55,6 +57,12 @@ public class SearchFiles {
         i++;
       } else if ("-raw".equals(args[i])) {
         raw = true;
+      } else if ("-lat".equals(args[i])) {
+    	origin.setLatitude(Double.parseDouble(args[i+1]));
+    	i++;
+      } else if ("-lng".equals(args[i])) {
+    	origin.setLongitude(Double.parseDouble(args[i+1]));
+    	i++;
       } else if ("-paging".equals(args[i])) {
         hitsPerPage = Integer.parseInt(args[i+1]);
         if (hitsPerPage <= 0) {
@@ -104,7 +112,7 @@ public class SearchFiles {
         System.out.println("Time: "+(end.getTime()-start.getTime())+"ms");
       }
 
-      doPagingSearch(in, searcher, query, hitsPerPage, raw, queries == null && queryString == null);
+      doPagingSearch(in, searcher, query, origin, hitsPerPage, raw, queries == null && queryString == null);
 
       if (queryString != null) {
         break;
@@ -123,7 +131,7 @@ public class SearchFiles {
    * is executed another time and all hits are collected.
    * 
    */
-  public static void doPagingSearch(BufferedReader in, IndexSearcher searcher, Query query, 
+  public static void doPagingSearch(BufferedReader in, IndexSearcher searcher, Query query, GeographicCoordenates origin,
                                      int hitsPerPage, boolean raw, boolean interactive) throws IOException {
  
     // Collect enough docs to show 5 pages
@@ -135,7 +143,10 @@ public class SearchFiles {
 
     int start = 0;
     int end = Math.min(numTotalHits, hitsPerPage);
-        
+      
+    GeographicCoordenates establishment = null;
+    double euclidianDistance = 0.0;
+    DecimalFormat df2 = new DecimalFormat();
     while (true) {
       if (end > hits.length) {
         System.out.println("Only results 1 - " + hits.length +" of " + numTotalHits + " total matching documents collected.");
@@ -162,7 +173,9 @@ public class SearchFiles {
           path = "No path for this document";
         }
         //System.out.println((i+1) + ". " + path);
-      	System.out.println(path);                  
+        establishment = new GeographicCoordenates(Double.parseDouble(doc.get("latitude")), Double.parseDouble(doc.get("longitude")) );
+        euclidianDistance = origin.getEuclidianDistance(establishment);
+      	System.out.println(path+" "+df2.format(euclidianDistance)+"km");                  
       }
 
       if (!interactive || end == 0) {

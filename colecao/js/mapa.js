@@ -43,7 +43,7 @@ function clienteRequisicao() {
                     scrollTop: 90
                 },500);
 		$.ajax({
-			type: "POST",
+			method: "POST",
 			url: "php/filtro.php",
 			data: dados,
 			dataType: "text",
@@ -60,8 +60,6 @@ function clienteRequisicao() {
                                 var restaurante = obj.restaurantes[i];
                                 var p = $("<p></p>").html((i+1)+" - "+restaurante.nome);
                                 $("div#listaRestaurantes").append(p);
-                                //console.log(restaurante.nome);
-                                restaurante.distancia = {};
                                 restaurantesArray.push(restaurante);					
                         }
                         main();
@@ -139,7 +137,7 @@ function main(){
 		for(var i = numResultados - 1; i >= 0; i--){
 			marcaDestino(i);
             var latlng = new google.maps.LatLng(restaurantesArray[i].latlon[0],restaurantesArray[i].latlon[1]);
-			calculaDistanciaEuclidiana(origem.position, latlng, restaurantesArray[i].nome, i);
+			//calculaDistanciaEuclidiana(origem.position, latlng, restaurantesArray[i].nome, i);
 			//desenhaRotaEuclidiana(origem, restaurantesArray[i].marker);
 		}
 

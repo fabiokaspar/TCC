@@ -13,14 +13,14 @@ class Index {
         mkdir(self::INDEX_PATH, 0777, true);
         shell_exec('cd .. ; ./criaColecao.sh; ./indexaColecao.sh');
     }
-    static function search($query) {
-        $resp =	shell_exec("cd .. ; ./buscaColecao.sh '$query'");
+    static function search($query,$geoCoordenates) {
+        $resp =	shell_exec("cd .. ; ./buscaColecao.sh '$query' $geoCoordenates[0] $geoCoordenates[1]");
         $filenames = explode("\n", $resp);
 
         $resposta = array();
         foreach ($filenames as $value) {
-            if (preg_match("/[A-z\.\/]+\.json$/", $value,$expr)) {
-                $resposta[] = $expr[0];
+            if (preg_match("/([A-z\.\/]+\.json) (\d+(\.\d+)?)km/", $value,$expr)) {
+                $resposta[] = array("json"=>$expr[1],"distance"=>$expr[2]);
             }
         }
         return $resposta;

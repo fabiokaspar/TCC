@@ -12,6 +12,7 @@ import java.nio.file.Paths;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
+import org.apache.lucene.document.DoubleField;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.StringField;
 import org.apache.lucene.document.TextField;
@@ -21,6 +22,7 @@ import org.apache.lucene.index.IndexWriterConfig.OpenMode;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class IndexFiles 
@@ -49,6 +51,7 @@ public class IndexFiles
 	}
 	static void indexDoc(IndexWriter writer, Path file) throws IOException {
 		String descricao = "", link = "", nome = "";
+		JSONArray latlon;
 		try (InputStream stream = Files.newInputStream(file)) {
 			Document doc = new Document();
       
@@ -72,7 +75,10 @@ public class IndexFiles
 		    }
 		    link = json.getString("link");
 		    doc.add( new StringField("link", link, Field.Store.YES) );
-			
+		    latlon = json.getJSONArray("latlon");
+		    doc.add( new DoubleField("latitude", Double.parseDouble(latlon.get(0).toString()), Field.Store.YES) );
+		    doc.add( new DoubleField("longitude", Double.parseDouble(latlon.get(1).toString()), Field.Store.YES) );
+		    
 			if (writer.getConfig().getOpenMode() == OpenMode.CREATE) {
 				System.out.println("adding " + file);
 				writer.addDocument(doc);
