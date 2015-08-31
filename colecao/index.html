@@ -65,10 +65,16 @@
                     </td>
                     <td width='300'>
                         <div class='rotulo metallic'>Resultados</div>
+                        <div id="espera" style="display: none;text-align: center">
+                            <br/><b>Carregando...</b>
+                            <img src="images/loading.gif" alt="">
+                        </div>
                         <div id="mensagem"></div>
                         <form id="restaurantes">
                             <b>Lista de restaurantes por Distância</b><br>
-                            <mark> Escolha um dos estabelecimentos para calcular rota:</mark>
+                            <div class="info">
+                                Escolha um dos estabelecimentos para calcular a rota:
+                            </div>
                             <div id="listaRestaurantes"></div>
                             <input type='button' id='btnRota' value='Criar rota até o local marcado'>
                         </form>

@@ -20,6 +20,10 @@ function initialize() {
 	mostraRota = new google.maps.DirectionsRenderer({
       suppressMarkers: true
   	});
+        $("body").animate({
+            scrollTop: 10
+        },500);
+        $("#estab").focus();
     //numResultados = 9;
 	navigator.geolocation.getCurrentPosition(getGeolocation, errorGeolocation);
 }
@@ -32,6 +36,12 @@ function clienteRequisicao() {
 			dados += '&lng=';
 			dados += origem.position.K;
 		}
+                $("#espera").show();
+                $("#listaRestaurantes").html("");
+                $("form#restaurantes").hide();
+                $("body").animate({
+                    scrollTop: 90
+                },500);
 		$.ajax({
 			type: "POST",
 			url: "php/filtro.php",
@@ -56,6 +66,7 @@ function clienteRequisicao() {
                         }
                         main();
                     }
+                    $("#espera").hide();
 				} catch(err) {
 					console.log("catch");
 					printError(err);
