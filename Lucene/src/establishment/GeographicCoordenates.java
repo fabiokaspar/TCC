@@ -1,4 +1,6 @@
-package core;
+package establishment;
+
+import org.apache.lucene.document.Document;
 
 public class GeographicCoordenates {
 	private double latitude;
@@ -9,6 +11,10 @@ public class GeographicCoordenates {
 		this.longitude = longitude;
 	}
 
+	public GeographicCoordenates(Document doc) {
+    this(Double.parseDouble(doc.get("latitude")), Double.parseDouble(doc.get("longitude")));
+	}
+	
 	public double getLatitude() {
 		return latitude;
 	}
@@ -25,6 +31,11 @@ public class GeographicCoordenates {
 		this.longitude = longitude;
 	}
 	
+	public double getEuclidianDistance(Document doc) {
+    GeographicCoordenates establishment = new GeographicCoordenates(doc);
+    double euclidianDistance = getEuclidianDistance(establishment);
+    return euclidianDistance;
+	}
 	public double getEuclidianDistance(GeographicCoordenates otherPlace) {
 	  double lat1 = this.latitude, lon1 = this.longitude;
 	  double lat2 = otherPlace.latitude, lon2 = otherPlace.longitude;
@@ -47,4 +58,5 @@ public class GeographicCoordenates {
 	public String toString() {
 		return "Lat:"+this.latitude+" Lng:"+this.longitude;
 	}
+	
 }
