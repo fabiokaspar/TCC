@@ -23,6 +23,7 @@ import org.apache.lucene.index.Term;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 public class IndexFiles 
@@ -62,10 +63,11 @@ public class IndexFiles
 			
 			BufferedReader br = new BufferedReader(new InputStreamReader(stream, StandardCharsets.UTF_8));
 			StringBuilder sb = new StringBuilder();
-		    String line;
-		    while ((line = br.readLine()) != null) {
-		        sb.append(line);
-		    }
+	    String line;
+	    while ((line = br.readLine()) != null) {
+	        sb.append(line);
+	    }
+	    try {
 		    JSONObject json = new JSONObject(sb.toString());
 		    nome = json.getString("nome");
 	    	doc.add( new StringField("name", nome, Field.Store.YES) );
@@ -78,7 +80,10 @@ public class IndexFiles
 		    latlon = json.getJSONArray("latlon");
 		    doc.add( new DoubleField("latitude", Double.parseDouble(latlon.get(0).toString()), Field.Store.YES) );
 		    doc.add( new DoubleField("longitude", Double.parseDouble(latlon.get(1).toString()), Field.Store.YES) );
-		    
+		    doc.add( new StringField("grade", json.getString("nota"), Field.Store.YES) );
+	    } catch (JSONException e) {
+	    	return;
+	    }
 			if (writer.getConfig().getOpenMode() == OpenMode.CREATE) {
 				System.out.println("adding " + file);
 				writer.addDocument(doc);

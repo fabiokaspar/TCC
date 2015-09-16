@@ -21,21 +21,24 @@ import scorer.Scorer;
 import establishment.Establishment;
 import establishment.Establishments;
 import establishment.GeographicCoordenates;
+import establishment.Grade;
 
 public class SearchFiles {
 
-	private static final String index = "/var/www/TCC/colecao/restaurantes/index"; 
+	private static final String index = "/var/www/TCC/colecao/restaurantes/index";
   private SearchFiles() {}
 
   public static void main(String[] args) throws Exception {
     if (args.length > 0 && ("-h".equals(args[0]) || "-help".equals(args[0]))) {
-      System.out.println("Usage:\tjava core.SearchFiles [-query string] [-lat double] [-lng double]");
+      System.out.println("Usage:\tjava core.SearchFiles [-query string] [-lat double] [-lng double] [-distance] [-grade]");
       System.exit(0);
     }
 
     String field = "contents";
     String queryString = null;
     GeographicCoordenates origin = new GeographicCoordenates(-23.5505199,-46.6333094);
+    int[] weights = new int[Scorer.N_OPT];
+    weights[Scorer.CURRENT] = 1;
     
     for(int i = 0;i < args.length;i++) {
       if ("-query".equals(args[i])) {
@@ -47,6 +50,10 @@ public class SearchFiles {
       } else if ("-lng".equals(args[i])) {
 	    	origin.setLongitude(Double.parseDouble(args[i+1]));
 	    	i++;
+      } else if ("-distance".equals(args[i])) {
+      	adjustWeightArray(weights, Scorer.DISTANCE);
+      } else if ("-grade".equals(args[i])) {
+      	adjustWeightArray(weights, Scorer.GRADE);
       }
     }
     
@@ -68,7 +75,7 @@ public class SearchFiles {
     Establishments establishments = doSearch(searcher, query, origin);
     
     Scorer scorer = new Scorer(establishments);
-    establishments = scorer.calculateScore(establishments, 2, 1);
+    establishments = scorer.calculateScore(establishments, weights);
     
     establishments.sort();
     for (Establishment establishment : establishments) {
@@ -96,8 +103,22 @@ public class SearchFiles {
 	    }
 	    Establishment e = new Establishment(doc,hits[i].score);
 	    e.setDistanceFrom(origin);
+	    Grade grade = Grade.getEnum(doc.get("grade"));
+	    e.setGrade(grade);
 	    establishments.add(e);
 	  }
 	  return establishments;
+  }
+  
+  private static void adjustWeightArray(int[] weights, int index) {
+  	weights[index] = 2;
+  	for(int i = 0; i < weights.length; i++) {
+  		if(i == index) {
+  			continue;
+  		}
+  		if(weights[i] > 0) {
+  			weights[i]++;
+  		}
+  	}
   }
 }
