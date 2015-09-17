@@ -6,9 +6,22 @@
 
 	include_once 'Index.php';
 
+        function str_to_parameter($str) {
+            switch ($str) {
+                case "endereco":
+                    return Index::DISTANCE_PARAM;
+                case "preco":
+                    return Index::PRICE_PARAM;
+                case "nota":
+                    return Index::GRADE_PARAM;
+                default:
+                    return false;
+            }
+        }
 	$parametro = filter_input(INPUT_POST,"parametro");
-	if (!$parametro) {
-		$parametro = "nota";
+        $parametros = array();
+	if ($parametro && ($parametro = str_to_parameter($parametro))) {
+            $parametros[] = $parametro;
 	}
 	$query = filter_input(INPUT_POST,"query");
 	$lat = filter_input(INPUT_POST,"lat",FILTER_VALIDATE_FLOAT);
@@ -18,7 +31,7 @@
 	if (!Index::exists()) {
 		Index::create();
 	}
-	$filenames = Index::search($query,$geoCoordenates);
+	$filenames = Index::search($query,$geoCoordenates,$parametros);
 	$dir = Index::INDEX_FOLDER;
 	$restaurantes = array();
 	
