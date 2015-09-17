@@ -43,4 +43,14 @@ public class Establishments extends ArrayList<Establishment> {
 		}
 		return max;
 	}
+	
+	public double getMaxPrice() {
+		double max = 0.0;
+		for (Establishment e : this) {
+			if(e.getPriceRange().getMaxPrice() > max) {
+				max = e.getPriceRange().getMaxPrice();
+			}
+		}
+		return max;
+	}
 }

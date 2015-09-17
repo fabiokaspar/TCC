@@ -10,11 +10,20 @@ public class Establishment {
 	private GeographicCoordenates coordenates;
 	private double distance;
 	private Grade grade;
+	private PriceRange priceRange;
 	
 	public Establishment(Document doc, double score) {
 		this.doc = doc; 
 		this.score = score;
 		this.coordenates = new GeographicCoordenates(doc);
+		
+		Grade grade = Grade.getEnum(doc.get("grade"));
+    this.setGrade(grade);
+    
+    double minPrice = Double.parseDouble(doc.get("minPrice"));
+    double maxPrice = Double.parseDouble(doc.get("maxPrice"));
+    PriceRange priceRange = new PriceRange(minPrice, maxPrice);
+    this.setPriceRange(priceRange);
 	}
 
 	public Document getDoc() {
@@ -57,6 +66,14 @@ public class Establishment {
 		this.grade = grade;
 	}
 	
+	public PriceRange getPriceRange() {
+		return priceRange;
+	}
+
+	public void setPriceRange(PriceRange priceRange) {
+		this.priceRange = priceRange;
+	}
+
 	@Override
 	public String toString() {
 		String line = this.getDoc().get("filename");

@@ -8,6 +8,8 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
@@ -78,9 +80,26 @@ public class IndexFiles
 		    link = json.getString("link");
 		    doc.add( new StringField("link", link, Field.Store.YES) );
 		    latlon = json.getJSONArray("latlon");
-		    doc.add( new DoubleField("latitude", Double.parseDouble(latlon.get(0).toString()), Field.Store.YES) );
+		    doc.add( new DoubleField("latitude",  Double.parseDouble(latlon.get(0).toString()), Field.Store.YES) );
 		    doc.add( new DoubleField("longitude", Double.parseDouble(latlon.get(1).toString()), Field.Store.YES) );
 		    doc.add( new StringField("grade", json.getString("nota"), Field.Store.YES) );
+		    String preco_str = json.getString("preco");
+		    Pattern p = Pattern.compile("R\\$\\s*(\\d+),\\d+");
+		    Matcher m = p.matcher(preco_str);
+		    double minPrice = 0;
+		    double maxPrice = 0;
+		    if(m.find()) {
+	        minPrice = Double.parseDouble(m.group(1)); 
+		    } else {
+		    	return;
+		    }
+		    if(m.find()) {
+	        maxPrice = Double.parseDouble(m.group(1)); 
+		    } else {
+		    	maxPrice = minPrice;
+		    }
+		    doc.add( new DoubleField("minPrice", minPrice, Field.Store.YES) );
+		    doc.add( new DoubleField("maxPrice", maxPrice, Field.Store.YES) );
 	    } catch (JSONException e) {
 	    	return;
 	    }

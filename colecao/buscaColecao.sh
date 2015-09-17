@@ -16,4 +16,4 @@ else
 	lon=$3;
 fi
 #java -classpath $path org.apache.lucene.demo.SearchFiles -query "$1" -paging 50 -index $pathIndex
-java -classpath $path core.SearchFiles -query "$1" -paging 50 -lat "$lat" -lng "$lon" # -grade -distance 
+java -classpath $path core.SearchFiles -query "$1" -paging 50 -lat "$lat" -lng "$lon" -price

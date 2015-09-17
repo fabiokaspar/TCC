@@ -21,7 +21,6 @@ import scorer.Scorer;
 import establishment.Establishment;
 import establishment.Establishments;
 import establishment.GeographicCoordenates;
-import establishment.Grade;
 
 public class SearchFiles {
 
@@ -30,7 +29,7 @@ public class SearchFiles {
 
   public static void main(String[] args) throws Exception {
     if (args.length > 0 && ("-h".equals(args[0]) || "-help".equals(args[0]))) {
-      System.out.println("Usage:\tjava core.SearchFiles [-query string] [-lat double] [-lng double] [-distance] [-grade]");
+      System.out.println("Usage:\tjava core.SearchFiles [-query string] [-lat double] [-lng double] [-distance] [-grade] [-price]");
       System.exit(0);
     }
 
@@ -54,6 +53,8 @@ public class SearchFiles {
       	adjustWeightArray(weights, Scorer.DISTANCE);
       } else if ("-grade".equals(args[i])) {
       	adjustWeightArray(weights, Scorer.GRADE);
+      } else if ("-price".equals(args[i])) {
+      	adjustWeightArray(weights, Scorer.PRICE);
       }
     }
     
@@ -103,8 +104,6 @@ public class SearchFiles {
 	    }
 	    Establishment e = new Establishment(doc,hits[i].score);
 	    e.setDistanceFrom(origin);
-	    Grade grade = Grade.getEnum(doc.get("grade"));
-	    e.setGrade(grade);
 	    establishments.add(e);
 	  }
 	  return establishments;

@@ -27,7 +27,7 @@ public class Scorer {
 		this.normalizer = establishments.getMaxScore();
 		this.maxDistance = establishments.getMaxDistance();
 		this.maxGrade = Grade.OTIMO;
-		this.maxPrice = 0;
+		this.maxPrice = establishments.getMaxPrice();
 	}
 	
 	public Establishments calculateScore(Establishments establishments, int[] weights) {
@@ -35,21 +35,23 @@ public class Scorer {
 	  int distanceWeight = weights[DISTANCE];
 	  int gradeWeight    = weights[GRADE];
 	  int priceWeight    = weights[PRICE];
-	  return calculateScore(establishments, currentWeight, distanceWeight, gradeWeight);
+	  return calculateScore(establishments, currentWeight, distanceWeight, gradeWeight, priceWeight);
 	}
 	
 	public Establishments calculateScore(Establishments establishments, int currentWeight,
-			int distanceWeight, int gradeWeight) {
-		int sumOfWeights = currentWeight + distanceWeight + gradeWeight;
+			int distanceWeight, int gradeWeight, int priceWeight) {
+		int sumOfWeights = currentWeight + distanceWeight + gradeWeight + priceWeight;
 		double currentContribution  = ((double)currentWeight)/sumOfWeights;
 		double distanceContribution = ((double)distanceWeight)/sumOfWeights;
 		double gradeContribution    = ((double)gradeWeight)/sumOfWeights;
+		double priceContribution    = ((double)priceWeight)/sumOfWeights;
 		
 		for (Establishment establishment : establishments) {
 			double currentParcel  = currentContribution  * establishment.getScore();
 			double distanceParcel = distanceContribution * calculateDistanceScore(establishment);
 			double gradeParcel    = gradeContribution    * calculateGradeScore(establishment);
-			double newScore = currentParcel + distanceParcel + gradeParcel;
+			double priceParcel    = priceContribution    * calculatePriceScore(establishment);
+			double newScore = currentParcel + distanceParcel + gradeParcel + priceParcel;
 			establishment.setScore(newScore);
 		}
 		return establishments;
@@ -60,5 +62,8 @@ public class Scorer {
 	}
 	private double calculateGradeScore(Establishment e) {
 		return ((double)e.getGrade().ordinal())/this.maxGrade.ordinal(); 
+	}
+	private double calculatePriceScore(Establishment e) {
+		return 1.0 - (e.getPriceRange().getAveragePrice()/this.maxPrice);
 	}
 }
