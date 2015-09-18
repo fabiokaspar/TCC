@@ -1,0 +1,17 @@
+{
+    "nome": "Alfredo",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/natural/12491/alfredo?sr=551#onde",
+    "nota": false,
+    "descricao": "Inaugurado há mais de 50 anos, o restaurante natural agora serve também frango e peixe. O bufê que contempla saladas, sopas, pratos quentes e sobremesas está disponível a preço fixo ou por quilo.",
+    "preco": "até R$ 60,00",
+    "cozinha": "Natural",
+    "endereco": "Al. Ribeirão Preto, 160, Bela Vista, Centro, São Paulo, Brasil",
+    "endereco_busca": "Al. Ribeirão Preto, 160, São Paulo, Brasil",
+    "telefone": "3251-4070",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico. Não aceita cheques. Não faz entrega em domicílio. Aceita reservas. Não tem ar-condicionado. Não tem mesas ao ar livre. 80 lugares.",
+    "funcionamento": "segunda a sexta: 11h às 15h.",
+    "latlon": [
+        -23.5644657,
+        -46.6487368
+    ]
+}

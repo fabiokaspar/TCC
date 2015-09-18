@@ -1,0 +1,17 @@
+{
+    "nome": "Tulipa",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/variada/12717/tulipa?sr=901#onde",
+    "nota": "Regular",
+    "descricao": "Serve almoço na região da Paulista. Seu vasto cardápio de comida variada inclui pratos como salmão ao molho de ervas e brócolis",
+    "preco": "de R$ 60,01 a R$ 75,00",
+    "cozinha": "Variada",
+    "endereco": "R. Itapeva, 636, Bela Vista, Centro, São Paulo, Brasil",
+    "endereco_busca": "R. Itapeva, 636, São Paulo, Brasil",
+    "telefone": "3141-3000",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico. Não aceita cheques. Não faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Não tem mesas ao ar livre. Tem conexão wi-fi. 130 lugares. Estac. (R$ 8 p/ 3 h).",
+    "funcionamento": "segunda a domingo: 6h às 10h, 12h às 15h e 19h às 23h.",
+    "latlon": [
+        -23.5612989,
+        -46.6540061
+    ]
+}

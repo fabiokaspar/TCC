@@ -1,0 +1,17 @@
+{
+    "nome": "Gendai",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/japonesa/11531/gendai?sr=451#onde",
+    "nota": false,
+    "descricao": "Rede de restaurantes e comida rápida de comida japonesa com 15 unidades em São Paulo. Serve opções tradicionais, como o combinado Gendai salmão, com sushis e sashimis de salmão. Entre os pratos quentes, há o yakissoba executivo.",
+    "preco": "até R$ 60,00",
+    "cozinha": "Japonesa",
+    "endereco": "Av. das Nações Unidas, 12.555, Brooklin Paulista, Sul, São Paulo, Brasil",
+    "endereco_busca": "Av. das Nações Unidas, 12.555, São Paulo, Brasil",
+    "telefone": "3043-7777",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico. Não aceita cheques. Não faz entrega em domicílio. Não aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Não tem mesas ao ar livre. Estac. (R$ 29 p/ 3 h).",
+    "funcionamento": "segunda a sexta: 11h às 22h.sábado: 11h às 20h.domingo: 12h às 19h.",
+    "latlon": [
+        -23.6090024,
+        -46.6969682
+    ]
+}

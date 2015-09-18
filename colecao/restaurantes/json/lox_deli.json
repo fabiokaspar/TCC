@@ -1,0 +1,17 @@
+{
+    "nome": "Lox Deli",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/judaica/2205995/lox_deli?sr=551#onde",
+    "nota": "Regular",
+    "descricao": "Um imóvel gracioso, com cadeiras amarelas dispostas num deck logo na entrada, abriga o restaurante que funciona aos moldes das delicatéssen americanas. A estrela do menu é salmão. Feito ali mesmo, ele é curado por 36 horas em sal, açúcar mascavo e temperos, e recheia o bagel com cream cheese, dill e picles de cebola. A receita é judaica, assim como os tradicionais varenikes, que também figuram no cardápio.",
+    "preco": "de R$ 60,01 a R$ 75,00",
+    "cozinha": "Judaica",
+    "endereco": "R. Batataes, 403, Jardim Paulista, Oeste, São Paulo, Brasil",
+    "endereco_busca": "R. Batataes, 403, São Paulo, Brasil",
+    "telefone": "3051-6020",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Ticket Restaurante Eletrônico. Aceita cheques. Faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Tem mesas ao ar livre. Tem conexão wi-fi. 30 lugares.",
+    "funcionamento": "segunda a sexta: 9h30 às 20h.sábado: 9h às 18h.",
+    "latlon": [
+        -23.5702653,
+        -46.6574233
+    ]
+}

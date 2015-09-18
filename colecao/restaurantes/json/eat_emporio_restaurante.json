@@ -1,0 +1,17 @@
+{
+    "nome": "Eat... Empório Restaurante",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/variada/1663251/eat_emporio_restaurante?sr=801#onde",
+    "nota": false,
+    "descricao": "O empreendimento, agora sob o comando de Celso La Pastina (da marca homônima), passou por uma reforma mas manteve sua proposta: reunir num mesmo espaço restaurante, café, loja de vinhos e empório. A cozinha, de sotaque italiano, expede pratos como o risoto de linguiça toscana ao vinho tinto. Durante este mês, oferece menu preparado com as geleias italianas da marca Casa Giulia -da entrada à sobremesa. Destaque para o ceviche de camarão com geleia de laranja e rúcula.",
+    "preco": "de R$ 75,01 a R$ 95,00",
+    "cozinha": "Variada",
+    "endereco": "Av. Dr. Cardoso de Melo, 1.191, Vila Olímpia, Oeste, São Paulo, Brasil",
+    "endereco_busca": "Av. Dr. Cardoso de Melo, 1.191, São Paulo, Brasil",
+    "telefone": "5643-5353",
+    "localInfo": "Aceita os cartões Amex, Diners, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico. Não aceita cheques. Não faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Não tem mesas ao ar livre. Tem conexão wi-fi. 140 lugares. Valet (R$ 10 a 1ª h, no almoço, e R$ 20).",
+    "funcionamento": "segunda a sábado: 9h às 23h.",
+    "latlon": [
+        -23.5983829,
+        -46.6850888
+    ]
+}

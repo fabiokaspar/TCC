@@ -1,0 +1,17 @@
+{
+    "nome": "Brunetto",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/italiana/12329/brunetto?sr=301#onde",
+    "nota": false,
+    "descricao": "A pequena casa instalada numa esquina do Itaim é especializada em bruschettas, massas e risotos. O menu é enxuto, oferece bons preços e faz do local uma opção interessante para o almoço.",
+    "preco": "até R$ 60,00",
+    "cozinha": "Italiana",
+    "endereco": "R. Dr. Renato Paes de Barros, 465, Itaim Bibi, Oeste, São Paulo, Brasil",
+    "endereco_busca": "R. Dr. Renato Paes de Barros, 465, São Paulo, Brasil",
+    "telefone": "3294-3508",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Plan Vale Refeição, Sodexo Pass, Ticket Restaurante Eletrônico. Não faz entrega em domicílio. Não aceita reservas. Tem ar-condicionado. Não tem mesas ao ar livre. 50 lugares.",
+    "funcionamento": "segunda a sábado: 11h30 às 15h.",
+    "latlon": [
+        -23.582705,
+        -46.67394
+    ]
+}

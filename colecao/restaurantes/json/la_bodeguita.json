@@ -1,0 +1,17 @@
+{
+    "nome": "La Bodeguita",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/espanhola/2729598/la_bodeguita?sr=251#onde",
+    "nota": false,
+    "descricao": "Com clima de bar, a casa oferece cardápio voltado à cozinha espanhola. À noite, o destaque são as tapas: há variadas opções, como os pan tumacas, com tomate, azeite, alho e crispy de jamón. No almoço de segunda à sexta, boa pedida é o menu-executivo.",
+    "preco": "de R$ 60,01 a R$ 75,00",
+    "cozinha": "Espanhola",
+    "endereco": "Al. Tietê, 360, Cerqueira César, Oeste, São Paulo, Brasil",
+    "endereco_busca": "Al. Tietê, 360, São Paulo, Brasil",
+    "telefone": "2691-3557",
+    "localInfo": "Aceita os cartões Amex, Diners, MasterCard, Visa. Não aceita cheques. Aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Tem música ao vivo. Tem mesas ao ar livre. Tem conexão wi-fi. 120 lugares. Valet (R$ 25).",
+    "funcionamento": "segunda a quarta e domingo: 12h às 24h.quinta a sábado: 12h à 1h.",
+    "latlon": [
+        -23.5612644,
+        -46.666469
+    ]
+}

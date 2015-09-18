@@ -1,0 +1,17 @@
+{
+    "nome": "Pasquale",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/italiana/12177/pasquale?sr=401#onde",
+    "nota": "Bom",
+    "descricao": "A cantina, na Vila Madalena, aposta na cozinha do sul da Itália, mais rústica. Comece com o caprichado balcão de antepastos, com sardella, alicella e outros tira-gostos artesanais. Na ala das massas, destaque para o nhoque de batatas e para o orecchiette -há mais de 20 opções de molho para acompanhar. Entre as carnes, sobressai a paleta de cordeiro com batatas e brócolis.",
+    "preco": "de R$ 60,01 a R$ 75,00",
+    "cozinha": "Italiana",
+    "endereco": "R. Girassol, 66, Vila Madalena, Oeste, São Paulo, Brasil",
+    "endereco_busca": "R. Girassol, 66, São Paulo, Brasil",
+    "telefone": "3081-0333",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo. Aceita cheques. Não faz entrega em domicílio. Aceita reservas. Não tem ar-condicionado. Tem acesso para deficiente. Não tem mesas ao ar livre. 140 lugares.",
+    "funcionamento": "segunda: 18h às 24h.terça a sábado: 12h às 24h.domingo: 12h às 17h.",
+    "latlon": [
+        -23.5578163,
+        -46.6874198
+    ]
+}

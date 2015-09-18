@@ -1,0 +1,17 @@
+{
+    "nome": "Boa Mesa",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/bufequilo/11951/boa_mesa?sr=101#onde",
+    "nota": false,
+    "descricao": "Serve pratos de cozinha variada no bufê de almoço (por peso), em um ambiente colorido e decorado com espelhos. O cardápio varia diariamente, com receitas como mezzaluna de mussarela ao sugo. Costuma fazer sucesso o salmão servido às sextas. Nas segundas a casa oferece pratos de sotaque tex-mex como tacos, burritos e o apimentado chile.",
+    "preco": "até R$ 60,00",
+    "cozinha": "Bufê/quilo",
+    "endereco": "R. Mergenthaler, 997, Vila Leopoldina, Oeste, São Paulo, Brasil",
+    "endereco_busca": "R. Mergenthaler, 997, São Paulo, Brasil",
+    "telefone": "3831-8095",
+    "localInfo": "Aceita os cartões Amex, Cabal, Diners, Elo, Hipercard, MasterCard, Visa. Aceita os tíquetes Alelo, Plan Vale Refeição, Sodexo Pass, Ticket Restaurante Eletrônico, Vale Refeição. Não aceita cheques. Não faz entrega em domicílio. Tem ar-condicionado. Tem acesso para deficiente. Tem conexão wi-fi. 300 lugares. Valet (R$ 10).",
+    "funcionamento": "segunda a sexta: 11h30 às 15h30.sábado: 11h30 às 16h.",
+    "latlon": [
+        -23.5326509,
+        -46.742423
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "nome": "Generale",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/italiana/58099/generale?sr=351#onde",
+    "nota": false,
+    "descricao": "Cantina tradicional tanto no ambiente, quanto no cardápio. Faz pratos fartos, que podem servir até três pessoas. O forte são as massas, mas também capricha nas saladas, que chegam à mesa já temperadas.",
+    "preco": "de R$ 75,01 a R$ 95,00",
+    "cozinha": "Italiana",
+    "endereco": "R. Pamplona, 957, Jardim Paulista, Oeste, São Paulo, Brasil",
+    "endereco_busca": "R. Pamplona, 957, São Paulo, Brasil",
+    "telefone": "3285-3574",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico. Não aceita cheques. Faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Não tem mesas ao ar livre. Não tem local para comer. 188 lugares. Estac. c/ manob. grátis.",
+    "funcionamento": "segunda a quinta e domingo: 11h30 às 24h.sexta e sábado: 11h30 à 1h.",
+    "latlon": [
+        -23.5659908,
+        -46.6559478
+    ]
+}

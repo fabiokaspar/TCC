@@ -1,0 +1,17 @@
+{
+    "nome": "Sobaria",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/brasileira/175890/sobaria?sr=51#onde",
+    "nota": "Regular",
+    "descricao": "Oferece pratos típicos da cozinha mato-grossense-do-sul em um simpático sobrado na Vila Mariana. A atração é o soba, típico de Okinawa, que traz macarrão artesanal (feito com trigo sarraceno) em caldo quente mais acompanhamentos. A versão clássica é a de lombinho com cebolinha e tirinhas de omelete.",
+    "preco": "de R$ 60,01 a R$ 75,00",
+    "cozinha": "Brasileira",
+    "endereco": "R. Aurea, 343, Vila Mariana, Sul, São Paulo, Brasil",
+    "endereco_busca": "R. Aurea, 343, São Paulo, Brasil",
+    "telefone": "5084-8014",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, Hipercard, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico. Não aceita cheques. Aceita reservas. Tem ar-condicionado. Tem mesas ao ar livre. 70 lugares.",
+    "funcionamento": "segunda, terça, quinta e domingo: 12h às 23h.sexta e sábado: 12h às 24h.",
+    "latlon": [
+        -23.5873649,
+        -46.6453768
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "nome": "La Pasta Gialla",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/italiana/11579/la_pasta_gialla?sr=351#onde",
+    "nota": "Bom",
+    "descricao": "A casa do chef Sergio Arno é um misto de bruschetteria e cantina. Destaque para o ravióli de queijo de cabra, servido ao molho de pera e amêndoas.",
+    "preco": "de R$ 75,01 a R$ 95,00",
+    "cozinha": "Italiana",
+    "endereco": "Al. Lorena, 1.285, Jardim Paulista, Oeste, São Paulo, Brasil",
+    "endereco_busca": "Al. Lorena, 1.285, São Paulo, Brasil",
+    "telefone": "3061-3055",
+    "localInfo": "Aceita os cartões Amex, Diners, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico. Faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Tem mesas ao ar livre. Tem conexão wi-fi. 70 lugares. Valet (R$ 20).",
+    "funcionamento": "segunda a quinta: 12h às 15h30 e 19h às 23h.sexta: 12h às 15h30 e 19h às 24h.sábado: 12h às 24h.domingo: 12h às 17h.",
+    "latlon": [
+        -23.5653792,
+        -46.6642372
+    ]
+}

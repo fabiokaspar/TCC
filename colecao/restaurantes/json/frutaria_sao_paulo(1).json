@@ -1,0 +1,17 @@
+{
+    "nome": "Frutaria São Paulo",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/variada/13877/frutaria_sao_paulo?sr=801#onde",
+    "nota": false,
+    "descricao": "Instalado na badalada Oscar Freire, o local investe em um cardápio com pegada saudável, com sanduíches e pratos rápidos, como a quiche integral de espinafre com salada. Para beber, há sucos, smoothies e açaí.",
+    "preco": "de R$ 75,01 a R$ 95,00",
+    "cozinha": "Variada",
+    "endereco": "Av. Hélio Pellegrino, alt. do nº 100, Vila Nova Conceição, Sul, São Paulo, Brasil",
+    "endereco_busca": "Av. Hélio Pellegrino, alt. do nº 100, São Paulo, Brasil",
+    "telefone": "3842-9934",
+    "localInfo": "Aceita os cartões Amex, Diners, MasterCard, Visa. Não aceita cheques. Faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Tem mesas ao ar livre. Tem conexão wi-fi. 180 lugares. Valet (R$ 22).",
+    "funcionamento": "segunda: 10h às 24h.terça a sexta: 10h à 1h.sábado: 8h à 1h.domingo: 8h às 24h.",
+    "latlon": [
+        -23.5972919,
+        -46.66613
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "nome": "Il Pastaio",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/italiana/12215/il_pastaio?sr=351#onde",
+    "nota": "Regular",
+    "descricao": "Funcionando como rotisseria desde 1971, o endereço também serve pratos à la carte no almoço de segunda a sexta. Entre as opções, que variam diariamente, pode haver linguado grelhado na companhia de risoto de parmesão e rúcula ou berinjela à parmigiana guarnecida de arroz e salada.",
+    "preco": "até R$ 60,00",
+    "cozinha": "Italiana",
+    "endereco": "Al. Santos, 44, Cerqueira César, Sul, São Paulo, Brasil",
+    "endereco_busca": "Al. Santos, 44, São Paulo, Brasil",
+    "telefone": "3289-8897",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, Hipercard, MasterCard, Visa. Aceita os tíquetes Alelo, Bônus, Sodexo Pass, Ticket Restaurante Eletrônico. Não aceita cheques. Não faz entrega em domicílio. Não aceita reservas. Tem ar-condicionado. Tem mesas ao ar livre. Tem conexão wi-fi. 50 lugares.",
+    "funcionamento": "Restaurante: segunda a sexta: 12h às 15h. Rotisseria: domingo: 9h às 14h.segunda a sábado: 9h às 19h.",
+    "latlon": [
+        -23.5719255,
+        -46.6456272
+    ]
+}

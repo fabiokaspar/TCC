@@ -1,0 +1,17 @@
+{
+    "nome": "Maria Escaleira",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/variada/1361130/maria_escaleira?sr=851#onde",
+    "nota": false,
+    "descricao": "Em um sobrado, o polonês Andrzej Wica serve pratos caseiros da cozinha do Leste Europeu. Arroz e purê de batata são companhias do goulash e do \"leczo\", refogado de linguiça e pimentão. Tem também raviólis gordinhos recheados de cream cheese e batata com bacon. Os preços são abaixo da média. <br>",
+    "preco": "até R$ 60,00",
+    "cozinha": "Variada",
+    "endereco": "R. Mourato Coelho, 53, Pinheiros, Oeste, São Paulo, Brasil",
+    "endereco_busca": "R. Mourato Coelho, 53, São Paulo, Brasil",
+    "telefone": "2364-9913",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Sodexo Pass, Ticket Restaurante Eletrônico. Não aceita cheques. Aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Tem conexão wi-fi. 100 lugares.",
+    "funcionamento": "terça a quinta: 12h às 15h e 18h às 23h.sábado: 12h às 24h.domingo: 12h às 17h.sexta: 12h às 15h e 18h às 24h.",
+    "latlon": [
+        -23.5663899,
+        -46.6857918
+    ]
+}

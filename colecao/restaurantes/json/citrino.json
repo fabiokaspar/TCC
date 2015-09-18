@@ -1,0 +1,17 @@
+{
+    "nome": "Citrino",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/comidarapida/49373/citrino?sr=201#onde",
+    "nota": false,
+    "descricao": "Instalado em um salão pequeno revestido de tijolos em uma região comercial, atrai executivos para o café da manhã e almoço. Seu menu traz, além de pratos do dia, sugestões do chef, como o picadinho com purê de banana-da-terra e farofa.",
+    "preco": "até R$ 60,00",
+    "cozinha": "Comida Rápida",
+    "endereco": "R. Min. Jesuíno Cardoso, 556, Vila Nova Conceição, Sul, São Paulo, Brasil",
+    "endereco_busca": "R. Min. Jesuíno Cardoso, 556, São Paulo, Brasil",
+    "telefone": "3044-0025",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, Hipercard, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico. Aceita cheques. Faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Não tem mesas ao ar livre. 50 lugares.",
+    "funcionamento": "segunda a sexta: 11h30 às 15h.",
+    "latlon": [
+        -23.5929922,
+        -46.6830743
+    ]
+}

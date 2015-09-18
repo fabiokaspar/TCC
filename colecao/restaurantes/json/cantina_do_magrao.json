@@ -1,0 +1,17 @@
+{
+    "nome": "Cantina do Magrão",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/italiana/12331/cantina_do_magrao?sr=301#onde",
+    "nota": false,
+    "descricao": "Localizada ao lado do Bar do Magrão, no Ipiranga, a casa é pequena e aconchegante, com atmosfera de cantina tradicional. Os risotos caprichados e as massas de fabricação própria, como o talharim ao molho de limão, chamam a atenção. Uma dica são as cervejas especiais do bar vizinho, também servidas na casa, como a Paulaner.",
+    "preco": "de R$ 75,01 a R$ 95,00",
+    "cozinha": "Italiana",
+    "endereco": "R. Agostinho Gomes, 2.996, Ipiranga, Sul, São Paulo, Brasil",
+    "endereco_busca": "R. Agostinho Gomes, 2.996, São Paulo, Brasil",
+    "telefone": "2061-6649",
+    "localInfo": "Aceita os cartões Diners, Elo, Hipercard, MasterCard, Visa. Não aceita cheques. Não faz entrega em domicílio. Não aceita reservas. Tem ar-condicionado. Tem mesas ao ar livre. 42 lugares.",
+    "funcionamento": "terça a sábado: 12h às 23h30.domingo: 12h às 22h.",
+    "latlon": [
+        -23.5970662,
+        -46.6032895
+    ]
+}

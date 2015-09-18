@@ -1,0 +1,17 @@
+{
+    "nome": "Feed Food",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/variada/1410046/feed_food?sr=801#onde",
+    "nota": "Regular",
+    "descricao": "Atrás da galeria Cartel 011, um jardim arborizado guarda o restaurante tocado pelos chefs Adriana Cymes (do bufê Arroz de Festa) e Victor Vasconcellos (bar Número). O menu variado tem seu ápice na seção de massas e risotos. Os \"noodles crunch\" são fios de massa crocantes banhados por molho de legumes, frango e curry. O risoto de abóbora com queijo da Canastra recebe uma camada de farofa de amêndoas e avelãs.",
+    "preco": "de R$ 60,01 a R$ 75,00",
+    "cozinha": "Variada",
+    "endereco": "R. Artur de Azevedo, 517, Cerqueira César, Oeste, São Paulo, Brasil",
+    "endereco_busca": "R. Artur de Azevedo, 517, São Paulo, Brasil",
+    "telefone": "4305-7727",
+    "localInfo": "Aceita os cartões MasterCard, Visa. Não aceita cheques. Não faz entrega em domicílio. Aceita reservas. Não tem ar-condicionado. Não tem mesas ao ar livre. Tem conexão wi-fi. 80 lugares. Valet (R$ 20).",
+    "funcionamento": "terça a sábado: 12h às 24h.domingo: 13h às 17h30.",
+    "latlon": [
+        -23.5600928,
+        -46.6771746
+    ]
+}

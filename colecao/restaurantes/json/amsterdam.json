@@ -1,0 +1,17 @@
+{
+    "nome": "Amsterdam",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/variada/11847/amsterdam?sr=751#onde",
+    "nota": false,
+    "descricao": "Em um simpático ambiente com poucas mesas espalhadas na calçada, num salão interno e em um pequeno lounge, serve pratos de cozinha variada, que destaca risotos e saladas. Há criações como a que mistura folhas verdes, pêra marinada e queijo brie grelhado. Outra sugestão é o salmão em crosta de gergelim que pode vir na companhia de salada, penne ao limone ou risoto à escolha do cliente.",
+    "preco": "de R$ 60,01 a R$ 75,00",
+    "cozinha": "Variada",
+    "endereco": "R. Dr. Melo Alves, 506, Cerqueira César, Oeste, São Paulo, Brasil",
+    "endereco_busca": "R. Dr. Melo Alves, 506, São Paulo, Brasil",
+    "telefone": "3061-1676",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo. Não aceita reservas. Tem ar-condicionado. Tem mesas ao ar livre. Tem conexão wi-fi. 70 lugares.",
+    "funcionamento": "segunda e terça: 12h às 15h30.quarta a sexta: 12h às 15h30 e 16h30 às 23h30.sábado: 12h às 23h30.domingo: 12h às 16h30.",
+    "latlon": [
+        -23.5615375,
+        -46.6710657
+    ]
+}

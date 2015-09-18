@@ -1,0 +1,17 @@
+{
+    "nome": "Orange",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/natural/85199/orange?sr=601#onde",
+    "nota": "Regular",
+    "descricao": "Restaurante e entreposto de produtos naturais nos Jardins. Seu menu é centrado na cozinha vegetariana, mas inclui também frango e peixe. Em sistema de bufê, que varia todo dia, inclui receitas como a quiche de banana caramelada. Às quartas, é servida a feijoada de legumes com ricota defumada. <br>",
+    "preco": "até R$ 60,00",
+    "cozinha": "Natural",
+    "endereco": "R. Batataes, 388, Jardim Paulista, Oeste, São Paulo, Brasil",
+    "endereco_busca": "R. Batataes, 388, São Paulo, Brasil",
+    "telefone": "3885-3384",
+    "localInfo": "Aceita os cartões Amex, Aura, Cabal, Diners, Elo, Good Card, Hipercard, MasterCard, Sorocred, Todos, Visa. Aceita os tíquetes Alelo, Bônus, Cabal Vale, Good Vale, Plan Vale Refeição, Sodexo Pass, Ticket Restaurante, Ticket Restaurante Eletrônico, Todos, Vale Ticket. Aceita cheques. Tem mesas ao ar livre. 60 lugares.",
+    "funcionamento": "Entreposto: segunda a sábado: 8h às 16h20. Restaurante: segunda a sexta: 11h45 às 15h30.sábado: 11h45 às 16h.",
+    "latlon": [
+        -23.5704226,
+        -46.6570099
+    ]
+}

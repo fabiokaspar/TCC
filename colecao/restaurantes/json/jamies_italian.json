@@ -1,0 +1,17 @@
+{
+    "nome": "Jamie's Italian",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/italiana/2729241/jamies_italian?sr=351#onde",
+    "nota": false,
+    "descricao": "É a casa italiana do famoso chef inglês Jamie Oliver. Prove os nachos italianos (raviólis de queijo fritos e servidos com molho picante de tomate).",
+    "preco": "de R$ 75,01 a R$ 95,00",
+    "cozinha": "Italiana",
+    "endereco": "Av. Horácio Lafer, 61, Itaim Bibi, Oeste, São Paulo, Brasil",
+    "endereco_busca": "Av. Horácio Lafer, 61, São Paulo, Brasil",
+    "telefone": "2365-1309",
+    "localInfo": "Aceita os cartões Amex, Diners, MasterCard, Visa. Aceita os tíquetes Sodexo Pass, Ticket Restaurante Eletrônico. Tem ar-condicionado. Tem acesso para deficiente. Tem conexão wi-fi. 228 lugares. Valet (R$ 20).",
+    "funcionamento": "segunda a quarta e domingo: 12h às 23h.quinta a sábado: 12h às 24h.",
+    "latlon": [
+        -23.5869232,
+        -46.6799732
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "nome": "Chicano Taqueria",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/mexicana/2377078/chicano_taqueria?sr=551#onde",
+    "nota": false,
+    "descricao": "A casa de comida mexicana serve pratos rápidos que são degustados no balcão. O menu tem burritos (com arroz e feijão), quesadilhas e tacos. Há opções vegetarianas com recheios de legumes e porção de míni churros, com doce de leite ou chocolate.",
+    "preco": "até R$ 60,00",
+    "cozinha": "Mexicana",
+    "endereco": "R. Augusta, 976, Consolação, Centro, São Paulo, Brasil",
+    "endereco_busca": "R. Augusta, 976, São Paulo, Brasil",
+    "telefone": "2371-3542",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Sodexo Pass, Ticket Restaurante Eletrônico. Não aceita cheques. Não faz entrega em domicílio. Não aceita reservas. Tem ar-condicionado. Não tem mesas ao ar livre. Tem conexão wi-fi. 55 lugares. Estac. (R$ 10 a 1ª h, no nº 1.001 - convênio).",
+    "funcionamento": "terça a quinta: 12h às 15h30 e 17h às 23h.sábado: 12h à 1h.sexta: 12h às 15h30 e 17h à 1h.",
+    "latlon": [
+        -23.5532635,
+        -46.6549968
+    ]
+}

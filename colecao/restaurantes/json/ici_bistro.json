@@ -1,0 +1,17 @@
+{
+    "nome": "Ici Bistrô",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/francesa/12135/ici_bistro?sr=251#onde",
+    "nota": "Bom",
+    "descricao": "A casa do chef Benny Novak, que passou por restaurantes de peso nos EUA, aposta em receitas clássicas de bistrô. O cardápio típico francês sugere pratos como os mexilhões com fritas, que chegam à mesa acompanhados de manteiga de alho e salsa, o steak tartare, escargot, coxinhas de rã e também foie gras.",
+    "preco": "de R$ 95,01 a R$ 130,00",
+    "cozinha": "Francesa",
+    "endereco": "R. Pará, 36, Consolação, Centro, São Paulo, Brasil",
+    "endereco_busca": "R. Pará, 36, São Paulo, Brasil",
+    "telefone": "3257-4064",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita cheques. Não faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Não tem mesas ao ar livre. 50 lugares. Valet (R$ 25).",
+    "funcionamento": "segunda a quinta: 12h às 15h e 19h às 24h.sexta: 12h às 15h e 19h à 0h30.sábado: 12h30 às 16h e 19h30 à 0h30.domingo: 12h30 às 17h.",
+    "latlon": [
+        -23.549279,
+        -46.6580948
+    ]
+}

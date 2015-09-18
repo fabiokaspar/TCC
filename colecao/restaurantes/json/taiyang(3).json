@@ -1,0 +1,17 @@
+{
+    "nome": "Taiyang",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/chinesa/1006804/taiyang?sr=201#onde",
+    "nota": false,
+    "descricao": "Instalado na praça de alimentação de shoppings na cidade, trabalha com serviço de bufê de pratos da cozinha chinesa. Oferece receitas populares por aqui, como frango xadrez, rolinho primavera e macarrão com porco",
+    "preco": "de R$ 60,01 a R$ 75,00",
+    "cozinha": "Chinesa",
+    "endereco": "Av. Rebouças, 3.970, Pinheiros, Oeste, São Paulo, Brasil",
+    "endereco_busca": "Av. Rebouças, 3.970, São Paulo, Brasil",
+    "telefone": "2197-7155",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, Good Card, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico. Não aceita cheques. Não faz entrega em domicílio. Não aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Não tem mesas ao ar livre. Estac. (R$ 12 p/ 2 h).",
+    "funcionamento": "segunda a domingo: 12h às 22h.",
+    "latlon": [
+        -23.5725661,
+        -46.695732
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "nome": "Rodó",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/variada/2005101/rodo?sr=901#onde",
+    "nota": false,
+    "descricao": "Pequenino e decorado com uma prateleira de orquídeas, o restaurante ocupa o imóvel onde foi fundado o italiano Vito, na Vila Madalena. A cozinha da chef Vika Moretti traz pratos variados com gostinho caseiro a bons preços. No almoço, há picadinho mais arroz, feijão, pastel, banana e ovo frito. O cardápio, mais elaborado no jantar, sugere o ossobuco desfiado sobre risoto milanês.",
+    "preco": "até R$ 60,00",
+    "cozinha": "Variada",
+    "endereco": "R. Pascoal Vita, 329, Vila Madalena, Oeste, São Paulo, Brasil",
+    "endereco_busca": "R. Pascoal Vita, 329, São Paulo, Brasil",
+    "telefone": "3032-7517",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico, Vale Refeição. Aceita cheques. Não faz entrega em domicílio. Tem ar-condicionado. Tem mesas ao ar livre. Tem conexão wi-fi. 40 lugares.",
+    "funcionamento": "segunda a domingo: 12h às 15h.",
+    "latlon": [
+        -23.5516298,
+        -46.6978157
+    ]
+}

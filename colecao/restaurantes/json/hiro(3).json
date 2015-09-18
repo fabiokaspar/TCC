@@ -1,0 +1,17 @@
+{
+    "nome": "Hiro",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/japonesa/12349/hiro?sr=451#onde",
+    "nota": "Regular",
+    "descricao": "A casa japonesa funciona em sistema \"kaiten-sushi\", onde os enrolados são servidos em esteiras diante dos clientes, que pegam os que lhe apetecem e pagam pelo que for consumido.",
+    "preco": "de R$ 95,01 a R$ 130,00",
+    "cozinha": "Japonesa",
+    "endereco": "Rod. Raposo Tavares, km 22,5, , Região Metropolitana, São Paulo, Brasil",
+    "endereco_busca": "Rod. Raposo Tavares, km 22, São Paulo, Brasil",
+    "telefone": "4702-6848",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico. Não faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Não tem mesas ao ar livre. Possui menu executivo. 80 lugares. Estac. (R$ 6 a 1ª h) e subsolo (R$ 6 p/ 4 h).",
+    "funcionamento": "segunda a quinta: 12h às 15h e 18h30 às 22h30.sexta: 11h30 às 15h e 18h30 às 23h.sábado: 12h às 23h.domingo: 12h às 22h.",
+    "latlon": [
+        -23.6219986,
+        -46.6886048
+    ]
+}

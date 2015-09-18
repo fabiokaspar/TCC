@@ -1,0 +1,17 @@
+{
+    "nome": "Carlino",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/italiana/387155/carlino?sr=301#onde",
+    "nota": false,
+    "descricao": "O restaurante foi fundado em 1881 no largo do Paissandú. Hoje, com 133 anos, opera ainda no centro, numa travessa próxima ao edifício Copan. A especialidade da cozinha são os pratos de acento italiano, caso do polpettone de picanha recheado de mozarela, que chega à mesa ladeado de nhoque, e do agnolotti de vitela com iscas de picanha ao vinho branco.",
+    "preco": "de R$ 75,01 a R$ 95,00",
+    "cozinha": "Italiana",
+    "endereco": "R. Epitácio Pessoa, 85, República, Centro, São Paulo, Brasil",
+    "endereco_busca": "R. Epitácio Pessoa, 85, São Paulo, Brasil",
+    "telefone": "3258-5055",
+    "localInfo": "Aceita os cartões Amex, Aura, Cabal, Diners, Elo, Good Card, Hipercard, MasterCard, Sorocred, Todos, Visa. Aceita os tíquetes Alelo, Bônus, Sodexo Pass, Ticket Restaurante Eletrônico. Aceita cheques. Não faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Não tem mesas ao ar livre. Tem conexão wi-fi. Possui cadeirões para bebês. 60 lugares.",
+    "funcionamento": "segunda a domingo: 12h às 16h.",
+    "latlon": [
+        -23.5461005,
+        -46.6458467
+    ]
+}

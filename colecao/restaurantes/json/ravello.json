@@ -1,0 +1,17 @@
+{
+    "nome": "Ravello",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/variada/12733/ravello?sr=851#onde",
+    "nota": "Regular",
+    "descricao": "Tem instalações caprichadas e confortáveis, iluminadas por vidraças que dão para um jardim lateral. A cozinha é fran­ <br>co-italiana e inclui pratos como <br>o camarão à grega empanado <br>servido com arroz e batata",
+    "preco": "de R$ 75,01 a R$ 95,00",
+    "cozinha": "Variada",
+    "endereco": "Al. Lorena, 473, Jardim Paulista, Oeste, São Paulo, Brasil",
+    "endereco_busca": "Al. Lorena, 473, São Paulo, Brasil",
+    "telefone": "3051-3078",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico. Não aceita cheques. Não faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Tem música ao vivo. Não tem mesas ao ar livre. 110 lugares.",
+    "funcionamento": "segunda a sexta: 6h30 às 10h, 12h às 15h e 19h às 23h.sábado: 6h30 às 10h30 e 12h às 15h.domingo: 6h30 às 10h30.",
+    "latlon": [
+        -23.5707048,
+        -46.6589083
+    ]
+}

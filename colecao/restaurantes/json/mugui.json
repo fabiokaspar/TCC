@@ -1,0 +1,17 @@
+{
+    "nome": "Mugui",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/japonesa/54849/mugui?sr=501#onde",
+    "nota": false,
+    "descricao": "Instalada em um prédio que hospeda outros restaurantes orientais, a casa é pequena, simples e tem um cardápio que privilegia pratos quentes, como as massas lamen, udon e yakisoba. Também há opções frias, caso do zaruten (com tempura de legumes, camarão e macarrão macrobiótico).",
+    "preco": "até R$ 60,00",
+    "cozinha": "Japonesa",
+    "endereco": "R. da Glória, 111, 1º andar, Liberdade, Centro, São Paulo, Brasil",
+    "endereco_busca": "R. da Glória, 111, São Paulo, Brasil",
+    "telefone": "3106-8260",
+    "localInfo": "Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico. Não tem som digital. Não aceita cheques. Não faz entrega em domicílio. Não aceita reservas. Tem ar-condicionado. Não vende ingresso pelo telefone. Não tem mesas ao ar livre. Não tem local para comer. 32 lugares. Estac. c/ manob. (R$ 8 a 1ª h - convênio).",
+    "funcionamento": "segunda: 11h30 às 14h30 e 18h30 às 21h.terça a sábado: 11h30 às 14h30 e 18h30 às 22h.",
+    "latlon": [
+        -23.5540876,
+        -46.6342852
+    ]
+}

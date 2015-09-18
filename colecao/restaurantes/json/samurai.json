@@ -1,0 +1,17 @@
+{
+    "nome": "Samurai",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/japonesa/12383/samurai?sr=501#onde",
+    "nota": "Regular",
+    "descricao": "Desde 1969 na Liberdade, serve a cozinha tradicional japonesa em ambiente típico (salão e salas privativas com tatame), com horário flexível. Serve cozinha japonesa trivial e tem um karokê. O rodízio inclui pratos quentes.",
+    "preco": "de R$ 60,01 a R$ 75,00",
+    "cozinha": "Japonesa",
+    "endereco": "R. da Glória, 608, Liberdade, Centro, São Paulo, Brasil",
+    "endereco_busca": "R. da Glória, 608, São Paulo, Brasil",
+    "telefone": "3208-6969",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Não aceita cheques. Não faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Não tem mesas ao ar livre. 120 lugares.",
+    "funcionamento": "segunda e terça: 19h às 2h.quarta e quinta: 19h às 3h.sexta e sábado: 19h às 4h.",
+    "latlon": [
+        -23.5587037,
+        -46.6340724
+    ]
+}

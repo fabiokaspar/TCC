@@ -1,0 +1,17 @@
+{
+    "nome": "Salsa",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/brasileira/1848623/salsa?sr=51#onde",
+    "nota": false,
+    "descricao": "A casa fez fama com pratos comerciais generosos, preparados por dona Lúcia. Pratos como o virado à paulista e o filé à cubana servem duas pessoas atraem até Rodrigo Oliveira, o badalado chef do restaurante Mocotó.",
+    "preco": "até R$ 60,00",
+    "cozinha": "Brasileira",
+    "endereco": "Av. Nsa. Sra. do Loreto, 1.050, Vila Medeiros, Norte, São Paulo, Brasil",
+    "endereco_busca": "Av. Nsa. Sra. do Loreto, 1.050, São Paulo, Brasil",
+    "telefone": "2212-1364",
+    "localInfo": "Aceita os cartões Amex, Aura, Diners, Elo, Hipercard, MasterCard, Sorocred, Visa. Aceita os tíquetes Alelo, Plan Vale Refeição, Sodexo Pass, Ticket Restaurante Eletrônico. Faz entrega em domicílio. Não aceita reservas. Tem ar-condicionado. Não tem mesas ao ar livre. 60 lugares.",
+    "funcionamento": "segunda a sábado: 11h às 23h.",
+    "latlon": [
+        -23.4870544,
+        -46.5819701
+    ]
+}

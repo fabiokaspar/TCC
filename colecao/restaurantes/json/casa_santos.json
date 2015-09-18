@@ -1,0 +1,17 @@
+{
+    "nome": "Casa Santos",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/variada/129837/casa_santos?sr=751#onde",
+    "nota": "Regular",
+    "descricao": "O restaurante, situado na região norte de São Paulo, oferece um extenso cardápio de comida brasileira e portuguesa. Entre os pratos, está o cabrito à portuguesa, o filé à parmegiana e os famosos bolinhos de bacalhau. O local também serve opções de pizza.",
+    "preco": "de R$ 75,01 a R$ 95,00",
+    "cozinha": "Variada",
+    "endereco": "R. Cons. Dantas, 92, Canindé, Centro, São Paulo, Brasil",
+    "endereco_busca": "R. Cons. Dantas, 92, São Paulo, Brasil",
+    "telefone": "3228-5971",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo. Não aceita cheques. Não faz entrega em domicílio. Não aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Tem mesas ao ar livre. 151 lugares.",
+    "funcionamento": "segunda a sábado: 11h30 às 23h.domingo: 11h30 às 17h.",
+    "latlon": [
+        -23.5293618,
+        -46.6217439
+    ]
+}

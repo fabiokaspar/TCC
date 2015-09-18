@@ -1,0 +1,17 @@
+{
+    "nome": "Sushi Den",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/japonesa/57920/sushi_den?sr=501#onde",
+    "nota": false,
+    "descricao": "Em um espaço minúsculo, serve-se cardápio enxuto, com poucos combinados frios, de sushis e sashimis, e pratos quentes como yakisoba.",
+    "preco": "de R$ 75,01 a R$ 95,00",
+    "cozinha": "Japonesa",
+    "endereco": "R. Dr. Luiz Migliano, 1.110, Jardim Caboré, Sul, São Paulo, Brasil",
+    "endereco_busca": "R. Dr. Luiz Migliano, 1.110, São Paulo, Brasil",
+    "telefone": "3742-8477",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Ticket Restaurante Eletrônico. Aceita cheques. Tem ar-condicionado. Tem mesas ao ar livre. 33 lugares.",
+    "funcionamento": "segunda a sábado: 12h às 15h e 19h às 23h.",
+    "latlon": [
+        -23.6145369,
+        -46.7428162
+    ]
+}

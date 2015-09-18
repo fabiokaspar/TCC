@@ -1,0 +1,17 @@
+{
+    "nome": "Restaurante It",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/variada/1171660/restaurante_it?sr=901#onde",
+    "nota": false,
+    "descricao": "A casa possui um menu de inspiração contemporânea, que junta aspectos da cozinha internacional e brasileira. Entre as opções, há o atum grelhado, acompanhado de acelga chinesa com pinoli e uvas passas (R$ 52).",
+    "preco": "de R$ 95,01 a R$ 130,00",
+    "cozinha": "Variada",
+    "endereco": "R. Joinville, 515, Vila Mariana, Sul, São Paulo, Brasil",
+    "endereco_busca": "R. Joinville, 515, São Paulo, Brasil",
+    "telefone": "5088-4045",
+    "localInfo": "Aceita os cartões Amex, Diners, MasterCard, Visa. Não aceita cheques. Não faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Tem mesas ao ar livre. Tem conexão wi-fi. Possui cadeirões para bebês. Possui menu executivo. 65 lugares. Estac. (R$ 14 p/ 3 h - convênio).",
+    "funcionamento": "Restaurante: segunda a domingo: 12h às 15h e 19h às 24h. Bar: segunda a domingo: 12h à 1h.",
+    "latlon": [
+        -23.5824931,
+        -46.6503252
+    ]
+}

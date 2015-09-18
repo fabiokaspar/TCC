@@ -1,0 +1,17 @@
+{
+    "nome": "Vino!",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/italiana/11571/vino?sr=401#onde",
+    "nota": "Regular",
+    "descricao": "Loja de vinhos, wine-bar e restaurante se integram num espaço único. Sob o comando do chef Rodrigo Martins (ex-Pomodori), a casa se dedica a um rodízio de massas no almoço e ao serviço à la carte no jantar. Pratos como o medalhão de filé-mignon com fettuccine ao molho de parmesão estão no menu.",
+    "preco": "de R$ 95,01 a R$ 130,00",
+    "cozinha": "Italiana",
+    "endereco": "R. Prof. Tamandaré de Toledo, 51, Itaim Bibi, Oeste, São Paulo, Brasil",
+    "endereco_busca": "R. Prof. Tamandaré de Toledo, 51, São Paulo, Brasil",
+    "telefone": "3078-6442",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Não aceita cheques. Não faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Não tem mesas ao ar livre. 100 lugares. Valet (R$ 20).",
+    "funcionamento": "segunda e quarta a sexta: 12h às 23h30.terça: 19h às 23h30.sábado: 12h às 24h.domingo: 12h às 17h.",
+    "latlon": [
+        -23.5833543,
+        -46.6742433
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "nome": "Bueno",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/japonesa/53810/bueno?sr=451#onde",
+    "nota": false,
+    "descricao": "Localizada na região da Paulista, a casa serve suas receitas inspiradas na culinária japonesa. À noite, a especialidade da casa é o chanko nabe. Alimento favorito dos lutadores de sumô (um dos donos do restaurante praticou o esporte no Japão), é uma caldeirada com carne de porco ou frango com verduras, servida em quatro versões. Há ainda um balcão de petiscos, como a barriga de porco cozida no shoyu e no saquê.",
+    "preco": "até R$ 60,00",
+    "cozinha": "Japonesa",
+    "endereco": "Al. Santos, 835, Cerqueira César, Oeste, São Paulo, Brasil",
+    "endereco_busca": "Al. Santos, 835, São Paulo, Brasil",
+    "telefone": "2386-8035",
+    "localInfo": "Aceita os cartões Amex, Diners, Good Card, MasterCard, Sorocred, Visa. Aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Não tem mesas ao ar livre. 66 lugares.",
+    "funcionamento": "segunda a sexta: 11h30 às 14h30 e 18h às 22h30.sábado: 12h às 15h e 18h às 22h30.",
+    "latlon": [
+        -23.5673499,
+        -46.6516081
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "nome": "Don Miguel",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/mexicana/371633/don_miguel?sr=551#onde",
+    "nota": false,
+    "descricao": "O restaurante investe nos clássicos da cozinha tex-mex, um tipo de fast food comum no Texas (EUA) e no México. A casa oferece uma seção à la carte, mas também há opção de rodízio, com pratos -tacos, burritos, quesadillas- que são servidos à vontade.",
+    "preco": "de R$ 60,01 a R$ 75,00",
+    "cozinha": "Mexicana",
+    "endereco": "R. Itapura, 757, Vila Gomes Cardim, Leste, São Paulo, Brasil",
+    "endereco_busca": "R. Itapura, 757, São Paulo, Brasil",
+    "telefone": "2097-6383",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico, Vale Refeição. Não aceita cheques. Não faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Não tem mesas ao ar livre. Tem conexão wi-fi. Possui cadeirões para bebês. 160 lugares. Valet (R$ 20).",
+    "funcionamento": "segunda a quinta: 12h às 15h e 18h às 24h.sexta: 12h às 15h e 18h à 1h.sábado: 12h às 17h e 18h à 1h.domingo: 12h às 17h e 18h às 24h.",
+    "latlon": [
+        -23.5451975,
+        -46.5663068
+    ]
+}

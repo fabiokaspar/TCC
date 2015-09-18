@@ -1,0 +1,17 @@
+{
+    "nome": "Tendall Grill",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/carnes/2303817/tendall_grill?sr=201#onde",
+    "nota": false,
+    "descricao": "O salão da churrascaria, fundada há cerca de 20 anos, tem capacidade para mais de 300 clientes. São 26 tipos de carne, servidos em rodízio, como picanha, maminha e carneiro. Ainda há bufê de saladas, frios, massas e frutos do mar.",
+    "preco": "de R$ 60,01 a R$ 75,00",
+    "cozinha": "Carnes",
+    "endereco": "Av. Aricanduva, 7.997, Vila Aricanduva, Leste, São Paulo, Brasil",
+    "endereco_busca": "Av. Aricanduva, 7.997, São Paulo, Brasil",
+    "telefone": "2721-5248",
+    "localInfo": "Aceita os cartões Amex, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Plan Vale Refeição, Sodexo Pass, Ticket Restaurante Eletrônico. Não aceita cheques. Aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Não tem mesas ao ar livre. Tem conexão wi-fi. 370 lugares. Estac. grátis.",
+    "funcionamento": "segunda a quinta e domingo: 11h30 às 22h30.sexta e sábado: 11h30 às 23h30.",
+    "latlon": [
+        -23.5844999,
+        -46.4889483
+    ]
+}

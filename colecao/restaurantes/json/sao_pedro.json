@@ -1,0 +1,17 @@
+{
+    "nome": "São Pedro",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/pizzarias/12577/sao_pedro?sr=701#onde",
+    "nota": "Regular",
+    "descricao": "A tradicional pizzaria da Mooca tem mais de 30 anos de existência e oferece aproximadamente 60 sabores de pizzas em ambiente com clima familiar. Entre as opções de cobertura para as redondas de massa fina, destaque para a de rúcula com tomate seco, calabresa, pepperone, escarola e marguerita.",
+    "preco": "de R$ 60,01 a R$ 75,00",
+    "cozinha": "Pizzarias",
+    "endereco": "R. Javari, 333, Mooca, Leste, São Paulo, Brasil",
+    "endereco_busca": "R. Javari, 333, São Paulo, Brasil",
+    "telefone": "2291-8771",
+    "localInfo": "Aceita os cartões MasterCard, Visa. Não aceita cheques. Não faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Não tem mesas ao ar livre. 280 lugares.",
+    "funcionamento": "terça a quinta: 11h às 15h e 17h30 às 23h.sexta: 11h às 15h e 17h30 às 24h.sábado: 17h30 às 24h.domingo: 17h30 às 23h.",
+    "latlon": [
+        -23.5541023,
+        -46.6028561
+    ]
+}

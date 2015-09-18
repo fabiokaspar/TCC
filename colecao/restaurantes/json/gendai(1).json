@@ -1,0 +1,17 @@
+{
+    "nome": "Gendai",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/japonesa/11531/gendai?sr=451#onde",
+    "nota": false,
+    "descricao": "Rede de restaurantes e comida rápida de comida japonesa com 15 unidades em São Paulo. Serve opções tradicionais, como o combinado Gendai salmão, com sushis e sashimis de salmão. Entre os pratos quentes, há o yakissoba executivo.",
+    "preco": "até R$ 60,00",
+    "cozinha": "Japonesa",
+    "endereco": "Pça. Leonor Kaupa, 100, Bosque da Saúde, Sul, São Paulo, Brasil",
+    "endereco_busca": "Pça. Leonor Kaupa, 100, São Paulo, Brasil",
+    "telefone": "5058-8895",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico. Não aceita cheques. Não faz entrega em domicílio. Tem ar-condicionado. Tem acesso para deficiente. Estac. (R$ 8 p/ 3 h).",
+    "funcionamento": "segunda a domingo: 11h às 22h30.",
+    "latlon": [
+        -23.6198313,
+        -46.6268788
+    ]
+}

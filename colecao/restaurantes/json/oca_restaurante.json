@@ -1,0 +1,17 @@
+{
+    "nome": "Oca Restaurante",
+    "link": "http://guia1.folha.com.br/guia/restaurantes/variada/2543538/oca_restaurante?sr=851#onde",
+    "nota": false,
+    "descricao": "O restaurante veio de Santos e se instalou na badalada rua Mário Ferraz. A decoração do salão, meio rústico-chique, inclui cocares e flechas de madeira. O cardápio, assinado pelo chef Daniel Stucchi, lista receitas de sotaque variado. Dá para combinar grelhados a massas, risotos e outros acompanhamentos, como cuscuz marroquino e legumes.",
+    "preco": "de R$ 75,01 a R$ 95,00",
+    "cozinha": "Variada",
+    "endereco": "R. Dr. Mário Ferraz, 561, Jardim Paulistano, Oeste, São Paulo, Brasil",
+    "endereco_busca": "R. Dr. Mário Ferraz, 561, São Paulo, Brasil",
+    "telefone": "2538-8197",
+    "localInfo": "Aceita os cartões Amex, Diners, Elo, MasterCard, Visa. Aceita os tíquetes Alelo, Sodexo Pass, Ticket Restaurante Eletrônico, Vale Ticket. Não aceita cheques. Não faz entrega em domicílio. Aceita reservas. Tem ar-condicionado. Tem acesso para deficiente. Tem conexão wi-fi. Possui menu executivo. 100 lugares.",
+    "funcionamento": "segunda a quarta: 11h30 às 15h.quinta e sexta: 11h30 às 15h e 18h às 23h.sábado: 11h30 às 16h e 18h às 23h.",
+    "latlon": [
+        -23.5851828,
+        -46.685013
+    ]
+}
