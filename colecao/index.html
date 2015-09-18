@@ -39,17 +39,20 @@
                                     <th><b>Ordenar por: </b></th>
                                     <td>
                                         <label>
-                                            <input id="inptLocalizacao" type="radio" name=parametro value="endereco" checked>Distância
+                                            <input id="inptLocalizacao" type="radio" name=parametro value="endereco" checked>
+                                            <span class="labelText">Distância</span>
                                         </label>
                                     </td>
                                     <td>
                                         <label>
-                                            <input id="inptPreco" type="radio" name=parametro value="preco">Preço            
+                                            <input id="inptPreco" type="radio" name=parametro value="preco">
+                                            <span class="labelText">Preço</span>        
                                         </label>
                                     </td>
                                     <td>
                                         <label>
-                                            <input id="inptQualidade" type="radio" name=parametro value="nota">Qualidade   
+                                            <input id="inptQualidade" type="radio" name=parametro value="nota">
+                                            <span class="labelText">Qualidade</span>
                                         </label>
                                     </td>
                                 </tr>
@@ -71,7 +74,7 @@
                         </div>
                         <div id="mensagem"></div>
                         <form id="restaurantes">
-                            <b>Lista de restaurantes por Distância</b><br>
+                            <b>Lista de restaurantes por <span id="parametrosBuscados">Distância</span></b><br>
                             <div class="info">
                                 Escolha um dos estabelecimentos para calcular a rota:
                             </div>

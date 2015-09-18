@@ -29,53 +29,53 @@ function initialize() {
 }
 
 function clienteRequisicao() {
-  	var dados = $(this).serialize();
-		if (origem != undefined){
-			dados += '&lat=';
-			dados += origem.position.G;
-			dados += '&lng=';
-			dados += origem.position.K;
-		}
-                $("#espera").show();
-                $("#listaRestaurantes").html("");
-                $("form#restaurantes").hide();
-                $("body").animate({
-                    scrollTop: 90
-                },500);
-		$.ajax({
-			method: "POST",
-			url: "php/filtro.php",
-			data: dados,
-			dataType: "text",
-			success: function(response){
-				try {
-					//console.log(response)
-                    var obj = JSON.parse(response);
-                    $("div#listaRestaurantes").html("");
-                    clearMarkers();
-                    restaurantesArray = [];
-                    numResultados = obj.restaurantes.length; 
-                    if(obj.restaurantes.length > 0) {
-                        for(var i = 0; i < obj.restaurantes.length; i++){
-                                var restaurante = obj.restaurantes[i];
-                                var p = $("<p></p>").html((i+1)+" - "+restaurante.nome);
-                                $("div#listaRestaurantes").append(p);
-                                restaurantesArray.push(restaurante);					
-                        }
-                        main();
+    $("#espera").show();
+    $("#listaRestaurantes").html("");
+    $("form#restaurantes").hide();
+    $("body").animate({
+        scrollTop: 90
+    },500);
+    
+    var dados = $(this).serialize();
+    if (typeof origem !== "undefined"){
+            dados += '&lat=';
+            dados += origem.position.G;
+            dados += '&lng=';
+            dados += origem.position.K;
+    }
+    $.ajax({
+        method: "POST",
+        url: "php/filtro.php",
+        data: dados,
+        dataType: "text",
+        success: function(response){
+            try {
+                //console.log(response)
+                var obj = JSON.parse(response);
+                $("div#listaRestaurantes").html("");
+                clearMarkers();
+                restaurantesArray = [];
+                numResultados = obj.restaurantes.length; 
+                if(obj.restaurantes.length > 0) {
+                    for(var i = 0; i < obj.restaurantes.length; i++){
+                        restaurantesArray.push(obj.restaurantes[i]);					
                     }
-                    $("#espera").hide();
-				} catch(err) {
-					console.log("catch");
-					printError(err);
-				}
-			},
-			error: function(err){
-				console.log("error");
-				printError(err);
-			}		
-		});
-		return false;
+                    main();
+                }
+                $("#espera").hide();
+                var param = $('[name=parametro]:checked').siblings(".labelText").html();
+                $("#parametrosBuscados").html(param);
+            } catch(err) {
+                console.log("catch");
+                printError(err);
+            }
+        },
+        error: function(err){
+            console.log("error");
+            printError(err);
+        }		
+    });
+    return false;
 }
 
 function printError(err) {
@@ -84,7 +84,7 @@ function printError(err) {
     var erroString = "Ocorreu algum erro. Tente novamente."; 
     $("#mensagem").fadeOut(250).html(erroString).fadeIn(250);
     setTimeout(function() {
-    $("#mensagem").fadeOut(1000);
+        $("#mensagem").fadeOut(1000);
     },2000);
 }
 
