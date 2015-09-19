@@ -18,11 +18,18 @@
                     return false;
             }
         }
-	$parametro = filter_input(INPUT_POST,"parametro");
+	$_parametros = filter_input(INPUT_POST,"parametro",FILTER_DEFAULT,FILTER_REQUIRE_ARRAY);
+        
         $parametros = array();
-	if ($parametro && ($parametro = str_to_parameter($parametro))) {
-            $parametros[] = $parametro;
+	if (!empty($_parametros)) {
+            foreach($_parametros as $_parametro) {
+                $parametro = str_to_parameter($_parametro);
+                if($parametro) {
+                    $parametros[] = $parametro;
+                }
+            }
 	}
+        
 	$query = filter_input(INPUT_POST,"query");
 	$lat = filter_input(INPUT_POST,"lat",FILTER_VALIDATE_FLOAT);
 	$lng = filter_input(INPUT_POST,"lng",FILTER_VALIDATE_FLOAT);

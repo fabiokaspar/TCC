@@ -19,7 +19,7 @@ class Index {
     }
     static function search($query,$geoCoordenates,$parametros) {
         $_parametros = implode(" ", $parametros);
-        $resp =	shell_exec("cd .. ; ./buscaColecao.sh '$query' $geoCoordenates[0] $geoCoordenates[1] $_parametros");
+        $resp =	shell_exec("cd .. ; ./buscaColecao.sh '$query' -lat $geoCoordenates[0] -lon $geoCoordenates[1] $_parametros");
         $filenames = explode("\n", $resp);
 
         $resposta = array();

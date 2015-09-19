@@ -1,6 +1,6 @@
 * {
     font-size: 16px;
-    font-family: "Times New Roman", Times, serif;
+    font-family: helvetica, arial, sans-serif;
 }
 
 #conteudo {
@@ -139,7 +139,14 @@ button:focus, input[type=button]:active {
     background: -moz-linear-gradient(white, #ddd); /* For Firefox 3.6 to 15 */
     background: linear-gradient(white, #ddd); /* Standard syntax */
     border: 1px solid grey;
-    //border-radius: 10px;
+}
+.metallic.hover:not(.selected):hover {
+    background: #ddd;
+}
+.metallic.selected {
+    background: #aaa;
+    color: #333;
+    border-color: #aaa;
 }
 div.info {
     background: -webkit-linear-gradient(#ffe, #ddd); /* For Safari 5.1 to 6.0 */
@@ -167,18 +174,35 @@ div.info {
     width: calc(100% - 2px);
     height:30px;
     margin: 5px 0px;
+    line-height: 32px;
+    text-align: right;
+    font-weight: bold;
 }
-#opcoes > table {  
-    height: 100%;
-    border-collapse: collapse;
+#opcoes > div {  
+    display: inline-block;
     text-align: center;
 }
-#opcoes > table td:not(:first-child) {
-    border-left: grey solid 1px;
+#opcoes > div:not(.param) {  
+    float:left;
+    line-height: 34px;
+    padding-left: 2px;
 }
-#opcoes > table td *{  
-    vertical-align: -2px;
-    line-height: 27px;
+#opcoes > div.param {  
+    width: 25%;
+    border-radius: 20px;
+    cursor: pointer;
+    height: 32px;
+    transition: all 0.2s ease;
+}
+#opcoes > div.param > .order {  
+    display: none;
+    background: white;
+    border-radius: 20px;
+    float:left;
+    margin: 6px 0 6px 10px;
+    width: 20px;
+    height: 20px;
+    line-height: 22px;
 }
 
 .labels {

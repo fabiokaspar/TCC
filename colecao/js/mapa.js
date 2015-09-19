@@ -38,10 +38,12 @@ function clienteRequisicao() {
     
     var dados = $(this).serialize();
     if (typeof origem !== "undefined"){
-            dados += '&lat=';
-            dados += origem.position.G;
-            dados += '&lng=';
-            dados += origem.position.K;
+        dados += '&lat='+origem.position.H;
+        dados += '&lng='+origem.position.L;
+    }
+    var parametros = getParameters();
+    for(var i = 0; i < parametros.length; i++) {
+        dados += "&parametro[]="+parametros[i];
     }
     $.ajax({
         method: "POST",
@@ -50,9 +52,22 @@ function clienteRequisicao() {
         dataType: "text",
         success: function(response){
             try {
-                //console.log(response)
+                console.log(response);
                 var obj = JSON.parse(response);
                 $("div#listaRestaurantes").html("");
+                $("#espera").hide();
+                var parametros_str = [];
+                for(var i = 0; i < parametros.length; i++) {
+                    var p = parametros[i];
+                    var param = $('div.param[data-value='+p+"]").data("str");
+                    parametros_str.push(param);
+                }
+                if(parametros.length > 0) {
+                    $("#parametrosContainer").show();
+                    $("#parametrosBuscados").html(parametros_str.join(", "));
+                } else {
+                    $("#parametrosContainer").hide();
+                }
                 clearMarkers();
                 restaurantesArray = [];
                 numResultados = obj.restaurantes.length; 
@@ -62,9 +77,6 @@ function clienteRequisicao() {
                     }
                     main();
                 }
-                $("#espera").hide();
-                var param = $('[name=parametro]:checked').siblings(".labelText").html();
-                $("#parametrosBuscados").html(param);
             } catch(err) {
                 console.log("catch");
                 printError(err);
