@@ -1,0 +1,162 @@
+%% ------------------------------------------------------------------------- %%
+\chapter{Conceitos}
+\label{cap:conceitos}
+
+Texto texto texto texto texto texto texto texto texto texto texto texto texto
+texto texto texto texto texto texto texto texto texto texto texto texto texto
+texto texto texto texto texto texto texto texto texto texto texto texto texto
+texto texto texto texto texto texto texto texto texto texto texto texto texto
+texto texto texto texto texto texto.
+
+%% ------------------------------------------------------------------------- %%
+\section{Capítulo 1 - Recuperação booleana}
+\label{sec:recuperacao_booleana}
+
+Com o passar do tempo os sistemas de busca foram se popularizando e aprimorando, com respostas que facilitam a tomada de decisão do usuário, fornecendo um conjunto de opções supostamente mais relevantes. Este processo é conhecido como Recuperação de Informação. \\
+
+“Recuperação de Informação é encontrar materiais (normalmente documentos) de natureza não-estruturada (normalmente texto) que satisfaçam uma informação necessária em grandes coleções (normalmente armazenadas em computadores).” (Manning, Raghavan, Schütze, 2008, p.1) \\
+
+Por décadas, utilizou-se sistemas de recuperação de informação em ambientes restritos com usuários específicos utilizando alguma linguagem de consulta. No começo da década de 90, coincidentemente com o advento da Internet, sistemas com consultas em linguagem natural tiveram maior destaque.
+
+Não seria prático executar tais buscas em todos os documentos toda vez que uma informação for requerida, tornando-se um processo inviável dependendo do tamanho da coleção, por exemplo, com o número de páginas na Internet este processo seria extremamente lento. Portanto, criar um índice dos documentos de antemão permite executar a busca mais rapidamente, ao custo do armazenamento e manutenção deste.
+
+Uma forma de fazer tais buscas é por meio do Modelo de Recuperação Booleana (do inglês, Boolean Retrieval Model), o qual permite consultas com expressões booleanas, utilizando termos e operadores lógicos como AND, OR e NOT para conectá-los. Com esse modelo, o usuário consegue encontrar precisamente que documentos dentro da coleção satisfazem a sua busca. 
+
+Cada documento possui um conjunto de termos nele presente, que o distingue de outros, e para cada termo que se busca, existem documentos em que esse está presente. Assim, a forma mais natural de criar esse índice é uma matriz de incidência, no qual cada posição pode ser 1 ou 0, se o documento contém o termo ou não. Essa matriz, portanto, é criada levando-se em conta todos os termos presentes na coleção. Para saber quais documentos contém certo termo, consulta-se a linha da matriz correspondente ao termo.
+
+Para uma determinada coleção de documentos, o conjunto de termos presentes é chamado de vocabulário ou léxico e a estrutura de dados que guarda o vocabulário é chamada de dicionário.
+
+Existe aqui uma diferença entre a informação necessária, que é aquilo que o usuário visa encontrar de fato, e consulta, que é o que o usuário fornece ao sistema. Um documento é dito relevante se contém informações que o usuário julgue compatíveis com o que lhe é necessário. Podemos medir a eficiência do sistema quanto a uma busca de duas formas: sua precisão, ou quantos dos documentos retornados são relevantes; e seu recall, ou que parcela dos documentos relevantes do sistema foi retornada.
+
+Tendo uma consulta de dois termos “$t_{1}$ AND $t_{2}$”, o modelo de recuperação booleana considera as linhas da matriz de incidência como dois números binários, e aplica o operador. Portanto, nesse modelo, temos um baixo recall, pois o sistema filtra os documentos a partir da consulta, não tendo flexibilidade para incluir outros que poderiam ser relevantes. É um modelo muito limitado, tendo em vista as necessidades dos usuários.
+
+A matriz de incidência dos termos é, em geral, extremamente esparsa. Se tivermos documentos de 1000 palavras, mas um dicionário com $10^{6}$ termos, teremos cada linha da matriz com no máximo 0,1\% das posições com 1. 
+
+Entretando, existe uma estrutura mais compacta chamada Lista Invertida (do inglês, inverted index), que indica para cada termo do dicionário os documentos em que esse está presente. Cada registro nesta lista é chamado de postagem (do inglês, posting). Para cada termo temos uma lista de postagens. 
+
+Para gerar o índice temos os seguintes passos:
+\begin{enumerate}
+\item Reunir os documentos que farão parte do índice.
+\item Criar tokens para as palavras criando uma lista para cada documento.
+\item Normalizar estes tokens por meio de um processo linguístico. Os tokens normalizados serão os termos indexados (o dicionário).
+\item Atribuir uma identificação (número inteiro em série, por exemplo) para cada documento e atribui-los às listas dos termos que neles aparecem.
+\end{enumerate}
+
+Depois, ordena-se o dicionário em ordem alfabética, ocorrências repetidas de um mesmo termo em um documento são mescladas e entradas repetidas de um mesmo termo no dicionário são agrupadas. O produto final é composto pelo dicionário de termos e suas postagens. O dicionário pode ser armazenado na memória, dependendo de seu tamanho, enquanto as postagens serão lidas do disco.
+
+Essa estrutura de dados pode ser usada para guardar estatísticas, como o número de documentos em que um termo aparece (que é também o comprimento da lista de postagens). Essas estatísticas podem ser usadas para ranquear os resultados de uma busca de forma mais eficiente.
+
+As listas de postagens podem ser feitas com diferentes estruturas de dados, como vetores e listas ligadas. Vetores de tamanho fixo são pouco eficientes, pois podemos ter listas de postagens de tamanhos muito discrepantes, o que resultaria em desperdício de espaço. Com vetores de tamanho variável, perde-se tempo apenas no redimensionamento, logo, se o índice não for muito atualizado, este pode ser útil. Por sua vez, listas ligadas precisam de mais espaço por causa dos ponteiros.
+
+No modelo de recuperação booleana, tendo essas listas ordenadas pelas identificações dos documentos, é fácil de processar buscas. No caso do operador AND, basta recuperar as listas de dos dois termos e selecionar os termos presentes nas duas listas. Já que as listas estão ordenadas podemos avançar intercaladamente entre elas. Sendo ni o tamanho de cada uma das listas, esta operação tem $O(n_{1}+n_{2})$ comparações. Para processar a consulta inteira, pode-se fazer uma operação de cada vez. Assim, para uma consulta genérica, a complexidade da busca é $\Theta(N)$, sendo N o tamanho do dicionário, que na prática é uma constante imensa.
+
+Uma forma de otimizar o processamento da consulta é mudar a ordem em que as operações são feitas, ordenando os termos da consulta pelo tamanho de suas listas de postagens. Nenhum resultado parcial será maior do que a menor das listas utilizadas até ali, logo, começando pelas operações com as listas menores, o tamanho dos resultados parciais será sempre menor ou igual a menor das listas utilizadas na consulta.
+
+Existem outros modelos de recuperação de informação, como modelos de recuperação ranqueada (do inglês, ranked retrieval models), no qual a consulta submetida pelo usuário assume formato livre e o sistema deve responder a essas consultas. Um exemplo é o modelo de espaço vetorial contrastando com o uso de operadores.
+%% ------------------------------------------------------------------------- %%
+\section{Capítulo 2 - O termo do vocabulário e listas de postagens}
+\label{sec:lista_postagens}
+
+texto texto texto texto texto texto texto texto
+texto texto texto texto texto texto texto texto texto texto texto texto texto
+texto texto texto texto texto texto texto texto texto texto texto texto texto
+texto texto texto texto texto texto texto texto texto texto texto texto texto
+texto texto texto.
+
+%% ------------------------------------------------------------------------- %%
+\section{Capítulo 3 - Dicionários e recuperação tolerante}
+\label{sec:dicionarios}
+
+  Hashes e árvores são estruturas de dados extremamente importantes na realização de consulta, pois ajudam a determinar se cada termo da consulta existe no vocabulário. No primeiro, cada termo do vocabulário(chave) é mapeado para um inteiro com espaço suficiente para que as colisões de hash sejam improváveis. No segundo, a árvore de busca mais conhecida é a árvore binária, na qual cada nó interno tem dois filhos. A busca de um termo começa na raiz da árvore. Cada nó interno (incluindo a raiz) representa um teste binário, baseado nesse resultado a busca prossegue para uma das sub-árvores abaixo desse nó. Contudo, um dos problemas enfrentados pelas árvores binárias é o rebalanceamento, portanto, para suavizar esse problema são usadas árvores B, as quais são árvores de busca em que cada nó interno tem um número de filhos no intervalo [a-b].
+   
+  Um ponto negativo dos hashes é que em uma ferramente (tal como a Web) cujo tamanho do vocabulário permanece aumentando, uma função de hash projetada para necessidade atual pode não ser suficiente daqui algum tempo. \\
+  
+  Há consultas conhecidas como “consultas curingas”, as quais são, normalmente, usadas pelo usuário quando ele não tem certeza de como se escreve um termo da consulta ou está ciente das várias formas de escrita de um termo, então procura documentos contendo qualquer uma dessas variações. Para realizar essas consultas curingas, o usuário precisa digitar o caracter *, como nos exemplos abaixo: \\
+    
+\indent S*dney $\rightarrow$ Sydney ou Sidney \\
+\indent *artoze $\rightarrow$ Catorze ou Quatorze \\
+
+  Para manipular consultas em que há um único símbolo *, tal como “S*dney”, costuma-se usar duas árvores-B, árvore-B normal e árvore-B reversa, e depois pegar a intersecção de ambas.    
+
+  Além disso, algumas técnicas robustas para consultas curingas e correções ortográficas são utilizadas tais como os índices permuterm e os índices k-grama. 
+    
+  O índice permuterm consiste em marcar o final do termo com o caracter \$ e então buscar no dicionário todas as rotações com esse índice. Um exemplo do índice permuterm para a palavra carro é:  carro\$, arro\$c, rro\$ca, ro\$car, o\$carr. Uma desvantagem do índice permuterm é que o seu dicionário se torna bastante grande, já que inclui todas as rotações de cada termo. 
+    
+  Dessa forma, uma outra técnica seria o índice k-grama. Um k-grama é uma sequência de k caracteres. Além disso, usa-se um caractere especial \$ para denotar o começo ou o fim de um termo, de modo que o conjunto completo de 3-gramas gerado para o termo carro é: \$ca, arr, rro, ro\$. Em um índice k-grama, o dicionário contém todos os k-gramas que ocorrem em qualquer termo do  vocabulário. Cada lista de postagem aponta de um k-grama para todos os termos de vocabulário que contém esse k-grama.
+
+%% ------------------------------------------------------------------------- %%
+\section{Capítulo 4 - Contrução do índice}
+\label{sec:construcao_indice}
+
+Para criar uma lista invertida para uma coleção de documentos, primeiro cria-se um lista de pares termo-docID, ordenando-a pelos termos e mantendo a sequência da identificação dos documentos. Com isso, podemos criar estatísticas como a frequência de documentos e a do termo. Para coleções pequenas, a memória pode ser suficiente para esta tarefa. Para coleções maiores, no entanto, será necessário também o uso do disco.
+
+Para a discussão que se segue, vale lembrar alguns pontos:
+\begin{itemize}
+\item O acesso à memória é muito mais rápido do que acessar dados no disco.
+\item A movimentação da disk head é em geral muito lenta, e durante esse processo não há transferência de dados. Logo, é melhor transferir dados que estejam agrupados no menor número de blocos possível.
+\item Os sistemas operacionais leem blocos inteiros do disco, logo, ler 1 byte ou um bloco inteiro representa a mesma operação.
+\item A leitura do disco não é executado pelo processador, logo, este está livre durante a leitura. Uma forma de se aproveitar esse fato é gravar dados comprimidos no disco e ter um algoritmo de descompressão eficiente, de forma que a leitura mais o tempo de descompressão dos dados seja menor que a leitura dos dados descomprimidos.
+\end{itemize}
+
+
+Operações com strings podem ser custosas, portanto, é preferível o uso de termIDs ao invés dos termos em si. Estas identificações podem ser geradas durante a criação da lista invertida ou em uma etapa anterior, criando primeiramente o dicionário.
+
+Se cada termIDs ou docIDs ocupar 4 bytes, uma coleção de 100 milhões de tokens somaria 0,8 GB. A ordenação destes pares tomará ainda mais espaço, dependendo do algoritmo que for utilizado. A memória sendo insuficiente, torna-se necessário o uso do disco. Além disso, o uso de algoritmos de ordenação externa que minimizem o número de acessos aleatórios ao disco, já que buscas em blocos sequenciais são mais rápidas. Um exemplo desse tipo de algoritmo é o blocked sort-based indexing algorithm (BSBI). 
+
+Esse algoritmo cria blocos de mesmo tamanho contendo os pares termID-docID, ordena cada bloco em memória guardando os resultados parciais no disco e, por fim, mescla os blocos na lista final. Os blocos devem caber na memória de forma que permitam a sua ordenação sem o uso do disco. Após a ordenação, cada bloco é uma lista invertida de um pedaço da coleção. Assim, para mesclar as listas, mantém-se aberto um buffer de leitura para cada bloco e um buffer de escrita, onde será escrito a lista resultante. Escolhemos o menor termID que não está na lista final e mesclamos as listas de postagens de todos os blocos; esta será a lista de postagens deste termID na lista inversa resultante. 
+
+A complexidade do algoritmo é equivalente à uma ordenação. Sendo T um limitante superior proporcional a quantidade de pares termID-docID, temos que esta complexidade é $\Theta( T \cdot log T )$. Na prática, os passos de parsear os documentos e executar o mesclagem da lista final influenciam o tempo total da execução do algoritmo.
+
+O algoritmo BSBI requer que a estrutura de dados que mapeia termos aos seus respectivos termIDs seja guardada na memória. Para coleções muito grandes isso se torna impraticável. Uma alternativa é o algoritmo single-pass in-memory indexing (SPIMI) que usa os próprios termos ao invés de seus termIDs, criando um dicionário para cada bloco e guardando-o no disco. 
+
+Primeiro, é necessário parsear os documentos em pares de termos e docIDs. Para cada um destes pares, verifica-se no dicionário se o termo já está presente e resgata-se a sua lista de postagens. Assim, cada postagem é adicionada a lista de postagens individualmente, diferentemente do algoritmo BSBI que primeiro recolhe todos os pares para depois organizá-los. Isso torna o algoritmo SPIMI mais rápido por não precisar fazer este último passo e, além disso, não precisa guardar os termIDs por manter uma relação entre um termo e a sua lista de postagens, o que permite utilizar melhor a memória com blocos maiores. Quando a memória estiver cheia, escreve-se a lista em bloco no disco, apenas tomando o cuidado de ordenar os termos do dicionário, o que facilita a mesclagem das listas, por permitir encontrar um termo com uma busca linear em qualquer dicionário. Por fim, mescla-se as listas de todos os blocos. 
+
+O algoritmo SPIMI também permite a compressão das listas de postagens e do dicionário, o que permite processar blocos maiores de cada vez e economiza espaço do disco. Por não precisarmos ordenar uma lista de postagens, o algoritmo tem complexidade $\Theta( T )$, ou seja, não tem operações que sejam mais do que lineares no tamanho da coleção.
+Mas, e se uma coleção for muito grande para ser indexada em um único computador? Neste caso, são utilizados algorítimos de indexação distribuída, que criam um índice armazenado em mais de uma máquina. Cada máquina pode conter um pedaço de cada lista de postagens ou, para um conjunto de termos, suas listas de postagens. Assim, podemos usar o processamento distribuído de um cluster, distribuindo parcelas da coleção de documentos a ser indexada para cada máquina.
+
+Um problema com este método é a atribuição de termIDs para os termos, já que cada unidade de processamento terá uma tabela própria. Um modo de contornar isso é preprocessar uma tabela de termIDs para os termos mais recorrentes que será distribuída para todas as máquinas e, para os termos menos frequentes, atribuir as listas de postagens aos termos em si. Com isso, cada máquina cria arquivos intermediários que guardam um conjunto de pares de valores para as listas de postagens. Por exemplo, para cada máquina teríamos um arquivos com os pares correspondentes aos termos que começam com a letra ‘a’ até a letra ‘g’, outro arquivos para os termos que começam com a letra ‘h’ até a letra ‘p’, e assim por diante. Depois estes arquivos serão mesclados de forma que uma máquina contenha todos os pares para um destes segmentos de termos. Digamos, uma máquina recebe os arquivos que contém os pares com os termos de ‘a’ até ‘g’, mescla estas listas e mantém as listas de postagens resultantes.
+
+Tanto os algoritmos BSBI e SPIMI quanto a indexação distribuída trabalham, a princípio, com coleções estáticas, ou seja, cada documento será indexado apenas uma vez. Mas coleções que se modificam ao longo do tempo precisarão de atualizações eventualmente. Se as mudanças forem pouco frequentes, uma opção seria reindexar a coleção inteira, mantendo uma versão estável para as buscas. Se for necessário adicionar versões mais recentes dos documentos de forma rápida, no entanto, isto deixa de ser uma opção. 
+
+Uma lista auxiliar seria útil neste caso. Manteríamos a lista invertida original em disco e a lista auxiliar com as entradas novas, em memória. Ao invés de atualizarmos frequentemente a lista, podemos concentrar as mudanças nesta lista auxiliar e fazer acessos ao disco de uma vez só. Com este esquema, uma busca percorre ambas as listas para obter seu resultado. Entradas novas são adicionadas a lista auxiliar e entradas que foram deletadas são mantidas em um vetor de validação ou estrutura similar que possa ser usada para filtrar os resultados. Assim, para atualizar um documento, basta deletar suas entradas da lista original (ou seja, adicioná-las ao vetor de deleções) e adicionar as novas entradas na lista auxiliar. Quando a lista auxiliar estiver muito grande, enfim, mesclamos as duas listas. Se tivéssemos cada lista de postagens em um arquivo separado isto seria fácil, bastaríamos mesclar as mudanças pertinentes a este arquivo. Mas em geral este não é o caso, já que os sistemas operacionais não lidam bem com um número muito grande de arquivos. 
+
+Para que o número de arquivos não cresça demasiadamente, uma possibilidade é usar o algoritmo logarithmic merge, que utiliza um conjunto de listas guardadas em memória cada uma com o dobro do tamanho da anterior. O tamanho da primeira lista é igual ao tamanho máximo n da lista auxiliar e toda vez que um nível estiver cheio, mesclamos com o próximo. Para um conjunto de postagens com T elementos a serem processados, teremos $log( T/n )$ níveis. Por exemplo, se tivéssemos n postagens, apenas a lista auxiliar seria necessária. Com isso, a inserção de uma postagem ao índice terá complexidade $\Theta( log( T/n ))$, pois passará no máximo por todos os níveis. A indexação de todas as postagens, por sua vez, terá complexidade $\Theta( T log(T/n ))$.
+
+O problema deste método é que uma busca terá que percorrer todos os níveis mesclando os resultados e não só as duas listas que tínhamos anteriormente. Pode ser preferível, portanto, reconstruir o índice de tempos em tempos, dependendo da aplicação.
+
+
+%% ------------------------------------------------------------------------- %%
+\section{Capítulo 5 - Compressão do índice}
+\label{sec:compressao_indice}
+
+texto texto texto texto texto texto texto texto
+texto texto texto texto texto texto texto texto texto texto texto texto texto
+texto texto texto texto texto texto texto texto texto texto texto texto texto
+texto texto texto texto texto texto texto texto texto texto texto texto texto
+texto texto texto.
+
+%% ------------------------------------------------------------------------- %%
+\section{Capítulo 6 - Pontuação, ponderação do termo e modelo do espaço vetorial}
+\label{sec:espaco_vetorial}
+
+\subsection{Índices paramétricos e de zonas}
+
+Buscas poderão depender de mais de uma informação, além de termos no corpo de um documento. Por exemplo, poderíamos querer resgatar documentos que foram criados antes de uma data ou por um autor específico. Estas informações são guardadas como metadados do documento e através destes poderíamos executar tais buscas. Para tal, é necessário um índice paramétrico, que para cada campo passível de buscas possui uma lista invertida com suas postagens. Assim, fazemos buscas separadas e mesclamos os resultamos.
+
+Os campos de metadados podem ter em um domínio de valores ordenáveis, como datas, por exemplo. Assim, o dicionário deste campo pode ser implementado em uma estrutura que facilite a navegação por ela, como uma árvore binária.
+
+Além dos campos, uma busca pode ser feitos em partes específicas de um documento, como o título ou um resumo. Para tal, utiliza-se zonas, similares aos campos, mas que assumem textos de tamanho arbitrário. Para cada zona podemos construir um índice, cujo dicionário é constituído dos termos presentes nesta zona. Outra alternativa é codificar a zona em que um termo aparece e fazermos um índice único, o que reduz o espaço ocupado pelo dicionário.
+
+Até aqui utilizamos os índices paramétricos para fazermos buscas em que um termo está ou não presente em uma zona. Podemos, então, ponderar as zonas e atribuir uma pontuação para cada documento. Por exemplo, talvez seja uma informação mais relevante para o usuário se um termo aparece no corpo de um documento, enquanto o título pode não ser importante. Se tivermos n zonas, e atribuirmos um peso pi para cada zona, podemos normatizar a soma dos pesos para que:
+
+\begin{displaymath}
+	\sum_{i=1}^{n} p_{i} = 1
+\end{displaymath}
+
+Dado uma query q e um documento d, podemos atribuir uma pontuação si para cada zona do documento. A pontuação total do documento é, portanto, a combinação linear dos pesos e as pontuações das zonas:
+
+\begin{displaymath}
+	score(d,q)= \sum_{i=1}^{n} p_{i} s_{i}
+\end{displaymath}
+
+Um problema surge, naturalmente: como determinar os pesos $p_{i}$? Eles podem ser determinados pelo próprio usuário ou “aprendidos” através de exemplos escolhidos, ou seja, o aprendizado de máquina. [REFERÊNCIA] define os exemplos como tuplas que contém uma query q, um documento d e um julgamento da relevância, que pode ser tão simples quanto “é relevante” e “não é relevante”, mas pode ter outras nuâncias. Através destes exemplos, a máquina gera pesos $p_{i}$ que tenham resultados que se aproximem dos julgamentos de relevância que foram fornecidos. Isto pode ser escrito como um problema de otimização.
