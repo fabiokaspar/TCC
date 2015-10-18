@@ -2,11 +2,11 @@
 \chapter{Conceitos}
 \label{cap:conceitos}
 
-Texto texto texto texto texto texto texto texto texto texto texto texto texto
-texto texto texto texto texto texto texto texto texto texto texto texto texto
-texto texto texto texto texto texto texto texto texto texto texto texto texto
-texto texto texto texto texto texto texto texto texto texto texto texto texto
-texto texto texto texto texto texto.
+% Texto texto texto texto texto texto texto texto texto texto texto texto texto
+% texto texto texto texto texto texto texto texto texto texto texto texto texto
+% texto texto texto texto texto texto texto texto texto texto texto texto texto
+% texto texto texto texto texto texto texto texto texto texto texto texto texto
+% texto texto texto texto texto texto.
 
 %% ------------------------------------------------------------------------- %%
 \section{Capítulo 1 - Recuperação booleana}
@@ -54,14 +54,90 @@ Uma forma de otimizar o processamento da consulta é mudar a ordem em que as ope
 
 Existem outros modelos de recuperação de informação, como modelos de recuperação ranqueada (do inglês, ranked retrieval models), no qual a consulta submetida pelo usuário assume formato livre e o sistema deve responder a essas consultas. Um exemplo é o modelo de espaço vetorial contrastando com o uso de operadores.
 %% ------------------------------------------------------------------------- %%
-\section{Capítulo 2 - O termo do vocabulário e listas de postagens}
+\section{Capítulo 2 - Vocabulário de termos e listas de postagens}
 \label{sec:lista_postagens}
 
-texto texto texto texto texto texto texto texto
-texto texto texto texto texto texto texto texto texto texto texto texto texto
-texto texto texto texto texto texto texto texto texto texto texto texto texto
-texto texto texto texto texto texto texto texto texto texto texto texto texto
-texto texto texto.
+\subsection{Decodificação de sequências de caracteres e delimitação de documento}
+
+\subsubsection{Extrair sequências de caracteres de um documento}
+
+Os documentos digitais são entradas para um indexador e são tipicamente bytes de um arquivo ou de uma página web e, sendo assim, a primeira etapa do processo de indexação é converter estes bytes para uma sequência linear de caracteres. Mas antes  é preciso determinar a codificação correta do documento. Determinada a codificação, é feita a conversão de bytes para caracteres. 
+
+\subsubsection{Escolhendo a unidade de documento}
+
+Para uma coleção de livros, normalmente seria má ideia indexar um livro inteiro como um documento, pois a busca por brinquedos chineses pode retornar um livro que menciona China no primeiro capitulo e brinquedos no último, o que não torna o livro relevante. Ao invés disso, podemos indexar cada capítulo ou parágrafo ou até mesmo sentenças individuais como documentos. Com isso, uma vez que os documentos são menores, será muito mais fácil para o usuário encontrar passagens relevantes dentro do documento. Torna-se claro que há uma recompensa com isso em termos de precision/recall. Se as unidades forem muito pequenas, é provável que se perca passagens importantes, porque os termos foram distribuídos sobre vários mini-documentos, enquanto que se as unidades forem muito grandes, há a tendência de obtermos correspondências espúrias e a informação relevante torna-se difícil de ser encontrada pelo usuário.
+
+\subsection{Determinando o vocabulário de termos}
+
+\subsubsection{Tokenização}
+
+Tokenização é a tarefa de dividir uma sequência de caracteres em pedaços menores, chamados de tokens, podendo eventualmente descartar certos caracteres, como pontuação. Um token é uma instância de cadeia de caracteres em um documento que é agrupada como uma unidade semântica útil para processamento.
+Eis aqui um exemplo de tokenização:
+
+Entrada: Friends, Romans, Countrymen, lend me your ears \\
+Saída: [Friends] [Romans] [Countrymen] [lend] [me] [your] [ears]
+
+Um tipo é a classe de todos os tokens contendo a mesma sequência de caracteres.
+Um termo é um tipo (talvez normalizado) que é incluso no dicionário do sistema de RI.
+Múltiplos tokens que são reunidos em conjunto via normalização são indexados como um termo sob forma normalizada. Por exemplo, se o documento a ser indexado é to sleep perchance to dream, então há 5 tokens, mas apenas 4 tipos (uma vez que há 2 instâncias de to). Entretanto, se to for omitido do índice (como uma stop word), então haverá somente 3 termos: sleep, perchance, e dream. 
+A principal questão na fase de tokenização é qual convenção a se usar ? Corta-se nos espaços em branco ou não, remove-se os caracteres de pontuação, o que fazer em casos com hífen, etc. 
+Cada idioma apresenta questões particulares que devem ser considerados e alguns até mesmo fazem da tokenização uma tarefa muito complexa.
+Todos os métodos cometem erros algumas vezes, e então nunca há a garantia de uma tokenização única e consistente.
+
+\subsubsection{Eliminando termos comuns: stop words}
+
+Tokens que não são indexados, e que portanto não são termos do vocabulário.
+Tais tokens são muito comuns e parecem ser de pouco valor para tornar um documento relevante ao usuário (e.g. artigos, pronomes, preposições, entre outros).
+Alguns sistemas de RI excluem do vocabulário as stop words e para isso, determinam-se os termos mais frequentes da coleção, podendo ser necessário estudar a relação da semântica do termo com o domínio de indexação. Entretando, nem sempre é razoável eliminar as stop words, pois podem ser úteis em casos de consultas de frases (e.g. “presidente do Brasil” é mais preciso do que “presidente” AND “Brasil”).
+A princípio, o custo de inclusão de stop words não é tão grande, tanto em armazenamento quanto em processamento, e em geral, motores de busca da Web nem as utilizam.
+
+\subsubsection{Normalização (classes de equivalência de termos)}
+Nesta etapa é que são gerados os termos que aparecerão no dicionário.
+Após “quebrar” a coleção e a consulta em tokens, casos de correspondência exata entre os tokens não são sempre verdade, mas há casos onde é desejável agrupar tokens semelhantes por classes de equivalência ou por algum outro método de agrupamento. Agrupá-los por classes de equivalência tem suas vantagens em termos de desempenho e significa aplicar regras de eliminação de hífens, diacríticos, redução para o minúsculo (e entre outros) e o resultado dessas regras geram o nome das classes. Em outras palavras, implica converter os tokens para a forma canônica. Outras questões particulares de cada idioma que devem ser levados em conta tanto na etapa de tokenização quanto de normalização e muitas vezes é util a aplicação de classificadores de idioma para a melhor seleção das regras em ambas as etapas.
+
+\subsubsection{Stemização e Lematização}
+
+Ambos termos se referem a algoritmos que permitem a redução de palavras flexionadas ou derivadas à sua forma base ou raiz, permitindo que variantes gramaticais de uma palavra sejam agrupada como uma só unidade. A normalização continua sendo o objetivo aqui.
+Stemização geralmente se refere a uma heurística bruta de cortes de afixos (isto e, prefixos e sufixos) para encontrar a raiz da palavra, o que torna sua implementação mais fácil, rápida e satisfatória para muitas aplicações, permitindo alto recall, mas baixa precisão.
+Lematização faz uso de vocabulário e análise morfológica para identificar a classe gramatical da palavra, e assim determinar o lema da palavra, que é a sua forma de dicionário (forma raiz). Diferente da stemização, a lematização distingue o contexto das palavras, selecionando seu radical apropriado.
+
+Exemplo: (https://en.wikipedia.org/wiki/Lemmatisation)
+
+\begin{enumerate}
+\item A palavra "better" possui "good" como lema. Esta associação é perdida na stemização, mas obtida na lematização, pois requer um dicionário.
+
+\item A palavra "walk" é a forma base da palavra "walking", e portanto isto é conseguido tanto pela stemização como pela lematização.
+\end{enumerate}
+
+\subsection{Intersecção de listas de postagens mais rápida via skip pointers}
+
+Se o index for relativamente estático, é possível implementar intersecção de listas de postagens mais eficiente usando skip pointers. Tradicionalmente, dadas duas listas de tamanho m e n, a operação de intersecção consome tempo $O(m+n)$, pois percorre simultaneamente ambas as listas. Já com skip pointers, é possível reduzir esta complexidade para tempo sublinear. Alocando-se uma quantidade arbitrária e heuristicamente razoável de ponteiros, ganha-se tempo ao evitar ter de comparar postagens menores de uma das listas com o elemento de comparação da outra lista, pois não apareceriam de qualquer maneira no resultado da operação.
+
+\subsection{Postagens posicionais e consultas de frase}
+
+Na maioria das situações, os usuários irão expressar sua consultas por meio de frases, e assim é desejável que o motor de busca forneça suporte adequado e eficiente para consultas mais complexas que envolvam múltiplos termos, onde a proximidade entre eles é um fator de relevância adicional.
+
+\subsubsection{Indíce de dupla palavra}
+
+Após a tokenização, é necessário realizar classificação linguística das palavras (e.g. susbtantivo, verbo, preposição, entre outros) por meio do uso de ferramentas computacionais próprias. Com isso, torna-se possível indexar os documentos como duplas palavras estendidas na forma N X* N, onde N representa uma palavra “relevante” e X, uma palavra funcional de baixa relevância, como preposição, artigo ou conjunção. Assim, as entradas do dicionário passam a assumir a forma  N X* N, tornando possível a realização de consultas de frase por parte do usuário final. Tal conceito pode ser estendido para mais de duas palavras, e assim denominando-se índice de frases. Índices de frases em geral expandem muito o vocabulário, e não impedem que falsos positivos ocorram. Quando o índice de dupla palavra é usado, deve-se manter também um índice de termos únicos, para que buscas por termos individuais possam ser realizadas.
+ 
+Exemplo de formato de dupla palavra:
+
+renegotiation of the constitution
+
+N X X N
+
+\subsubsection{Índices posicionais}
+
+Índices de dupla palavra não são o padrão, por razões de espaço requerido. O mais usado para dar suporte a consultas de frase e de proximidade é o índice posicional: \\
+
+to , 993427:
+
+< 1, 6: < 7, 18, 33, 72, 86, 231 > ;
+
+\hspace{0.4cm}2, 5: < 1, 17, 74, 222, 255 >; ...>\\
+
+No exemplo acima, o termo to tem valor df 993427 (nº de ocorrências do termo na coleção). A primeira postagem são ocorrências do termo no documento 1, e seu valor tf vale 6 (número de ocorrências do termo no documento). A lista em seguida são as posições de ocorrência do termo no documento. Porém, os índices posicionais tendem a exigir mais requisitos de espaço e a ser menos eficiente do que os outros índices.
 
 %% ------------------------------------------------------------------------- %%
 \section{Capítulo 3 - Dicionários e recuperação tolerante}
@@ -126,14 +202,14 @@ O problema deste método é que uma busca terá que percorrer todos os níveis m
 
 
 %% ------------------------------------------------------------------------- %%
-\section{Capítulo 5 - Compressão do índice}
-\label{sec:compressao_indice}
+% \section{Capítulo 5 - Compressão do índice}
+% \label{sec:compressao_indice}
 
-texto texto texto texto texto texto texto texto
-texto texto texto texto texto texto texto texto texto texto texto texto texto
-texto texto texto texto texto texto texto texto texto texto texto texto texto
-texto texto texto texto texto texto texto texto texto texto texto texto texto
-texto texto texto.
+% texto texto texto texto texto texto texto texto
+% texto texto texto texto texto texto texto texto texto texto texto texto texto
+% texto texto texto texto texto texto texto texto texto texto texto texto texto
+% texto texto texto texto texto texto texto texto texto texto texto texto texto
+% texto texto texto.
 
 %% ------------------------------------------------------------------------- %%
 \section{Capítulo 6 - Pontuação, ponderação do termo e modelo do espaço vetorial}
