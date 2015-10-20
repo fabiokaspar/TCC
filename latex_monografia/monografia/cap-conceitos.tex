@@ -9,7 +9,7 @@
 % texto texto texto texto texto texto.
 
 %% ------------------------------------------------------------------------- %%
-\section{Capítulo 1 - Recuperação booleana}
+\section{Recuperação booleana}
 \label{sec:recuperacao_booleana}
 
 Com o passar do tempo os sistemas de busca foram se popularizando e aprimorando, com respostas que facilitam a tomada de decisão do usuário, fornecendo um conjunto de opções supostamente mais relevantes. Este processo é conhecido como Recuperação de Informação. \\
@@ -54,7 +54,7 @@ Uma forma de otimizar o processamento da consulta é mudar a ordem em que as ope
 
 Existem outros modelos de recuperação de informação, como modelos de recuperação ranqueada (do inglês, ranked retrieval models), no qual a consulta submetida pelo usuário assume formato livre e o sistema deve responder a essas consultas. Um exemplo é o modelo de espaço vetorial contrastando com o uso de operadores.
 %% ------------------------------------------------------------------------- %%
-\section{Capítulo 2 - Vocabulário de termos e listas de postagens}
+\section{Vocabulário de termos e listas de postagens}
 \label{sec:lista_postagens}
 
 \subsection{Decodificação de sequências de caracteres e delimitação de documento}
@@ -140,7 +140,7 @@ to , 993427:
 No exemplo acima, o termo to tem valor df 993427 (nº de ocorrências do termo na coleção). A primeira postagem são ocorrências do termo no documento 1, e seu valor tf vale 6 (número de ocorrências do termo no documento). A lista em seguida são as posições de ocorrência do termo no documento. Porém, os índices posicionais tendem a exigir mais requisitos de espaço e a ser menos eficiente do que os outros índices.
 
 %% ------------------------------------------------------------------------- %%
-\section{Capítulo 3 - Dicionários e recuperação tolerante}
+\section{Dicionários e recuperação tolerante}
 \label{sec:dicionarios}
 
   Hashes e árvores são estruturas de dados extremamente importantes na realização de consulta, pois ajudam a determinar se cada termo da consulta existe no vocabulário. No primeiro, cada termo do vocabulário(chave) é mapeado para um inteiro com espaço suficiente para que as colisões de hash sejam improváveis. No segundo, a árvore de busca mais conhecida é a árvore binária, na qual cada nó interno tem dois filhos. A busca de um termo começa na raiz da árvore. Cada nó interno (incluindo a raiz) representa um teste binário, baseado nesse resultado a busca prossegue para uma das sub-árvores abaixo desse nó. Contudo, um dos problemas enfrentados pelas árvores binárias é o rebalanceamento, portanto, para suavizar esse problema são usadas árvores B, as quais são árvores de busca em que cada nó interno tem um número de filhos no intervalo [a-b].
@@ -161,7 +161,7 @@ No exemplo acima, o termo to tem valor df 993427 (nº de ocorrências do termo n
   Dessa forma, uma outra técnica seria o índice k-grama. Um k-grama é uma sequência de k caracteres. Além disso, usa-se um caractere especial \$ para denotar o começo ou o fim de um termo, de modo que o conjunto completo de 3-gramas gerado para o termo carro é: \$ca, arr, rro, ro\$. Em um índice k-grama, o dicionário contém todos os k-gramas que ocorrem em qualquer termo do  vocabulário. Cada lista de postagem aponta de um k-grama para todos os termos de vocabulário que contém esse k-grama.
 
 %% ------------------------------------------------------------------------- %%
-\section{Capítulo 4 - Contrução do índice}
+\section{Contrução do índice}
 \label{sec:construcao_indice}
 
 Para criar uma lista invertida para uma coleção de documentos, primeiro cria-se um lista de pares termo-docID, ordenando-a pelos termos e mantendo a sequência da identificação dos documentos. Com isso, podemos criar estatísticas como a frequência de documentos e a do termo. Para coleções pequenas, a memória pode ser suficiente para esta tarefa. Para coleções maiores, no entanto, será necessário também o uso do disco.
@@ -212,8 +212,40 @@ O problema deste método é que uma busca terá que percorrer todos os níveis m
 % texto texto texto.
 
 %% ------------------------------------------------------------------------- %%
-\section{Capítulo 6 - Pontuação, ponderação do termo e modelo do espaço vetorial}
+\section{Pontuação, ponderação do termo e modelo do espaço vetorial}
 \label{sec:espaco_vetorial}
+
+\subsection{atribuir pontuação a um documento}
+
+Para ranquear os resultados de uma busca é necessário algum sistema de pontuação. Um documento que menciona um termo da consulta mais vezes é mais interessante, logo, deve receber um pontuação maior. Essa pontuação de um termo t em um documento d será chamado de peso de t em d. Pensando em consultas de texto livre, que é uma forma mais comum na web, seria fácil computar a pontuação de um documento, sendo a soma dos pesos dos termos da consulta presentes no documento. A forma mais natural de atribuir este peso é pela frequência do termo, denotada tft,d, mas pode-se usar qualquer função de ponderação. Essa forma é conhecida como modelo saco-de-palavras (do inglês, bag of words model) que leva em consideração apenas o número de ocorrências dos termos, mas não a ordem destes. Mesmo que a ordem das palavras divirja entre dois documentos, se as frequências dos termos forem similares, esses devem ser similares.
+
+Alguns termos podem ser muito frequentes na coleção, logo, não terão muita influência no ranqueamento dos documentos, sendo necessária algum tipo de atenuação. Utilizando a frequência do termo na coleção, um termo muito presente em poucos documentos e um termo pouco presente em muitos documentos teriam a mesma frequência, então, a atenuação não surtiria efeito. Portanto, é comum usar a frequência de documentos (dft), ou seja, o número de documentos da coleção em que o termo está presente. Assim, definimos frequência inversa do documento (idf):
+
+$$idf_{t} = log \frac{N}{df_{t}}$$
+
+Um termo que está em todos os documentos terá idf = 0. Quanto mais raro o termo na coleção, maior será o seu idf. Multiplicando tft,d por idft temos uma balanceamento entre a presença de um termo em um documento e a sua raridade na coleção. Um documento que diz muito sobre um assunto que aparece pouco na coleção deve ser mais relevante para este assunto. Definimos então o balanceamento tf-idf:
+
+$$tf-idf_{t,d} = tf_{t,d} \cdot idf_{t}$$
+
+Trabalhando com o documento como um vetor de pesos para os termos do dicionário, temos a pontuação de um documento d em relação à uma consulta q:
+
+\begin{displaymath}
+Score(q,d) = \sum_{t \in q} tf-idf_{t,d}
+\end{displaymath}
+
+Esta representação de documentos como vetores em um espaço vetorial é conhecida como modelo vetorial (do inglês, vector space model) e pode ser usado em outras operações de recuperação de informação. Além disso, outras funções de ponderação podem ser usadas no lugar de tf-idf. Para cada documento d temos, então, um vetor \overline{V}(d) com componentes sendo as ponderações. Assim, o espaço vetorial terá um eixo para cada termo.
+
+Dois documentos serão similares se tiverem vetores com componentes proporcionalmente parecidas, mesmo que as componentes de um documento sejam maiores do que a do outro. Para computar esta similaridade, é comum o uso do cosseno entre os dois vetores:
+
+$$sim(d_{1},d_{2}) = \frac{\overline{V}(d_{1})\cdot \overline{V}(d_{2})}{|\overline{V}(d_{1})|\cdot|\overline{V}(d_{2})|}$$
+
+Temos a divisão do produto vetorial entre os vetores sobre o produto de seus comprimentos euclidianos. Esta divisão é necessária para normalizar os resultados. Se os vetores já estiverem normalizados, apenas o produto vetorial é necessário.
+
+A coleção será representada pelo conjunto destes vetores: uma matriz MxN, sendo M o número de termos do dicionário e N o número de documentos. Da mesma forma que um documento, uma consulta pode ser representada por um vetor. Sendo assim, a pontuação de um documento em relação a uma consulta será:
+
+$$score(q,d) = \frac{\overline{V}(q) \cdot \overline{V}(d)}{|\overline{V}(q)|\cdot|\overline{V}(d)|}$$
+
+Além do uso do cosseno para o cálculo da similaridade, outras funções podem ser usadas. Busca-se, hoje, determinar de maneira mais formal a influência destas funções em diferentes domínios.
 
 \subsection{Índices paramétricos e de zonas}
 
