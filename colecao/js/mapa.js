@@ -38,8 +38,8 @@ function clienteRequisicao() {
     
     var dados = $(this).serialize();
     if (typeof origem !== "undefined"){
-        dados += '&lat='+origem.position.H;
-        dados += '&lng='+origem.position.L;
+        dados += '&lat='+origem.position.lng();
+        dados += '&lng='+origem.position.lat();
     }
     var parametros = getParameters();
     for(var i = 0; i < parametros.length; i++) {

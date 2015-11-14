@@ -41,7 +41,7 @@
 	$filenames = Index::search($query,$geoCoordenates,$parametros);
 	$dir = Index::INDEX_FOLDER;
 	$restaurantes = array();
-	
+
 	// procura na lista filenames
 	foreach($filenames as $infos) {
                 $filename = $infos['json'];
@@ -50,7 +50,9 @@
 			continue;
 		}
 		$content = json_decode(file_get_contents($path),TRUE);
-                $content['distancia'] = array("texto"=>$infos['distance']."km","valor"=>$infos['distance']);
+                $distancia_KM = floatval(str_replace(",", "", $infos['distance']))/1000;
+                $distancia_KM = number_format($distancia_KM,2);
+                $content['distancia'] = array("texto"=>"{$distancia_KM} km","valor"=>$infos['distance']);
 		$restaurantes[] = $content;
 	}
 

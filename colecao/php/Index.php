@@ -21,10 +21,10 @@ class Index {
         $_parametros = implode(" ", $parametros);
         $resp =	shell_exec("cd .. ; ./buscaColecao.sh '$query' -lat $geoCoordenates[0] -lon $geoCoordenates[1] $_parametros");
         $filenames = explode("\n", $resp);
-
+        
         $resposta = array();
         foreach ($filenames as $value) {
-            if (preg_match("/([A-z\.\/]+\.json) (\d+(\.\d+)?)km/", $value,$expr)) {
+            if (preg_match("/([A-z\.\/]+\.json) (\d+(\,\d+)?(\.\d+)?)km/", $value, $expr)) {
                 $resposta[] = array("json"=>$expr[1],"distance"=>$expr[2]);
             }
         }

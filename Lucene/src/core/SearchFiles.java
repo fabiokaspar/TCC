@@ -57,7 +57,9 @@ public class SearchFiles {
       	adjustWeightArray(weights, Scorer.PRICE);
       }
     }
-    
+    for (int i : weights) {
+    	System.out.println(i);	
+		}
     IndexReader reader = DirectoryReader.open(FSDirectory.open(Paths.get(index)));
     IndexSearcher searcher = new IndexSearcher(reader);
     Analyzer analyzer = new StandardAnalyzer();
