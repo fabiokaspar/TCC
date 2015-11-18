@@ -82,6 +82,6 @@
             Criado por: Fábio Eduardo Kaspar, Igor Canko Minotto e Ricardo Oliveira Teles (2015)
         </div>
    </div>
+    <?php include_once("analyticstracking.php") ?>
   </body>
 </html>
-<?php include_once("analyticstracking.php") ?>
