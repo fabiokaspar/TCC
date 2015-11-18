@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/java-7-openjdk-i386"/>
-	<classpathentry kind="lib" path="/var/www/lucene-5.1.0/analysis/common/lucene-analyzers-common-5.1.0.jar"/>
-	<classpathentry kind="lib" path="/var/www/lucene-5.1.0/core/lucene-core-5.1.0.jar"/>
-	<classpathentry kind="lib" path="/var/www/lucene-5.1.0/demo/lucene-demo-5.1.0.jar"/>
-	<classpathentry kind="lib" path="/var/www/lucene-5.1.0/queryparser/lucene-queryparser-5.1.0.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/java-7-openjdk-amd64"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="/var/www/TCC/lucene-5.1.0/analysis/common/lucene-analyzers-common-5.1.0.jar"/>
+	<classpathentry kind="lib" path="/var/www/TCC/lucene-5.1.0/core/lucene-core-5.1.0.jar"/>
+	<classpathentry kind="lib" path="/var/www/TCC/lucene-5.1.0/demo/lucene-demo-5.1.0.jar"/>
+	<classpathentry kind="lib" path="/var/www/TCC/lucene-5.1.0/queryparser/lucene-queryparser-5.1.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

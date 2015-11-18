@@ -50,7 +50,7 @@
 			continue;
 		}
 		$content = json_decode(file_get_contents($path),TRUE);
-                $distancia_KM = floatval(str_replace(",", "", $infos['distance']))/1000;
+                $distancia_KM = floatval(str_replace(",", "", $infos['distance']));
                 $distancia_KM = number_format($distancia_KM,2);
                 $content['distancia'] = array("texto"=>"{$distancia_KM} km","valor"=>$infos['distance']);
 		$restaurantes[] = $content;
