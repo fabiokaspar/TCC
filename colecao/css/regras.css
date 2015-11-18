@@ -8,20 +8,19 @@
 }
 
 .restauranteInfo {
-    background-color: lightsteelblue;
-    border: thin solid steelblue;
+    background-color: #EEE;
+    border: thin solid #99A;
+    border-width: thin 0px;
     width: calc(100% - 22px);
     padding: 10px;
-    margin: 0px 0px 4px 0px;
+    margin: 0px 0px -1px 0px;
     display:block;
     cursor:pointer;
-    -webkit-transition: all 0.7s; /* Safari */
-    transition: all 0.7s;
+    -webkit-transition: all 0.1s; /* Safari */
+    transition: all 0.1s;
 }
 .restauranteInfo:hover {
-    -moz-box-shadow:    inset 0 0 15px 3px steelblue;
-   -webkit-box-shadow:  inset 0 0 15px 3px steelblue;
-   box-shadow:          inset 0 0 15px 3px steelblue;
+    background-color: #DDD;
 }
 .restauranteInfo input[type=radio] {
     display: none;
@@ -36,7 +35,7 @@ form#restaurantes input[type=button] {
     padding: 4px;
 }
 #listaRestaurantes {
-    max-height: 388px;
+    height: 62vh;
     overflow-y: scroll;
 }
 
@@ -61,8 +60,12 @@ form#restaurantes input[type=button] {
     border-top: thin solid #228B22;
     padding: 5px;
     font-family: "Times New Roman", Times, serif;
-    text-align: center;
     padding: 10px 0px;
+    width:100%;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    z-index: 10;
 }
 
 #googleMap {
@@ -88,6 +91,7 @@ body {
 }
 div#corpo {
     width:100%;
+    height: calc(100vh - 42px);
 }
 div#corpo > table {
     margin: 0 auto; /* or margin: 0 auto 0 auto */
@@ -223,7 +227,7 @@ div.info {
 }
 #listaRestaurantes .labels {
     display:inline-block;
-    background-color: rgba(155,155,255,0.4);
+    background-color: rgba(155,155,155,0.4);
     margin-right:5px;
     vertical-align: -2px;
 }
