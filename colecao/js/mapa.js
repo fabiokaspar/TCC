@@ -110,11 +110,11 @@ function getGeolocation(position){
 	map.setCenter(origem.position);
 	origem.setMap(map);
 
-	var infowindow = new google.maps.InfoWindow({
-		content: "Você está aqui"
-	});
-
-	infowindow.open(map,origem);
+//	var infowindow = new google.maps.InfoWindow({
+//		content: "Você está aqui"
+//	});
+//
+//	infowindow.open(map,origem);
 
 	$('#ajax_form').submit(function(e) {
 		e.preventDefault();
@@ -206,13 +206,6 @@ function marcaDestino(index){
 	});
 	
 	destino.setMap(map);
-
-	/*var infowindow = new google.maps.InfoWindow({
-		content: restaurantesArray[index].nome
-	});
-
-	infowindow.open(map,destino);		
-*/
 	restaurantesArray[index].marker = destino;
 }
 
@@ -229,10 +222,10 @@ function desenhaRota(origem, destino){
 		if(status == google.maps.DirectionsStatus.OK){
 			mostraRota.setDirections(response);
 			if (destinoRota != undefined) {
-     			destinoRota.setVisible(false);
-     			destinoRota.infowindow.close();	
+                            destinoRota.setVisible(false);
+                            destinoRota.infowindow.close();	
   			}
-  			console.log(response)
+  			console.log(response);
 			mostraMarkersDaRota(response, destino);
 			//console.log("Tempo de percurso estimado: "+response.routes[0].legs[0].duration.text);
 			//console.log("Distancia total: "+response.routes[0].legs[0].distance.text);

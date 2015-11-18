@@ -35,7 +35,7 @@ form#restaurantes input[type=button] {
     padding: 4px;
 }
 #listaRestaurantes {
-    height: 62vh;
+    max-height: 62vh;
     overflow-y: scroll;
 }
 
