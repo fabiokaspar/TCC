@@ -18,7 +18,8 @@ class Index {
         shell_exec('cd .. ; ./criaColecao.sh; ./indexaColecao.sh');
     }
     static function search($query,$geoCoordenates,$parametros) {
-        $_parametros = "-".implode(" -", $parametros);
+        $parametros = array_map(function($a) { return "-$a"; }, $parametros);
+        $_parametros = implode(" ",$parametros);
         $resp =	shell_exec("cd .. ; ./buscaColecao.sh '$query' -lat $geoCoordenates[0] -lon $geoCoordenates[1] $_parametros");
         $filenames = explode("\n", $resp);
         
