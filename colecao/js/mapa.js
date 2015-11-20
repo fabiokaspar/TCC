@@ -259,7 +259,8 @@ function mostraListaRestaurante(){
             lista += "<a href='"+restaurantesArray[i].link+"' target='_blank'>" + restaurantesArray[i].nome + "</a><br>";
             lista += " Preco: " + restaurantesArray[i].preco + "<br>";
             lista += " Qualidade: " + restaurantesArray[i].nota + "<br>";
-            lista += " <b>Distância: " + restaurantesArray[i].distancia.texto + "</b></label>";
+            lista += " Endereço: " + restaurantesArray[i].endereco +
+                    " <b>(" + restaurantesArray[i].distancia.texto + ")</b></label>";
         }
 	$("#listaRestaurantes").html(lista);
         $("#listaRestaurantes input").change(function() {
