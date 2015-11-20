@@ -254,15 +254,21 @@ function mostraListaRestaurante(){
 
         for (var i = 0; i < numResultados; i++) {
             var userVisibleIndex = (i+1);
-            lista += "<label class='restauranteInfo'><input id='restaurante"+i+"' type='radio' name='1'>";
+            lista += "<label class='restauranteInfo' data-posicao='"+userVisibleIndex+"'><input id='restaurante"+i+"' type='radio' name='1'>";
             lista += "<div class='labels' data-id='"+userVisibleIndex+"'>"+userVisibleIndex+"</div>";
             lista += "<a href='"+restaurantesArray[i].link+"' target='_blank'>" + restaurantesArray[i].nome + "</a><br>";
             lista += " Preco: " + restaurantesArray[i].preco + "<br>";
             lista += " Qualidade: " + restaurantesArray[i].nota + "<br>";
             lista += " <b>Distância: " + restaurantesArray[i].distancia.texto + "</b></label>";
         }
-  	
 	$("#listaRestaurantes").html(lista);
+        $("label.restauranteInfo").click(function(e) {
+            e.preventDefault();
+            var posicao = $(this).data("posicao");
+            var data = {"posicao":posicao};
+            $.post("php/gravarResposta.php",data);
+            return false;
+        });
         $("form#restaurantes").show();
 }
 
