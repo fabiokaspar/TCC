@@ -3,7 +3,8 @@
 \bibitem[Apaa]{ApacheLucene}
 {Apache Lucene}.
 \newblock
-  \url{https://web.archive.org/web/20151102014915/http://lucene.apache.org/core/}.
+  \url{https://web.archive.org/web/20151102014915/http://lucene.apache.org/cor%
+e/}.
 \newblock Accessed: 2015-11-2.
 
 \bibitem[Apab]{ApacheNutch}
@@ -32,13 +33,15 @@ Nuno~Filipe Escudeiro e Al{\'i}pio~M{\'a}rio Jorge.
 \bibitem[Goob]{GoogleMaps}
 {Google Maps}.
 \newblock
-  \url{https://web.archive.org/web/20150429170137/https://www.google.com.br/maps}.
+  \url{https://web.archive.org/web/20150429170137/https://www.google.com.br/ma%
+ps}.
 \newblock Accessed: 2015-11-22.
 
 \bibitem[Gui]{GuiaFolha}
 {Guia Folha}.
 \newblock
-  \url{https://web.archive.org/web/20150908233920/http://guia.folha.uol.com.br/restaurantes/}.
+  \url{https://web.archive.org/web/20150908233920/http://guia.folha.uol.com.br%
+/restaurantes/}.
 \newblock Accessed: 2015-11-22.
 
 \bibitem[HTT]{HTTrack}
@@ -49,13 +52,15 @@ Nuno~Filipe Escudeiro e Al{\'i}pio~M{\'a}rio Jorge.
 \bibitem[Ind]{IndexWriter}
 {Documenta\c{c}{\~a}o da classe IndexWriter}.
 \newblock
-  \url{https://web.archive.org/web/20150515144032/http://lucene.apache.org/core/4_0_0/core/org/apache/lucene/index/IndexWriter.html}.
+  \url{https://web.archive.org/web/20150515144032/http://lucene.apache.org/cor%
+e/4_0_0/core/org/apache/lucene/index/IndexWriter.html}.
 \newblock Accessed: 2015-05-15.
 
 \bibitem[JSO]{JSON}
 {Artigo sobre JSON}.
 \newblock
-  \url{https://web.archive.org/web/20150911133904/https://pt.wikipedia.org/wiki/JSON}.
+  \url{https://web.archive.org/web/20150911133904/https://pt.wikipedia.org/wik%
+i/JSON}.
 \newblock Accessed: 2015-11-27.
 
 \bibitem[Kek]{Kekanto}
@@ -100,13 +105,15 @@ Bruno~C{\'e}sar Rodrigues e Giulia Crippa.
 \bibitem[Vis]{VisiteSaoPaulo}
 {Visite S{\~a}o Paulo}.
 \newblock
-  \url{https://web.archive.org/web/20150929081059/http://www.visitesaopaulo.com/dados-da-cidade.asp}.
+  \url{https://web.archive.org/web/20150929081059/http://www.visitesaopaulo.co%
+m/dados-da-cidade.asp}.
 \newblock Accessed: 2015-11-19.
 
 \bibitem[XML]{XML}
 {Artigo sobre XML}.
 \newblock
-  \url{https://web.archive.org/web/20150906111445/https://pt.wikipedia.org/wiki/XML}.
+  \url{https://web.archive.org/web/20150906111445/https://pt.wikipedia.org/wik%
+i/XML}.
 \newblock Accessed: 2015-11-27.
 
 \end{thebibliography}

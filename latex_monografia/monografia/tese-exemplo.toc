@@ -23,12 +23,11 @@
 \contentsline {section}{\numberline {3.1}Coleta de documentos e metadados}{15}{section.3.1}
 \contentsline {section}{\numberline {3.2}Indexa\IeC {\c c}\IeC {\~a}o}{15}{section.3.2}
 \contentsline {section}{\numberline {3.3}Busca parametrizada}{16}{section.3.3}
-\contentsline {section}{\numberline {3.4}Interface de usu\IeC {\'a}rio e georreferenciamento}{18}{section.3.4}
-\contentsline {chapter}{\numberline {4}Aplica\IeC {\c c}\IeC {\~a}o}{20}{chapter.4}
-\contentsline {section}{\numberline {4.1}Resultados}{20}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Consultas}{21}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Estabelecimentos escolhidos}{22}{subsection.4.1.2}
-\contentsline {section}{\numberline {4.2}Feedback dos usu\IeC {\'a}rios}{23}{section.4.2}
-\contentsline {chapter}{\numberline {5}Conclus\IeC {\~o}es}{25}{chapter.5}
-\contentsline {chapter}{\numberline {A}Formul{\'a}rio}{26}{appendix.A}
-\contentsfinish 
+\contentsline {section}{\numberline {3.4}Interface de usu\IeC {\'a}rio e georreferenciamento}{17}{section.3.4}
+\contentsline {chapter}{\numberline {4}Aplica\IeC {\c c}\IeC {\~a}o}{19}{chapter.4}
+\contentsline {section}{\numberline {4.1}Resultados}{19}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Consultas}{20}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Estabelecimentos escolhidos}{21}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}Feedback dos usu\IeC {\'a}rios}{22}{section.4.2}
+\contentsline {chapter}{\numberline {5}Conclus\IeC {\~o}es}{24}{chapter.5}
+\contentsline {chapter}{\numberline {A}Formul{\'a}rio}{25}{appendix.A}

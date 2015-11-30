@@ -1,26 +1,26 @@
-\BOOKMARK [0][]{chapter.1}{Introdu\347\343o}{}% 1
-\BOOKMARK [0][]{chapter.2}{Fundamentos}{}% 2
-\BOOKMARK [1][]{section.2.1}{Recupera\347\343o booleana}{chapter.2}% 3
-\BOOKMARK [1][]{section.2.2}{Vocabul\341rio de termos e listas de postagens}{chapter.2}% 4
-\BOOKMARK [2][]{subsection.2.2.1}{Decodifica\347\343o de sequ\352ncias de caracteres e delimita\347\343o de documento}{section.2.2}% 5
-\BOOKMARK [2][]{subsection.2.2.2}{Escolhendo a unidade de documento}{section.2.2}% 6
-\BOOKMARK [2][]{subsection.2.2.3}{Determinando o vocabul\341rio de termos}{section.2.2}% 7
-\BOOKMARK [2][]{subsection.2.2.4}{Intersec\347\343o de listas de postagens mais r\341pida via skip pointers}{section.2.2}% 8
-\BOOKMARK [2][]{subsection.2.2.5}{Postagens posicionais e consultas de frase}{section.2.2}% 9
-\BOOKMARK [1][]{section.2.3}{Dicion\341rios e recupera\347\343o tolerante}{chapter.2}% 10
-\BOOKMARK [1][]{section.2.4}{Contru\347\343o do \355ndice}{chapter.2}% 11
-\BOOKMARK [1][]{section.2.5}{Pontua\347\343o, pondera\347\343o do termo e modelo do espa\347o vetorial}{chapter.2}% 12
-\BOOKMARK [2][]{subsection.2.5.1}{Atribuir pontua\347\343o a um documento}{section.2.5}% 13
-\BOOKMARK [2][]{subsection.2.5.2}{\315ndices param\351tricos e de zonas}{section.2.5}% 14
-\BOOKMARK [0][]{chapter.3}{Desenvolvimento}{}% 15
-\BOOKMARK [1][]{section.3.1}{Coleta de documentos e metadados}{chapter.3}% 16
-\BOOKMARK [1][]{section.3.2}{Indexa\347\343o}{chapter.3}% 17
-\BOOKMARK [1][]{section.3.3}{Busca parametrizada}{chapter.3}% 18
-\BOOKMARK [1][]{section.3.4}{Interface de usu\341rio e georreferenciamento}{chapter.3}% 19
-\BOOKMARK [0][]{chapter.4}{Aplica\347\343o}{}% 20
-\BOOKMARK [1][]{section.4.1}{Resultados}{chapter.4}% 21
-\BOOKMARK [2][]{subsection.4.1.1}{Consultas}{section.4.1}% 22
-\BOOKMARK [2][]{subsection.4.1.2}{Estabelecimentos escolhidos}{section.4.1}% 23
-\BOOKMARK [1][]{section.4.2}{Feedback dos usu\341rios}{chapter.4}% 24
-\BOOKMARK [0][]{chapter.5}{Conclus\365es}{}% 25
-\BOOKMARK [0][]{appendix.A}{Formul\341rio}{}% 26
+\BOOKMARK [0][]{chapter.1}{Introdu\347\343o}{}
+\BOOKMARK [0][]{chapter.2}{Fundamentos}{}
+\BOOKMARK [1][]{section.2.1}{Recupera\347\343o booleana}{chapter.2}
+\BOOKMARK [1][]{section.2.2}{Vocabul\341rio de termos e listas de postagens}{chapter.2}
+\BOOKMARK [2][]{subsection.2.2.1}{Decodifica\347\343o de sequ\352ncias de caracteres e delimita\347\343o de documento}{section.2.2}
+\BOOKMARK [2][]{subsection.2.2.2}{Escolhendo a unidade de documento}{section.2.2}
+\BOOKMARK [2][]{subsection.2.2.3}{Determinando o vocabul\341rio de termos}{section.2.2}
+\BOOKMARK [2][]{subsection.2.2.4}{Intersec\347\343o de listas de postagens mais r\341pida via skip pointers}{section.2.2}
+\BOOKMARK [2][]{subsection.2.2.5}{Postagens posicionais e consultas de frase}{section.2.2}
+\BOOKMARK [1][]{section.2.3}{Dicion\341rios e recupera\347\343o tolerante}{chapter.2}
+\BOOKMARK [1][]{section.2.4}{Contru\347\343o do \355ndice}{chapter.2}
+\BOOKMARK [1][]{section.2.5}{Pontua\347\343o, pondera\347\343o do termo e modelo do espa\347o vetorial}{chapter.2}
+\BOOKMARK [2][]{subsection.2.5.1}{Atribuir pontua\347\343o a um documento}{section.2.5}
+\BOOKMARK [2][]{subsection.2.5.2}{\315ndices param\351tricos e de zonas}{section.2.5}
+\BOOKMARK [0][]{chapter.3}{Desenvolvimento}{}
+\BOOKMARK [1][]{section.3.1}{Coleta de documentos e metadados}{chapter.3}
+\BOOKMARK [1][]{section.3.2}{Indexa\347\343o}{chapter.3}
+\BOOKMARK [1][]{section.3.3}{Busca parametrizada}{chapter.3}
+\BOOKMARK [1][]{section.3.4}{Interface de usu\341rio e georreferenciamento}{chapter.3}
+\BOOKMARK [0][]{chapter.4}{Aplica\347\343o}{}
+\BOOKMARK [1][]{section.4.1}{Resultados}{chapter.4}
+\BOOKMARK [2][]{subsection.4.1.1}{Consultas}{section.4.1}
+\BOOKMARK [2][]{subsection.4.1.2}{Estabelecimentos escolhidos}{section.4.1}
+\BOOKMARK [1][]{section.4.2}{Feedback dos usu\341rios}{chapter.4}
+\BOOKMARK [0][]{chapter.5}{Conclus\365es}{}
+\BOOKMARK [0][]{appendix.A}{Formul\341rio}{}

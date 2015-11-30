@@ -262,9 +262,10 @@ Até aqui utilizamos os índices paramétricos para fazermos buscas em que um te
 
 Dado uma query $q$ e um documento $d$, podemos atribuir uma pontuação $s_{i}$ para cada zona do documento. A pontuação total do documento é, portanto, a combinação linear dos pesos e as pontuações das zonas:
 
-\begin{displaymath}
+\begin{equation}
 	score(d,q)= \sum_{i=1}^{n} p_{i} s_{i}
-\end{displaymath}
+	 \label{score}
+\end{equation}
 
 Um problema surge, naturalmente: como determinar os pesos $p_{i}$? Eles podem ser determinados pelo próprio usuário ou ``aprendidos'' através de exemplos escolhidos, ou seja, o aprendizado de máquina. Os autores definem os exemplos como tuplas que contém uma query $q$, um documento $d$ e um julgamento da relevância, que pode ser tão simples quanto ``é relevante'' e ``não é relevante'', mas pode ter outras nuâncias. Através destes exemplos, a máquina gera pesos $p_{i}$ que tenham resultados que se aproximem dos julgamentos de relevância que foram fornecidos. Isto pode ser escrito como um problema de otimização.
 
