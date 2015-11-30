@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.4.28)  30 NOV 2015 16:29
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.4.28)  30 NOV 2015 17:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -828,79 +828,74 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 90.
  [6]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 108.
-Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 112.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 119.
+(babel)             in language  on input line 116.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 119.
+(babel)             in language  on input line 123.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 123.
  [7]
-Underfull \hbox (badness 10000) in paragraph at lines 128--129
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 134--135
-
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 139.
-
-Underfull \hbox (badness 10000) in paragraph at lines 144--145
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 146--147
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 148--150
+Underfull \hbox (badness 10000) in paragraph at lines 149--150
 
  []
 
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 154.
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 163--165
+
+ []
+
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 154.
+(babel)             in language  on input line 165.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 165.
 [8]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 160.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 167.
+(babel)             in language  on input line 175.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 182.
 
  (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 167.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 182.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 181.
+(babel)             in language  on input line 193.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 181.
+(babel)             in language  on input line 193.
  [9]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 194.
+(babel)             in language  on input line 208.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 194.
+(babel)             in language  on input line 208.
  [10]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 211.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 214.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 233.
+(babel)             in language  on input line 217.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 233.
+(babel)             in language  on input line 231.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 231.
  [11]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 246.
+(babel)             in language  on input line 249.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 264.
+(babel)             in language  on input line 258.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 264.
+(babel)             in language  on input line 258.
 
 [12]) (./cap-desenvolvimento.tex
 Package babel Info: Redefining portuges shorthand "|
@@ -911,7 +906,7 @@ Package babel Info: Redefining portuges shorthand "|
 Cap\'{\i }tulo 3.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 2.
-<./figuras/figura_unica.png, id=266, 668.4975pt x 970.62625pt>
+<./figuras/figura_unica.png, id=268, 668.4975pt x 970.62625pt>
 File: ./figuras/figura_unica.png Graphic file (type png)
 
 <use ./figuras/figura_unica.png>
@@ -926,7 +921,7 @@ Package babel Info: Redefining portuges shorthand "|
  [14
 
  <./figuras/figura_unica.png>]
-<./figuras/3_2.png, id=278, 534.99875pt x 113.42375pt>
+<./figuras/3_2.png, id=280, 534.99875pt x 113.42375pt>
 File: ./figuras/3_2.png Graphic file (type png)
  <use ./figuras/3_2.png>
 Package pdftex.def Info: ./figuras/3_2.png used on input line 28.
@@ -941,7 +936,7 @@ Package babel Info: Redefining portuges shorthand "|
 [15 <./figuras/3_2.png>]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 54.
- <./figuras/3_3.png, id=298, 478.78876pt x 99.37125pt>
+ <./figuras/3_3.png, id=300, 478.78876pt x 99.37125pt>
 File: ./figuras/3_3.png Graphic file (type png)
 
 <use ./figuras/3_3.png>
@@ -964,7 +959,7 @@ LaTeX Warning: Command \textquoteright invalid in math mode on input line 119.
 
 LaTeX Warning: Command \textquoteright invalid in math mode on input line 126.
 
-<./figuras/3_4.png, id=309, 570.13pt x 328.22626pt>
+<./figuras/3_4.png, id=311, 570.13pt x 328.22626pt>
 File: ./figuras/3_4.png Graphic file (type png)
  <use ./figuras/3_4.png>
 Package pdftex.def Info: ./figuras/3_4.png used on input line 147.
@@ -979,7 +974,7 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 157.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 157.
-[17] <./figuras/PartesDoSite.png, id=317, 963.6pt x 722.7pt>
+[17] <./figuras/PartesDoSite.png, id=319, 963.6pt x 722.7pt>
 File: ./figuras/PartesDoSite.png Graphic file (type png)
 
 <use ./figuras/PartesDoSite.png>
@@ -999,7 +994,7 @@ Package babel Info: Redefining portuges shorthand "|
 Cap\'{\i }tulo 4.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 2.
-<./figuras/GuiaFolha-Formulario.png, id=333, 682.55pt x 167.62625pt>
+<./figuras/GuiaFolha-Formulario.png, id=335, 682.55pt x 167.62625pt>
 File: ./figuras/GuiaFolha-Formulario.png Graphic file (type png)
 
 <use ./figuras/GuiaFolha-Formulario.png>
@@ -1017,7 +1012,7 @@ Package babel Info: Redefining portuges shorthand "|
  <./figuras/GuiaFolha-Formulario.png>]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 36.
- <./figuras/Grafico-parametros.png, id=343, 606.265pt x 282.05376pt>
+ <./figuras/Grafico-parametros.png, id=345, 606.265pt x 282.05376pt>
 File: ./figuras/Grafico-parametros.png Graphic file (type png)
 
 <use ./figuras/Grafico-parametros.png>
@@ -1025,7 +1020,7 @@ Package pdftex.def Info: ./figuras/Grafico-parametros.png used on input line 48
 .
 (pdftex.def)             Requested size: 374.66748pt x 174.30771pt.
 
-<./figuras/Grafico-parametrosPorConsulta.png, id=345, 428.60126pt x 311.1625pt>
+<./figuras/Grafico-parametrosPorConsulta.png, id=347, 428.60126pt x 311.1625pt>
 File: ./figuras/Grafico-parametrosPorConsulta.png Graphic file (type png)
 <use ./figuras/Grafico-parametrosPorConsulta.png>
 Package pdftex.def Info: ./figuras/Grafico-parametrosPorConsulta.png used on in
@@ -1038,7 +1033,7 @@ Package babel Info: Redefining portuges shorthand "|
  [21 <./figuras/Grafico-parametros.png>]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 70.
- <./figuras/Grafico-escolhas.png, id=354, 553.06625pt x 363.3575pt>
+ <./figuras/Grafico-escolhas.png, id=356, 553.06625pt x 363.3575pt>
 File: ./figuras/Grafico-escolhas.png Graphic file (type png)
 
 <use ./figuras/Grafico-escolhas.png>
@@ -1053,7 +1048,7 @@ png>]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 94.
 
-<./figuras/Grafico-dif.png, id=363, 602.25pt x 372.39125pt>
+<./figuras/Grafico-dif.png, id=365, 602.25pt x 372.39125pt>
 File: ./figuras/Grafico-dif.png Graphic file (type png)
 
 <use ./figuras/Grafico-dif.png>
@@ -1141,9 +1136,9 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 293.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 293.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 293.
 Package rerunfilecheck Info: File `tese-exemplo.out' has not changed.
-(rerunfilecheck)             Checksum: A39997E3D8AB4A26F700170E9820E51B;2012.
+(rerunfilecheck)             Checksum: AEE47402A354BD7AF481E57AC0C219A0;2012.
 Package rerunfilecheck Info: File `tese-exemplo.brf' has not changed.
-(rerunfilecheck)             Checksum: 8C9C6DE3C1BCB84C52B029DC342A3F30;724.
+(rerunfilecheck)             Checksum: 9A21C22D347762A3D0A92DDB7B20F3F6;724.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1152,37 +1147,37 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 293.
  ) 
 Here is how much of TeX's memory you used:
- 10595 strings out of 495005
- 154827 string characters out of 6180688
+ 10591 strings out of 495005
+ 154771 string characters out of 6180688
  289506 words of memory out of 5000000
- 13520 multiletter control sequences out of 15000+600000
- 20915 words of font info for 43 fonts, out of 8000000 for 9000
+ 13514 multiletter control sequences out of 15000+600000
+ 21614 words of font info for 44 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
  36i,12n,46p,1388b,465s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/nina/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti0800.600pk> </home/ni
 na/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/nina/.texmf-va
-r/fonts/pk/ljfour/jknappen/ec/ecbi1095.600pk> </home/nina/.texmf-var/fonts/pk/l
-jfour/jknappen/ec/ecbx1200.600pk> </home/nina/.texmf-var/fonts/pk/ljfour/jknapp
-en/ec/ecrm0900.600pk> </home/nina/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti10
-00.600pk> </home/nina/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </
-home/nina/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2074.600pk> </home/nina/.t
-exmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.600pk> </home/nina/.texmf-var/fon
-ts/pk/ljfour/jknappen/ec/ecti1095.600pk> </home/nina/.texmf-var/fonts/pk/ljfour
-/jknappen/ec/ecbx2488.600pk> </home/nina/.texmf-var/fonts/pk/ljfour/jknappen/ec
-/ecrm1095.600pk> </home/nina/.texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1440.60
-0pk> </home/nina/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </home/
-nina/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy8.pfb>
-Output written on tese-exemplo.pdf (33 pages, 1011862 bytes).
+r/fonts/pk/ljfour/jknappen/ec/ecbi1200.600pk> </home/nina/.texmf-var/fonts/pk/l
+jfour/jknappen/ec/ecbi1095.600pk> </home/nina/.texmf-var/fonts/pk/ljfour/jknapp
+en/ec/ecbx1200.600pk> </home/nina/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm09
+00.600pk> </home/nina/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </
+home/nina/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/nina/.t
+exmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2074.600pk> </home/nina/.texmf-var/fon
+ts/pk/ljfour/jknappen/ec/ecbx1095.600pk> </home/nina/.texmf-var/fonts/pk/ljfour
+/jknappen/ec/ecti1095.600pk> </home/nina/.texmf-var/fonts/pk/ljfour/jknappen/ec
+/ecbx2488.600pk> </home/nina/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.60
+0pk> </home/nina/.texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1440.600pk> </home/
+nina/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </home/nina/.texmf-
+var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on tese-exemplo.pdf (33 pages, 1018201 bytes).
 PDF statistics:
- 1029 PDF objects out of 1200 (max. 8388607)
- 465 compressed objects within 5 object streams
- 111 named destinations out of 1000 (max. 500000)
+ 1047 PDF objects out of 1200 (max. 8388607)
+ 470 compressed objects within 5 object streams
+ 112 named destinations out of 1000 (max. 500000)
  264 words of extra memory for PDF output out of 10000 (max. 10000000)
 

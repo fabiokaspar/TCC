@@ -10,14 +10,14 @@
 \contentsline {subsubsection}{Eliminando termos comuns: \emph {stop words}}{6}{section*.7}
 \contentsline {subsubsection}{Normaliza\IeC {\c c}\IeC {\~a}o (classes de equival\IeC {\^e}ncia de termos)}{7}{section*.8}
 \contentsline {subsubsection}{Stemiza\IeC {\c c}\IeC {\~a}o e Lematiza\IeC {\c c}\IeC {\~a}o}{7}{section*.9}
-\contentsline {subsection}{\numberline {2.2.4}Intersec\IeC {\c c}\IeC {\~a}o de listas de postagens mais r\IeC {\'a}pida via skip pointers}{7}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.4}Intersec\IeC {\c c}\IeC {\~a}o de listas de postagens mais r\IeC {\'a}pida via \emph {skip pointers}}{7}{subsection.2.2.4}
 \contentsline {subsection}{\numberline {2.2.5}Postagens posicionais e consultas de frase}{7}{subsection.2.2.5}
-\contentsline {subsubsection}{Ind\IeC {\'\i }ce de dupla palavra}{7}{section*.10}
-\contentsline {subsubsection}{\IeC {\'I}ndices posicionais}{8}{section*.11}
+\contentsline {subsubsection}{\IeC {\'I}ndice de dupla palavra}{8}{section*.10}
+\contentsline {subsubsection}{\IeC {\'I}ndices posicionais}{8}{section*.12}
 \contentsline {section}{\numberline {2.3}Dicion\IeC {\'a}rios e recupera\IeC {\c c}\IeC {\~a}o tolerante}{8}{section.2.3}
 \contentsline {section}{\numberline {2.4}Contru\IeC {\c c}\IeC {\~a}o do \IeC {\'\i }ndice}{9}{section.2.4}
 \contentsline {section}{\numberline {2.5}Pontua\IeC {\c c}\IeC {\~a}o, pondera\IeC {\c c}\IeC {\~a}o do termo e modelo do espa\IeC {\c c}o vetorial}{11}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}atribuir pontua\IeC {\c c}\IeC {\~a}o a um documento}{11}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.1}Atribuir pontua\IeC {\c c}\IeC {\~a}o a um documento}{11}{subsection.2.5.1}
 \contentsline {subsection}{\numberline {2.5.2}\IeC {\'I}ndices param\IeC {\'e}tricos e de zonas}{12}{subsection.2.5.2}
 \contentsline {chapter}{\numberline {3}Desenvolvimento}{14}{chapter.3}
 \contentsline {section}{\numberline {3.1}Coleta de documentos e metadados}{15}{section.3.1}

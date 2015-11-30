@@ -83,55 +83,70 @@ A principal questão na fase de tokenização é qual convenção usar? Corta-se
 
 \emph{Stop words} são \emph{tokens} que não são indexados e, portanto, não são termos do vocabulário. Tais \emph{tokens} são muito comuns e parecem ser de pouco valor para tornar um documento relevante ao usuário (e.g. artigos, pronomes, preposições, entre outros).
 
-Alguns sistemas de RI excluem do vocabulário as \emph{stop words} e para isso, determinam-se os termos mais frequentes da coleção, podendo ser necessário estudar a relação da semântica do termo com o domínio de indexação. Entretanto, nem sempre é razoável eliminar as \emph{stop words}, pois podem ser úteis em casos de consultas de frases (e.g. ``presidente do Brasil'' é mais preciso do que ``presidente'' \emph{AND} ``Brasil'').
+Alguns sistemas de RI excluem do vocabulário as \emph{stop words} e para isso, determina-se os termos mais frequentes da coleção, podendo ser necessário estudar a relação da semântica do termo com o domínio de indexação. Entretanto, nem sempre é razoável eliminar as \emph{stop words}, pois podem ser úteis em casos de consultas de frases (e.g. ``presidente do Brasil'' é mais preciso do que ``presidente'' \emph{AND} ``Brasil'').
 
-A princípio, o custo de inclusão de \emph{stop words} não é tão grande, tanto em armazenamento quanto em processamento, e em geral, motores de busca da Web nem as utilizam.
+A princípio, o custo de inclusão de \emph{stop words} não é tão grande, tanto em armazenamento quanto em processamento, e em geral, ferramentas de busca da Web nem as utilizam.
 
 \subsubsection{Normalização (classes de equivalência de termos)}
 
-Nesta etapa é que são gerados os termos que aparecerão no dicionário. Após ``quebrar'' a coleção e a consulta em \emph{tokens}, casos de correspondência exata entre os tokens não são sempre verdade, mas há casos onde é desejável agrupar \emph{tokens} semelhantes por classes de equivalência ou por algum outro método de agrupamento. Agrupá-los por classes de equivalência tem suas vantagens em termos de desempenho e significa aplicar regras de eliminação de hífens, diacríticos, redução para o minúsculo (e entre outros) e o resultado dessas regras geram o nome das classes. Em outras palavras, implica converter os tokens para a forma canônica. Outras questões particulares de cada idioma que devem ser levados em conta tanto na etapa de tokenização quanto de normalização e muitas vezes é util a aplicação de classificadores de idioma para a melhor seleção das regras em ambas as etapas.
+Nesta etapa é que são gerados os termos que aparecerão no dicionário. Após ``quebrar'' a coleção e a consulta em \emph{tokens}, casos de correspondência exata entre os \emph{tokens} não são sempre verdade, mas há casos onde é desejável agrupar \emph{tokens} semelhantes por classes de equivalência ou por algum outro método de agrupamento.
+
+Agrupá-los por classes de equivalência tem suas vantagens em termos de desempenho e significa aplicar regras de eliminação de hífens, diacríticos, redução para o minúsculo (e entre outros) e o resultado dessas regras geram o nome das classes. Em outras palavras, implica converter os \emph{tokens} para a forma canônica. Outras questões particulares de cada idioma devem ser levadas em conta tanto na etapa de tokenização quanto de normalização e muitas vezes é útil a aplicação de classificadores de idioma para a melhor seleção das regras em ambas as etapas.
 
 \subsubsection{Stemização e Lematização}
 
-Ambos termos se referem a algoritmos que permitem a redução de palavras flexionadas ou derivadas à sua forma base ou raiz, permitindo que variantes gramaticais de uma palavra sejam agrupada como uma só unidade. A normalização continua sendo o objetivo aqui.
-Stemização geralmente se refere a uma heurística bruta de cortes de afixos (isto e, prefixos e sufixos) para encontrar a raiz da palavra, o que torna sua implementação mais fácil, rápida e satisfatória para muitas aplicações, permitindo alto recall, mas baixa precisão.
+Ambos termos se referem a algoritmos que permitem a redução de palavras flexionadas ou derivadas à sua forma base ou raiz, permitindo que variantes gramaticais de uma palavra sejam agrupadas como uma só unidade. A normalização continua sendo o objetivo aqui.
+
+Stemização geralmente se refere a uma heurística bruta de cortes de afixos (isto é, prefixos e sufixos) para encontrar a raiz da palavra, o que torna sua implementação mais fácil, rápida e satisfatória para muitas aplicações, permitindo alto \emph{recall}, mas baixa precisão.
+
 Lematização faz uso de vocabulário e análise morfológica para identificar a classe gramatical da palavra, e assim determinar o lema da palavra, que é a sua forma de dicionário (forma raiz). Diferente da stemização, a lematização distingue o contexto das palavras, selecionando seu radical apropriado.
 
-Exemplo: (https://en.wikipedia.org/wiki/Lemmatisation)
+Exemplo: %(https://en.wikipedia.org/wiki/Lemmatisation)
 
 \begin{enumerate}
-\item A palavra ``better'' possui ``good'' como lema. Esta associação é perdida na stemização, mas obtida na lematização, pois requer um dicionário.
+\item A palavra ``\emph{better}'' possui ``\emph{good}'' como lema. Essa associação é perdida na stemização, mas obtida na lematização, pois requer um dicionário.
 
-\item A palavra "walk" é a forma base da palavra "walking", e portanto isto é conseguido tanto pela stemização como pela lematização.
+\item A palavra ``\emph{walk}'' é a forma base da palavra ``\emph{walking}'', e portanto isso é conseguido tanto pela stemização como pela lematização.
 \end{enumerate}
 
-\subsection{Intersecção de listas de postagens mais rápida via skip pointers}
+\subsection{Intersecção de listas de postagens mais rápida via \emph{skip pointers}}
 
-Se o index for relativamente estático, é possível implementar intersecção de listas de postagens mais eficiente usando skip pointers. Tradicionalmente, dadas duas listas de tamanho m e n, a operação de intersecção consome tempo $O(m+n)$, pois percorre simultaneamente ambas as listas. Já com skip pointers, é possível reduzir esta complexidade para tempo sublinear. Alocando-se uma quantidade arbitrária e heuristicamente razoável de ponteiros, ganha-se tempo ao evitar ter de comparar postagens menores de uma das listas com o elemento de comparação da outra lista, pois não apareceriam de qualquer maneira no resultado da operação.
+Se o índice for relativamente estático, é possível implementar intersecção de listas de postagens mais eficiente usando \emph{skip pointers}. Tradicionalmente, dadas duas listas de tamanho $m$ e $n$, a operação de intersecção consome tempo $O(m+n)$, pois percorre simultaneamente ambas as listas. Já com \emph{skip pointers}, é possível reduzir essa complexidade para tempo sublinear. Alocando-se uma quantidade arbitrária e heuristicamente razoável de ponteiros, ganha-se tempo ao evitar ter de comparar postagens menores de uma das listas com o elemento de comparação da outra lista, pois não apareceriam de qualquer maneira no resultado da operação.
 
 \subsection{Postagens posicionais e consultas de frase}
 
-Na maioria das situações, os usuários irão expressar sua consultas por meio de frases, e assim é desejável que o motor de busca forneça suporte adequado e eficiente para consultas mais complexas que envolvam múltiplos termos, onde a proximidade entre eles é um fator de relevância adicional.
+Na maioria das situações, os usuários irão expressar sua consultas por meio de frases, e assim é desejável que a ferramenta de busca forneça suporte adequado e eficiente para consultas mais complexas que envolvam múltiplos termos, onde a proximidade entre eles é um fator de relevância adicional.
 
-\subsubsection{Indíce de dupla palavra}
+\subsubsection{Índice de dupla palavra}
 
-Após a tokenização, é necessário realizar classificação linguística das palavras (e.g. susbtantivo, verbo, preposição, entre outros) por meio do uso de ferramentas computacionais próprias. Com isso, torna-se possível indexar os documentos como duplas palavras estendidas na forma N X* N, onde N representa uma palavra “relevante” e X, uma palavra funcional de baixa relevância, como preposição, artigo ou conjunção. Assim, as entradas do dicionário passam a assumir a forma N X* N, tornando possível a realização de consultas de frase por parte do usuário final. Tal conceito pode ser estendido para mais de duas palavras, e assim denominando-se índice de frases. Índices de frases em geral expandem muito o vocabulário, e não impedem que falsos positivos ocorram. Quando o índice de dupla palavra é usado, deve-se manter também um índice de termos únicos, para que buscas por termos individuais possam ser realizadas.
+Após a tokenização, é necessário realizar classificação linguística das palavras (e.g. susbtantivo, verbo, preposição, entre outros) por meio do uso de ferramentas computacionais próprias. Com isso, torna-se possível indexar os documentos como duplas palavras estendidas na forma N X* N, onde N representa uma palavra ``relevante'' e X, uma palavra funcional de baixa relevância, como preposição, artigo ou conjunção. Assim, as entradas do dicionário passam a assumir a forma N X* N, tornando possível a realização de consultas de frase por parte do usuário final. Tal conceito pode ser estendido para mais de duas palavras, e assim denominando-se índice de frases. Índices de frases em geral expandem muito o vocabulário, e não impedem que falsos positivos ocorram. Quando o índice de dupla palavra é usado, deve-se manter também um índice de termos únicos, para que buscas por termos individuais possam ser realizadas.
  
 Exemplo de formato de dupla palavra:
 
-renegotiation of the constitution
-
-N X X N
+\begin{table}[!h]
+	\centering
+	\caption{Formato de dupla palavra.}
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		\emph{renegotiation} & \emph{of} & \emph{the} & \emph{constitution} \\
+		\hline
+		N & X & X & N\\
+		\hline 
+		\end{tabular}
+\end{table}
 
 \subsubsection{Índices posicionais}
 
 Índices de dupla palavra não são o padrão, por razões de espaço requerido. O mais usado para dar suporte a consultas de frase e de proximidade é o índice posicional: \\
 
-to , 993427:
-
-< 1, 6: < 7, 18, 33, 72, 86, 231 > ;
-
-\hspace{0.4cm}2, 5: < 1, 17, 74, 222, 255 >; ...>\\
+%----------------------------------------------------
+%to , 993427:
+%
+%< 1, 6: < 7, 18, 33, 72, 86, 231 > ;
+%
+%\hspace{0.4cm}2, 5: < 1, 17, 74, 222, 255 >; ...>\\
+%----------------------------------------------------
+to , 993427: < 1, 6: < 7, 18, 33, 72, 86, 231 > ;\hspace{0.4cm}2, 5: < 1, 17, 74, 222, 255 >; ...>\\
 
 No exemplo acima, o termo to tem valor df 993427 (nº de ocorrências do termo na coleção). A primeira postagem são ocorrências do termo no documento 1, e seu valor tf vale 6 (número de ocorrências do termo no documento). A lista em seguida são as posições de ocorrência do termo no documento. Porém, os índices posicionais tendem a exigir mais requisitos de espaço e a ser menos eficiente do que os outros índices.
 
@@ -139,16 +154,16 @@ No exemplo acima, o termo to tem valor df 993427 (nº de ocorrências do termo n
 \section{Dicionários e recuperação tolerante}
 \label{sec:dicionarios}
 
-  Hashes e árvores são estruturas de dados extremamente importantes na realização de consulta, pois ajudam a determinar se cada termo da consulta existe no vocabulário. No primeiro, cada termo do vocabulário(chave) é mapeado para um inteiro com espaço suficiente para que as colisões de hash sejam improváveis. No segundo, a árvore de busca mais conhecida é a árvore binária, na qual cada nó interno tem dois filhos. A busca de um termo começa na raiz da árvore. Cada nó interno (incluindo a raiz) representa um teste binário, baseado nesse resultado a busca prossegue para uma das sub-árvores abaixo desse nó. Contudo, um dos problemas enfrentados pelas árvores binárias é o rebalanceamento, portanto, para suavizar esse problema são usadas árvores B, as quais são árvores de busca em que cada nó interno tem um número de filhos no intervalo [a-b].
+  \emph{Hashes} e árvores são estruturas de dados extremamente importantes na realização de consulta, pois ajudam a determinar se cada termo da consulta existe no vocabulário. No primeiro, cada termo do vocabulário(chave) é mapeado para um inteiro com espaço suficiente para que as colisões de \emph{hash} sejam improváveis. No segundo, a árvore de busca mais conhecida é a árvore binária, na qual cada nó interno tem dois filhos. A busca de um termo começa na raiz da árvore. Cada nó interno (incluindo a raiz) representa um teste binário, baseado nesse resultado a busca prossegue para uma das sub-árvores abaixo desse nó. Contudo, um dos problemas enfrentados pelas árvores binárias é o rebalanceamento, portanto, para suavizar esse problema são usadas árvores B, as quais são árvores de busca em que cada nó interno tem um número de filhos no intervalo [a-b].
    
-  Um ponto negativo dos hashes é que em uma ferramente (tal como a Web) cujo tamanho do vocabulário permanece aumentando, uma função de hash projetada para necessidade atual pode não ser suficiente daqui algum tempo. \\
+  Um ponto negativo dos \emph{hashes} é que em uma ferramente (tal como a Web) cujo tamanho do vocabulário permanece aumentando, uma função de \emph{hash} projetada para necessidade atual pode não ser suficiente daqui algum tempo.
   
-  Há consultas conhecidas como “consultas curingas”, as quais são, normalmente, usadas pelo usuário quando ele não tem certeza de como se escreve um termo da consulta ou está ciente das várias formas de escrita de um termo, então procura documentos contendo qualquer uma dessas variações. Para realizar essas consultas curingas, o usuário precisa digitar o caracter *, como nos exemplos abaixo: \\
+  Há consultas conhecidas como ``consultas curingas'', as quais são, normalmente, usadas pelo usuário quando ele não tem certeza de como se escreve um termo da consulta ou está ciente das várias formas de escrita de um termo, então procura documentos contendo qualquer uma dessas variações. Para realizar essas consultas curingas, o usuário precisa digitar o caracter *, como nos exemplos abaixo: \\
     
 \indent S*dney $\rightarrow$ Sydney ou Sidney \\
 \indent *artoze $\rightarrow$ Catorze ou Quatorze \\
 
-  Para manipular consultas em que há um único símbolo *, tal como “S*dney”, costuma-se usar duas árvores-B, árvore-B normal e árvore-B reversa, e depois pegar a intersecção de ambas.    
+  Para manipular consultas em que há um único símbolo *, tal como ``S*dney'', costuma-se usar duas árvores-B, árvore-B normal e árvore-B reversa, e depois pegar a intersecção de ambas.    
 
   Além disso, algumas técnicas robustas para consultas curingas e correções ortográficas são utilizadas tais como os índices permuterm e os índices k-grama. 
     
@@ -160,76 +175,64 @@ No exemplo acima, o termo to tem valor df 993427 (nº de ocorrências do termo n
 \section{Contrução do índice}
 \label{sec:construcao_indice}
 
-Para criar uma lista invertida para uma coleção de documentos, primeiro cria-se um lista de pares termo-docID, ordenando-a pelos termos e mantendo a sequência da identificação dos documentos. Com isso, podemos criar estatísticas como a frequência de documentos e a do termo. Para coleções pequenas, a memória pode ser suficiente para esta tarefa. Para coleções maiores, no entanto, será necessário também o uso do disco.
+Para criar uma lista invertida para uma coleção de documentos, primeiro cria-se um lista de pares termo-\emph{docID}, ordenando-a pelos termos e mantendo a sequência da identificação dos documentos. Com isso, podemos criar estatísticas como a frequência de documentos e a do termo. Para coleções pequenas, a memória pode ser suficiente para esta tarefa. Para coleções maiores, no entanto, será necessário também o uso do disco.
 
 Para a discussão que se segue, vale lembrar alguns pontos:
 \begin{itemize}
 \item O acesso à memória é muito mais rápido do que acessar dados no disco.
-\item A movimentação da disk head é em geral muito lenta, e durante esse processo não há transferência de dados. Logo, é melhor transferir dados que estejam agrupados no menor número de blocos possível.
+\item A movimentação da \emph{disk head} é em geral muito lenta, e durante esse processo não há transferência de dados. Logo, é melhor transferir dados que estejam agrupados no menor número de blocos possível.
 \item Os sistemas operacionais leem blocos inteiros do disco, logo, ler 1 byte ou um bloco inteiro representa a mesma operação.
-\item A leitura do disco não é executado pelo processador, logo, este está livre durante a leitura. Uma forma de se aproveitar esse fato é gravar dados comprimidos no disco e ter um algoritmo de descompressão eficiente, de forma que a leitura mais o tempo de descompressão dos dados seja menor que a leitura dos dados descomprimidos.
+\item A leitura do disco não é executado pelo processador, logo, esse está livre durante a leitura. Uma forma de se aproveitar esse fato é gravar dados comprimidos no disco e ter um algoritmo de descompressão eficiente, de forma que a leitura mais o tempo de descompressão dos dados seja menor que a leitura dos dados descomprimidos.
 \end{itemize}
 
+Operações com strings podem ser custosas, portanto, é preferível o uso de \emph{termIDs} ao invés dos termos em si. Estas identificações podem ser geradas durante a criação da lista invertida ou em uma etapa anterior, criando primeiramente o dicionário.
 
-Operações com strings podem ser custosas, portanto, é preferível o uso de termIDs ao invés dos termos em si. Estas identificações podem ser geradas durante a criação da lista invertida ou em uma etapa anterior, criando primeiramente o dicionário.
+Se cada \emph{termIDs} ou \emph{docIDs} ocupar 4 bytes, uma coleção de 100 milhões de tokens somaria 0,8 GB. A ordenação destes pares tomará ainda mais espaço, dependendo do algoritmo que for utilizado. A memória sendo insuficiente, torna-se necessário o uso do disco. Além disso, o uso de algoritmos de ordenação externa que minimizem o número de acessos aleatórios ao disco, já que buscas em blocos sequenciais são mais rápidas. Um exemplo desse tipo de algoritmo é o \emph{blocked sort-based indexing algorithm} (BSBI). 
 
-Se cada termIDs ou docIDs ocupar 4 bytes, uma coleção de 100 milhões de tokens somaria 0,8 GB. A ordenação destes pares tomará ainda mais espaço, dependendo do algoritmo que for utilizado. A memória sendo insuficiente, torna-se necessário o uso do disco. Além disso, o uso de algoritmos de ordenação externa que minimizem o número de acessos aleatórios ao disco, já que buscas em blocos sequenciais são mais rápidas. Um exemplo desse tipo de algoritmo é o blocked sort-based indexing algorithm (BSBI). 
+Esse algoritmo cria blocos de mesmo tamanho contendo os pares \emph{termID-docID}, ordena cada bloco em memória guardando os resultados parciais no disco e, por fim, mescla os blocos na lista final. Os blocos devem caber na memória de forma que permitam a sua ordenação sem o uso do disco. Após a ordenação, cada bloco é uma lista invertida de um pedaço da coleção. Assim, para mesclar as listas, mantém-se aberto um buffer de leitura para cada bloco e um buffer de escrita, onde será escrito a lista resultante. Escolhemos o menor \emph{termID} que não está na lista final e mesclamos as listas de postagens de todos os blocos; essa será a lista de postagens desse \emph{termID} na lista inversa resultante. 
 
-Esse algoritmo cria blocos de mesmo tamanho contendo os pares termID-docID, ordena cada bloco em memória guardando os resultados parciais no disco e, por fim, mescla os blocos na lista final. Os blocos devem caber na memória de forma que permitam a sua ordenação sem o uso do disco. Após a ordenação, cada bloco é uma lista invertida de um pedaço da coleção. Assim, para mesclar as listas, mantém-se aberto um buffer de leitura para cada bloco e um buffer de escrita, onde será escrito a lista resultante. Escolhemos o menor termID que não está na lista final e mesclamos as listas de postagens de todos os blocos; esta será a lista de postagens deste termID na lista inversa resultante. 
+A complexidade do algoritmo é equivalente à uma ordenação. Sendo $T$ um limitante superior proporcional a quantidade de pares \emph{termID-docID}, temos que esta complexidade é $\Theta( T \cdot log T )$. Na prática, os passos de parsear os documentos e executar o mesclagem da lista final influenciam o tempo total da execução do algoritmo.
 
-A complexidade do algoritmo é equivalente à uma ordenação. Sendo T um limitante superior proporcional a quantidade de pares termID-docID, temos que esta complexidade é $\Theta( T \cdot log T )$. Na prática, os passos de parsear os documentos e executar o mesclagem da lista final influenciam o tempo total da execução do algoritmo.
+O algoritmo BSBI requer que a estrutura de dados que mapeia termos aos seus respectivos \emph{termIDs} seja guardada na memória. Para coleções muito grandes isso se torna impraticável. Uma alternativa é o algoritmo \emph{single-pass in-memory indexing} (SPIMI) que usa os próprios termos ao invés de seus \emph{termIDs}, criando um dicionário para cada bloco e guardando-o no disco. 
 
-O algoritmo BSBI requer que a estrutura de dados que mapeia termos aos seus respectivos termIDs seja guardada na memória. Para coleções muito grandes isso se torna impraticável. Uma alternativa é o algoritmo single-pass in-memory indexing (SPIMI) que usa os próprios termos ao invés de seus termIDs, criando um dicionário para cada bloco e guardando-o no disco. 
-
-Primeiro, é necessário parsear os documentos em pares de termos e docIDs. Para cada um destes pares, verifica-se no dicionário se o termo já está presente e resgata-se a sua lista de postagens. Assim, cada postagem é adicionada a lista de postagens individualmente, diferentemente do algoritmo BSBI que primeiro recolhe todos os pares para depois organizá-los. Isso torna o algoritmo SPIMI mais rápido por não precisar fazer este último passo e, além disso, não precisa guardar os termIDs por manter uma relação entre um termo e a sua lista de postagens, o que permite utilizar melhor a memória com blocos maiores. Quando a memória estiver cheia, escreve-se a lista em bloco no disco, apenas tomando o cuidado de ordenar os termos do dicionário, o que facilita a mesclagem das listas, por permitir encontrar um termo com uma busca linear em qualquer dicionário. Por fim, mescla-se as listas de todos os blocos. 
+Primeiro, é necessário parsear os documentos em pares de termos e \emph{docIDs}. Para cada um destes pares, verifica-se no dicionário se o termo já está presente e resgata-se a sua lista de postagens. Assim, cada postagem é adicionada a lista de postagens individualmente, diferentemente do algoritmo BSBI que primeiro recolhe todos os pares para depois organizá-los. Isso torna o algoritmo SPIMI mais rápido por não precisar fazer este último passo e, além disso, não precisa guardar os \emph{termIDs} por manter uma relação entre um termo e a sua lista de postagens, o que permite utilizar melhor a memória com blocos maiores. Quando a memória estiver cheia, escreve-se a lista em bloco no disco, apenas tomando o cuidado de ordenar os termos do dicionário, o que facilita a mesclagem das listas, por permitir encontrar um termo com uma busca linear em qualquer dicionário. Por fim, mescla-se as listas de todos os blocos. 
 
 O algoritmo SPIMI também permite a compressão das listas de postagens e do dicionário, o que permite processar blocos maiores de cada vez e economiza espaço do disco. Por não precisarmos ordenar uma lista de postagens, o algoritmo tem complexidade $\Theta( T )$, ou seja, não tem operações que sejam mais do que lineares no tamanho da coleção.
-Mas, e se uma coleção for muito grande para ser indexada em um único computador? Neste caso, são utilizados algorítimos de indexação distribuída, que criam um índice armazenado em mais de uma máquina. Cada máquina pode conter um pedaço de cada lista de postagens ou, para um conjunto de termos, suas listas de postagens. Assim, podemos usar o processamento distribuído de um cluster, distribuindo parcelas da coleção de documentos a ser indexada para cada máquina.
+Mas, e se uma coleção for muito grande para ser indexada em um único computador? Neste caso, são utilizados algoritimos de indexação distribuída, que criam um índice armazenado em mais de uma máquina. Cada máquina pode conter um pedaço de cada lista de postagens ou, para um conjunto de termos, suas listas de postagens. Assim, podemos usar o processamento distribuído de um \emph{cluster}, distribuindo parcelas da coleção de documentos a ser indexada para cada máquina.
 
-Um problema com este método é a atribuição de termIDs para os termos, já que cada unidade de processamento terá uma tabela própria. Um modo de contornar isso é preprocessar uma tabela de termIDs para os termos mais recorrentes que será distribuída para todas as máquinas e, para os termos menos frequentes, atribuir as listas de postagens aos termos em si. Com isso, cada máquina cria arquivos intermediários que guardam um conjunto de pares de valores para as listas de postagens. Por exemplo, para cada máquina teríamos um arquivos com os pares correspondentes aos termos que começam com a letra ‘a’ até a letra ‘g’, outro arquivos para os termos que começam com a letra ‘h’ até a letra ‘p’, e assim por diante. Depois estes arquivos serão mesclados de forma que uma máquina contenha todos os pares para um destes segmentos de termos. Digamos, uma máquina recebe os arquivos que contém os pares com os termos de ‘a’ até ‘g’, mescla estas listas e mantém as listas de postagens resultantes.
+Um problema com esse método é a atribuição de \emph{termIDs} para os termos, já que cada unidade de processamento terá uma tabela própria. Um modo de contornar isso é preprocessar uma tabela de \emph{termIDs} para os termos mais recorrentes que será distribuída para todas as máquinas e, para os termos menos frequentes, atribuir as listas de postagens aos termos em si. Com isso, cada máquina cria arquivos intermediários que guardam um conjunto de pares de valores para as listas de postagens. Por exemplo, para cada máquina teríamos um arquivos com os pares correspondentes aos termos que começam com a letra `a' até a letra `g', outro arquivos para os termos que começam com a letra `h' até a letra `p', e assim por diante. Depois estes arquivos serão mesclados de forma que uma máquina contenha todos os pares para um destes segmentos de termos. Digamos, uma máquina recebe os arquivos que contém os pares com os termos de `a' até `g', mescla estas listas e mantém as listas de postagens resultantes.
 
 Tanto os algoritmos BSBI e SPIMI quanto a indexação distribuída trabalham, a princípio, com coleções estáticas, ou seja, cada documento será indexado apenas uma vez. Mas coleções que se modificam ao longo do tempo precisarão de atualizações eventualmente. Se as mudanças forem pouco frequentes, uma opção seria reindexar a coleção inteira, mantendo uma versão estável para as buscas. Se for necessário adicionar versões mais recentes dos documentos de forma rápida, no entanto, isto deixa de ser uma opção. 
 
 Uma lista auxiliar seria útil neste caso. Manteríamos a lista invertida original em disco e a lista auxiliar com as entradas novas, em memória. Ao invés de atualizarmos frequentemente a lista, podemos concentrar as mudanças nesta lista auxiliar e fazer acessos ao disco de uma vez só. Com este esquema, uma busca percorre ambas as listas para obter seu resultado. Entradas novas são adicionadas a lista auxiliar e entradas que foram deletadas são mantidas em um vetor de validação ou estrutura similar que possa ser usada para filtrar os resultados. Assim, para atualizar um documento, basta deletar suas entradas da lista original (ou seja, adicioná-las ao vetor de deleções) e adicionar as novas entradas na lista auxiliar. Quando a lista auxiliar estiver muito grande, enfim, mesclamos as duas listas. Se tivéssemos cada lista de postagens em um arquivo separado isto seria fácil, bastaríamos mesclar as mudanças pertinentes a este arquivo. Mas em geral este não é o caso, já que os sistemas operacionais não lidam bem com um número muito grande de arquivos. 
 
-Para que o número de arquivos não cresça demasiadamente, uma possibilidade é usar o algoritmo logarithmic merge, que utiliza um conjunto de listas guardadas em memória cada uma com o dobro do tamanho da anterior. O tamanho da primeira lista é igual ao tamanho máximo n da lista auxiliar e toda vez que um nível estiver cheio, mesclamos com o próximo. Para um conjunto de postagens com T elementos a serem processados, teremos $log( T/n )$ níveis. Por exemplo, se tivéssemos n postagens, apenas a lista auxiliar seria necessária. Com isso, a inserção de uma postagem ao índice terá complexidade $\Theta( log( T/n ))$, pois passará no máximo por todos os níveis. A indexação de todas as postagens, por sua vez, terá complexidade $\Theta( T log(T/n ))$.
+Para que o número de arquivos não cresça demasiadamente, uma possibilidade é usar o algoritmo \emph{logarithmic merge}, que utiliza um conjunto de listas guardadas em memória cada uma com o dobro do tamanho da anterior. O tamanho da primeira lista é igual ao tamanho máximo $n$ da lista auxiliar e toda vez que um nível estiver cheio, mesclamos com o próximo. Para um conjunto de postagens com $T$ elementos a serem processados, teremos $log( T/n )$ níveis. Por exemplo, se tivéssemos n postagens, apenas a lista auxiliar seria necessária. Com isso, a inserção de uma postagem ao índice terá complexidade $\Theta( log( T/n ))$, pois passará no máximo por todos os níveis. A indexação de todas as postagens, por sua vez, terá complexidade $\Theta( T log(T/n ))$.
 
-O problema deste método é que uma busca terá que percorrer todos os níveis mesclando os resultados e não só as duas listas que tínhamos anteriormente. Pode ser preferível, portanto, reconstruir o índice de tempos em tempos, dependendo da aplicação.
-
-
-%% ------------------------------------------------------------------------- %%
-% \section{Capítulo 5 - Compressão do índice}
-% \label{sec:compressao_indice}
-
-% texto texto texto texto texto texto texto texto
-% texto texto texto texto texto texto texto texto texto texto texto texto texto
-% texto texto texto texto texto texto texto texto texto texto texto texto texto
-% texto texto texto texto texto texto texto texto texto texto texto texto texto
-% texto texto texto.
+O problema desse método é que uma busca terá que percorrer todos os níveis mesclando os resultados e não só as duas listas que tínhamos anteriormente. Pode ser preferível, portanto, reconstruir o índice de tempos em tempos, dependendo da aplicação.
 
 %% ------------------------------------------------------------------------- %%
 \section{Pontuação, ponderação do termo e modelo do espaço vetorial}
 \label{sec:espaco_vetorial}
 
-\subsection{atribuir pontuação a um documento}
+\subsection{Atribuir pontuação a um documento}
 
-Para ranquear os resultados de uma busca é necessário algum sistema de pontuação. Um documento que menciona um termo da consulta mais vezes é mais interessante, logo, deve receber um pontuação maior. Essa pontuação de um termo t em um documento d será chamado de peso de t em d. Pensando em consultas de texto livre, que é uma forma mais comum na web, seria fácil computar a pontuação de um documento, sendo a soma dos pesos dos termos da consulta presentes no documento. A forma mais natural de atribuir este peso é pela frequência do termo, denotada tft,d, mas pode-se usar qualquer função de ponderação. Essa forma é conhecida como modelo saco-de-palavras (do inglês, bag of words model) que leva em consideração apenas o número de ocorrências dos termos, mas não a ordem destes. Mesmo que a ordem das palavras divirja entre dois documentos, se as frequências dos termos forem similares, esses devem ser similares.
+Para ranquear os resultados de uma busca é necessário algum sistema de pontuação. Um documento que menciona um termo da consulta mais vezes é mais interessante, logo, deve receber um pontuação maior. Essa pontuação de um termo $t$ em um documento $d$ será chamado de peso de $t$ em $d$. Pensando em consultas de texto livre, que é uma forma mais comum na web, seria fácil computar a pontuação de um documento, sendo a soma dos pesos dos termos da consulta presentes no documento. Segundo Manning, Raghavan e Schütze (2008), a forma mais natural de atribuir esse peso é pela frequência do termo, denotada $tf_{t,d}$, mas pode-se usar qualquer função de ponderação. Essa forma é conhecida como modelo saco-de-palavras (do inglês, \emph{bag of words model}) que leva em consideração apenas o número de ocorrências dos termos, mas não a ordem destes. Mesmo que a ordem das palavras divirja entre dois documentos, se as frequências dos termos forem similares, esses devem ser similares.
 
-Alguns termos podem ser muito frequentes na coleção, logo, não terão muita influência no ranqueamento dos documentos, sendo necessária algum tipo de atenuação. Utilizando a frequência do termo na coleção, um termo muito presente em poucos documentos e um termo pouco presente em muitos documentos teriam a mesma frequência, então, a atenuação não surtiria efeito. Portanto, é comum usar a frequência de documentos (dft), ou seja, o número de documentos da coleção em que o termo está presente. Assim, definimos frequência inversa do documento (idf):
+Alguns termos podem ser muito frequentes na coleção, logo, não terão muita influência no ranqueamento dos documentos, sendo necessária algum tipo de atenuação. Utilizando a frequência do termo na coleção, um termo muito presente em poucos documentos e um termo pouco presente em muitos documentos teriam a mesma frequência, então, a atenuação não surtiria efeito. Portanto, é comum usar a frequência de documentos ($df_{t}$), ou seja, o número de documentos da coleção em que o termo está presente. Assim, definimos frequência inversa do documento ($idf$):
 
 $$idf_{t} = log \frac{N}{df_{t}}$$
 
-Um termo que está em todos os documentos terá idf = 0. Quanto mais raro o termo na coleção, maior será o seu idf. Multiplicando tft,d por idft temos uma balanceamento entre a presença de um termo em um documento e a sua raridade na coleção. Um documento que diz muito sobre um assunto que aparece pouco na coleção deve ser mais relevante para este assunto. Definimos então o balanceamento tf-idf:
+Um termo que está em todos os documentos terá $idf$ = 0. Quanto mais raro o termo na coleção, maior será o seu $idf$. Multiplicando $tf_{t,d}$ por $idf_{t}$ temos um balanceamento entre a presença de um termo em um documento e a sua raridade na coleção. Um documento que diz muito sobre um assunto que aparece pouco na coleção deve ser mais relevante para este assunto. Definimos então o balanceamento $tf\textnormal{-}idf$:
 
-$$tf-idf_{t,d} = tf_{t,d} \cdot idf_{t}$$
+$$tf\textnormal{-}idf_{t,d} = tf_{t,d} \cdot idf_{t}$$
 
-Trabalhando com o documento como um vetor de pesos para os termos do dicionário, temos a pontuação de um documento d em relação à uma consulta q:
+Trabalhando com o documento como um vetor de pesos para os termos do dicionário, temos a pontuação de um documento $d$ em relação à uma consulta $q$:
 
 \begin{displaymath}
-Score(q,d) = \sum_{t \in q} tf-idf_{t,d}
+score(q,d) = \sum_{t \in q} tf\textnormal{-}idf_{t,d}
 \end{displaymath}
 
-Esta representação de documentos como vetores em um espaço vetorial é conhecida como modelo vetorial (do inglês, vector space model) e pode ser usado em outras operações de recuperação de informação. Além disso, outras funções de ponderação podem ser usadas no lugar de tf-idf. Para cada documento d temos, então, um vetor $\overline{V}(d)$ com componentes sendo as ponderações. Assim, o espaço vetorial terá um eixo para cada termo.
+Esta representação de documentos como vetores em um espaço vetorial é conhecida como modelo vetorial (do inglês, \emph{vector space model}) e pode ser usado em outras operações de recuperação de informação. Além disso, outras funções de ponderação podem ser usadas no lugar de $tf\textnormal{-}idf$. Para cada documento $d$ temos, então, um vetor $\overline{V}(d)$ com componentes sendo as ponderações. Assim, o espaço vetorial terá um eixo para cada termo.
 
 Dois documentos serão similares se tiverem vetores com componentes proporcionalmente parecidas, mesmo que as componentes de um documento sejam maiores do que a do outro. Para computar esta similaridade, é comum o uso do cosseno entre os dois vetores:
 
@@ -245,22 +248,24 @@ Além do uso do cosseno para o cálculo da similaridade, outras funções podem 
 
 \subsection{Índices paramétricos e de zonas}
 
-Buscas poderão depender de mais de uma informação, além de termos no corpo de um documento. Por exemplo, poderíamos querer resgatar documentos que foram criados antes de uma data ou por um autor específico. Estas informações são guardadas como metadados do documento e através destes poderíamos executar tais buscas. Para tal, é necessário um índice paramétrico, que para cada campo passível de buscas possui uma lista invertida com suas postagens. Assim, fazemos buscas separadas e mesclamos os resultamos.
+Buscas poderão depender de outras informações que estão além do corpo de um documento. Como alternativa, Moura, Pereira e Campos (2002) propõem o uso de metadados como uma solução adequada para promover uma recuperação de recursos na Web mais eficiente e precisa, já que permite um melhor agrupamento de recursos digitais. Por exemplo, poderíamos querer resgatar documentos que foram criados antes de uma data ou por um autor específico. Guardando estas informações (data de publicação e autor, no exemplo) como metadados dos documentos, podemos recuperá-los com precisão. Manning, Raghavan e Schütze (2008) definem estas representações das informações nos metados como campos. Para a indexação destes campos, os autores dão como possibilidade o uso de índices paramétricos (do inglês, \emph{parametric indexes}). Nestes, para cada campo é construída uma lista invertida com suas postagens. Assim, fazemos buscas separadas e mesclamos os resultados.
 
 Os campos de metadados podem ter em um domínio de valores ordenáveis, como datas, por exemplo. Assim, o dicionário deste campo pode ser implementado em uma estrutura que facilite a navegação por ela, como uma árvore binária.
 
-Além dos campos, uma busca pode ser feitos em partes específicas de um documento, como o título ou um resumo. Para tal, utiliza-se zonas, similares aos campos, mas que assumem textos de tamanho arbitrário. Para cada zona podemos construir um índice, cujo dicionário é constituído dos termos presentes nesta zona. Outra alternativa é codificar a zona em que um termo aparece e fazermos um índice único, o que reduz o espaço ocupado pelo dicionário.
+Além dos campos, uma busca pode ser feita em partes específicas de um documento, como o título ou um resumo. Para tal, utiliza-se zonas, similares aos campos, mas que assumem textos de tamanho arbitrário. Para cada zona podemos construir um índice, cujo dicionário é constituído dos termos presentes nesta zona. Outra alternativa é codificar a zona em que um termo aparece e fazermos um índice único, o que reduz o espaço ocupado pelo dicionário.
 
-Até aqui utilizamos os índices paramétricos para fazermos buscas em que um termo está ou não presente em uma zona. Podemos, então, ponderar as zonas e atribuir uma pontuação para cada documento. Por exemplo, talvez seja uma informação mais relevante para o usuário se um termo aparece no corpo de um documento, enquanto o título pode não ser importante. Se tivermos n zonas, e atribuirmos um peso pi para cada zona, podemos normatizar a soma dos pesos para que:
+Até aqui utilizamos os índices paramétricos para fazermos buscas em que um termo está ou não presente em uma zona. Podemos, então, ponderar as zonas e atribuir uma pontuação para cada documento. Por exemplo, talvez seja uma informação mais relevante para o usuário se um termo aparece no corpo de um documento, enquanto o título pode não ser importante. Se tivermos $n$ zonas, e atribuirmos um peso $p_{i}$ para cada zona, podemos normatizar a soma dos pesos para que:
 
 \begin{displaymath}
 	\sum_{i=1}^{n} p_{i} = 1
 \end{displaymath}
 
-Dado uma query q e um documento d, podemos atribuir uma pontuação si para cada zona do documento. A pontuação total do documento é, portanto, a combinação linear dos pesos e as pontuações das zonas:
+Dado uma query $q$ e um documento $d$, podemos atribuir uma pontuação $s_{i}$ para cada zona do documento. A pontuação total do documento é, portanto, a combinação linear dos pesos e as pontuações das zonas:
 
 \begin{displaymath}
 	score(d,q)= \sum_{i=1}^{n} p_{i} s_{i}
 \end{displaymath}
 
-Um problema surge, naturalmente: como determinar os pesos $p_{i}$? Eles podem ser determinados pelo próprio usuário ou “aprendidos” através de exemplos escolhidos, ou seja, o aprendizado de máquina. [REFERÊNCIA] define os exemplos como tuplas que contém uma query q, um documento d e um julgamento da relevância, que pode ser tão simples quanto “é relevante” e “não é relevante”, mas pode ter outras nuâncias. Através destes exemplos, a máquina gera pesos $p_{i}$ que tenham resultados que se aproximem dos julgamentos de relevância que foram fornecidos. Isto pode ser escrito como um problema de otimização.
+Um problema surge, naturalmente: como determinar os pesos $p_{i}$? Eles podem ser determinados pelo próprio usuário ou ``aprendidos'' através de exemplos escolhidos, ou seja, o aprendizado de máquina. Os autores definem os exemplos como tuplas que contém uma query $q$, um documento $d$ e um julgamento da relevância, que pode ser tão simples quanto ``é relevante'' e ``não é relevante'', mas pode ter outras nuâncias. Através destes exemplos, a máquina gera pesos $p_{i}$ que tenham resultados que se aproximem dos julgamentos de relevância que foram fornecidos. Isto pode ser escrito como um problema de otimização.
+
+No aplicativo \emph{LookingFor} desenvolvido neste Trabalho de Conclusão de Curso, exploramos o primeiro caso: o usuário determina os pesos para cada consulta. No entanto, nenhum parâmetro textual é fornecido. O sistema utiliza parâmetros preestabelecidos para gerar as pontuações. Ou seja, o usuário influencia os pesos $p_{i}$ mas não as pontuações $s_{i}$.
