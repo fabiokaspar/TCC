@@ -2,27 +2,14 @@
 \chapter{Conclusões}
 \label{cap:conclusoes}
 
-% Texto texto texto texto texto texto texto texto texto texto texto texto texto
-% texto texto texto texto texto texto texto texto texto texto texto texto texto
-% texto texto texto texto texto texto\footnote{Exemplo de referência para página
-% Web: \url{www.vision.ime.usp.br/~jmena/stuff/tese-exemplo}}.
+Recuperação de Informação é uma área da Ciência da Computação de extrema relevância, pois métodos de recuperação sobre dados não-estruturados (como texto, imagens, entre outros) contidos em documentos digitais (e.g. páginas web) são pré-requisitos para o tratamento de grandes volumes de dados. RI está presente nas ferramentas do dia-a-dia das pessoas – e-mails, sites de busca, comércios eletrônicos, entre outros. Um dos desafios da área é apoiar o processo de descoberta de conhecimento num contexto de crescimento exacerbado de dados na Internet.
 
-%------------------------------------------------------
-\section{Considerações Finais} 
+Dentre os conceitos de RI, três se destacam: indexação, processamento linguístico e ranqueamento. A indexação é necessária ao construir o índice invertido antes de qualquer busca ser requisitada pelo usuário. Essa estrutura de dados tem como principal objetivo armazenar listas de postagens (ordenadas pelo id do documento) em disco e associar cada lista a um termo específico do dicionário, e este por sua vez normalmente é mantido em memória principal. Os termos do dicionário são normalmente ordenados lexicograficamente.
 
-% Texto texto texto texto texto texto texto texto texto texto texto texto texto
-% texto texto texto texto texto texto texto texto texto texto texto texto texto
-% texto texto texto texto texto texto. 
+Já o processamento linguístico é usado para auxiliar na construção do dicionário, ao gerar termos que representam classes de tokens de mesma base léxica. Tal método é conhecido como normalização e dois tipos de algoritmos podem ser utilizados como de exemplo: stemização e lematização.
 
-%------------------------------------------------------
-\section{Sugestões para Pesquisas Futuras} 
+Por último, e não menos importante, está o ranqueamento, cuja base é o cálculo do $tf\textnormal{-}idf$, sendo adaptado conforme cada aplicação. Ele é útil na ponderação dos documentos a fim de ordená-los por relevância em função da consulta.
 
-% Texto texto texto texto texto texto texto texto texto texto texto texto texto
-% texto texto texto texto texto texto texto texto texto texto texto texto texto
-% texto texto texto texto texto texto.
+Um outro desafio de RI é definir o conceito de relevância, dado que o usuário final é quem aprova as respostas retornadas e não o projetista do sistema de RI. O \emph{LookingFor}, aplicativo desenvolvido no nosso Trabalho de Conclusão de Curso, permite combinar o campo de texto com alguns filtros adicionais que incluem parâmetros de interesse do usuário. O objetivo foi alcançado, já que a busca do usuário tornou-se mais cômoda e otimizada. No entanto, alguns ajustes serão necessários, mas eles surgirão à medida que estatísticas de controle forem geradas pelas ações dos usuários.
 
-% Finalmente, leia o trabalho de Uri Alon \cite{alon09:how} no qual apresenta-se
-% uma reflexão sobre a utilização da Lei de Pareto para tentar definir/escolher
-% problemas para as diferentes fases da vida acadêmica.  A direção dos novos
-% passos para a continuidade da vida acadêmica deveriam ser discutidos com seu
-% orientador.
+Como trabalhos futuros, o aplicativo poderá ser estendido para outros estabelecimentos como também para outras categorias de coleções, como livros de uma biblioteca digital. Além disso, poderão ser inclusos parâmetros de diversas naturezas - tais como idade, gênero, índice de violência, etc – de acordo com uma análise mais apurada da real necessidade dos usuários.

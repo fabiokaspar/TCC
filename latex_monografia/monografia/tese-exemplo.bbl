@@ -1,0 +1,119 @@
+\begin{thebibliography}{MPC02}
+
+\bibitem[Apaa]{ApacheLucene}
+{Apache Lucene}.
+\newblock
+  \url{https://web.archive.org/web/20151102014915/http://lucene.apache.org/cor%
+e/}.
+\newblock Accessed: 2015-11-2.
+
+\bibitem[Apab]{ApacheNutch}
+{Apache Nutch}.
+\newblock \url{http://nutch.apache.org/}.
+\newblock Accessed: 2015-11-27.
+
+\bibitem[EJ08]{ESCUDEIRO2008}
+Nuno~Filipe Escudeiro e Al{\'i}pio~M{\'a}rio Jorge.
+\newblock {Satisfying Information Needs on the Web: a Survey of Web Information
+  Retrieval}.
+\newblock {\em {5. T{\'e}khne - Revista de Estudos Polit{\'i}cos}}, p\'{a}ginas
+  337 -- 369, 06 2008.
+
+\bibitem[Exp]{ExpRegulares}
+{Artigo sobre express{\~o}es regulares}.
+\newblock \url{https://pt.wikipedia.org/wiki/Express\%C3\%A3o_regular}.
+\newblock Accessed: 2015-11-27.
+
+\bibitem[Gooa]{Google}
+{Google}.
+\newblock
+  \url{https://web.archive.org/web/20151122162241/http://www.google.com.br/}.
+\newblock Accessed: 2015-11-22.
+
+\bibitem[Goob]{GoogleMaps}
+{Google Maps}.
+\newblock
+  \url{https://web.archive.org/web/20150429170137/https://www.google.com.br/ma%
+ps}.
+\newblock Accessed: 2015-11-22.
+
+\bibitem[Gui]{GuiaFolha}
+{Guia Folha}.
+\newblock
+  \url{https://web.archive.org/web/20150908233920/http://guia.folha.uol.com.br%
+/restaurantes/}.
+\newblock Accessed: 2015-11-22.
+
+\bibitem[HTT]{HTTrack}
+{HTTrack}.
+\newblock \url{http://www.httrack.com/}.
+\newblock Accessed: 2015-11-27.
+
+\bibitem[Ind]{IndexWriter}
+{Documenta\c{c}{\~a}o da classe IndexWriter}.
+\newblock
+  \url{https://web.archive.org/web/20150515144032/http://lucene.apache.org/cor%
+e/4_0_0/core/org/apache/lucene/index/IndexWriter.html}.
+\newblock Accessed: 2015-05-15.
+
+\bibitem[JSO]{JSON}
+{Artigo sobre JSON}.
+\newblock
+  \url{https://web.archive.org/web/20150911133904/https://pt.wikipedia.org/wik%
+i/JSON}.
+\newblock Accessed: 2015-11-27.
+
+\bibitem[Kek]{Kekanto}
+{Kekanto}.
+\newblock
+  \url{https://web.archive.org/web/20151009101731/https://kekanto.com.br/}.
+\newblock Accessed: 2015-11-22.
+
+\bibitem[MAS09]{MEIRELES2009}
+Magali Rezende~Gouv{\^e}a Meireles, Paulo Eduardo Maciel~de Almeida e Ana
+  Carolina Milagres~Resende Silva.
+\newblock {2. Recupera{\c c}{\~a}o de informa{\c c}{\~a}o no ambiente
+  acad{\^e}mico: 2. georreferenciamento dos dados dos estudantes do Instituto
+  de Educa{\c c}{\~a}o Continuada da PUC Minas}.
+\newblock {\em {Perspectivas em Ci{\^e}ncia da Informa{\c c}{\~a}o}}, 14:61 --
+  74, 12 2009.
+
+\bibitem[MPC02]{MOURA2002}
+Ana Maria de~Carvalho Moura, Genelice da~Costa Pereira e Mar{\'i}a
+  Luiza~Machado Campos.
+\newblock {A metadata approach to manage and organize electronic documents and
+  collections on the web}.
+\newblock {\em {Journal of the Brazilian Computer Society}}, 8:16 -- 31, 07
+  2002.
+
+\bibitem[MRS08]{Manning:2008:IIR:1394399}
+Christopher~D. Manning, Prabhakar Raghavan e Hinrich Sch\"{u}tze.
+\newblock {\em Introduction to Information Retrieval}.
+\newblock Cambridge University Press, New York, NY, USA, 2008.
+
+\bibitem[RC11]{RODRIGUES2011}
+Bruno~C{\'e}sar Rodrigues e Giulia Crippa.
+\newblock {4. A recupera{\c c}{\~a}o da informa{\c c}{\~a}o e o conceito de
+  informa{\c c}{\~a}o: o que {\'e} relevante em media{\c c}{\~a}o cultural?}
+\newblock {\em {Perspectivas em Ci{\^e}ncia da Informa{\c c}{\~a}o}}, 16:45 --
+  64, 03 2011.
+
+\bibitem[Rep]{Repo}
+{Reposit{\'o}rio do projeto}.
+\newblock \url{https://github.com/fabiokaspar/TCC}.
+
+\bibitem[Vis]{VisiteSaoPaulo}
+{Visite S{\~a}o Paulo}.
+\newblock
+  \url{https://web.archive.org/web/20150929081059/http://www.visitesaopaulo.co%
+m/dados-da-cidade.asp}.
+\newblock Accessed: 2015-11-19.
+
+\bibitem[XML]{XML}
+{Artigo sobre XML}.
+\newblock
+  \url{https://web.archive.org/web/20150906111445/https://pt.wikipedia.org/wik%
+i/XML}.
+\newblock Accessed: 2015-11-27.
+
+\end{thebibliography}
