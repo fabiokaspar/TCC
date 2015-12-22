@@ -48,7 +48,7 @@ Para representar os documentos durante a indexação é utilizada a classe \emph
 
 Cada documento é processado pela classe \emph{DocConsumer} e armazenado em memória. Essas operações podem ser realizadas por várias threads, cada uma mantendo um índice parcial. Através de um sistema de eventos, a classe \emph{MergePolicy} é chamada para mesclar esses índices parciais ao principal, mantendo sua consistência. A instância da classe \emph{MergePolicy} é única e serve de ponte entre as diferentes threads e o disco, concentrando os acessos em uma só operação. Com isso, não se desperdiça espaço nos blocos transferidos ou tempo de processamento, como visto na seção \ref{sec:construcao_indice}. 
 
-Criamos uma classe adicional \emph{IndexFiles} para encapsular a indexação de uma coleção. Nela, é aberto o diretório em que se encontra a coleção, iterando os documentos para adicioná-los ao índice, utilizando a classe \emph{ndexWriter}. Para cada documento, utilizamos a classe \emph{Field} para representar seu corpo e seus metadados. Três desses campos são: a faixa de preço do restaurante, as suas coordenadas geográficas e a qualidade do restaurante (uma nota atribuída previamente). Esses valores serão utilizados na etapa de busca.
+Criamos uma classe adicional \emph{IndexFiles} para encapsular a indexação de uma coleção. Nela, é aberto o diretório em que se encontra a coleção, iterando os documentos para adicioná-los ao índice, utilizando a classe \emph{IndexWriter}. Para cada documento, utilizamos a classe \emph{Field} para representar seu corpo e seus metadados. Três desses campos são: a faixa de preço do restaurante, as suas coordenadas geográficas e a qualidade do restaurante (uma nota atribuída previamente). Esses valores serão utilizados na etapa de busca.
 
 % %% ------------------------------------------------------------------------- %%
 \section{Busca parametrizada}
@@ -105,7 +105,7 @@ Utilizando o exemplo da figura \ref{fig:listprior}, os valores dos pesos seriam:
 	\sum_{i} p_{i} = 1
 \end{displaymath}
 
-Como utilizamos o modelo saco-de-palavras, e considerando a consulta como um pequeno documento, a pontuação representa a similaridade entre a consulta e o documento que está sendo avaliado. Os parâmetros, no entanto, não são definidos pelo usuário, mas por valores hipotéticos atribuídos pelo sistema. Os usuários apenas definem o texto da consulta e os pesos desses parâmetros na busca.
+Como utilizamos o modelo saco-de-palavras, e considerando a consulta como um pequeno do-cumento, a pontuação representa a similaridade entre a consulta e o documento que está sendo avaliado. Os parâmetros, no entanto, não são definidos pelo usuário, mas por valores hipotéticos atribuídos pelo sistema. Os usuários apenas definem o texto da consulta e os pesos desses parâmetros na busca.
 
 Encaramos a consulta como um documento ideal $d’$, o que para o nosso sistema significa um estabelecimento muito próximo do local do usuário, muito barato e com a melhor qualidade possível. Vamos analisar cada um desses parâmetros individualmente.
 

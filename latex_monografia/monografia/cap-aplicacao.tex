@@ -28,7 +28,7 @@ Utilizamos um sistema de gerenciamento de banco de dados para guardar as informa
 
 A tabela ``buscas'' foi usada para registrar as consultas feitas no sistema. Nela estão quatro colunas principais: \emph{text}, \emph{distance}, \emph{price}, \emph{grade}. A coluna \emph{text} representa os termos da consulta, como digitados pelo usuário. As outras três colunas guardam as prioridades dos parâmetros da busca. Essas colunas terão valor nulo se não forem escolhidos pelo usuário. Caso contrário, terão como valor um número natural menor ou igual ao número total de parâmetros.
 
-A outra tabela, ``escolhas'', guarda a posição do resultado escolhido por um usuário. Partimos da hipótese que, quando um usuário clica em algum resultado, está demonstrando algum interessante. Não necessariamente esse interesse se traduz em relevância, mas pode ser um indicador. Algumas evidências presentes nesses resultados podem contribuir para entendermos o que o usuário necessita.
+A outra tabela, ``escolhas'', guarda a posição do resultado escolhido por um usuário. Partimos da hipótese que, quando um usuário clica em algum resultado, então este pode ser interessante. Não necessariamente esse interesse se traduz em relevância, mas pode ser um indicador. Algumas evidências presentes nesses resultados podem contribuir para entendermos o que o usuário necessita.
 
 Para registrar essa escolha, apenas uma coluna é utilizada, chamada ``posição''. Quanto mais próximo o resultado está do topo da lista de resultados, melhor é a sua colocação. Ou seja, maior foi a pontuação dada pelo sistema de RI. Se muitos usuários escolhem resultados longe do topo, isso pode indicar falhas no nosso sistema de ranqueamento.
 
@@ -36,7 +36,7 @@ Para registrar essa escolha, apenas uma coluna é utilizada, chamada ``posição
 \subsection{Consultas}
 \label{subsec:consultas}
 
-Nesse período de testes, 253 consultas foram realizadas. Em média 11,8 consultas por usuário. Muitos termos foram repetidos nas consultas, de forma que apenas 87 distintas foram feitas, desconsiderando os parâmetros escolhidos. Dessas, 40 (46\%) não retornaram nenhuma resposta.
+Nesse período de testes, 253 consultas foram realizadas. Em média 11,8 consultas por usuário. Muitos termos foram repetidos nas consultas, de forma que apenas 87 distintas foram feitas, des-considerando os parâmetros escolhidos. Dessas, 40 (46\%) não retornaram nenhuma resposta.
 
 Duas hipóteses podem ser feitas sobre esse fato. Primeiro, por termos usado a descrição breve dos estabelecimentos do site GuiaFolha, o dicionário do sistema foi construído com poucos termos. Segundo, por termos usado o modelo saco-de-palavras sem nenhum processamento linguístico, muitos termos próximos não foram associados durante a busca. Por exemplo, a consulta ``japonesa'' retorna 27 resultados, mas ``japonês'' não retorna nenhum. É importante para um sistema de RI compreender a linguagem utilizada pelos seus usuários, para que possa satisfazer a necessidade de informação sem um maior esforço por parte do usuário.
 
